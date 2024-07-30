@@ -12,12 +12,15 @@ function NavBar(props) {
     return (
         <ParallaxLayer
             className="nav-parallax"
-            speed={props.speed}
+            offset={1}
+            // speed={props.speed}
             sticky={props.sticky}
             style={{
+                zIndex: 99,
                 top: 0,
                 height: "66px",
                 display: "flex",
+                width: "100%",
             }}
         >
             <div className="nav-bar-wrapper">

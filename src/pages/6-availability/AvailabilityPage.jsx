@@ -29,46 +29,30 @@ function AvailabilityPage(props) {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td className="td-img"><Img/></td>
-                                    <td className="td-tenancy">Office</td>
-                                    <td className="td-floor">Ground Floor</td>
-                                    <td className="td-lfa">1572 m2</td>
-                                    <td className="td-status">Available</td>
-                                    <td className="td-btn">
-                                        <div className="floor-plan-btn"><Dld/>Floor Plan</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="td-img"><Img/></td>
-                                    <td className="td-tenancy">Office</td>
-                                    <td className="td-floor">Ground Floor</td>
-                                    <td className="td-lfa">1572 m2</td>
-                                    <td className="td-status">Available</td>
-                                    <td className="td-btn">
-                                        <div className="floor-plan-btn"><Dld/>Floor Plan</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="td-img"><Img/></td>
-                                    <td className="td-tenancy">Office</td>
-                                    <td className="td-floor">Ground Floor</td>
-                                    <td className="td-lfa">1572 m2</td>
-                                    <td className="td-status">Available</td>
-                                    <td className="td-btn">
-                                        <div className="floor-plan-btn"><Dld/>Floor Plan</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="td-img"><Img/></td>
-                                    <td className="td-tenancy">Office</td>
-                                    <td className="td-floor">Ground Floor</td>
-                                    <td className="td-lfa">1572 m2</td>
-                                    <td className="td-status">Available</td>
-                                    <td className="td-btn">
-                                        <div className="floor-plan-btn"><Dld/>Floor Plan</div>
-                                    </td>
-                                </tr>
+                                <TableRow
+                                    tenancy={"Office"}
+                                    floor={"Ground Floor"}
+                                    lfa={"1572"}
+                                    status={"Available"}
+                                />
+                                <TableRow
+                                    tenancy={"Office"}
+                                    floor={"Ground Floor"}
+                                    lfa={"1572"}
+                                    status={"Available"}
+                                />
+                                <TableRow
+                                    tenancy={"Office"}
+                                    floor={"Ground Floor"}
+                                    lfa={"1572"}
+                                    status={"Available"}
+                                />
+                                <TableRow
+                                    tenancy={"Office"}
+                                    floor={"Ground Floor"}
+                                    lfa={"1572"}
+                                    status={"Available"}
+                                />
                                 </tbody>
                             </table>
                         </div>
@@ -76,6 +60,21 @@ function AvailabilityPage(props) {
                 </div>
             </div>
         </ParallaxLayer>
+    );
+}
+
+const TableRow = (props) => {
+    return (
+        <tr>
+            <td className="td-img"><Img/></td>
+            <td className="td-tenancy">{props.tenancy}</td>
+            <td className="td-floor">{props.floor}</td>
+            <td className="td-lfa">{props.lfa} m<sup>2</sup></td>
+            <td className="td-status">{props.status}</td>
+            <td className="td-btn">
+                <div className="floor-plan-btn"><Dld/>Floor Plan</div>
+            </td>
+        </tr>
     );
 }
 

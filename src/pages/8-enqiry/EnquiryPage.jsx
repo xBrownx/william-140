@@ -10,9 +10,9 @@ function EnquiryPage(props) {
             factor={props.factor || 1}
         >
             <div className="enquiry-page-wrapper">
-                <div className="enquiry-page-title-wrapper">
-                    <h1>Enquiry</h1>
-                    <div className="enquiry-page-content-wrapper">
+                <div className="availability-page-container">
+                    <div className="enquiry-page-title-wrapper">
+                        <h1>Enquiry</h1>
                     </div>
                 </div>
             </div>

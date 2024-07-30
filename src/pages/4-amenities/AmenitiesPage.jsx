@@ -4,6 +4,9 @@ import './AmenitiesPage.css'
 import {ParallaxLayer} from "@react-spring/parallax";
 
 function AmenitiesPage(props) {
+
+    const [imgSrc, setImgSrc] = React.useState("Render");
+
     return (
         <ParallaxLayer
             className="amenities-page-parallax"
@@ -21,62 +24,71 @@ function AmenitiesPage(props) {
                     </div>
                     <div className="amenities-page-content-wrapper">
                         <div className="amenities-page-img-wrapper">
-                            <p>Render</p>
+                            <p>{imgSrc}</p>
                         </div>
                         <div className="amenities-page-list-wrapper">
                             <ul className="amenities-page-list">
-                                <li>
-                                    <div className="amenities-list-img"/>
-                                    <div className="list-item-container">
-                                        <h3>Hotel Style Concierge</h3>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="amenities-list-img"/>
-                                    <div className="list-item-container">
-                                        <h3>Dry Cleaning</h3>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="amenities-list-img"/>
-                                    <div className="list-item-container">
-                                        <h3>Bike Storage and Workshop</h3>
-                                        <p>Approx. 420 sqm</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="amenities-list-img"/>
-                                    <div className="list-item-container">
-                                        <h3>Cafe</h3>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="amenities-list-img"/>
-                                    <div className="list-item-container">
-                                        <h3>Car Parking</h3>
-                                        <p>200 cars</p>
-                                    </div>
 
-                                </li>
-                                <li>
-                                    <div className="amenities-list-img"/>
-                                    <div className="list-item-container">
-                                        <h3>Resort Style Change Facilities</h3>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="amenities-list-img"/>
-                                    <div className="list-item-container">
-                                        <h3>RACV Club</h3>
-                                        <p>Next door</p>
-                                    </div>
-                                </li>
+                                <ListItem
+                                    heading={"Hotel Style Concierge"}
+                                    subHeading={""}
+                                    onClick={(e) => setImgSrc("Hotel Style Concierge")}
+                                />
+
+                                <ListItem
+                                    heading={"Dry Cleaning"}
+                                    subHeading={""}
+                                    onClick={(e) => setImgSrc("Dry Cleaning")}
+                                />
+
+                                <ListItem
+                                    heading={"Bike Storage and Workshop"}
+                                    subHeading={"Approx. 420 sqm"}
+                                    onClick={(e) => setImgSrc("Bike Storage and Workshop")}
+                                />
+
+                                <ListItem
+                                    heading={"Cafe"}
+                                    subHeading={""}
+                                    onClick={(e) => setImgSrc("Cafe")}
+                                />
+
+                                <ListItem
+                                    heading={"Car Parking"}
+                                    subHeading={"200 cars"}
+                                    onClick={(e) => setImgSrc("Car Parking")}
+                                />
+
+                                <ListItem
+                                    heading={"Resort Style Change Facilities"}
+                                    subHeading={""}
+                                    onClick={(e) => setImgSrc("Resort Style Change Facilities")}
+                                />
+
+                                <ListItem
+                                    heading={"RACV Club"}
+                                    subHeading={"Next door"}
+                                    onClick={(e) => setImgSrc("RACV Club")}
+                                />
+
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </ParallaxLayer>
+    );
+}
+
+const ListItem = (props) => {
+    return (
+        <li onClick={props.onClick}>
+            <div className="amenities-list-img"/>
+            <div className="list-item-container">
+                <h3>{props.heading}</h3>
+                <p>{props.subHeading}</p>
+            </div>
+        </li>
     );
 }
 

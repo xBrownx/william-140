@@ -73,11 +73,16 @@
     flex-direction: row;
 }
 
+.amenities-page-list li:hover {
+    cursor: pointer;
+}
+
 .amenities-list-img {
     width: 88px;
     height: 88px;
     background-color: var(--primary-text-colour);
 }
+
 
 .amenities-page-list li h3 {
     font-size: 16pt;

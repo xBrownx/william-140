@@ -46,6 +46,7 @@ function MainParallax() {
 
     return (
         <div onWheel={(e) => handleScroll()}>
+            <div style={{height: "100vh"}} />
 
 
             <Parallax
@@ -53,14 +54,14 @@ function MainParallax() {
                 pages={14}
                 ref={ref}
                 style={{
-                    top: "0", left: "0"
+                    top: "0", left: "0", flexDirection: "column",
                 }}
             >
 
-                <NavBar
+            <NavBar
                     offset={1}
                     factor={1}
-                    speed={1}
+                    speed={0}
                     sticky={{start: 1, end: 16}}
                     page={currentPage}
                     toTop={() => scrollToRef(0)}
@@ -77,7 +78,7 @@ function MainParallax() {
 
                 <HomePage2 offset={1} factor={1.5} speed={0} />
 
-                <FullPageVideo offset={2.5} factor={1} speed={0} />
+                <FullPageVideo offset={2.5} factor={1} speed={0} sticky={{start: 1, end: 3.4}}/>
 
                 <LifestylePage offset={3.5} factor={1.5} speed={0} />
 

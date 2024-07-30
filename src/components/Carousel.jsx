@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Swiper from 'swiper';
 import {Navigation, Pagination} from 'swiper/modules';
 
@@ -12,6 +12,8 @@ import s1 from '../assets/Landing-bg.png'
 import {ParallaxLayer} from "@react-spring/parallax";
 
 function CarouselPage(props) {
+
+    const [previousIndex, setPreviousIndex] = useState(0);
 
     const swiper = new Swiper('.swiper', {
         // configure Swiper to use modules
@@ -36,7 +38,18 @@ function CarouselPage(props) {
                 transform: "scale(0.5)",
             },
         },
+        initialSlide: previousIndex
 
+    });
+
+
+
+    function getPreviousIndex() {
+        setPreviousIndex(swiper.realIndex);
+    }
+
+    swiper.on('slideChange', function () {
+        getPreviousIndex();
     });
 
     return (
@@ -47,7 +60,8 @@ function CarouselPage(props) {
             speed={props.speed}
             style={{
                 background: `var(--primary-bg-colour)`,
-            }}>
+            }}
+        >
             <div className="swiper-container" style={{zIndex: 1}}>
                 <div className="swiper">
                     <div className="swiper-wrapper">
