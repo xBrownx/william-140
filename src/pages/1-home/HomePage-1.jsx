@@ -1,16 +1,22 @@
 import React from 'react';
 import './HomePage-1.css'
-import {ReactComponent as Logo} from "../assets/Logo.svg";
-import {ReactComponent as DownArrow} from "../assets/DownArrow.svg"
+
+import {ReactComponent as DownArrow} from "../../assets/DownArrow.svg"
 import {useEffect, useRef, useState} from "react";
+import LogoAnimation from "../../components/LogoAnimation";
+import {ParallaxLayer} from "@react-spring/parallax";
 
 function HomePage1(props) {
 
     return (
-        <div>
+        <ParallaxLayer
+            className="home-page-1-parallax"
+            offset={props.offset}
+            factor={props.factor}
+        >
             <div className="home-page-wrapper">
                 <div className="home-page-logo-container">
-                    <Logo className="home-page-logo"/>
+                    <LogoAnimation/>
                 </div>
                 <div className="home-page-down-arrow-container">
                     <div className="home-page-down-arrow-wrapper"
@@ -22,7 +28,7 @@ function HomePage1(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </ParallaxLayer>
     );
 }
 

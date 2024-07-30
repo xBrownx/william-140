@@ -1,67 +1,75 @@
-.lifestyle-page-wrapper {
+.home-2-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
 
-.lifestyle-page-title-wrapper {
-    position: absolute;
+.home-2-page-container {
+    width: 1440px;
+}
+
+.home-2-page-title-wrapper {
     width: 100%;
     padding: 0 64px 0 64px;
 }
 
-.lifestyle-page-title-wrapper h1 {
+.home-2-page-title-wrapper h1 {
+    padding: 120px 0 0 0;
+    margin: 0;
     font-size: 120pt;
     line-height: 120pt;
-    font-weight: 300;
+    font-weight: 100;
     color: var(--primary-text-colour);
 }
 
-.lifestyle-page-content-wrapper {
+.home-2-page-content-wrapper {
     width: 100%;
-    height: 100%;
-    padding: 100px 0 0 0;
+    /*height: 50%;*/
+    padding: 150px 0 0 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
 }
 
-.lifestyle-page-img-wrapper, .lifestyle-page-text-wrapper {
+.home-2-page-img-wrapper, .home-2-page-text-wrapper {
     display: flex;
     width: 100%;
-    align-items: center;
-    transition: var(--home-page-secondary-transition);
-    opacity: 0;
+    /*transition: var(--home-page-secondary-transition);*/
+    /*opacity: 0;*/
 }
 
-.lifestyle-page-img-wrapper {
+.home-2-page-img-wrapper {
     justify-content: end;
-    transform: translateX(var(--home-page-secondary-delta-x-left));
+    /*transform: translateX(var(--home-page-secondary-delta-x-left));*/
 }
 
-.lifestyle-page-text-wrapper {
+.home-2-page-text-wrapper {
     justify-content: start;
-    transform: translateX(var(--home-page-secondary-delta-x-right));
+    padding: 0 0 40px 0px;
+    /*transform: translateX(var(--home-page-secondary-delta-x-right));*/
 }
 
-.lifestyle-page-img-container {
-    height: 100%;
-    margin: 0 100px 0 0;
+.home-2-page-img-container {
+    height: 50%;
+    margin: 0 0px 0 0;
 }
 
-.lifestyle-page-text-container {
+.home-2-page-text-container {
     display: flex;
     flex-direction: column;
-    width: 38%;
-    margin: 0 0 0 100px;
+    /*width: 38%;*/
+    margin: 0 0 0 170px;
 }
 
-.lifestyle-page-img-container img {
-    width: 100%;
-    height: 100%;
+.home-2-page-img-container img {
+    /*width: 75%;*/
+    /*height: 50%;*/
 }
 
-.lifestyle-page-text-container h2 {
+.home-2-page-text-container h2 {
     font-size: 40pt;
     line-height: 40pt;
     font-weight: 350;
@@ -70,7 +78,7 @@
     margin: 0 0 10px 0;
 }
 
-.lifestyle-page-text-container p {
+.home-2-page-text-container p {
     font-size: 14pt;
     line-height: 15.5pt;
     color: var(--primary-text-colour);
@@ -78,7 +86,7 @@
 
 .show {
     opacity: 1;
-    transform: translateX(0);
+    /*transform: translateX(0);*/
 }
 
 @keyframes img-enter-from-top {

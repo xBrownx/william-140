@@ -33,9 +33,7 @@
     height: 100%;
     padding: 0;
     margin: 0;
-    ;
 }
-
 
 .home-page-down-arrow-container {
     position: absolute;
@@ -55,7 +53,6 @@
     align-items: end;
     justify-content: center;
     padding: 0px 10px;
-
 }
 
 .home-page-down-arrow {

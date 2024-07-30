@@ -1,0 +1,66 @@
+.main-parallax {
+    overflow: hidden;
+    display: flex;
+}
+
+.parallax-nav {
+    z-index: 5;
+    height: 91px;
+}
+
+.nav-bar-wrapper {
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    background: var(--primary-bg-colour);
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar-container {
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    width: 1440px
+}
+
+.nav-bar-title-container {
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    padding: 0 0 0 32px;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-bar-title-container:hover {
+    cursor: pointer;
+}
+
+.nav-bar-container ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0 32px 0 0;
+}
+
+.nav-bar-container li {
+    font-size: 16pt;
+    color: var(--primary-text-colour);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-bar-wrapper li:hover {
+    color: black;
+}
+
+li.link-active  {
+    color: black;
+}
+
+.page-wrapper {
+    padding: 91px 0 0 0;
+}
