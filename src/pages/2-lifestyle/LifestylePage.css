@@ -1,4 +1,5 @@
 .lifestyle-page-wrapper {
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     align-items: center;

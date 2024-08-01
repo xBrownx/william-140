@@ -20,8 +20,8 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin: 0;
-    transform: translateY(4.5%)
+    margin: 0 0 8% 0;
+    transform: translateY(0%)
 }
 
 .home-page-logo-wrapper {
@@ -64,5 +64,22 @@
     /*transform: translate(-50%, -50%);*/
     padding: 0 0 2% 0;
     transition: 0.4s;
+    animation: logoReveal 4s ease-in-out;
+}
+
+.home-page-1-bg-parallax {
+    animation: logoReveal 4s ease-in-out;
+}
+
+@keyframes logoReveal {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 

@@ -20,13 +20,21 @@ import FullPageVideo from "./FullPageVideo";
 import HomePageBg from "../pages/1-home/HomePageBg";
 
 
-
 function MainParallax() {
 
 
     const ref = useRef();
 
     const [currentPage, setCurrentPage] = useState(0);
+
+    const [mainOverflow, setMainOverflow] = useState("");
+
+    useEffect(() => {
+        setMainOverflow('hidden')
+        setTimeout(() => {
+            //setMainOverflow("")
+        }, 4000)
+    }, []);
 
     const scrollToRef = (page) => {
         ref.current.scrollTo(page)
@@ -40,13 +48,9 @@ function MainParallax() {
         console.log(page)
     }
 
-    useEffect(() => {
-
-    }, [])
-
     return (
         <div onWheel={(e) => handleScroll()}>
-            <div style={{height: "100vh"}} />
+            <div style={{height: "100vh"}}/>
 
 
             <Parallax
@@ -55,10 +59,11 @@ function MainParallax() {
                 ref={ref}
                 style={{
                     top: "0", left: "0", flexDirection: "column",
+                    overflow: mainOverflow
                 }}
             >
 
-            <NavBar
+                <NavBar
                     offset={1}
                     factor={1}
                     speed={0}
@@ -72,33 +77,37 @@ function MainParallax() {
                     toEnqire={() => scrollToRef(13.5)}
                 />
 
-                <HomePageBg offset={0} factor={0} sticky={{start: 0, end: 1}} />
+                <HomePageBg offset={0} factor={0} sticky={{start: 0, end: 1}}/>
 
-                <HomePage1 offset={0} factor={1} scrollTo={() => scrollToRef(1)} />
+                <HomePage1 offset={0} factor={1} scrollTo={() => {scrollToRef(1)
+                    // console.log("HELLLLLO")
 
-                <HomePage2 offset={1} factor={1.5} speed={0} />
+                    setMainOverflow("scroll");
+                }
+                }/>
+
+                <HomePage2 offset={1} factor={1.5} speed={0}/>
 
                 <FullPageVideo offset={2.5} factor={1} speed={0} sticky={{start: 1, end: 3.4}}/>
 
-                <LifestylePage offset={3.5} factor={1.5} speed={0} />
+                <LifestylePage offset={3.5} factor={1.5} speed={0}/>
 
-                <CarouselPage offset={5.1} factor={1} speed={0} />
+                <CarouselPage offset={5.1} factor={1} speed={0}/>
 
-                <DesignPage offset={5.8} factor={1.5} speed={0} />
+                <DesignPage offset={5.8} factor={1.5} speed={0}/>
 
-                <AmenitiesPage offset={7.5} factor={1.5} speed={0} />
+                <AmenitiesPage offset={7.5} factor={1.5} speed={0}/>
 
-                <HistoryPage offset={9} factor={1.5} speed={0} />
+                <HistoryPage offset={9} factor={1.5} speed={0}/>
 
-                <AvailabilityPage offset={10.5} factor={1.5} speed={0} />
+                <AvailabilityPage offset={10.5} factor={1.5} speed={0}/>
 
-                <AgencyPage offset={12} factor={1.3} speed={0} />
+                <AgencyPage offset={12} factor={1.3} speed={0}/>
 
-                <EnquiryPage offset={13.3} factor={0.85} speed={0} />
+                <EnquiryPage offset={13.3} factor={0.85} speed={0}/>
 
 
             </Parallax>
-
 
 
         </div>

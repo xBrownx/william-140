@@ -1,12 +1,22 @@
 html, body {
     min-height:100%;
     background-color: var(--primary-bg-colour);
+
 }
 
 body{
-    height:100vh;
+    /*height:100vh;*/
+
 }
 
+body::-webkit-scrollbar {
+    display: none;
+
+}
+
+* {
+
+}
 
 :root {
     --primary-bg-colour: #162425;

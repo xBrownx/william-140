@@ -1,7 +1,7 @@
 import React from 'react';
 import landing from "../../assets/Landing-bg.png";
 import {ParallaxLayer} from "@react-spring/parallax";
-
+import './HomePage-1.css'
 function HomePageBg(props) {
     return (
         <ParallaxLayer
@@ -13,7 +13,7 @@ function HomePageBg(props) {
                 backgroundImage: `url(${landing})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "100%",
-                backgroundPosition: "50%",
+                backgroundPosition: "50% 100%",
                 minWidth: "939px",
                 // backgroundPositionY: "100%",
                 zIndex: -1,
