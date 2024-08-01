@@ -22,7 +22,7 @@ function DesignPage(props) {
                                 The essence of Melbourne’s vibrant lifestyle,offering a<br/>
                                 perfect blend of convenience, culture, and connectivity.
                             </p>
-                            <div className="design-page-content-padding"/>
+
                         </div>
 
                     </div>

@@ -51,7 +51,7 @@ function MainParallax() {
 
             <Parallax
                 className="main-parallax"
-                pages={14}
+                pages={14.3}
                 ref={ref}
                 style={{
                     top: "0", left: "0", flexDirection: "column",
@@ -66,10 +66,10 @@ function MainParallax() {
                     page={currentPage}
                     toTop={() => scrollToRef(0)}
                     toLifestyle={() => scrollToRef(3.5)}
-                    toDesign={() => scrollToRef(6)}
+                    toDesign={() => scrollToRef(5.8)}
                     toAmenities={() => scrollToRef(7.5)}
                     toAvailibility={() => scrollToRef(10.5)}
-                    toEnqire={() => scrollToRef(13)}
+                    toEnqire={() => scrollToRef(13.5)}
                 />
 
                 <HomePageBg offset={0} factor={0} sticky={{start: 0, end: 1}} />
@@ -92,9 +92,10 @@ function MainParallax() {
 
                 <AvailabilityPage offset={10.5} factor={1.5} speed={0} />
 
-                <AgencyPage offset={12} factor={1} speed={0} />
+                <AgencyPage offset={12} factor={1.3} speed={0} />
 
-                <EnquiryPage offset={13} factor={1} speed={0} />
+                <EnquiryPage offset={13.3} factor={0.85} speed={0} />
+
 
             </Parallax>
 

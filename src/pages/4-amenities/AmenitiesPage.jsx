@@ -1,7 +1,10 @@
 import React from 'react';
-import img from "../../assets/Rectangle 21 (1).png";
 import './AmenitiesPage.css'
 import {ParallaxLayer} from "@react-spring/parallax";
+
+import bikeStorage from '../../assets/BikeStorage.png'
+import cafe from '../../assets/Cafe.png'
+import resort from '../../assets/Resort.png'
 
 function AmenitiesPage(props) {
 
@@ -44,12 +47,14 @@ function AmenitiesPage(props) {
                                 <ListItem
                                     heading={"Bike Storage and Workshop"}
                                     subHeading={"Approx. 420 sqm"}
+                                    imgSrc={bikeStorage}
                                     onClick={(e) => setImgSrc("Bike Storage and Workshop")}
                                 />
 
                                 <ListItem
                                     heading={"Cafe"}
                                     subHeading={""}
+                                    imgSrc={cafe}
                                     onClick={(e) => setImgSrc("Cafe")}
                                 />
 
@@ -62,6 +67,7 @@ function AmenitiesPage(props) {
                                 <ListItem
                                     heading={"Resort Style Change Facilities"}
                                     subHeading={""}
+                                    imgSrc={resort}
                                     onClick={(e) => setImgSrc("Resort Style Change Facilities")}
                                 />
 
@@ -83,7 +89,13 @@ function AmenitiesPage(props) {
 const ListItem = (props) => {
     return (
         <li onClick={props.onClick}>
-            <div className="amenities-list-img"/>
+
+            <div className="amenities-list-img">
+                { props.imgSrc &&
+                <img src={props.imgSrc} alt={"img"} />
+                    }
+            </div>
+
             <div className="list-item-container">
                 <h3>{props.heading}</h3>
                 <p>{props.subHeading}</p>

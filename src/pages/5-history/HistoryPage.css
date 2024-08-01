@@ -10,44 +10,58 @@
 
 .history-page-container {
     width: 1440px;
+    display: flex;
+    flex-direction: column;
 }
 
 .history-page-title-wrapper {
     width: 100%;
-    padding: 0 64px 0 64px;
     display: flex;
     flex-direction: row;
     margin: 0 0 0 0;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.history-page-title-wrapper h2 {
-    font-size: 14pt;
-    font-weight: bold;
+.history-page-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-page-title h2 {
+    font-size: 14px;
     color: var(--primary-text-colour);
-    padding: 0;
-    margin: 0;
+    font-family: 'SuisseIntl-Bold', serif;
+    padding: 0 0 0 64px;
+    margin: 0 0 10px 0;
 }
 
-.history-page-title-wrapper h1 {
-    padding: 0 0 0 0;
+.history-page-title h1 {
+    padding: 0 0 0 64px;
     margin: 0 0 0 0;
-    font-size: 88pt;
-    line-height: 88pt;
+    font-size: 88px;
+    line-height: 88px;
     font-weight: 300;
     color: var(--secondary-text-colour);
+    font-family: 'TWKEverett-Light', serif;
 }
 
 .history-page-content, .history-page-title {
-    width: 100%;
+    width:100%;
+    display: flex;
+    box-sizing: border-box;
 }
 
 .history-page-content {
     border-left: 1px solid var(--primary-text-colour);
-    padding: 120px 0 0 36px;
+    padding: 120px 0 0 0;
 }
 
 .history-page-content p {
-    font-size: 16pt;
+    width:100%;
+    padding: 0 0 0 36px;
+    font-size: 16px;
+    font-family: 'SuisseIntl-Regular', serif;
     color: #FFF;
 }
 

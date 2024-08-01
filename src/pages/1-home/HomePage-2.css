@@ -19,10 +19,11 @@
 .home-2-page-title-wrapper h1 {
     padding: 120px 0 0 0;
     margin: 0;
-    font-size: 120pt;
-    line-height: 120pt;
+    font-size: 128px;
+    line-height: 128px;
     font-weight: 100;
     color: var(--primary-text-colour);
+    font-family: 'TWKEverett-Light', serif;
 }
 
 .home-2-page-content-wrapper {
@@ -61,7 +62,7 @@
     display: flex;
     flex-direction: column;
     /*width: 38%;*/
-    margin: 0 0 0 170px;
+    margin: 0 0 0 100px;
 }
 
 .home-2-page-img-container img {
@@ -70,18 +71,21 @@
 }
 
 .home-2-page-text-container h2 {
-    font-size: 40pt;
-    line-height: 40pt;
-    font-weight: 350;
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 200;
     color: var(--secondary-text-colour);
     padding: 0;
     margin: 0 0 10px 0;
+    font-family: 'TWKEverett-Light', serif;
 }
 
 .home-2-page-text-container p {
-    font-size: 14pt;
-    line-height: 15.5pt;
+    font-size: 18px;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
     color: var(--primary-text-colour);
+    font-family: 'SuisseIntl-Regular', serif;
 }
 
 .show {

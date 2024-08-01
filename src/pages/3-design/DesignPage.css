@@ -18,25 +18,26 @@
 }
 
 .design-page-title-wrapper h2 {
-    font-size: 14pt;
-    font-weight: bold;
+    font-size: 14px;
     color: var(--primary-text-colour);
+    font-family: 'SuisseIntl-Bold', serif;
     padding: 0;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 .design-page-title-wrapper h1 {
     padding: 0 0 0 0;
     margin: 0 0 0 0;
-    font-size: 88pt;
-    line-height: 88pt;
+    font-size: 88px;
+    line-height: 88px;
     font-weight: 300;
     color: var(--secondary-text-colour);
+    font-family: 'TWKEverett-Light', serif;
 }
 
 .design-page-content-wrapper {
     border-left: 1px solid var(--primary-text-colour);
-    padding: 0 0 0 36px;
+    padding: 0 0 120px 36px;
     margin: 12px 0 50px 0;
 }
 
@@ -44,10 +45,11 @@
     padding: 0;
     margin: 0;
     height: 100%;
-    font-size: 18pt;
-    line-height: 18pt;
-    font-weight: 300;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 100;
     color: var(--primary-text-colour);
+    font-family: 'SuisseIntl-Regular', serif;
 }
 
 .design-page-content-padding {

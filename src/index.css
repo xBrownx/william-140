@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+    font-family: 'SuisseIntl-Bold';
+    src: local('SuisseIntl-Bold'), url(./fonts/SuisseIntl-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Light';
+    src: local('SuisseIntl-Light'), url(./fonts/SuisseIntl-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Regular';
+    src: local('SuisseIntl-Regular'), url(./fonts/SuisseIntl-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'TWKEverett-Light';
+    src: local('TWKEverett-Light'), url(./fonts/TWKEverett-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'TWKEverett-Regular';
+    src: local('TWKEverett-Regular'), url(./fonts/TWKEverett-Regular.ttf) format('truetype');
+}
