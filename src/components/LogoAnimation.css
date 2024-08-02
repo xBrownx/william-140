@@ -1,4 +1,4 @@
-.home-page-logo-title {
+.landing-page-logo-title {
     /*position: absolute;*/
     margin: 0;
     padding: 0;
@@ -37,21 +37,21 @@
     align-content: end;
 }
 
-.home-page-logo, .home-page-title {
+.landing-page-logo, .landing-page-title {
     height: 100%;
     padding: 0;
     margin: 0;
 
 }
 
-.home-page-title {
+.landing-page-title {
     width: 100%;
     padding: 0;
     margin: 50px 0 0 0;
     display: flex;
     justify-content: end;
     align-items: end;
-    animation: logoReveal 4s ease-in-out;
+    /*animation: logoReveal 4s ease-in-out;*/
 }
 
 .anim-div {
@@ -60,7 +60,7 @@
 }
 
 .anim-border {
-    animation: progressBarBorder 4s ease-in-out;
+    /*animation: progressBarBorder 4s ease-in-out;*/
     position: absolute;
     width: 100%;
     height: 100%;
@@ -77,9 +77,8 @@
 }
 
 .anim-div svg {
-
     width: auto;
-    animation: logoReveal 4s ease-in-out;
+    /*animation: logoReveal 4s ease-in-out;*/
     animation-fill-mode: both;
 }
 

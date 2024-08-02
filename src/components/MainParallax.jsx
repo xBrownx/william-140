@@ -3,12 +3,12 @@ import React, {useEffect, useRef, useState} from "react";
 import landing from '../assets/Landing-bg.png'
 import collage from '../assets/Collage.png'
 
-import NavBar from "./NavBar";
-import HomePage1 from "../pages/1-home/HomePage-1";
-import HomePage2 from "../pages/1-home/HomePage-2";
+import NavBar from "../components/NavBar";
+import Landing from "../pages/0-landing/Landing";
+import Home from "../pages/1-home/Home";
 
 import './MainParallax.css'
-import LifestylePage from "../pages/2-lifestyle/LifestylePage";
+import Lifestyle from "../pages/2-lifestyle/Lifestyle";
 import DesignPage from "../pages/3-design/DesignPage";
 import AmenitiesPage from "../pages/4-amenities/AmenitiesPage";
 import AvailabilityPage from "../pages/6-availability/AvailabilityPage";
@@ -17,100 +17,142 @@ import AgencyPage from "../pages/7-agency/AgencyPage";
 import EnquiryPage from "../pages/8-enqiry/EnquiryPage";
 import CarouselPage from "./Carousel";
 import FullPageVideo from "./FullPageVideo";
-import HomePageBg from "../pages/1-home/HomePageBg";
+import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
 
 
 function MainParallax() {
 
+    const pages = 15
 
-    const ref = useRef();
+    const ref = useRef(null);
+    const targetRef = useRef(null);
 
     const [currentPage, setCurrentPage] = useState(0);
-
     const [mainOverflow, setMainOverflow] = useState("");
 
-    useEffect(() => {
-        setMainOverflow('hidden')
-        setTimeout(() => {
-            //setMainOverflow("")
-        }, 4000)
-    }, []);
+
+    const {scrollYProgress} = useScroll({
+        layoutEffect: false,
+        target: targetRef,
+    });
+
+    useMotionValueEvent(scrollYProgress, "change",
+        (latest) => {
+            console.log(`yPos == ${latest}`);
+        })
+
+    // useEffect(() => {
+    //     // setMainOverflow('hidden')
+    //     setTimeout(() => {
+    //         //setMainOverflow("")
+    //     }, 4000)
+    // }, []);
 
     const scrollToRef = (page) => {
         ref.current.scrollTo(page)
         setCurrentPage(page)
-        console.log(page)
     }
 
-    const handleScroll = () => {
-        let page = ref.current.current / ref.current.space
-        setCurrentPage(page)
-        console.log(page)
-    }
+    // const handleScroll = () => {
+    //     let page = ref.current.current / ref.current.space
+    //     setCurrentPage(page)
+    // }
 
     return (
-        <div onWheel={(e) => handleScroll()}>
-            <div style={{height: "100vh"}}/>
+        // <div onWheel={(e) => handleScroll()}>
+        <Parallax
+            className="main-parallax"
+            pages={pages}
+            ref={ref}
+            style={{
+                top: "0", left: "0", flexDirection: "column",
+                overflow: mainOverflow
+            }}
+        >
 
+            <NavBar
+                offset={1}
+                factor={1}
+                speed={0}
+                sticky={{start: 1, end: 16}}
+                page={currentPage}
+                toTop={() => scrollToRef(0)}
+                toLifestyle={() => scrollToRef(3.5)}
+                toDesign={() => scrollToRef(5.8)}
+                toAmenities={() => scrollToRef(7.5)}
+                toAvailibility={() => scrollToRef(10.5)}
+                toEnqire={() => scrollToRef(13.5)}
+            />
 
-            <Parallax
-                className="main-parallax"
-                pages={14.3}
-                ref={ref}
+            <ParallaxLayer
+                className="home-page-1-bg-parallax"
+                sticky={{start: 0, end: 0.5}}
                 style={{
-                    top: "0", left: "0", flexDirection: "column",
-                    overflow: mainOverflow
-                }}
-            >
+                    backgroundImage: `url(${landing})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "100%",
+                    backgroundPosition: "50% 100%",
+                    minWidth: "939px",
+                    // backgroundPositionY: "100%",
+                    zIndex: -1,
+                }}/>
 
-                <NavBar
-                    offset={1}
-                    factor={1}
-                    speed={0}
-                    sticky={{start: 1, end: 16}}
-                    page={currentPage}
-                    toTop={() => scrollToRef(0)}
-                    toLifestyle={() => scrollToRef(3.5)}
-                    toDesign={() => scrollToRef(5.8)}
-                    toAmenities={() => scrollToRef(7.5)}
-                    toAvailibility={() => scrollToRef(10.5)}
-                    toEnqire={() => scrollToRef(13.5)}
-                />
-
-                <HomePageBg offset={0} factor={0} sticky={{start: 0, end: 1}}/>
-
-                <HomePage1 offset={0} factor={1} scrollTo={() => {scrollToRef(1)
-                    // console.log("HELLLLLO")
-
+            <Landing
+                offset={0} factor={1}
+                scrollTo={() => {
+                    scrollToRef(1);
                     setMainOverflow("scroll");
                 }
                 }/>
 
-                <HomePage2 offset={1} factor={1.5} speed={0}/>
+            <ParallaxLayer
+                ref={targetRef}
+                className="home-2-parallax"
+                offset={1}
+                style={{background: `var(--primary-bg-colour)`, zIndex: 1}}
+            >
+                <div className="home-2 home-2-title-container">
+                    <div className="home-2 home-2-title-wrapper">
+                        <h1 style={{}}>
+                            An Iconic Landmark<br/>
+                            in Melbourne
+                        </h1>
+                    </div>
+                </div>
 
-                <FullPageVideo offset={2.5} factor={1} speed={0} sticky={{start: 1, end: 3.4}}/>
+            </ParallaxLayer>
 
-                <LifestylePage offset={3.5} factor={1.5} speed={0}/>
+            <Home
+                // containerRef={ref}
+                offset={1}
+                factor={1}
+                speed={0}
+                pages={pages}
+            />
 
-                <CarouselPage offset={5.1} factor={1} speed={0}/>
+            <FullPageVideo offset={2} factor={2} speed={0} sticky={{start: 1, end: 4}}/>
 
-                <DesignPage offset={5.8} factor={1.5} speed={0}/>
+            <Lifestyle offset={3} factor={1} speed={0}/>
 
-                <AmenitiesPage offset={7.5} factor={1.5} speed={0}/>
+            <CarouselPage offset={4} factor={1} speed={0}/>
 
-                <HistoryPage offset={9} factor={1.5} speed={0}/>
+            <DesignPage offset={5} factor={1} speed={0}/>
 
-                <AvailabilityPage offset={10.5} factor={1.5} speed={0}/>
+            <AmenitiesPage offset={6} factor={1} speed={0}/>
 
-                <AgencyPage offset={12} factor={1.3} speed={0}/>
+            <HistoryPage offset={7} factor={1} speed={0}/>
 
-                <EnquiryPage offset={13.3} factor={0.85} speed={0}/>
+            <AvailabilityPage offset={8} factor={1} speed={0}/>
+
+            <AgencyPage offset={9} factor={1} speed={0}/>
+
+            <EnquiryPage offset={10} factor={1} speed={0}/>
 
 
-            </Parallax>
+        </Parallax>
 
 
-        </div>
+        // </div>
     )
 }
 

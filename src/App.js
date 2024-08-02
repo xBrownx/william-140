@@ -1,18 +1,27 @@
 import './App.css';
-import MainParallax from "./components/MainParallax";
+import React from "react";
+import {useEffect, useRef, useState} from "react";
+
+import Landing from "./pages/0-landing/Landing";
+import Home from "./pages/1-home/Home";
+import NavBar from "./components/NavBar";
 
 function App() {
 
-    const handleScroll = (event) => {
-    console.log('User scrolled:', event.target.scrollTop);
+    const mainRef = useRef();
+    const landingRef = useRef();
+    const homeRef = useRef();
 
-  };
+    return (
+        <div className="App">
+            <div ref={mainRef} className="app-container">
+                <Landing reff={landingRef} scrollTo={() => { homeRef.current.scrollIntoView({behavior: "smooth"}); }} />
+                <NavBar />
+                <Home reff={homeRef} />
 
-  return (
-    <div className="App" onScroll={handleScroll}>
-      <MainParallax  />
-    </div>
-  );
+            </div>
+        </div>
+    );
 }
 
 export default App;

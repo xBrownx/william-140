@@ -1,0 +1,38 @@
+/*.home-2 {*/
+/*    transition: all 0.8s ease;*/
+/*    opacity: 0;*/
+/*    transform-style: preserve-3d;*/
+/*}*/
+
+/*.home-2.home-2-title-wrapper {*/
+/*    transform: translate(400px, 0);*/
+/*}*/
+
+/*.home-2.home-2-img-wrapper {*/
+/*    transition-delay: 150ms;*/
+/*    transform: translate(-300px, 0);*/
+/*}*/
+
+/*.home-2.home-2-text-container h2 {*/
+/*    transition-delay: 150ms;*/
+/*    transform: translate(0, -600px);*/
+/*}*/
+
+/*.home-2.home-2-text-container p {*/
+/*    transition-delay: 150ms;*/
+/*    transform: translate(0, 300px);*/
+/*}*/
+
+/*.home-2.show,*/
+/*.home-2.show h2,*/
+/*.home-2.show p {*/
+/*    transform: translate(0, 0);*/
+/*    opacity: 1;*/
+/*}*/
+
+
+
+
+
+
+

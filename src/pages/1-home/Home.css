@@ -1,0 +1,121 @@
+.home-container {
+    position: relative;
+    height:100vh;
+    background-color: var(--primary-bg-colour);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.home-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1440px;
+    box-sizing: border-box;
+}
+
+.home-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.home-title-wrapper {
+    padding: 0 64px 0 64px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.home-title-wrapper h1 {
+    padding: 7vh 0 0 0;
+    margin: 0;
+    font-size: 128px;
+    line-height: 128px;
+    font-weight: 100;
+    color: var(--primary-text-colour);
+    font-family: 'TWKEverett-Light', serif;
+}
+
+/* content */
+
+.home-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+}
+
+.home-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.home-img-container,
+.home-text-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 0 0 25% 0;
+    box-sizing: border-box;
+}
+
+.home-text-wrapper,
+.home-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 0;
+    width: 100%;
+}
+
+.home-img-wrapper img {
+    width: 100%;
+    /*height: 50%;*/
+}
+
+.home-text-wrapper h2 {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 200;
+    color: var(--secondary-text-colour);
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-family: 'TWKEverett-Light', serif;
+}
+
+.home-text-wrapper p {
+    font-size: 18px;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    color: var(--primary-text-colour);
+    font-family: 'SuisseIntl-Regular', serif;
+}
+
+@media screen and (min-width: 1921px) {
+    .home-title-wrapper h1 {
+        /*padding: 10vh 0 0 0;*/
+    }
+
+    .home-content-wrapper {
+        /*padding: 40vh 0 0 0;*/
+    }
+
+    .home-img-container img {
+        /*width: 100%;*/
+        /*object-fit: cover;*/
+    }
+}
+

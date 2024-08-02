@@ -75,8 +75,3 @@
     width: 100%;
     height: auto;
 }
-
-.show {
-    opacity: 1;
-    transform: translateX(0);
-}

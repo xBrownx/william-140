@@ -1,22 +1,18 @@
 html, body {
     min-height:100%;
-    background-color: var(--primary-bg-colour);
+    /*background-color: var(--primary-bg-colour);*/
 
 }
 
 body{
     /*height:100vh;*/
-
 }
 
 body::-webkit-scrollbar {
-    display: none;
-
+    /*display: none;*/
 }
 
-* {
 
-}
 
 :root {
     --primary-bg-colour: #162425;
@@ -29,5 +25,14 @@ body::-webkit-scrollbar {
 }
 
 .main-parallax::-webkit-scrollbar {
-  display: none;
+
+}
+
+.app-container::-webkit-scrollbar {
+    /*display: none;*/
+}
+
+.link:hover {
+    cursor: pointer;
+    filter: invert(1);
 }

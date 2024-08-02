@@ -1,5 +1,4 @@
-.lifestyle-page-wrapper {
-    scroll-snap-align: start;
+.lifestyle-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,16 +8,16 @@
     margin: 91px 0 0 0;
 }
 
-.lifestyle-page-container {
+.lifestyle-container {
     width: 1440px;
 }
 
-.lifestyle-page-title-wrapper {
+.lifestyle-title-wrapper {
     width: 100%;
     padding: 0 64px 0 64px;
 }
 
-.lifestyle-page-title-wrapper h2 {
+.lifestyle-title-wrapper h2 {
     font-size: 14px;
     color: var(--primary-text-colour);
     font-family: 'SuisseIntl-Bold', serif;
@@ -26,7 +25,7 @@
     margin: 0;
 }
 
-.lifestyle-page-title-wrapper h1 {
+.lifestyle-title-wrapper h1 {
     padding: 0 0 0 0;
     margin: 0 0 0 0;
     font-size: 88px;
@@ -36,13 +35,13 @@
     font-family: 'TWKEverett-Light', serif;
 }
 
-.lifestyle-page-content-wrapper {
+.lifestyle-content-wrapper {
     border-left: 1px solid var(--primary-text-colour);
     padding: 0 0 0 36px;
     margin: 12px 0 50px 0;
 }
 
-.lifestyle-page-content-wrapper p {
+.lifestyle-content-wrapper p {
     padding: 0;
     margin: 0;
     height: 100%;
@@ -53,11 +52,11 @@
     font-family: 'SuisseIntl-Regular', serif;
 }
 
-.lifestyle-page-content-padding {
+.lifestyle-content-padding {
     height: 72px;
 }
 
-.lifestyle-page-img-wrapper {
+.lifestyle-img-wrapper {
     width: 100%;
     display: flex;
     overflow: hidden;
@@ -66,11 +65,6 @@
     /*padding: 0 64px 0 64px;*/
 }
 
-.lifestyle-page-img-wrapper img {
+.lifestyle-img-wrapper img {
     object-fit: cover;
-}
-
-.show {
-    opacity: 1;
-    transform: translateX(0);
 }

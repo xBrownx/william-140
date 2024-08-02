@@ -13,19 +13,14 @@ function LogoAnimation(props) {
                         <div className="anim-div">
                             <div className="anim-progress"/>
                             <div className="anim-border"/>
-                            <LogoTop className="home-page-logo"/>
+                            <LogoTop className="landing-logo"/>
                         </div>
                     </div>
                     <div className="logo-half bottom">
-                        <Title className="home-page-title"/>
+                        <Title className="landing-title"/>
                     </div>
-                    {/*<Logo className="home-page-logo"/>*/}
                 </div>
 
-                {/*<Title className="home-page-title"/>*/}
-                {/*<div className="home-page-logo-title">*/}
-
-                {/*</div>*/}
             </div>
         </>
     );
