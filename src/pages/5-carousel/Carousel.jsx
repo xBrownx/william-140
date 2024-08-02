@@ -8,8 +8,8 @@ import 'swiper/css/pagination';
 
 import './Carousel.css'
 
-import s1 from '../assets/Landing-bg.png'
-import {ParallaxLayer} from "@react-spring/parallax";
+import s1 from '../../assets/Landing-bg.png'
+import Page from "../../components/Page";
 
 function CarouselPage(props) {
 
@@ -43,7 +43,6 @@ function CarouselPage(props) {
     });
 
 
-
     function getPreviousIndex() {
         setPreviousIndex(swiper.realIndex);
     }
@@ -53,16 +52,8 @@ function CarouselPage(props) {
     });
 
     return (
-        <ParallaxLayer
-            className="carousel-page-parallax"
-            offset={props.offset}
-            factor={props.factor}
-            speed={props.speed}
-            style={{
-                background: `var(--primary-bg-colour)`,
-            }}
-        >
-            <div className="swiper-container" style={{zIndex: 1}}>
+        <Page pageRef={props.pageRef} size={"single-page"}>
+            <div ref={props.pageRef} className="swiper-container" style={{zIndex: 1}}>
                 <div className="swiper">
                     <div className="swiper-wrapper">
                         <div className="swiper-slide">
@@ -84,7 +75,7 @@ function CarouselPage(props) {
                     <div className="swiper-scrollbar"></div>
                 </div>
             </div>
-        </ParallaxLayer>
+        </Page>
     );
 }
 

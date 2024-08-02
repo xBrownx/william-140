@@ -1,0 +1,14 @@
+
+
+.lifestyle-img-wrapper {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: auto;
+    object-fit: cover;
+    /*padding: 0 64px 0 64px;*/
+}
+
+.lifestyle-img-wrapper img {
+    object-fit: cover;
+}

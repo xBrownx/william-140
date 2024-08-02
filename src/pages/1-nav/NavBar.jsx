@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './NavBar.css'
-import {ReactComponent as Title} from "../assets/Title.svg";
+import {ReactComponent as Title} from "../../assets/Title.svg";
 
 function NavBar(props) {
 
@@ -15,20 +15,31 @@ function NavBar(props) {
                     <Title className="nav-bar-title" onClick={props.toTop}/>
                 </div>
                 <ul>
-                    <li onClick={props.toTop}>Top</li>
+                    <li onClick={() => props.pageRefs.mainRef.current.scrollIntoView({behavior: "smooth"})}>
+                        Top
+                    </li>
+
                     <li className={isInPage(props.page, 3.4, 5.8) ? "link-active" : ""}
-                        onClick={props.toLifestyle}>Lifestyle
+                        onClick={() => props.pageRefs.lifestyleRef.current.scrollIntoView({behavior: "smooth"})}
+                    >
+                        Lifestyle
                     </li>
                     <li className={isInPage(props.page, 5.8, 7.5) ? "link-active" : ""}
-                        onClick={props.toDesign}>Design
+                        onClick={() => props.pageRefs.designRef.current.scrollIntoView({behavior: "smooth"})}
+                    >
+                        Design
                     </li>
                     <li className={isInPage(props.page, 7.5, 9) ? "link-active" : ""}
-                        onClick={props.toAmenities}>Amenities
+                        onClick={() => props.pageRefs.amenitiesRef.current.scrollIntoView({behavior: "smooth"})}>
+                        Amenities
                     </li>
                     <li className={isInPage(props.page, 10.5, 12) ? "link-active" : ""}
-                        onClick={props.toAvailibility}>Availability
+                        onClick={() => props.pageRefs.availabilitiesRef.current.scrollIntoView({behavior: "smooth"})}>
+                        Availability
                     </li>
-                    <li onClick={props.toEnqire}>Enquire</li>
+                    <li onClick={() => props.pageRefs.enquiryRef.current.scrollIntoView({behavior: "smooth"})}>
+                        Enquire
+                    </li>
                 </ul>
             </div>
         </div>

@@ -12,6 +12,9 @@ body::-webkit-scrollbar {
     /*display: none;*/
 }
 
+.App, .app-container {
+    position: relative;
+}
 
 
 :root {
@@ -36,3 +39,113 @@ body::-webkit-scrollbar {
     cursor: pointer;
     filter: invert(1);
 }
+
+
+.half-page {
+    height: 50vh;
+}
+
+.single-page {
+    height: 100vh;
+}
+
+.single-half-page {
+    height: 150vh;
+}
+
+.double-page {
+    height: 200vh;
+}
+
+.page-container {
+    position: relative;
+    background-color: var(--primary-bg-colour);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1440px;
+    box-sizing: border-box;
+}
+
+.sticky-page-container {
+    position: relative;
+    height: 100vh;
+}
+
+.sticky-page-wrapper {
+
+}
+
+.primary-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 91px 0 0 0;
+}
+
+.primary-title-wrapper {
+    width: 1440px;
+    padding: 0 64px 0 64px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.primary-title-wrapper h2 {
+    font-size: 14px;
+    color: var(--primary-text-colour);
+    font-family: 'SuisseIntl-Bold', serif;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-title-wrapper h1 {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    font-size: 88px;
+    line-height: 88px;
+    font-weight: 300;
+    color: var(--secondary-text-colour);
+    font-family: 'TWKEverett-Light', serif;
+}
+
+.primary-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 64px 0 64px;
+}
+
+.primary-content-wrapper {
+    width: 1440px;
+    padding: 0 64px 64px 36px;
+    margin: 0 0 35px 0;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-left: 1px solid var(--primary-text-colour);
+}
+
+.primary-content-wrapper p {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 100;
+    color: var(--primary-text-colour);
+    font-family: 'SuisseIntl-Regular', serif;
+}
+
+

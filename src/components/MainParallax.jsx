@@ -3,20 +3,20 @@ import React, {useEffect, useRef, useState} from "react";
 import landing from '../assets/Landing-bg.png'
 import collage from '../assets/Collage.png'
 
-import NavBar from "../components/NavBar";
+import NavBar from "../pages/1-nav/NavBar";
 import Landing from "../pages/0-landing/Landing";
-import Home from "../pages/1-home/Home";
+import Home from "../pages/2-home/Home";
 
 import './MainParallax.css'
-import Lifestyle from "../pages/2-lifestyle/Lifestyle";
-import DesignPage from "../pages/3-design/DesignPage";
-import AmenitiesPage from "../pages/4-amenities/AmenitiesPage";
-import AvailabilityPage from "../pages/6-availability/AvailabilityPage";
-import HistoryPage from "../pages/5-history/HistoryPage";
-import AgencyPage from "../pages/7-agency/AgencyPage";
-import EnquiryPage from "../pages/8-enqiry/EnquiryPage";
-import CarouselPage from "./Carousel";
-import FullPageVideo from "./FullPageVideo";
+import Lifestyle from "../pages/4-lifestyle/Lifestyle";
+import DesignPage from "../pages/6-design/DesignPage";
+import AmenitiesPage from "../pages/7-amenities/AmenitiesPage";
+import AvailabilityPage from "../pages/9-availability/AvailabilityPage";
+import HistoryPage from "../pages/8-history/HistoryPage";
+import AgencyPage from "../pages/10-agency/AgencyPage";
+import EnquiryPage from "../pages/11-enqiry/EnquiryPage";
+import CarouselPage from "../pages/5-carousel/Carousel";
+import FullPageVideo from "../pages/3-video/FullPageVideo";
 import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
 
 
