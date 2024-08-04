@@ -3,14 +3,24 @@ import './AvailabilityPage.css'
 import {ReactComponent as Img} from "../../assets/Group 5339.svg";
 import {ReactComponent as Dld} from "../../assets/download.svg";
 import Page from "../../components/Page";
+import {SecondaryTitleVariant} from "../../components/TitleVariants";
+import {useHomeAnim} from "../../hooks/HomeAnim";
+import {ScrollConst} from "../../util/PageRefs";
 
 function AvailabilityPage(props) {
-    return (
-        <Page pageRef={props.pageRef} size={"single-page"}>
 
-            <div className="availability-page-title-wrapper">
-                <h2>AVAILABILITY</h2>
-                <h1>Your Future Workplace</h1>
+    const anim = useHomeAnim(props.mainRef, ScrollConst.availabilityHead, ScrollConst.homeBody);
+
+    return (
+        <Page pageRef={props.pageRef} size={"page-100"}>
+
+            <SecondaryTitleVariant
+                subHeading={"AVAILABILITY"}
+                heading={"Your Future Workplace"}
+                anim={anim}
+            />
+
+            <div className="primary-content-container">
                 <div className="availability-page-content-wrapper">
                     <table>
                         <thead>

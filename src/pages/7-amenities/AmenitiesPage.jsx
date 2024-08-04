@@ -4,21 +4,31 @@ import bikeStorage from '../../assets/BikeStorage.png'
 import cafe from '../../assets/Cafe.png'
 import resort from '../../assets/Resort.png'
 import Page from "../../components/Page";
+import {motion} from "framer-motion"
+import {PrimaryTitle} from "../../components/TitleVariants";
+import {useHeadingAnim} from "../../hooks/Anim";
+import {ScrollConst} from "../../util/PageRefs";
 
 function AmenitiesPage(props) {
 
     const [imgSrc, setImgSrc] = React.useState("Render");
 
-    return (
+    const anim = useHeadingAnim(
+        props.mainRef,
+        ScrollConst.amenitiesHead,
+        [300, 350, 350]
+    )
 
-        <Page pageRef={props.pageRef} size={"single-half-page"}>
-            <div className="amenities-page-title-wrapper">
-                <h2>AMENITIES</h2>
-                <h1>
-                    Inspired Services<br/>
-                    and Amenities
-                </h1>
-            </div>
+    return (
+        <Page pageRef={props.pageRef} size={"page-150"}>
+
+            <PrimaryTitle
+                subHeading={"AMENITIES"}
+                headOne={"Inspired Services"}
+                headTwo={"and Amenities"}
+                anim={anim}
+            />
+
             <div className="amenities-page-content-wrapper">
                 <div className="amenities-page-img-wrapper">
                     <p>{imgSrc}</p>

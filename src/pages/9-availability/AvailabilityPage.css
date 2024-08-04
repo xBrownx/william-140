@@ -1,46 +1,9 @@
-.availability-page-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    margin: 91px 0 0 0;
-}
-
-.availability-page-container {
-    width: 1440px;
-}
-
-.availability-page-title-wrapper {
-    width: 100%;
-    padding: 0 64px 0 64px;
-}
-
-.availability-page-title-wrapper h2 {
-    font-size: 14px;
-    color: var(--primary-text-colour);
-    font-family: 'SuisseIntl-Bold', serif;
-    padding: 0;
-    margin: 0 0 10px 0;
-}
-
-.availability-page-title-wrapper h1 {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    font-size: 88px;
-    line-height: 88px;
-    font-weight: 300;
-    color: var(--primary-text-colour);
-    font-family: 'TWKEverett-Light', serif;
-}
-
 .availability-page-content-wrapper {
     display: flex;
     height: 100%;
     width: auto;
-    margin: 50px 0 0 0;
-    padding: 50px 172px 200px 64px;
+    margin: 10px 0 0 0;
+    padding: 30px 172px 200px 64px;
     border-left: 1px solid var(--primary-text-colour);
 }
 

@@ -3,51 +3,63 @@ import './AgencyPage.css'
 import {ParallaxLayer} from "@react-spring/parallax";
 import agent from '../../assets/Rectangle 6.png'
 import Page from "../../components/Page";
+import {SecondaryTitle} from "../../components/TitleVariants";
+import {useHomeAnim} from "../../hooks/HomeAnim";
+import {ScrollConst} from "../../util/PageRefs";
 
 function AgencyPage(props) {
+
+    const anim = useHomeAnim(props.mainRef, ScrollConst.agencyHead, ScrollConst.homeBody);
+
     return (
-        <Page pageRef={props.pageRef} size={"single-page"}>
-            <div className="agency-page-title-wrapper">
-                <h1>Leasing Agency</h1>
-            </div>
-            <div className="agency-page-content-wrapper">
-                <h2>Agency Name</h2>
-                <div className="agency-page-content-container">
-                    <div className="agency-page-agents-container">
-                        <ul>
+        <Page pageRef={props.pageRef} size={"page-100"} >
 
-                            <Agent
-                                img={agent}
-                                agentName={"AGENT NAME"}
-                                phone={"+61 234 567 890"}
-                                email={"agent@agency.com.au"}
-                            />
+            <SecondaryTitle
+                variant={" agency"}
+                heading={"Leasing Agency"}
+                anim={anim}
+            />
 
-                            <Agent
-                                img={agent}
-                                agentName={"AGENT NAME"}
-                                phone={"+61 234 567 890"}
-                                email={"agent@agency.com.au"}
-                            />
+            <div className="primary-content-container">
+                <div className="agency-page-content-wrapper">
+                    <h2>Agency Name</h2>
+                    <div className="agency-page-content-container">
+                        <div className="agency-page-agents-container">
+                            <ul>
 
-                            <Agent
-                                img={agent}
-                                agentName={"AGENT NAME"}
-                                phone={"+61 234 567 890"}
-                                email={"agent@agency.com.au"}
-                            />
+                                <Agent
+                                    img={agent}
+                                    agentName={"AGENT NAME"}
+                                    phone={"+61 234 567 890"}
+                                    email={"agent@agency.com.au"}
+                                />
 
-                            <Agent
-                                img={agent}
-                                agentName={"AGENT NAME"}
-                                phone={"+61 234 567 890"}
-                                email={"agent@agency.com.au"}
-                            />
+                                <Agent
+                                    img={agent}
+                                    agentName={"AGENT NAME"}
+                                    phone={"+61 234 567 890"}
+                                    email={"agent@agency.com.au"}
+                                />
 
-                        </ul>
-                    </div>
-                    <div className="agency-page-blank">
+                                <Agent
+                                    img={agent}
+                                    agentName={"AGENT NAME"}
+                                    phone={"+61 234 567 890"}
+                                    email={"agent@agency.com.au"}
+                                />
 
+                                <Agent
+                                    img={agent}
+                                    agentName={"AGENT NAME"}
+                                    phone={"+61 234 567 890"}
+                                    email={"agent@agency.com.au"}
+                                />
+
+                            </ul>
+                        </div>
+                        <div className="agency-page-blank">
+
+                        </div>
                     </div>
                 </div>
             </div>

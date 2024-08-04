@@ -4,10 +4,15 @@ import {ParallaxLayer} from "@react-spring/parallax";
 
 import {ReactComponent as FooterLogo} from "../../assets/140W_Logo_RGB_Stacked_White.svg";
 import Page from "../../components/Page";
+import {SecondaryTitle} from "../../components/TitleVariants";
+import {useHomeAnim} from "../../hooks/HomeAnim";
+import {ScrollConst} from "../../util/PageRefs";
 
 function EnquiryPage(props) {
 
     const [inputs, setInputs] = useState({});
+
+    const anim = useHomeAnim(props.mainRef, ScrollConst.enquiryHead, ScrollConst.homeBody);
 
     const handleChange = (event) => {
         const name = event.target.name;
@@ -21,52 +26,57 @@ function EnquiryPage(props) {
     }
 
     return (
-        <Page pageRef={props.pageRef} size={"single-page"}>
-            <div className="enquiry-page-title-wrapper">
-                <h1>Enquiry</h1>
-            </div>
-            <div className="enquiry-page-content-container">
-                <div className="enquiry-form-container">
-                    <form onSubmit={handleSubmit}>
+        <Page pageRef={props.pageRef} size={"page-100"}>
 
-                        <div className="enquiry-2-row">
-                            <input
-                                type="text"
-                                name={"lastName"}
-                                value={inputs.lastName || ""}
-                                placeholder="Last Name"
-                                onChange={handleChange}
-                            />
-                            <input
-                                type="text"
-                                name={"firstName"}
-                                value={inputs.firstName || ""}
-                                placeholder="First Name"
-                                onChange={handleChange}
-                            />
-                        </div>
+            <SecondaryTitle
+                variant={" enquire"}
+                heading={"Enquiry"}
+                anim={anim}
+            />
 
-                        <div className="enquiry-1-row">
-                            <input
-                                type="text"
-                                name={"email"}
-                                value={inputs.email || ""}
-                                placeholder="Email"
-                                onChange={handleChange}
-                            />
-                        </div>
+            <div className="primary-content-container enquire">
+                <div className="primary-content-wrapper no-border centre-horiz">
+                    <div className="enquire-form-wrapper">
+                        <form onSubmit={handleSubmit}>
 
-                        <div className="enquiry-1-row">
-                            <input
-                                type="text"
-                                name={"phone"}
-                                value={inputs.phone || ""}
-                                placeholder="Phone Number"
-                                onChange={handleChange}
-                            />
-                        </div>
+                            <div className="enquiry-2-row">
+                                <input
+                                    type="text"
+                                    name={"lastName"}
+                                    value={inputs.lastName || ""}
+                                    placeholder="Last Name"
+                                    onChange={handleChange}
+                                />
+                                <input
+                                    type="text"
+                                    name={"firstName"}
+                                    value={inputs.firstName || ""}
+                                    placeholder="First Name"
+                                    onChange={handleChange}
+                                />
+                            </div>
 
-                        <div className="enquiry-1-row">
+                            <div className="enquiry-1-row">
+                                <input
+                                    type="text"
+                                    name={"email"}
+                                    value={inputs.email || ""}
+                                    placeholder="Email"
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="enquiry-1-row">
+                                <input
+                                    type="text"
+                                    name={"phone"}
+                                    value={inputs.phone || ""}
+                                    placeholder="Phone Number"
+                                    onChange={handleChange}
+                                />
+                            </div>
+
+                            <div className="enquiry-1-row">
                                     <textarea
                                         className="enquiry-input-msg"
                                         name={"message"}
@@ -75,16 +85,16 @@ function EnquiryPage(props) {
                                         onChange={handleChange}
                                         rows="4"
                                     />
-                        </div>
-                        <div className="submit-btn-wrapper">
-                            <button type="submit">Submit</button>
-                        </div>
-                    </form>
+                            </div>
+                            <div className="submit-btn-wrapper">
+                                <button type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-
             </div>
-            <div className="enquiry-page-footer-container">
-                <div className="enquiry-page-footer">
+            <div className="footer-container">
+                <div className="footer-wrapper">
                     <div className="footer-div left">
                         <p>Privacy Policy</p>
                     </div>

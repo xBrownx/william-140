@@ -3,25 +3,25 @@ import './HistoryPage.css'
 import img from "../../assets/140-William.png";
 import {ParallaxLayer} from "@react-spring/parallax";
 import Page from "../../components/Page";
+import {PrimaryTitleVariant} from "../../components/TitleVariants";
 
 function HistoryPage(props) {
     return (
-        <Page pageRef={props.pageRef} size={"single-half-page"}>
-            <div className="history-page-title-wrapper">
-                <div className="history-page-title">
-                    <h2>HISTORY</h2>
-                    <h1>Built in 1972</h1>
-                </div>
-                <div className="history-page-content">
+        <Page pageRef={props.pageRef} size={"page-150"}>
+
+            <PrimaryTitleVariant
+                subHeading={"HISTORY"}
+                heading={"Built in 1972"}
+            >
                     <p>
                         Designed by the renowned architectural firm Yuncken<br/>
                         Freeman, 140 William Street stands as a testament to<br/>
                         modernist architecture in Melbourne.
                     </p>
-                </div>
-            </div>
+            </PrimaryTitleVariant>
+
             <div className="history-page-img-container">
-                <img
+            <img
                     src={img}
                     alt={"history"}
                 />

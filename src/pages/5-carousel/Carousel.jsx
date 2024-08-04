@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Swiper from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Pagination} from 'swiper/modules';
 
 import 'swiper/css';
@@ -9,73 +9,36 @@ import 'swiper/css/pagination';
 import './Carousel.css'
 
 import s1 from '../../assets/Landing-bg.png'
+import s2 from '../../assets/140-William.png'
+import s3 from '../../assets/Frame 69.png'
 import Page from "../../components/Page";
+import {useSwiper} from "swiper/react";
 
 function CarouselPage(props) {
-
-    const [previousIndex, setPreviousIndex] = useState(0);
-
-    const swiper = new Swiper('.swiper', {
-        // configure Swiper to use modules
-        modules: [Navigation, Pagination],
-        slidesPerView: 2,
-        spaceBetween: 30,
-        centeredSlides: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
-        effect: 'creative',
-        creativeEffect: {
-            prev: {
-                transform: "scale(0.5)",
-            },
-            next: {
-                transform: "scale(0.5)",
-            },
-        },
-        initialSlide: previousIndex
-
-    });
-
-
-    function getPreviousIndex() {
-        setPreviousIndex(swiper.realIndex);
-    }
-
-    swiper.on('slideChange', function () {
-        getPreviousIndex();
-    });
-
     return (
-        <Page pageRef={props.pageRef} size={"single-page"}>
-            <div ref={props.pageRef} className="swiper-container" style={{zIndex: 1}}>
-                <div className="swiper">
-                    <div className="swiper-wrapper">
-                        <div className="swiper-slide">
-                            <img src={s1} alt={"slide 1"}/>
-                        </div>
-                        <div className="swiper-slide">
-                            <img src={s1} alt={"slide 1"}/>
-                        </div>
-                        <div className="swiper-slide">
-                            <img src={s1} alt={"slide 1"}/>
-                        </div>
-                    </div>
+        <div ref={props.pageRef} className="swiper-container">
+            <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={0}
+                slidesPerView={2}
+                navigation
+                pagination={{ clickable: false }}
+                centeredSlides={true}
+            >
+                <SwiperSlide>
+                    <img src={s1} alt={"slide 1"}/>
+                </SwiperSlide>
 
-                    <div className="swiper-pagination"></div>
-                    <div className="swiper-button-prev"></div>
-                    <div className="swiper-button-next"></div>
+                <SwiperSlide>
+                    <img src={s2} alt={"slide 2"}/>
+                </SwiperSlide>
 
+                <SwiperSlide>
+                    <img src={s3} alt={"slide 3"}/>
+                </SwiperSlide>
+            </Swiper>
+        </div>
 
-                    <div className="swiper-scrollbar"></div>
-                </div>
-            </div>
-        </Page>
     );
 }
 

@@ -14,7 +14,7 @@ import HistoryPage from "./pages/8-history/HistoryPage";
 import AvailabilityPage from "./pages/9-availability/AvailabilityPage";
 import AgencyPage from "./pages/10-agency/AgencyPage";
 import EnquiryPage from "./pages/11-enqiry/EnquiryPage";
-import PageRefs from "./util/PageRefs";
+import {PageRefs} from "./util/PageRefs";
 
 function App() {
 

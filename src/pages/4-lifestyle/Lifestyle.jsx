@@ -4,7 +4,9 @@ import img from '../../assets/Frame 69.png'
 import Page from "../../components/Page";
 import {useHomeAnim} from "../../hooks/HomeAnim";
 import {motion} from "framer-motion"
-import {useOffsetAnim} from "../../hooks/LifestyleAnim";
+import {useHeadingAnim, useOffsetAnim} from "../../hooks/Anim";
+import {PrimaryTitle} from "../../components/TitleVariants";
+import {ScrollConst} from "../../util/PageRefs";
 
 function Lifestyle(props) {
 
@@ -12,8 +14,15 @@ function Lifestyle(props) {
         [0.200, 0.283, 0.293, 0.350],
         [0.210, 0.283, 0.293, 0.360],
         [0.215, 0.283, 0.293, 0.370],
-        [0.220, 0.283, 0.303, 0.410]
+        //
     ];
+
+    const headAnim = useHeadingAnim(
+        props.mainRef,
+        ScrollConst.lifeStyleHead,
+        [300, 350, 350]
+    )
+
     const bodyScroll = [0.220, 0.3, 0.340, 0.410];
 
     const anim = useHomeAnim(
@@ -23,66 +32,21 @@ function Lifestyle(props) {
         300
     );
 
-    const offsetAnimSubHead = useOffsetAnim(
-        props.mainRef,
-        headScrolls[0],
-        300
-    );
-
-    const offsetAnimHeadOne = useOffsetAnim(
-        props.mainRef,
-        headScrolls[1],
-        -350
-    );
-
-    const offsetAnimHeadTwo = useOffsetAnim(
-        props.mainRef,
-        headScrolls[2],
-        350
-    );
-
-    const offsetAnimSubTwo = useOffsetAnim(
-        props.mainRef,
-        headScrolls[3],
-        -600
-    );
-
     return (
-        <Page pageRef={props.pageRef} size={"single-half-page"}>
-            <div className="primary-title-container">
-                <div className="primary-title-wrapper">
-                    <motion.h2
-                        style={{
-                            translateX: offsetAnimSubHead,
-                            opacity: anim.headFade,
-                        }}
-                    >
-                        LIFESTYLE
-                    </motion.h2>
+        <Page pageRef={props.pageRef} size={"page-150"}>
 
-                    <motion.h1
-                        style={{
-                            translateX: offsetAnimHeadOne,
-                            opacity: anim.headFade,
-                        }}>
-                        Located in the
-                    </motion.h1>
-
-                    <motion.h1
-                        style={{
-                            translateX: offsetAnimHeadTwo,
-                            opacity: anim.headFade,
-                        }}>
-                        Heart of the City
-                    </motion.h1>
-                </div>
-            </div>
+            <PrimaryTitle
+                subHeading={"LIFESTYLE"}
+                headOne={"Located in the"}
+                headTwo={"Heart of the City"}
+                anim={headAnim}
+            />
 
             <div className="primary-content-container">
                 <motion.div
                     className="primary-content-wrapper"
                     style={{
-                        translateX: offsetAnimSubTwo,
+                        translateX: anim.bodyOffset,
                         opacity: anim.headFade,
                     }}
                 >
