@@ -9,7 +9,7 @@ import landing from "../../assets/Landing-bg.png";
 
 function Landing(props) {
     return (
-        <div ref={props.reff} className="landing-container">
+        <div ref={props.pageRef} className="landing-container">
             <div className="landing-background"/>
             <div className="landing-wrapper">
                 <div className="landing-logo-container">

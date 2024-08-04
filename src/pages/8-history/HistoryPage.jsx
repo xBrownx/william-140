@@ -4,12 +4,15 @@ import img from "../../assets/140-William.png";
 import {ParallaxLayer} from "@react-spring/parallax";
 import Page from "../../components/Page";
 import {PrimaryTitleVariant} from "../../components/TitleVariants";
+import {ScrollConst} from "../../util/PageRefs";
 
 function HistoryPage(props) {
     return (
-        <Page pageRef={props.pageRef} size={"page-150"}>
+        <Page pageRef={props.pageRef} size={"page-120"}>
 
             <PrimaryTitleVariant
+                mainRef={props.mainRef}
+                scrolls={ScrollConst.historyHead}
                 subHeading={"HISTORY"}
                 heading={"Built in 1972"}
             >

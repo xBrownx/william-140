@@ -4,59 +4,49 @@ import img from "../../assets/Rectangle 21 (1).png";
 import {ParallaxLayer} from "@react-spring/parallax";
 import Page from "../../components/Page";
 import {motion} from "framer-motion"
+import {PrimaryTitle, PrimaryTitleVariant} from "../../components/TitleVariants";
+import {ScrollConst} from "../../util/PageRefs";
+import {useHeadingAnim} from "../../hooks/Anim";
 
 function DesignPage(props) {
+
+    const anim = useHeadingAnim(
+        props.mainRef,
+        ScrollConst.designHead,
+        [300, 350, 350, 300]
+    )
+
     return (
+
         <Page pageRef={props.pageRef} size={"page-150"}>
-            <div className="primary-title-container">
-                <div className="primary-title-wrapper">
-                    <motion.h2
-                        style={{
-                            // translateX: offsetAnimSubHead,
-                            // opacity: anim.headFade,
-                        }}>
-                        DESIGN
-                    </motion.h2>
+            <PrimaryTitle
+                mainRef={props.mainRef}
+                scrolls={ScrollConst.designHead}
+                subHeading={"DESIGN"}
+                headOne={"A Dynamic"}
+                headTwo={"Ground-Level Hub"}
+                // padding: "0px 64px 120px 36px"
+            >
+                <p>
+                    The essence of Melbourne’s vibrant lifestyle,offering a<br/>
+                    perfect blend of convenience, culture, and connectivity.
+                </p>
+            </PrimaryTitle>
 
-                    <motion.h1 style={{
-                        // translateX: offsetAnimSubHead,
-                        // opacity: anim.headFade,
-                    }}>
-                        A Dynamic<br/>
-                    </motion.h1>
-
-                    <motion.h1 style={{
-                        // translateX: offsetAnimSubHead,
-                        // opacity: anim.headFade,
-                    }}>
-                        Ground-Level Hub
-                    </motion.h1>
-                </div>
-                <div className="primary-content-container">
-                    <motion.div
-                        className="primary-content-wrapper"
-                        style={{
-                            // translateX: offsetAnimSubTwo,
-                            // opacity: anim.headFade,
-                            padding: "0px 64px 120px 36px"
-                        }}
-                    >
-                        <p>
-                            The essence of Melbourne’s vibrant lifestyle,offering a<br/>
-                            perfect blend of convenience, culture, and connectivity.
-                        </p>
-                    </motion.div>
-                </div>
-
-            </div>
-            <div className="design-page-img-wrapper">
+            <motion.div
+                className="design-page-img-wrapper"
+                style={{
+                    scale: anim.bodyScale,
+                    opacity: anim.bodyFade,
+                }}
+            >
                 <img
                     src={img}
-                    alt={"design"}
+                    alt={"Design"}
                 />
-            </div>
+            </motion.div>
         </Page>
-);
+    );
 }
 
 export default DesignPage;

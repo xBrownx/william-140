@@ -23,6 +23,8 @@ function AmenitiesPage(props) {
         <Page pageRef={props.pageRef} size={"page-150"}>
 
             <PrimaryTitle
+                mainRef={props.mainRef}
+                scrolls={ScrollConst.amenitiesHead}
                 subHeading={"AMENITIES"}
                 headOne={"Inspired Services"}
                 headTwo={"and Amenities"}

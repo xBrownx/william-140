@@ -32,7 +32,16 @@
 }
 
 .logo-half.bottom {
+    margin: 40px 0 0 0;
     width: 100%;
+    justify-items: end;
+    align-content: end;
+    animation: logoReveal 4s ease-in-out;
+}
+
+.logo-half.bottom svg {
+    width: 100%;
+    height: 100%;
     justify-items: end;
     align-content: end;
 }
@@ -51,7 +60,7 @@
     display: flex;
     justify-content: end;
     align-items: end;
-    /*animation: logoReveal 4s ease-in-out;*/
+    animation: logoReveal 5s ease-in-out;
 }
 
 .anim-div {
@@ -60,7 +69,7 @@
 }
 
 .anim-border {
-    /*animation: progressBarBorder 4s ease-in-out;*/
+    animation: progressBarBorder 4s ease-in-out;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -78,7 +87,7 @@
 
 .anim-div svg {
     width: auto;
-    /*animation: logoReveal 4s ease-in-out;*/
+    animation: logoReveal 4s ease-in-out;
     animation-fill-mode: both;
 }
 

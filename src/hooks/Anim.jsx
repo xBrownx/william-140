@@ -14,22 +14,27 @@ export function useOffsetAnim(mainRef, scrollVals, offsetVal) {
 
 export function useHeadingAnim(mainRef, scrollVals, offsets) {
 
-    const subHeadOffset = [offsets[0] + "px", "0px", "0px", -offsets[0] + "px"]
+    const subHeadOneOffset = [offsets[0] + "px", "0px", "0px", -offsets[0] + "px"]
     const headOneOffset = [-offsets[1] + "px", "0px", "0px", offsets[1] + "px"]
     const headTwoOffset = [offsets[2] + "px", "0px", "0px", -offsets[2] + "px"]
+    const subHeadTwoOffset = [-offsets[3] + "px", "0px", "0px", offsets[3] + "px"]
     const fadeRange = [0, 1, 1, 0];
-
+    const bodyScale = [0.7, 1, 1, 0.7]
 
     const { scrollYProgress} =  useScroll({
         target: mainRef,
     });
 
     return {
-        subHeadOffset: useTransform(scrollYProgress, scrollVals[0], subHeadOffset),
+        subHeadOneOffset: useTransform(scrollYProgress, scrollVals[0], subHeadOneOffset),
         headOneOffset: useTransform(scrollYProgress, scrollVals[1], headOneOffset),
         headTwoOffset: useTransform(scrollYProgress, scrollVals[2], headTwoOffset),
-        subHeadFade:   useTransform(scrollYProgress, scrollVals[0], fadeRange),
+        subHeadTwoOffset: useTransform(scrollYProgress, scrollVals[3], subHeadTwoOffset),
+        subHeadOneFade:   useTransform(scrollYProgress, scrollVals[0], fadeRange),
         headOneFade:   useTransform(scrollYProgress, scrollVals[1], fadeRange),
         headTwoFade:   useTransform(scrollYProgress, scrollVals[2], fadeRange),
+        subHeadTwoFade:   useTransform(scrollYProgress, scrollVals[3], fadeRange),
+        bodyScale: useTransform(scrollYProgress, scrollVals[3], bodyScale),
+        bodyFade: useTransform(scrollYProgress, scrollVals[3], fadeRange),
     };
 }

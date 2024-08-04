@@ -10,54 +10,28 @@ import {ScrollConst} from "../../util/PageRefs";
 
 function Lifestyle(props) {
 
-    const headScrolls = [
-        [0.200, 0.283, 0.293, 0.350],
-        [0.210, 0.283, 0.293, 0.360],
-        [0.215, 0.283, 0.293, 0.370],
-        //
-    ];
-
-    const headAnim = useHeadingAnim(
+    const anim = useHeadingAnim(
         props.mainRef,
         ScrollConst.lifeStyleHead,
-        [300, 350, 350]
+        [300, 350, 350, 300]
     )
 
-    const bodyScroll = [0.220, 0.3, 0.340, 0.410];
-
-    const anim = useHomeAnim(
-        props.mainRef,
-        headScrolls[0],
-        bodyScroll,
-        300
-    );
-
     return (
-        <Page pageRef={props.pageRef} size={"page-150"}>
+        <Page pageRef={props.pageRef} size={"page-160"}>
 
             <PrimaryTitle
+                mainRef={props.mainRef}
+                scrolls={ScrollConst.lifeStyleHead}
                 subHeading={"LIFESTYLE"}
                 headOne={"Located in the"}
                 headTwo={"Heart of the City"}
-                anim={headAnim}
-            />
-
-            <div className="primary-content-container">
-                <motion.div
-                    className="primary-content-wrapper"
-                    style={{
-                        translateX: anim.bodyOffset,
-                        opacity: anim.headFade,
-                    }}
-                >
-                    <p>
-                        The essence of Melbourne’s vibrant lifestyle,<br/>
-                        offering a perfect blend of convenience, culture,<br/>
-                        and connectivity.
-                    </p>
-
-                </motion.div>
-            </div>
+            >
+                <p>
+                    The essence of Melbourne’s vibrant lifestyle,<br/>
+                    offering a perfect blend of convenience, culture,<br/>
+                    and connectivity.
+                </p>
+            </PrimaryTitle>
 
             <motion.div
                 className="lifestyle-img-wrapper"
