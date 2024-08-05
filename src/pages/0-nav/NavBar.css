@@ -1,17 +1,17 @@
 .nav-bar-container {
     top: 0;
-    position: sticky;
+    position: fixed;
     height: 66px;
     display: flex;
     z-index: 2;
     width: 100%;
-    background: var(--primary-bg-colour);
+
     align-items: center;
     justify-content: center;
 }
 
 .nav-bar-wrapper {
-    background: var(--primary-bg-colour);
+
     display: flex;
     flex-direction: row;
     width: 1440px

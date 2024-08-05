@@ -1,7 +1,7 @@
 import React from 'react';
 import './AvailabilityPage.css'
-import {ReactComponent as Img} from "../../assets/Group 5339.svg";
-import {ReactComponent as Dld} from "../../assets/download.svg";
+import {ReactComponent as Img} from "../../assets/old/Group 5339.svg";
+import {ReactComponent as Dld} from "../../assets/old/download.svg";
 import Page from "../../components/Page";
 import {SecondaryTitleVariant} from "../../components/TitleVariants";
 import {useHomeAnim} from "../../hooks/HomeAnim";

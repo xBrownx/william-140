@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import './EnquiryPage.css'
-import {ParallaxLayer} from "@react-spring/parallax";
-
-import {ReactComponent as FooterLogo} from "../../assets/140W_Logo_RGB_Stacked_White.svg";
+import {ReactComponent as FooterLogo} from "../../assets/old/140W_Logo_RGB_Stacked_White.svg";
 import Page from "../../components/Page";
 import {SecondaryTitle} from "../../components/TitleVariants";
 import {useHomeAnim} from "../../hooks/HomeAnim";

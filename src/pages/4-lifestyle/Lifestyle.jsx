@@ -1,12 +1,17 @@
 import React from 'react';
 // import './LifestylePage.css'
-import img from '../../assets/Frame 69.png'
+import car1 from '../../assets/location/Location-Carousel-1.png'
+import car2 from '../../assets/location/Location-Carousel-2.png'
+import car3 from '../../assets/location/Location-Carousel-3.png'
+import car4 from '../../assets/location/Location-Carousel-4.png'
+
 import Page from "../../components/Page";
 import {useHomeAnim} from "../../hooks/HomeAnim";
 import {motion} from "framer-motion"
 import {usePrimaryTitleAnim, useOffsetAnim} from "../../hooks/Anim";
-import {PrimaryTitle} from "../../components/TitleVariants";
+
 import {primaryTitleHeadScroll, ScrollConst} from "../../util/PageRefs";
+import {Heading} from "../../hooks/TextAnim";
 
 function Lifestyle(props) {
 
@@ -19,36 +24,30 @@ function Lifestyle(props) {
     )
 
     return (
-        <Page pageRef={props.pageRef}>
+        <section ref={props.pageRef.lifestyleRef} className="lifestyle">
+            <div className="heading-container">
+                <div className="sub-heading">
+                    <Heading word={"LOCATION"}/>
+                </div>
+                <div className="title line-1">
+                    <Heading word={"Located_in_the"}/>
+                </div>
+                <div className="title line-1">
+                    <Heading word={"heart_of_the_city"}/>
+                </div>
+            </div>
+            <div className="content-container">
+                <div className="text-wrapper">
+                    <p>
+                        Ideally located in the heart of Melbourne CBD, enjoying a prime<br/>
+                        position on the corner of Bourke Street and William Street.
+                    </p>
+                </div>
+                <div className="swiper-container">
 
-            <PrimaryTitle
-                mainRef={props.mainRef}
-                anim={anim}
-                scrolls={pageOffsets}
-                subHeading={"LIFESTYLE"}
-                headOne={"Located in the"}
-                headTwo={"Heart of the City"}
-            >
-                <p>
-                    The essence of Melbourne’s vibrant lifestyle,<br/>
-                    offering a perfect blend of convenience, culture,<br/>
-                    and connectivity.
-                </p>
-            </PrimaryTitle>
-
-            <motion.div
-                className="lifestyle-img-wrapper"
-                style={{
-                    scale: anim.bodyScale,
-                    opacity: anim.bodyFade,
-                }}
-            >
-                <img
-                    src={img}
-                    alt={"Lifestyle"}
-                />
-            </motion.div>
-        </Page>
+                </div>
+            </div>
+        </section>
     );
 }
 

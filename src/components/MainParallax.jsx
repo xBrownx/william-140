@@ -1,10 +1,10 @@
 import {Parallax, ParallaxLayer, ParallaxProps} from '@react-spring/parallax'
 import React, {useEffect, useRef, useState} from "react";
-import landing from '../assets/Landing-bg.png'
-import collage from '../assets/Collage.png'
+import landing from '../assets/old/Landing-bg.png'
+import collage from '../assets/old/Collage.png'
 
-import NavBar from "../pages/1-nav/NavBar";
-import Landing from "../pages/0-landing/Landing";
+import NavBar from "../pages/0-nav/NavBar";
+import Landing from "../pages/1-landing/Landing";
 import Home from "../pages/2-home/Home";
 
 import './MainParallax.css'
@@ -15,8 +15,8 @@ import AvailabilityPage from "../pages/9-availability/AvailabilityPage";
 import HistoryPage from "../pages/8-history/HistoryPage";
 import AgencyPage from "../pages/10-agency/AgencyPage";
 import EnquiryPage from "../pages/11-enqiry/EnquiryPage";
-import CarouselPage from "../pages/5-carousel/Carousel";
-import FullPageVideo from "../pages/3-video/FullPageVideo";
+import CarouselPage from "../pages/3-carousel/Carousel";
+import FullPageVideo from "../pages/999-video/FullPageVideo";
 import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './DesignPage.css'
-import img from "../../assets/Rectangle 21 (1).png";
+import img from "../../assets/old/Rectangle 21 (1).png";
 import {ParallaxLayer} from "@react-spring/parallax";
 import Page from "../../components/Page";
 import {motion} from "framer-motion"

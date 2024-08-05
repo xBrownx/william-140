@@ -1,6 +1,6 @@
 import React from 'react';
 import './HistoryPage.css'
-import img from "../../assets/140-William.png";
+import img from "../../assets/old/140-William.png";
 import {ParallaxLayer} from "@react-spring/parallax";
 import Page from "../../components/Page";
 import {PrimaryTitleVariant} from "../../components/TitleVariants";

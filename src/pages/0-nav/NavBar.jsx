@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './NavBar.css'
-import {ReactComponent as Title} from "../../assets/Title.svg";
+import {ReactComponent as Title} from "../../assets/old/Title.svg";
 
 function NavBar(props) {
 

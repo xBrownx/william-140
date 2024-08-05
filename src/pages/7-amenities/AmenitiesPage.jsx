@@ -1,8 +1,8 @@
 import React from 'react';
 import './AmenitiesPage.css'
-import bikeStorage from '../../assets/BikeStorage.png'
-import cafe from '../../assets/Cafe.png'
-import resort from '../../assets/Resort.png'
+import bikeStorage from '../../assets/old/BikeStorage.png'
+import cafe from '../../assets/old/Cafe.png'
+import resort from '../../assets/old/Resort.png'
 import Page from "../../components/Page";
 import {motion} from "framer-motion"
 import {PrimaryTitle} from "../../components/TitleVariants";

@@ -1,7 +1,6 @@
 import React from 'react';
 import './AgencyPage.css'
-import {ParallaxLayer} from "@react-spring/parallax";
-import agent from '../../assets/Rectangle 6.png'
+import agent from '../../assets/old/Rectangle 6.png'
 import Page from "../../components/Page";
 import {SecondaryTitle} from "../../components/TitleVariants";
 import {useHomeAnim} from "../../hooks/HomeAnim";
