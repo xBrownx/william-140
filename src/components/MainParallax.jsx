@@ -8,9 +8,9 @@ import Landing from "../pages/1-landing/Landing";
 import Home from "../pages/2-home/Home";
 
 import './MainParallax.css'
-import Lifestyle from "../pages/4-lifestyle/Lifestyle";
-import DesignPage from "../pages/6-design/DesignPage";
-import AmenitiesPage from "../pages/7-amenities/AmenitiesPage";
+import Location from "../pages/4-location/Location";
+import Design from "../pages/6-design/Design";
+import Amenities from "../pages/7-amenities/Amenities";
 import AvailabilityPage from "../pages/9-availability/AvailabilityPage";
 import HistoryPage from "../pages/8-history/HistoryPage";
 import AgencyPage from "../pages/10-agency/AgencyPage";
@@ -132,13 +132,13 @@ function MainParallax() {
 
             <FullPageVideo offset={2} factor={2} speed={0} sticky={{start: 1, end: 4}}/>
 
-            <Lifestyle offset={3} factor={1} speed={0}/>
+            <Location offset={3} factor={1} speed={0}/>
 
             <CarouselPage offset={4} factor={1} speed={0}/>
 
-            <DesignPage offset={5} factor={1} speed={0}/>
+            <Design offset={5} factor={1} speed={0}/>
 
-            <AmenitiesPage offset={6} factor={1} speed={0}/>
+            <Amenities offset={6} factor={1} speed={0}/>
 
             <HistoryPage offset={7} factor={1} speed={0}/>
 
