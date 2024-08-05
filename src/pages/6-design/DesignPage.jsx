@@ -5,14 +5,15 @@ import {ParallaxLayer} from "@react-spring/parallax";
 import Page from "../../components/Page";
 import {motion} from "framer-motion"
 import {PrimaryTitle, PrimaryTitleVariant} from "../../components/TitleVariants";
-import {ScrollConst} from "../../util/PageRefs";
-import {useHeadingAnim} from "../../hooks/Anim";
+import {primaryTitleHeadScroll, ScrollConst} from "../../util/PageRefs";
+import {usePrimaryTitleAnim} from "../../hooks/Anim";
 
 function DesignPage(props) {
 
-    const anim = useHeadingAnim(
+    const pageOffset = primaryTitleHeadScroll(0.475)
+    const anim = usePrimaryTitleAnim(
         props.mainRef,
-        ScrollConst.designHead,
+        pageOffset,
         [300, 350, 350, 300]
     )
 
@@ -21,7 +22,7 @@ function DesignPage(props) {
         <Page pageRef={props.pageRef} size={"page-150"}>
             <PrimaryTitle
                 mainRef={props.mainRef}
-                scrolls={ScrollConst.designHead}
+                anim={anim}
                 subHeading={"DESIGN"}
                 headOne={"A Dynamic"}
                 headTwo={"Ground-Level Hub"}

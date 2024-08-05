@@ -9,15 +9,17 @@ import {ScrollConst} from "../../util/PageRefs";
 
 function AvailabilityPage(props) {
 
-    const anim = useHomeAnim(props.mainRef, ScrollConst.availabilityHead, ScrollConst.homeBody);
+    // const anim = useHomeAnim(props.mainRef, ScrollConst.availabilityHead, ScrollConst.homeBody);
 
     return (
         <Page pageRef={props.pageRef} size={"page-100"}>
 
             <SecondaryTitleVariant
+                mainRef={props.mainRef}
+                scrolls={ScrollConst.availabilityHead}
                 subHeading={"AVAILABILITY"}
                 heading={"Your Future Workplace"}
-                anim={anim}
+
             />
 
             <div className="primary-content-container">

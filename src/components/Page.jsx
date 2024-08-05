@@ -4,8 +4,8 @@ import {motion,} from 'framer-motion'
 
 function Page(props) {
     return (
-        <div className={"page-container " + props.size} ref={props.pageRef}>
-            <div className="page-wrapper">
+        <div className="page-container" ref={props.pageRef}>
+            <div className="page-wrapper" ref={props.pageRef}>
                 {props.children}
             </div>
         </div>

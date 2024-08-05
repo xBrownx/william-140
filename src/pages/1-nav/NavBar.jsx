@@ -16,18 +16,18 @@ function NavBar(props) {
                 </div>
                 <ul>
                     <li onClick={() => props.pageRefs.mainRef.current.scrollIntoView({behavior: "smooth"})}>
-                        Top
+                        Location
                     </li>
 
                     <li className={isInPage(props.page, 3.4, 5.8) ? "link-active" : ""}
                         onClick={() => props.pageRefs.lifestyleRef.current.scrollIntoView({behavior: "smooth"})}
                     >
-                        Lifestyle
+                        Design
                     </li>
                     <li className={isInPage(props.page, 5.8, 7.5) ? "link-active" : ""}
                         onClick={() => props.pageRefs.designRef.current.scrollIntoView({behavior: "smooth"})}
                     >
-                        Design
+                        Availability
                     </li>
                     <li className={isInPage(props.page, 7.5, 9) ? "link-active" : ""}
                         onClick={() => props.pageRefs.amenitiesRef.current.scrollIntoView({behavior: "smooth"})}>
@@ -35,7 +35,10 @@ function NavBar(props) {
                     </li>
                     <li className={isInPage(props.page, 10.5, 12) ? "link-active" : ""}
                         onClick={() => props.pageRefs.availabilitiesRef.current.scrollIntoView({behavior: "smooth"})}>
-                        Availability
+                        History
+                    </li>
+                    <li onClick={() => props.pageRefs.enquiryRef.current.scrollIntoView({behavior: "smooth"})}>
+                        Agencies
                     </li>
                     <li onClick={() => props.pageRefs.enquiryRef.current.scrollIntoView({behavior: "smooth"})}>
                         Enquire

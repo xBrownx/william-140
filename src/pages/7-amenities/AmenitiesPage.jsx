@@ -6,14 +6,14 @@ import resort from '../../assets/Resort.png'
 import Page from "../../components/Page";
 import {motion} from "framer-motion"
 import {PrimaryTitle} from "../../components/TitleVariants";
-import {useHeadingAnim} from "../../hooks/Anim";
+import {usePrimaryTitleAnim} from "../../hooks/Anim";
 import {ScrollConst} from "../../util/PageRefs";
 
 function AmenitiesPage(props) {
 
     const [imgSrc, setImgSrc] = React.useState("Render");
 
-    const anim = useHeadingAnim(
+    const anim = usePrimaryTitleAnim(
         props.mainRef,
         ScrollConst.amenitiesHead,
         [300, 350, 350]

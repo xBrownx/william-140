@@ -1,6 +1,7 @@
 .landing-container {
     position: relative;
     height:100vh;
+    background-color: var(--primary-bg-colour);
 }
 
 .landing-background {
@@ -75,8 +76,8 @@
     /*animation: logoReveal 4s ease-in-out;*/
 }
 
-.landing-1-bg-parallax {
-    /*animation: logoReveal 4s ease-in-out;*/
+.landing-background {
+    animation: logoReveal 4s ease-in-out;
 }
 
 @keyframes logoReveal {

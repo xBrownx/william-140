@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion} from "framer-motion"
-import {useHeadingAnim} from "../hooks/Anim";
+import {usePrimaryTitleAnim} from "../hooks/Anim";
 import {ScrollConst} from "../util/PageRefs";
 
 const SubTitle = (props) => {
@@ -17,32 +17,26 @@ const SubTitle = (props) => {
 
 export function PrimaryTitle(props) {
 
-    const anim = useHeadingAnim(
-        props.mainRef,
-        props.scrolls,
-        [300, 350, 350, 300]
-    )
-
     return (
         <div className="primary-title-container">
             <div className="primary-title-wrapper">
                 <SubTitle
                     subHeading={props.subHeading}
-                    anim={anim}
+                    anim={props.anim}
                 />
 
                 <motion.h1
                     style={{
-                        translateX: anim.headOneOffset,
-                        opacity: anim.headOneFade,
+                        translateX: props.anim.headOneOffset,
+                        opacity: props.anim.headOneFade,
                     }}>
                     {props.headOne}
                 </motion.h1>
 
                 <motion.h1
                     style={{
-                        translateX: anim.headTwoOffset,
-                        opacity: anim.headTwoFade,
+                        translateX: props.anim.headTwoOffset,
+                        opacity: props.anim.headTwoFade,
                     }}>
                     {props.headTwo}
                 </motion.h1>
@@ -51,8 +45,8 @@ export function PrimaryTitle(props) {
                 <motion.div
                     className="primary-content-wrapper"
                     style={{
-                        translateX: anim.subHeadTwoOffset,
-                        opacity: anim.subHeadTwoFade,
+                        translateX: props.anim.subHeadTwoOffset,
+                        opacity: props.anim.subHeadTwoFade,
                     }}
                 >
                     {props.children}
@@ -66,7 +60,7 @@ export function PrimaryTitle(props) {
 
 export function PrimaryTitleVariant(props) {
 
-    const anim = useHeadingAnim(
+    const anim = usePrimaryTitleAnim(
         props.mainRef,
         props.scrolls,
         [-300, 500, 350, -300]
@@ -122,19 +116,30 @@ export function SecondaryTitle(props) {
 }
 
 export function SecondaryTitleVariant(props) {
+
+    const anim = usePrimaryTitleAnim(
+        props.mainRef,
+        props.scrolls,
+        [-300, -500, 350, -300, 500]
+    )
+
     return (
-        <motion.div
-            className="secondary-title-variant-container"
-            style={{
-                // scale: props.anim.headScale,
-                // opacity: props.anim.headFade,
-            }}
-        >
+        <div className="secondary-title-variant-container">
             <div className="secondary-title-variant-wrapper">
-                <h2>{props.subHeading}</h2>
-                <h1>{props.heading}</h1>
+                <SubTitle
+                    subHeading={props.subHeading}
+                    anim={anim}
+                />
+
+                <motion.h1
+                    style={{
+                        translateX: anim.headOneOffset,
+                        opacity: anim.headOneFade,
+                    }}>
+                    {props.heading}
+                </motion.h1>
             </div>
-        </motion.div>
+        </div>
     );
 }
 

@@ -9,10 +9,9 @@ export function useOffsetAnim(mainRef, scrollVals, offsetVal) {
     });
 
     return useTransform(scrollYProgress, scrollVals, offsetRange);
-
 }
 
-export function useHeadingAnim(mainRef, scrollVals, offsets) {
+export function usePrimaryTitleAnim(mainRef, scrollVals, offsets) {
 
     const subHeadOneOffset = [offsets[0] + "px", "0px", "0px", -offsets[0] + "px"]
     const headOneOffset = [-offsets[1] + "px", "0px", "0px", offsets[1] + "px"]
@@ -34,7 +33,7 @@ export function useHeadingAnim(mainRef, scrollVals, offsets) {
         headOneFade:   useTransform(scrollYProgress, scrollVals[1], fadeRange),
         headTwoFade:   useTransform(scrollYProgress, scrollVals[2], fadeRange),
         subHeadTwoFade:   useTransform(scrollYProgress, scrollVals[3], fadeRange),
-        bodyScale: useTransform(scrollYProgress, scrollVals[3], bodyScale),
-        bodyFade: useTransform(scrollYProgress, scrollVals[3], fadeRange),
+        bodyScale: useTransform(scrollYProgress, scrollVals[4], bodyScale),
+        bodyFade: useTransform(scrollYProgress, scrollVals[4], fadeRange),
     };
 }

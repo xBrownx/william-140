@@ -13,7 +13,7 @@ function Home(props) {
     const anim = useHomeAnim(props.mainRef, ScrollConst.homeHead, ScrollConst.homeBody);
 
     return (
-        <Page pageRef={props.pageRef} size={"page-100"}>
+        <Page pageRef={props.pageRef}>
 
             <SecondaryTitle
                 heading={"An Iconic Landmark\nin Melbourne"}

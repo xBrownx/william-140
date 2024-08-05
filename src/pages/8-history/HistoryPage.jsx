@@ -5,8 +5,17 @@ import {ParallaxLayer} from "@react-spring/parallax";
 import Page from "../../components/Page";
 import {PrimaryTitleVariant} from "../../components/TitleVariants";
 import {ScrollConst} from "../../util/PageRefs";
+import {motion} from "framer-motion";
+import {usePrimaryTitleAnim} from "../../hooks/Anim";
 
 function HistoryPage(props) {
+
+    const anim = usePrimaryTitleAnim(
+        props.mainRef,
+        ScrollConst.historyHead,
+        [300, 350, 350, 300]
+    )
+
     return (
         <Page pageRef={props.pageRef} size={"page-120"}>
 
@@ -16,19 +25,25 @@ function HistoryPage(props) {
                 subHeading={"HISTORY"}
                 heading={"Built in 1972"}
             >
-                    <p>
-                        Designed by the renowned architectural firm Yuncken<br/>
-                        Freeman, 140 William Street stands as a testament to<br/>
-                        modernist architecture in Melbourne.
-                    </p>
+                <p>
+                    Designed by the renowned architectural firm Yuncken<br/>
+                    Freeman, 140 William Street stands as a testament to<br/>
+                    modernist architecture in Melbourne.
+                </p>
             </PrimaryTitleVariant>
 
-            <div className="history-page-img-container">
-            <img
+            <motion.div
+                className="history-img-container"
+                style={{
+                    scale: anim.bodyScale,
+                    opacity: anim.bodyFade,
+                }}
+            >
+                <img
                     src={img}
-                    alt={"history"}
+                    alt={"History"}
                 />
-            </div>
+            </motion.div>
         </Page>
     );
 }

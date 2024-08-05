@@ -4,24 +4,27 @@ import img from '../../assets/Frame 69.png'
 import Page from "../../components/Page";
 import {useHomeAnim} from "../../hooks/HomeAnim";
 import {motion} from "framer-motion"
-import {useHeadingAnim, useOffsetAnim} from "../../hooks/Anim";
+import {usePrimaryTitleAnim, useOffsetAnim} from "../../hooks/Anim";
 import {PrimaryTitle} from "../../components/TitleVariants";
-import {ScrollConst} from "../../util/PageRefs";
+import {primaryTitleHeadScroll, ScrollConst} from "../../util/PageRefs";
 
 function Lifestyle(props) {
 
-    const anim = useHeadingAnim(
+    const pageOffsets = primaryTitleHeadScroll(0.291);
+
+    const anim = usePrimaryTitleAnim(
         props.mainRef,
-        ScrollConst.lifeStyleHead,
+        pageOffsets,
         [300, 350, 350, 300]
     )
 
     return (
-        <Page pageRef={props.pageRef} size={"page-160"}>
+        <Page pageRef={props.pageRef}>
 
             <PrimaryTitle
                 mainRef={props.mainRef}
-                scrolls={ScrollConst.lifeStyleHead}
+                anim={anim}
+                scrolls={pageOffsets}
                 subHeading={"LIFESTYLE"}
                 headOne={"Located in the"}
                 headTwo={"Heart of the City"}
