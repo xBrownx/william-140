@@ -3,7 +3,7 @@ import {useHomeAnim} from "../../hooks/HomeAnim";
 import {ScrollConst} from "../../util/PageRefs";
 import {PrimaryTextButton} from "../../components/Buttons";
 import {motion} from "framer-motion";
-import {Heading, ParaSpan} from "../../hooks/TextAnim";
+import {HeadingAnim, ParaAnim} from "../../hooks/TextAnim";
 
 
 function Home(props) {
@@ -15,13 +15,15 @@ function Home(props) {
             <div className="page-container">
                 <div className="content-container">
                     <div className="content-wrapper">
-                        <Heading word={"Spaces for"} />
-                        <Heading word={"our tenants"} />
-                        <Heading word={"to thrive"} />
+                        <HeadingAnim word={"Spaces for"} />
+                        <HeadingAnim word={"our tenants"} />
+                        <HeadingAnim word={"to thrive"} />
 
-                        <ParaSpan word={"Presenting a range of fully fitted tenancies available to lease."} />
-                        <ParaSpan word={"These opportunities, offer stunning views and natural light with"} />
-                        <ParaSpan word={"access to the building’s first class facilities and amenities."} />
+                        <div className="text-container">
+                            <ParaAnim line={"Presenting a range of fully fitted tenancies available to lease."} />
+                            <ParaAnim line={"These opportunities, offer stunning views and natural light with"} />
+                            <ParaAnim line={"access to the building’s first class facilities and amenities."} />
+                        </div>
 
                         <PrimaryTextButton
                             onClick={() => {

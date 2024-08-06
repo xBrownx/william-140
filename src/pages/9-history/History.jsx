@@ -1,7 +1,7 @@
 import React from 'react';
 import img from "../../assets/old/140-William.png";
 
-import {Heading} from "../../hooks/TextAnim";
+import {HeadingAnim} from "../../hooks/TextAnim";
 
 function History(props) {
 
@@ -11,16 +11,16 @@ function History(props) {
             <div className="page-container">
                 <div className="heading-container">
                     <div className="sub-heading">
-                        <Heading word={"HISTORY"}/>
+                        <HeadingAnim word={"HISTORY"}/>
                     </div>
                     <div className="heading-wrapper">
                         <div className="title-wrapper">
                             <div className="title line-1">
-                                <Heading word={"The_Legacy_of"}/>
+                                <HeadingAnim word={"The Legacy of"}/>
                             </div>
 
                             <div className="title line-2">
-                                <Heading word={"140_William_Street"}/>
+                                <HeadingAnim word={"140 William Street"}/>
                             </div>
                         </div>
                         <div className="sub-heading-wrapper">

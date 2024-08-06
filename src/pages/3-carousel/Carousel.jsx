@@ -6,7 +6,7 @@ import 'swiper/css';
 import './Carousel.css'
 
 import {useImgScale} from "../../util/PageRefs";
-import {Heading} from "../../hooks/TextAnim";
+import {HeadingAnim, ParaAnim} from "../../hooks/TextAnim";
 import car1 from '../../assets/carousel/Carousel-1.png'
 import car2 from '../../assets/carousel/Carousel-2.png'
 import car3 from '../../assets/carousel/Carousel-3.png'
@@ -23,10 +23,10 @@ function Carousel(props) {
             <div className="page-container">
                 <div className="heading-container">
                     <div className="title line-1">
-                        <Heading word={"Everyday_is_an"}/>
+                        <HeadingAnim word={"Everyday is an"}/>
                     </div>
                     <div className="title line-1">
-                        <Heading word={"experience"}/>
+                        <HeadingAnim word={"experience"}/>
                     </div>
                 </div>
                 <div className="content-container">
@@ -64,10 +64,8 @@ function Carousel(props) {
                     </div>
                     <div className="text-container">
                         <div className="text-wrapper">
-                            <p>
-                                The essence of Melbourne's vibrant lifestyle, offering a<br/>
-                                perfect blend of convenience, culture, and connectivity.
-                            </p>
+                            <ParaAnim line={"The essence of Melbourne's vibrant lifestyle, offering a"} />
+                            <ParaAnim line={"perfect blend of convenience, culture, and connectivity."} />
                         </div>
                     </div>
                 </div>

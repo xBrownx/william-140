@@ -3,7 +3,7 @@ import {ReactComponent as Carousel1} from '../../assets/location/Location-1.svg'
 import {ReactComponent as Carousel2} from '../../assets/location/Location-2.svg'
 import {ReactComponent as Carousel3} from '../../assets/location/Location-3.svg'
 import {ReactComponent as Carousel4} from '../../assets/location/Location-4.svg'
-import {Heading} from "../../hooks/TextAnim";
+import {HeadingAnim, ParaAnim} from "../../hooks/TextAnim";
 import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
 import {EffectFade, Navigation} from "swiper/modules";
 
@@ -42,21 +42,19 @@ function Location(props) {
             <div className="page-container">
                 <div className="heading-container">
                     <div className="sub-heading">
-                        <Heading word={"LOCATION"}/>
+                        <HeadingAnim word={"LOCATION"}/>
                     </div>
                     <div className="title line-1">
-                        <Heading word={"Located_in_the"}/>
+                        <HeadingAnim word={"Located in the"}/>
                     </div>
                     <div className="title line-2">
-                        <Heading word={"heart_of_the_city"}/>
+                        <HeadingAnim word={"heart of the city"}/>
                     </div>
                 </div>
                 <div className="content-container">
                     <div className="text-wrapper">
-                        <p>
-                            Ideally located in the heart of Melbourne CBD, enjoying a prime<br/>
-                            position on the corner of Bourke Street and William Street.
-                        </p>
+                        <ParaAnim line={"Ideally located in the heart of Melbourne CBD, enjoying a prime"} />
+                        <ParaAnim line={"position on the corner of Bourke Street and William Street."} />
                     </div>
 
                     <CustomSwiper

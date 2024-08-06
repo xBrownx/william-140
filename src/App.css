@@ -174,23 +174,27 @@ section {
                 padding: 0 0 128px 0;
 
 
-                    h1 {
+                h1 {
+                    color: var(--primary-text-colour);
+                    font-size: 4vw;
+                    font-weight: lighter;
+                    font-family: 'TWKEverett-Light', serif;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .text-container {
+
+                    padding: 30px 0 30px 0;
+
+                    p {
                         color: var(--primary-text-colour);
-                        font-size: 4vw;
+                        font-size: 1vw;
                         font-weight: lighter;
-                        font-family: 'TWKEverett-Light', serif;
+                        font-family: 'SuisseIntl-Light', serif;
                         margin: 0;
                         padding: 0;
                     }
-
-
-                p {
-                    color: var(--primary-text-colour);
-                    font-size: 1vw;
-                    font-weight: lighter;
-                    font-family: 'SuisseIntl-Light', serif;
-                    margin: 0;
-                    padding: 0;
                 }
             }
         }
@@ -276,10 +280,12 @@ section {
 
             .text-container {
                 margin: 40px 0 0 64px;
-                padding: 0 0 20px 30px;
+                padding: 0 0 30px 30px;
                 border-left: 1px solid black;
 
                 p {
+                    margin: 0;
+                    padding: 0;
                     font-size: 18px;
                     line-height: 22px;
                     font-family: "SuisseIntl-Regular", serif;
@@ -332,12 +338,12 @@ section {
 
             .text-wrapper {
                 margin: 40px 64px 10px 64px;
-                padding: 0 0 20px 30px;
+                padding: 0 0 30px 30px;
                 border-left: 1px solid black;
 
                 p {
                     margin: 0;
-                    padding: 0 0 20px;
+                    padding: 0;
                     color: black;
                     font-size: 18px;
                     font-weight: lighter;
@@ -429,46 +435,46 @@ section {
             }
         }
 
-            .swiper-container {
-                display: flex;
+        .swiper-container {
+            display: flex;
+            height: 100%;
+            padding: 32px;
+
+            .swiper {
+                width: 100vw;
                 height: 100%;
-                padding: 32px;
 
-                .swiper {
-                    width: 100vw;
-                    height: 100%;
+                .swiper-slide {
 
-                    .swiper-slide {
+                    .img-wrapper {
+                        object-fit: cover;
 
-                        .img-wrapper {
-                            object-fit: cover;
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
 
-                            svg {
-                                width: 100%;
-                                height: 100%;
-                            }
+                .footer-container {
+                    .subtitle-wrapper {
+                        p {
+                            font-size: 32px;
+                            color: white;
                         }
                     }
 
-                    .footer-container {
-                        .subtitle-wrapper {
+                    .swiper-nav-container {
+
+                        .txt-wrapper {
                             p {
-                                font-size: 32px;
                                 color: white;
-                            }
-                        }
-
-                        .swiper-nav-container {
-
-                            .txt-wrapper {
-                                p {
-                                   color: white;
-                                }
                             }
                         }
                     }
                 }
             }
+        }
     }
 }
 
@@ -483,11 +489,10 @@ section {
         min-height: 100vh;
         padding: 64px 0 64px 0;
         flex-direction: column;
-    justify-content: center;
+        justify-content: center;
 
         .content-container {
             width: 100%;
-
             display: flex;
             flex-direction: row;
 
@@ -496,9 +501,26 @@ section {
                 flex-direction: column;
                 width: 50%;
 
-                .img-wrapper {
-                    img {
-                        transition: all 1s ease-in-out;
+                .img-container {
+                    width: 576px;
+                    height: 861px;
+                    transition: all 5s ease-in-out;
+                    .img-wrapper {
+                        position: absolute;
+                        transition: all 5s ease-in-out;
+                        img {
+                            opacity: 1;
+                            transition: all 5s ease-in-out;
+                        }
+                        .hidden {
+                            opacity: 0;
+                        }
+                        .show {
+                            opacity: 1;
+                        }
+                    }
+                    .img-wrapper.hidden {
+                        opacity: 0;
                     }
                 }
 
@@ -695,12 +717,19 @@ section {
 
 .agency {
     background-color: var(--primary-bg-colour);
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     .page-container {
-
+        width: 1440px;
+        min-height: 100vh;
+        padding: 64px 0 64px 0;
+        flex-direction: column;
+        justify-content: center;
 
         .content-container {
+            width: 100%;
             display: flex;
             flex-direction: row;
 
@@ -782,7 +811,6 @@ section {
                         }
 
                     }
-
                 }
             }
         }
@@ -793,10 +821,11 @@ section {
     position: relative;
     background-color: var(--primary-bg-colour);
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
 
     .page-container {
-
+        justify-content: center;
         align-items: center;
         height: 100%;
 
@@ -1113,12 +1142,12 @@ section {
     }
 
     50% {
-       width: 50vh;
+        width: 50vh;
         height: 50vh;
     }
 
     60% {
-      width: 50vh;
+        width: 50vh;
         height: 50vh;
     }
     100% {

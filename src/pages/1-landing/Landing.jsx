@@ -3,7 +3,7 @@ import React, {useLayoutEffect, useRef} from 'react';
 import SplitType from 'split-type'
 import {motion} from "framer-motion";
 import {PrimaryButton} from "../../components/Buttons";
-import {Heading} from "../../hooks/TextAnim";
+import {HeadingAnim} from "../../hooks/TextAnim";
 
 function Landing(props) {
 

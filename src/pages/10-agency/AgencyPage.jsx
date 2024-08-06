@@ -10,7 +10,7 @@ import {ReactComponent as GeoMur} from "../../assets/agency/3-Georgina-Murray.sv
 import {ReactComponent as MicDar} from "../../assets/agency/4-Michael-Darvell.svg";
 import {ReactComponent as ShaBur} from "../../assets/agency/5-Shane-Burns.svg";
 import {ReactComponent as OpenIcon} from "../../assets/agency/Open-Icon.svg";
-import {Heading} from "../../hooks/TextAnim";
+import {HeadingAnim} from "../../hooks/TextAnim";
 
 
 function AgencyPage(props) {
@@ -29,7 +29,7 @@ function AgencyPage(props) {
                     <div className="column-container">
                         <div className="heading-container">
                             <div className="title">
-                                <Heading word={"Agencies"}/>
+                                <HeadingAnim word={"Agencies"}/>
                             </div>
                         </div>
                         <div className="content-wrapper">

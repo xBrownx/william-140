@@ -6,6 +6,7 @@ import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import {PrimaryButton} from "./Buttons";
+import {HeadingAnim, ParaAnim} from "../hooks/TextAnim";
 
 const CustomSwiper = ({imgList, subtitles}) => {
 
@@ -46,7 +47,7 @@ const SwiperNavigation = ({swiperIdx, subtitles}) => {
     return (
         <div className="footer-container">
             <div className={"subtitle-wrapper"}>
-                <p>{subtitles[swiperIdx]}</p>
+                <ParaAnim line={subtitles[swiperIdx]} />
             </div>
             <div className="swiper-nav-container">
 

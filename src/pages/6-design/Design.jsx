@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Heading} from "../../hooks/TextAnim";
+import {HeadingAnim} from "../../hooks/TextAnim";
 
 
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -39,13 +39,13 @@ function Design(props) {
             <div className="page-container">
                 <div className="heading-container">
                     <div className="sub-heading">
-                        <Heading word={"DESIGN"}/>
+                        <HeadingAnim word={"DESIGN"}/>
                     </div>
                     <div className="title line-1">
-                        <Heading word={"A_memorable"}/>
+                        <HeadingAnim word={"A memorable"}/>
                     </div>
                     <div className="title line-2">
-                        <Heading word={"arrival_experience"}/>
+                        <HeadingAnim word={"arrival experience"}/>
                     </div>
                 </div>
 

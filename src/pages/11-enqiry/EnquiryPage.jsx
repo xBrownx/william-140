@@ -3,7 +3,7 @@ import {ReactComponent as FooterLogo} from "../../assets/old/140W_Logo_RGB_Stack
 
 import {useHomeAnim} from "../../hooks/HomeAnim";
 import {ScrollConst} from "../../util/PageRefs";
-import {Heading} from "../../hooks/TextAnim";
+import {HeadingAnim} from "../../hooks/TextAnim";
 
 function EnquiryPage(props) {
 
@@ -28,7 +28,7 @@ function EnquiryPage(props) {
                 <div className="content-container">
                     <div className="heading-wrapper">
                         <div className="title">
-                            <Heading word={"Enquiry"}/>
+                            <HeadingAnim word={"Enquiry"}/>
                         </div>
                     </div>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import carousel1 from '../../assets/amenities/1-concierge.png'
 import carousel2 from '../../assets/amenities/2-lobby.png'
@@ -7,15 +7,15 @@ import carousel4 from '../../assets/amenities/4-gym.png'
 import carousel5 from '../../assets/amenities/5-shower.png'
 import carousel6 from '../../assets/amenities/6-parking.png'
 import carousel7 from '../../assets/amenities/7-cafe.png'
-import {Heading} from "../../hooks/TextAnim";
+import {HeadingAnim} from "../../hooks/TextAnim";
 
-import { ReactComponent as Icon1 } from '../../assets/amenities/Icon-1.svg'
-import { ReactComponent as Icon2 } from '../../assets/amenities/Icon-2.svg'
-import { ReactComponent as Icon3 } from '../../assets/amenities/Icon-3.svg'
-import { ReactComponent as Icon4 } from '../../assets/amenities/Icon-4.svg'
-import { ReactComponent as Icon5 } from '../../assets/amenities/Icon-5.svg'
-import { ReactComponent as Icon6 } from '../../assets/amenities/Icon-6.svg'
-import { ReactComponent as Icon7 } from '../../assets/amenities/Icon-7.svg'
+import {ReactComponent as Icon1} from '../../assets/amenities/Icon-1.svg'
+import {ReactComponent as Icon2} from '../../assets/amenities/Icon-2.svg'
+import {ReactComponent as Icon3} from '../../assets/amenities/Icon-3.svg'
+import {ReactComponent as Icon4} from '../../assets/amenities/Icon-4.svg'
+import {ReactComponent as Icon5} from '../../assets/amenities/Icon-5.svg'
+import {ReactComponent as Icon6} from '../../assets/amenities/Icon-6.svg'
+import {ReactComponent as Icon7} from '../../assets/amenities/Icon-7.svg'
 
 
 function Amenities(props) {
@@ -41,6 +41,39 @@ function Amenities(props) {
         carousel7
     ]
 
+    // setImgSrc(imgList[i])
+
+    const initState = () => {
+        return [
+            {className: "", src: carousel1, alt: labelList[0]},
+            {className: "hidden", src: carousel2, alt: labelList[1]},
+            {className: "hidden", src: carousel3, alt: labelList[2]},
+            {className: "hidden", src: carousel4, alt: labelList[3]},
+            {className: "hidden", src: carousel5, alt: labelList[4]},
+            {className: "hidden", src: carousel6, alt: labelList[5]},
+            {className: "hidden", src: carousel7, alt: labelList[6]},
+        ];
+    }
+
+    const [imgProps, setImgProps] = useState(initState);
+
+    function handleImgChange(e, i) {
+        e.preventDefault()
+        let newState = initState()
+        newState[i].className = "show"
+
+        setImgProps(newState)
+    }
+
+    const IImage = (props) => {
+        return (
+            <div className={"img-wrapper " + props.className} >
+                <img {...props} />
+            </div>
+        );
+
+    }
+
     const iconList = [
         Icon1,
         Icon2,
@@ -49,7 +82,6 @@ function Amenities(props) {
         Icon5,
         Icon6,
         Icon7,
-
     ]
 
     const [imgSrc, setImgSrc] = React.useState(imgList[0]);
@@ -60,21 +92,27 @@ function Amenities(props) {
                 <div className="content-container">
 
                     <div className="column-container">
-                        <div className="img-wrapper">
-                            <img src={imgSrc} alt={labelList[0]}/>
+                        <div className="img-container">
+                            {/*<img className="hidden-ph" src={imgSrc} alt={labelList[0]}/>*/}
+
+                            {
+                                imgProps.map((inputProps) => {
+                                        return (<IImage {...inputProps} />)
+                                    }
+                                )}
                         </div>
                     </div>
 
                     <div className="column-container">
                         <div className="heading-container">
                             <div className="sub-heading">
-                                <Heading word={"AMENITIES"}/>
+                                <HeadingAnim word={"AMENITIES"}/>
                             </div>
                             <div className="title line-1">
-                                <Heading word={"Elite_services"}/>
+                                <HeadingAnim word={"Elite services"}/>
                             </div>
                             <div className="title line-2">
-                                <Heading word={"and_amenities"}/>
+                                <HeadingAnim word={"and amenities"}/>
                             </div>
                         </div>
 
@@ -84,7 +122,9 @@ function Amenities(props) {
                                     <ListItem
                                         heading={item}
                                         Icon={iconList[i]}
-                                        onMouseEnter={(e) => setImgSrc(imgList[i])}
+                                        onMouseEnter={(e) => {
+                                            handleImgChange(e, i)
+                                        }}
                                     />
                                 ))}
 
@@ -102,7 +142,7 @@ const ListItem = (props) => {
     return (
         <li>
             <div className="list-item-container" onMouseEnter={props.onMouseEnter}>
-                <props.Icon />
+                <props.Icon/>
                 <h3>{props.heading}</h3>
             </div>
         </li>
