@@ -16,29 +16,69 @@ function Landing(props) {
     })
 
     return (
-        <section ref={props.pageRef} className="landing">
-            <div className="container">
+        <section ref={props.pageRef.landingRef} className="landing">
+            <div className="page-container">
+
                 <div className="background"/>
                 <div className="button-wrapper">
-                    <PrimaryButton scrollTo={props.scrollTo}/>
+                    <PrimaryButton
+                        onClick={() => {
+                            props.pageRef.homeRef.current.scrollIntoView({behavior: "smooth"})
+                        }}/>
                 </div>
+
                 <div className="content-wrapper">
-                    <div className="title line-1">
-                        <Heading word={"AN ICONIC"}/>
-                    </div>
-                    <div className="title line-2">
-                        <Heading word={"MELBOURNE"}/>
-                    </div>
-                    <div className="title line-3">
-                        <Heading word={"LANDMARK"}/>
-                    </div>
+                    <motion.div
+                        className="title line-1"
+                        initial={{ y: "500%" }}
+                        animate={{ y: 0 }}
+                        transition={{ type: "spring", duration: 1 }}
+                    >
+                        <motion.div
+                            initial={{ x: "-50%" }}
+                            animate={{ x: 0 }}
+                            transition={{ type: "spring", duration: 1.3, delay: 1.2 }}
+                        >
+                            <h1>AN ICONIC</h1>
+                        </motion.div>
+
+                    </motion.div>
+
+                    <motion.div
+                        className="title line-2"
+                        initial={{ y: "500%" }}
+                        animate={{ y: 0 }}
+                        transition={{ type: "spring", duration: 1, delay: 0.1 }}
+                    >
+                        <motion.div
+                            initial={{ x: "50%" }}
+                            animate={{ x: 0 }}
+                            transition={{ type: "spring", duration: 1, delay: 1.2 }}
+                        >
+                            <h1>MELBOURNE</h1>
+                        </motion.div>
+                    </motion.div>
+
+                    <motion.div
+                        className="title line-3"
+                        initial={{ y: "500%" }}
+                        animate={{ y: 0 }}
+                        transition={{ type: "spring", duration: 1, delay: 0.15 }}
+                    >
+                        <motion.div
+                            initial={{ x: "-50%"}}
+                            animate={{ x: 0}}
+                            transition={{ type: "spring", duration: 1, delay: 1.2 }}
+                        >
+                            <h1>LANDMARK</h1>
+                        </motion.div>
+                    </motion.div>
 
                 </div>
             </div>
         </section>
     );
 }
-
 
 
 export default Landing;

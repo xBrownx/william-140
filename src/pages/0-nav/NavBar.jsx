@@ -15,31 +15,37 @@ function NavBar(props) {
                     <Title className="nav-bar-title" onClick={props.toTop}/>
                 </div>
                 <ul>
-                    <li onClick={() => props.pageRefs.mainRef.current.scrollIntoView({behavior: "smooth"})}>
+                    <li onClick={() => props.pageRefs.locationRef.current.scrollIntoView({behavior: "smooth"})}>
                         Location
                     </li>
 
                     <li className={isInPage(props.page, 3.4, 5.8) ? "link-active" : ""}
-                        onClick={() => props.pageRefs.lifestyleRef.current.scrollIntoView({behavior: "smooth"})}
+                        onClick={() => props.pageRefs.designRef.current.scrollIntoView({behavior: "smooth"})}
                     >
                         Design
                     </li>
-                    <li className={isInPage(props.page, 5.8, 7.5) ? "link-active" : ""}
-                        onClick={() => props.pageRefs.designRef.current.scrollIntoView({behavior: "smooth"})}
-                    >
-                        Availability
-                    </li>
+
                     <li className={isInPage(props.page, 7.5, 9) ? "link-active" : ""}
                         onClick={() => props.pageRefs.amenitiesRef.current.scrollIntoView({behavior: "smooth"})}>
                         Amenities
                     </li>
+
+                    <li className={isInPage(props.page, 5.8, 7.5) ? "link-active" : ""}
+                        onClick={() => props.pageRefs.availabilityRef.current.scrollIntoView({behavior: "smooth"})}
+                    >
+                        Availability
+                    </li>
+
                     <li className={isInPage(props.page, 10.5, 12) ? "link-active" : ""}
-                        onClick={() => props.pageRefs.availabilitiesRef.current.scrollIntoView({behavior: "smooth"})}>
+                        onClick={() => props.pageRefs.historyRef.current.scrollIntoView({behavior: "smooth"})}>
                         History
                     </li>
-                    <li onClick={() => props.pageRefs.enquiryRef.current.scrollIntoView({behavior: "smooth"})}>
+
+
+                    <li onClick={() => props.pageRefs.agencyRef.current.scrollIntoView({behavior: "smooth"})}>
                         Agencies
                     </li>
+
                     <li onClick={() => props.pageRefs.enquiryRef.current.scrollIntoView({behavior: "smooth"})}>
                         Enquire
                     </li>

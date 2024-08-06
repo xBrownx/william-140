@@ -11,11 +11,11 @@ import './MainParallax.css'
 import Location from "../pages/4-location/Location";
 import Design from "../pages/6-design/Design";
 import Amenities from "../pages/7-amenities/Amenities";
-import AvailabilityPage from "../pages/9-availability/AvailabilityPage";
-import HistoryPage from "../pages/8-history/HistoryPage";
+import Availability from "../pages/8-availability/Availability";
+import History from "../pages/9-history/History";
 import AgencyPage from "../pages/10-agency/AgencyPage";
 import EnquiryPage from "../pages/11-enqiry/EnquiryPage";
-import CarouselPage from "../pages/3-carousel/Carousel";
+import Carousel from "../pages/3-carousel/Carousel";
 import FullPageVideo from "../pages/999-video/FullPageVideo";
 import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
 
@@ -134,15 +134,15 @@ function MainParallax() {
 
             <Location offset={3} factor={1} speed={0}/>
 
-            <CarouselPage offset={4} factor={1} speed={0}/>
+            <Carousel offset={4} factor={1} speed={0}/>
 
             <Design offset={5} factor={1} speed={0}/>
 
             <Amenities offset={6} factor={1} speed={0}/>
 
-            <HistoryPage offset={7} factor={1} speed={0}/>
+            <History offset={7} factor={1} speed={0}/>
 
-            <AvailabilityPage offset={8} factor={1} speed={0}/>
+            <Availability offset={8} factor={1} speed={0}/>
 
             <AgencyPage offset={9} factor={1} speed={0}/>
 

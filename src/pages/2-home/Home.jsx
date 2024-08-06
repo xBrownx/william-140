@@ -2,6 +2,9 @@ import React, {useEffect, useRef, useState} from 'react';
 import {useHomeAnim} from "../../hooks/HomeAnim";
 import {ScrollConst} from "../../util/PageRefs";
 import {PrimaryTextButton} from "../../components/Buttons";
+import {motion} from "framer-motion";
+import {Heading, ParaSpan} from "../../hooks/TextAnim";
+
 
 function Home(props) {
 
@@ -9,18 +12,17 @@ function Home(props) {
 
     return (
         <section ref={props.pageRef.homeRef} className="home">
+            <div className="page-container">
                 <div className="content-container">
                     <div className="content-wrapper">
-                        <h1>
-                            Spaces for<br/>
-                            our tenants<br/>
-                            to thrive
-                        </h1>
-                        <p>
-                            Presenting a range of fully fitted tenancies available to lease.<br/>
-                            These opportunities, offer stunning views and natural light with<br/>
-                            access to the building’s first class facilities and amenities.<br/>
-                        </p>
+                        <Heading word={"Spaces for"} />
+                        <Heading word={"our tenants"} />
+                        <Heading word={"to thrive"} />
+
+                        <ParaSpan word={"Presenting a range of fully fitted tenancies available to lease."} />
+                        <ParaSpan word={"These opportunities, offer stunning views and natural light with"} />
+                        <ParaSpan word={"access to the building’s first class facilities and amenities."} />
+
                         <PrimaryTextButton
                             onClick={() => {
                                 props.pageRef.availabilitiesRef.current.scrollIntoView({behavior: "smooth"})
@@ -29,9 +31,10 @@ function Home(props) {
                         />
                     </div>
                 </div>
+            </div>
 
         </section>
-    );
+);
 }
 
 export default Home;

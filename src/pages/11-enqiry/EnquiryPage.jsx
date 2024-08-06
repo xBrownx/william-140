@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
-import './EnquiryPage.css'
 import {ReactComponent as FooterLogo} from "../../assets/old/140W_Logo_RGB_Stacked_White.svg";
-import Page from "../../components/Page";
-import {SecondaryTitle} from "../../components/TitleVariants";
+
 import {useHomeAnim} from "../../hooks/HomeAnim";
 import {ScrollConst} from "../../util/PageRefs";
+import {Heading} from "../../hooks/TextAnim";
 
 function EnquiryPage(props) {
 
@@ -24,70 +23,77 @@ function EnquiryPage(props) {
     }
 
     return (
-        <Page pageRef={props.pageRef} size={"page-100"}>
+        <section ref={props.pageRef.enquiryRef} className="enquiry">
+            <div className="page-container">
+                <div className="content-container">
+                    <div className="heading-wrapper">
+                        <div className="title">
+                            <Heading word={"Enquiry"}/>
+                        </div>
+                    </div>
 
-            <SecondaryTitle
-                variant={" enquire"}
-                heading={"Enquiry"}
-                anim={anim}
-            />
+                    <div className="content-wrapper">
+                        <div className="form-container">
+                            <div className="form-wrapper">
+                                <form onSubmit={handleSubmit}>
+                                    <div className="enquiry-row two">
 
-            <div className="primary-content-container enquire">
-                <div className="primary-content-wrapper no-border centre-horiz">
-                    <div className="enquire-form-wrapper">
-                        <form onSubmit={handleSubmit}>
+                                        <input
+                                            type="text"
+                                            name={"lastName"}
+                                            value={inputs.lastName || ""}
+                                            placeholder="Last Name"
+                                            onChange={handleChange}
+                                        />
 
-                            <div className="enquiry-2-row">
-                                <input
-                                    type="text"
-                                    name={"lastName"}
-                                    value={inputs.lastName || ""}
-                                    placeholder="Last Name"
-                                    onChange={handleChange}
-                                />
-                                <input
-                                    type="text"
-                                    name={"firstName"}
-                                    value={inputs.firstName || ""}
-                                    placeholder="First Name"
-                                    onChange={handleChange}
-                                />
+                                        <input
+                                            type="text"
+                                            name={"firstName"}
+                                            value={inputs.firstName || ""}
+                                            placeholder="First Name"
+                                            onChange={handleChange}
+                                        />
+
+                                    </div>
+
+                                    <div className="enquiry-row one">
+
+                                        <input
+                                            type="text"
+                                            name={"email"}
+                                            value={inputs.email || ""}
+                                            placeholder="Email"
+                                            onChange={handleChange}
+                                        />
+
+                                    </div>
+
+                                    <div className="enquiry-row one">
+                                        <input
+                                            type="text"
+                                            name={"phone"}
+                                            value={inputs.phone || ""}
+                                            placeholder="Phone Number"
+                                            onChange={handleChange}
+                                        />
+                                    </div>
+
+                                    <div className="enquiry-row one">
+                                        <textarea
+                                            className="enquiry-input-msg"
+                                            name={"message"}
+                                            value={inputs.message || ""}
+                                            placeholder="Message"
+                                            onChange={handleChange}
+                                            rows="4"
+                                        />
+                                    </div>
+                                    <div className="btn-wrapper">
+                                        <button type="submit">Submit</button>
+                                    </div>
+                                </form>
                             </div>
-
-                            <div className="enquiry-1-row">
-                                <input
-                                    type="text"
-                                    name={"email"}
-                                    value={inputs.email || ""}
-                                    placeholder="Email"
-                                    onChange={handleChange}
-                                />
-                            </div>
-
-                            <div className="enquiry-1-row">
-                                <input
-                                    type="text"
-                                    name={"phone"}
-                                    value={inputs.phone || ""}
-                                    placeholder="Phone Number"
-                                    onChange={handleChange}
-                                />
-                            </div>
-
-                            <div className="enquiry-1-row">
-                                    <textarea
-                                        className="enquiry-input-msg"
-                                        name={"message"}
-                                        value={inputs.message || ""}
-                                        placeholder="Message"
-                                        onChange={handleChange}
-                                        rows="4"
-                                    />
-                            </div>
-                            <div className="submit-btn-wrapper">
-                                <button type="submit">Submit</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -100,12 +106,13 @@ function EnquiryPage(props) {
                         <FooterLogo/>
                     </div>
                     <div className="footer-div right">
-                        <p>Website by Replika.</p>
+                        <p>Website designed by Replika.</p>
                     </div>
                 </div>
             </div>
-        </Page>
-    );
+        </section>
+    )
+        ;
 }
 
 export default EnquiryPage;
