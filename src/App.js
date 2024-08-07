@@ -18,32 +18,36 @@ import FullPageImg from "./components/FullPageImg";
 import fullPageImg1 from './assets/fullPageImg/Full-Page-Img-1.png'
 import fullPageImg2 from './assets/fullPageImg/Full-Page-Img-2.png'
 import fullPageImg3 from './assets/fullPageImg/Full-Page-Img-3.png'
+import {ThemeProvider} from "styled-components";
+import {mainTheme} from "./themes/MainTheme";
 
 function App() {
 
-    const pageRefs= PageRefs()
+    const pageRefs = PageRefs()
 
     return (
-        <div className="App">
-            <div ref={pageRefs.mainRef} className="app-container">
-                <NavBar pageRefs={pageRefs}/>
-                <Landing pageRef={pageRefs} scrollTo={() => {
-                    pageRefs.homeRef.current.scrollIntoView({behavior: "smooth"});
-                }}/>
-                <Home pageRef={pageRefs}/>
-                <Carousel pageRef={pageRefs} />
-                <Location pageRef={pageRefs} />
-                <FullPageImg pageRef={pageRefs} src={fullPageImg1}/>
-                <Design pageRef={pageRefs} />
-                <Amenities pageRef={pageRefs} />
-                <Availability pageRef={pageRefs} />
-                <History pageRef={pageRefs} />
-                <FullPageImg pageRef={pageRefs} src={fullPageImg2}/>
-                <AgencyPage pageRef={pageRefs} />
-                <FullPageImg pageRef={pageRefs} src={fullPageImg3}/>
-                <EnquiryPage pageRef={pageRefs} />
+        <ThemeProvider theme={mainTheme}>
+            <div className="App">
+                <div ref={pageRefs.mainRef} className="app-container">
+                    <NavBar pageRefs={pageRefs}/>
+                    <Landing pageRef={pageRefs} scrollTo={() => {
+                        pageRefs.homeRef.current.scrollIntoView({behavior: "smooth"});
+                    }}/>
+                    <Home pageRef={pageRefs}/>
+                    <Carousel pageRef={pageRefs}/>
+                    <Location pageRef={pageRefs}/>
+                    <FullPageImg pageRef={pageRefs} src={fullPageImg1}/>
+                    <Design pageRef={pageRefs}/>
+                    <Amenities pageRef={pageRefs}/>
+                    <Availability pageRef={pageRefs}/>
+                    <History pageRef={pageRefs}/>
+                    <FullPageImg pageRef={pageRefs} src={fullPageImg2}/>
+                    <AgencyPage pageRef={pageRefs}/>
+                    <FullPageImg pageRef={pageRefs} src={fullPageImg3}/>
+                    <EnquiryPage pageRef={pageRefs}/>
+                </div>
             </div>
-        </div>
+        </ThemeProvider>
     );
 }
 

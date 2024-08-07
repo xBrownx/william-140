@@ -4,6 +4,7 @@ import SplitType from 'split-type'
 import {motion} from "framer-motion";
 import {PrimaryButton} from "../../components/Buttons";
 import {HeadingAnim} from "../../hooks/TextAnim";
+import {HeadingDisplay} from "../../components/styles/Typography.styled";
 
 function Landing(props) {
 
@@ -39,7 +40,7 @@ function Landing(props) {
                             animate={{ x: 0 }}
                             transition={{ type: "spring", duration: 1.3, delay: 1.2 }}
                         >
-                            <h1>AN ICONIC</h1>
+                            <HeadingDisplay>AN ICONIC</HeadingDisplay>
                         </motion.div>
 
                     </motion.div>
