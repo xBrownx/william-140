@@ -1,59 +1,47 @@
 import React, {useEffect} from 'react';
-import './NavBar.css'
 import {ReactComponent as Title} from "../../assets/old/Title.svg";
+import {TextButton} from "../../components/styles/Buttons.styled";
+import {NavItems, NavBarLi, NavBarTitleWrapper, NavBarUl, NavBarWrapper, NavBarContainer} from "../../components/styles/NavBar.styled";
+import {motion} from "framer-motion";
 
 function NavBar(props) {
 
-    function isInPage(page, start, end) {
-        return page >= start && page < end;
-    }
+    const navItems = NavItems(props.pageRefs)
+    const enquireRef = props.pageRefs.enquiryRef.current;
 
     return (
-        <div className="nav-bar-container">
-            <div className="nav-bar-wrapper">
-                <div className="nav-bar-title-container">
-                    <Title className="nav-bar-title" onClick={props.toTop}/>
-                </div>
-                <ul>
-                    <li onClick={() => props.pageRefs.locationRef.current.scrollIntoView({behavior: "smooth"})}>
-                        Location
-                    </li>
+        <NavBarContainer
+            as={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{opacity: 1 }}
+            transition={{ type: "spring", duration: 2, delay: 1.5 }}
+        >
+            <NavBarWrapper>
 
-                    <li className={isInPage(props.page, 3.4, 5.8) ? "link-active" : ""}
-                        onClick={() => props.pageRefs.designRef.current.scrollIntoView({behavior: "smooth"})}
-                    >
-                        Design
-                    </li>
+                <NavBarTitleWrapper>
+                    <Title onClick={props.toTop}/>
+                </NavBarTitleWrapper>
 
-                    <li className={isInPage(props.page, 7.5, 9) ? "link-active" : ""}
-                        onClick={() => props.pageRefs.amenitiesRef.current.scrollIntoView({behavior: "smooth"})}>
-                        Amenities
-                    </li>
+                <NavBarUl>
+                    {navItems.map(item => {
+                        return (
+                            <NavBarLi
+                                onClick={() => {
+                                    item.pageRef.scrollIntoView({behavior: "smooth"})
+                                }}>
+                                {item.name}
+                            </NavBarLi>
+                        )
+                    })}
 
-                    <li className={isInPage(props.page, 5.8, 7.5) ? "link-active" : ""}
-                        onClick={() => props.pageRefs.availabilityRef.current.scrollIntoView({behavior: "smooth"})}
-                    >
-                        Availability
-                    </li>
+                    <NavBarLi onClick={() => enquireRef.scrollIntoView({behavior: "smooth"})}>
+                        <TextButton variant={true}>Enquire</TextButton>
+                    </NavBarLi>
+                </NavBarUl>
+            </NavBarWrapper>
+        </NavBarContainer>
+    )
 
-                    <li className={isInPage(props.page, 10.5, 12) ? "link-active" : ""}
-                        onClick={() => props.pageRefs.historyRef.current.scrollIntoView({behavior: "smooth"})}>
-                        History
-                    </li>
-
-
-                    <li onClick={() => props.pageRefs.agencyRef.current.scrollIntoView({behavior: "smooth"})}>
-                        Agencies
-                    </li>
-
-                    <li onClick={() => props.pageRefs.enquiryRef.current.scrollIntoView({behavior: "smooth"})}>
-                        Enquire
-                    </li>
-                </ul>
-            </div>
-        </div>
-        // </ParallaxLayer>
-    );
 }
 
 export default NavBar;

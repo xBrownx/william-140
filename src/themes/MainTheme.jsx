@@ -3,7 +3,7 @@
 
 
 export const mainTheme = {
-    colours: {
+    colors: {
         bg_primary: '#162425',
         bg_secondary: '#DED9D0',
         font_primary: '#fff',
@@ -21,8 +21,8 @@ export const mainTheme = {
     },
 
     fontSizes: {
-        display: '128px',
-        display_vw: '7.187vw',
+        displayPx: '128px',
+        display: '8vw',
         heading_1: '88px',
         heading_2: '48px',
         heading_3: '16px',
@@ -33,45 +33,45 @@ export const mainTheme = {
     typography: {
         display: {
             fontFamily: 'TWKEverett-Light',
-            fontSize: '128px',
-            fontSizeVariable: '7.187vw',
-            fontColour: '#fff'
+            fontSizePx: '128px',
+            fontSize: '7.187vw',
+            fontColor: '#fff'
         },
         h1: {
             fontFamily: 'TWKEverett-Light',
             fontSize: '88px',
             fontSizeVariable: '',
-            fontColour: '#fff'
+            fontColor: '#fff'
         },
         h2: {
             fontFamily: 'TWKEverett-Light',
             fontSize: '48px',
             fontSizeVariable: '',
-            fontColour: '#fff'
+            fontColor: '#fff'
         },
         h3: {
             fontFamily: 'SuisseIntl-Bold',
             fontSize: '16px',
             fontSizeVariable: '',
-            fontColour: '#fff'
+            fontColor: '#fff'
         },
         p1: {
             fontFamily: 'SuisseIntl-Regular',
             fontSize: '18px',
             fontSizeVariable: '',
-            fontColour: '#fff'
+            fontColor: '#fff'
         },
         p2: {
             fontFamily: 'SuisseIntl-Regular',
             fontSize: '14px',
             fontSizeVariable: '',
-            fontColour: '#fff'
+            fontColor: '#fff'
         },
         hyperlink: {
             fontFamily: 'TWKEverett-Regular',
             fontSize: '24px',
             fontSizeVariable: '',
-            fontColour: '#84936E'
+            fontColor: '#84936E'
         }
     },
 
@@ -84,11 +84,18 @@ export const mainTheme = {
             backgroundColor: '#162425',
         },
         secondary: {
-             fontFamily: 'SuisseIntl-Regular',
+            fontFamily: 'SuisseIntl-Regular',
             fontSize: '18px',
             fontSizeVariable: '',
             fontColour: '#162425',
             backgroundColor: '#FFF',
+        },
+        variant: {
+            fontFamily: 'SuisseIntl-Regular',
+            fontSize: '18px',
+            fontSizeVariable: '',
+            fontColour: '#FFF',
+            backgroundColor: '#5178E1',
         }
     }
 
