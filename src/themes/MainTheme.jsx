@@ -1,7 +1,3 @@
-
-
-
-
 export const mainTheme = {
     colors: {
         bg_primary: '#162425',
@@ -53,7 +49,7 @@ export const mainTheme = {
             fontFamily: 'SuisseIntl-Bold',
             fontSize: '16px',
             fontSizeVariable: '',
-            fontColor: '#fff'
+            fontColor: '#84936E'
         },
         p1: {
             fontFamily: 'SuisseIntl-Regular',

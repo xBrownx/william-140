@@ -1,0 +1,147 @@
+.enquiry-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    margin: 91px 0 0 0;
+}
+
+.enquiry-page-container {
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.enquiry-page-title-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.enquiry-page-title-wrapper h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 88px;
+    line-height: 88px;
+    font-weight: 300;
+    color: var(--primary-text-colour);
+    font-family: 'TWKEverett-Light', serif;
+}
+
+.enquiry-page-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 0 0;
+}
+
+.enquiry-form-container {
+    width: 576px;
+}
+
+.enquiry-2-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 20px 0;
+}
+
+.enquiry-2-row input {
+}
+
+.enquiry-1-row {
+    display: flex;
+    margin: 0 0 20px 0;
+}
+
+.enquiry-input-msg {
+
+}
+
+input {
+    width: 100%;
+    height: 51px;
+    font-size: 16px;
+    font-family: 'SuisseIntl-Regular', serif;
+    background-color: transparent;
+    color: var(--primary-text-colour);
+    box-sizing: border-box;
+    border: 1px solid #E6E6E6;
+    padding: 0 0 0 20px;
+}
+
+textarea {
+    width: 100%;
+    background-color: transparent;
+    color: var(--primary-text-colour);
+    box-sizing: border-box;
+    border: 1px solid #E6E6E6;
+    padding: 15px 0 0 20px;
+    font-size: 16px;
+    font-family: 'SuisseIntl-Regular', serif;
+    resize: none;
+}
+
+.submit-btn-wrapper button {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 40px;
+    color: var(--primary-bg-colour);
+    font-size: 16px;
+    font-family: 'SuisseIntl-Regular', serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+::placeholder {
+    color: var(--primary-text-colour);
+}
+
+
+/************* Footer **********/
+.enquiry-page-footer-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: end;
+}
+
+.enquiry-page-footer {
+
+}
+
+.footer-div {
+    width: 100%;
+    display: flex;
+}
+
+.footer-div p {
+    color: var(--primary-text-colour);
+    font-size: 16px;
+    font-family: 'SuisseIntl-Regular', serif;
+    padding: 0 64px 0 64px;
+    margin: 0;
+}
+
+.footer-div.left {}
+
+.footer-div.centre {
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-div.right {
+    align-items: end;
+    justify-content: end;
+}

@@ -3,17 +3,17 @@ import {useScroll, useTransform} from "framer-motion";
 
 export const PageRefs = () => {
     return({
-        mainRef: useRef(),
-        landingRef: useRef(),
-        homeRef: useRef(),
-        carouselRef: useRef(),
-        locationRef: useRef(),
-        designRef: useRef(),
-        amenitiesRef: useRef(),
-        availabilityRef: useRef(),
-        historyRef: useRef(),
-        agencyRef: useRef(),
-        enquiryRef: useRef()
+        main: useRef(),
+        landing: useRef(),
+        home: useRef(),
+        carousel: useRef(),
+        location: useRef(),
+        design: useRef(),
+        amenities: useRef(),
+        availability: useRef(),
+        history: useRef(),
+        agency: useRef(),
+        enquire: useRef()
     })
 };
 

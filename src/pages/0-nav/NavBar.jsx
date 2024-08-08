@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
 import {ReactComponent as Title} from "../../assets/old/Title.svg";
 import {TextButton} from "../../components/styles/Buttons.styled";
-import {NavItems, NavBarLi, NavBarTitleWrapper, NavBarUl, NavBarWrapper, NavBarContainer} from "../../components/styles/NavBar.styled";
+import {NavItems, NavBarLi, NavBarTitleWrapper, NavBarUl, NavBarWrapper, NavBarContainer} from "./NavBar.styled";
 import {motion} from "framer-motion";
 
 function NavBar(props) {
 
     const navItems = NavItems(props.pageRefs)
-    const enquireRef = props.pageRefs.enquiryRef.current;
+    const enquire = props.pageRefs.enquire.current;
 
     return (
         <NavBarContainer
@@ -23,19 +23,20 @@ function NavBar(props) {
                 </NavBarTitleWrapper>
 
                 <NavBarUl>
-                    {navItems.map(item => {
+                    {navItems.map((item, i) => {
                         return (
                             <NavBarLi
+                                key={i}
                                 onClick={() => {
-                                    item.pageRef.scrollIntoView({behavior: "smooth"})
+                                    item.pageRef.current.scrollIntoView({behavior: "smooth"})
                                 }}>
                                 {item.name}
                             </NavBarLi>
                         )
                     })}
 
-                    <NavBarLi onClick={() => enquireRef.scrollIntoView({behavior: "smooth"})}>
-                        <TextButton variant={true}>Enquire</TextButton>
+                    <NavBarLi onClick={() => enquire.scrollIntoView({behavior: "smooth"})}>
+                        <TextButton $variant={true}>Enquire</TextButton>
                     </NavBarLi>
                 </NavBarUl>
             </NavBarWrapper>

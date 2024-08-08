@@ -1,21 +1,21 @@
 import React, {useState} from 'react';
 
-import carousel1 from '../../assets/amenities/1-concierge.png'
-import carousel2 from '../../assets/amenities/2-lobby.png'
-import carousel3 from '../../assets/amenities/3-multi_room.png'
-import carousel4 from '../../assets/amenities/4-gym.png'
-import carousel5 from '../../assets/amenities/5-shower.png'
-import carousel6 from '../../assets/amenities/6-parking.png'
-import carousel7 from '../../assets/amenities/7-cafe.png'
+import carousel1 from './assets/1-concierge.png'
+import carousel2 from './assets/2-lobby.png'
+import carousel3 from './assets/3-multi_room.png'
+import carousel4 from './assets/4-gym.png'
+import carousel5 from './assets/5-shower.png'
+import carousel6 from './assets/6-parking.png'
+import carousel7 from './assets/7-cafe.png'
 import {HeadingAnim} from "../../hooks/TextAnim";
 
-import {ReactComponent as Icon1} from '../../assets/amenities/Icon-1.svg'
-import {ReactComponent as Icon2} from '../../assets/amenities/Icon-2.svg'
-import {ReactComponent as Icon3} from '../../assets/amenities/Icon-3.svg'
-import {ReactComponent as Icon4} from '../../assets/amenities/Icon-4.svg'
-import {ReactComponent as Icon5} from '../../assets/amenities/Icon-5.svg'
-import {ReactComponent as Icon6} from '../../assets/amenities/Icon-6.svg'
-import {ReactComponent as Icon7} from '../../assets/amenities/Icon-7.svg'
+import {ReactComponent as Icon1} from './assets/Icon-1.svg'
+import {ReactComponent as Icon2} from './assets/Icon-2.svg'
+import {ReactComponent as Icon3} from './assets/Icon-3.svg'
+import {ReactComponent as Icon4} from './assets/Icon-4.svg'
+import {ReactComponent as Icon5} from './assets/Icon-5.svg'
+import {ReactComponent as Icon6} from './assets/Icon-6.svg'
+import {ReactComponent as Icon7} from './assets/Icon-7.svg'
 
 
 function Amenities(props) {
@@ -112,7 +112,7 @@ function Amenities(props) {
                                 <HeadingAnim word={"Elite services"}/>
                             </div>
                             <div className="title line-2">
-                                <HeadingAnim word={"and amenities"}/>
+                                <HeadingAnim word={"and assets"}/>
                             </div>
                         </div>
 
