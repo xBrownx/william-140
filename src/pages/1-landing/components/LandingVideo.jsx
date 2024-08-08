@@ -5,7 +5,7 @@ import {BackgroundContainer, LandingVideo} from "../styles/1-Landing.styled";
 export const LandingBackground = () => {
     return (
         <BackgroundContainer>
-            <LandingVideo autoPlay loop muted controls={false}>
+            <LandingVideo loop muted controls={false}>
                 <source src={video} type="video/mp4"/>
             </LandingVideo>
         </BackgroundContainer>

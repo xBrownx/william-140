@@ -1,5 +1,6 @@
 export const mainTheme = {
     colors: {
+        primary: '#164A49',
         bg_primary: '#162425',
         bg_secondary: '#DED9D0',
         font_primary: '#fff',

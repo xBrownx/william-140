@@ -1,5 +1,15 @@
 import React, {useEffect, useRef} from 'react';
 import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
+import styled from "styled-components";
+
+
+const ImgContainer = styled.div`
+    padding: 0 11% 0 11%;
+`
+
+const StyledImg = styled(motion.img)`
+    margin: 0% 11%;
+`
 
 const FullPageImg = (props) => {
     const targetRef = useRef(null);
@@ -20,7 +30,8 @@ const FullPageImg = (props) => {
     return (
         <section ref={containerRef} className="full-page-img">
             <motion.div ref={targetRef} className="page-container">
-                <motion.img
+                <StyledImg
+                    as={motion.img}
                     style={{y: y1}}
                     src={props.src}
                     alt="Full Page Image"
