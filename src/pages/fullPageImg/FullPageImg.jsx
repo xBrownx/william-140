@@ -1,43 +1,18 @@
 import React, {useEffect, useRef} from 'react';
 import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
 import styled from "styled-components";
+import {ParallaxImg} from "../../components/ui/ParallaxImg";
+import {PageSection} from "../../components/styles/SectionContainer.styled";
+import {PageContainerStyled} from "../../components/styles/PageContainer.styled";
 
-
-const ImgContainer = styled.div`
-    padding: 0 11% 0 11%;
-`
-
-const StyledImg = styled(motion.img)`
-    margin: 0% 11%;
-`
 
 const FullPageImg = (props) => {
-    const targetRef = useRef(null);
-    const containerRef = useRef(null);
-
-    const {scrollYProgress, scrollY} = useScroll({
-        target: targetRef,
-        offset: ["start end", "end start"]
-    });
-
-    const y1 = useTransform(scrollYProgress, [0, 0.25, 0.75, 1], ["-50%", "-25%", "25%", "50%"]);
-
-    useMotionValueEvent(scrollYProgress, "change",
-    (latest) => {
-        console.log(`Posy == ${latest}`);
-    })
-
     return (
-        <section ref={containerRef} className="full-page-img">
-            <motion.div ref={targetRef} className="page-container">
-                <StyledImg
-                    as={motion.img}
-                    style={{y: y1}}
-                    src={props.src}
-                    alt="Full Page Image"
-                />
-            </motion.div>
-        </section>
+        <PageSection $secondary>
+            <PageContainerStyled $imgPadding>
+                <ParallaxImg src={props.src} alt="Full Page Img"/>
+            </PageContainerStyled>
+        </PageSection>
     );
 };
 

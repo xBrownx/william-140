@@ -6,21 +6,20 @@ const ContentPadding = styled.div`
     padding: 0 91px 0 91px;
 `
 
-export const TitleVariantOne = (props) => {
+export const TitleVariantOne = ({children}) => {
     return(
         <ContentPadding>
-            <HeadingOne $secondary>{props.lineOne}</HeadingOne>
-            <HeadingOne $secondary>{props.lineTwo}</HeadingOne>
+            <HeadingOne $secondary>
+                {children}
+            </HeadingOne>
         </ContentPadding>
     );
 }
 
-export const TitleVariantTwo = (props) => {
+export const TitleVariantTwo = ({children}) => {
       return(
         <ContentPadding>
-            <HeadingThree $secondary>{props.subHeading}</HeadingThree>
-            <HeadingOne $secondary>{props.lineOne}</HeadingOne>
-            <HeadingOne $secondary>{props.lineTwo}</HeadingOne>
+            <HeadingThree $secondary>{children}</HeadingThree>
         </ContentPadding>
     );
 }

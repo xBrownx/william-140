@@ -1,11 +1,8 @@
 import React, {lazy, Suspense} from "react";
-import {PageContainerStyled} from "../../components/styles/PageContainer.styled";
-
-// import {SplitScreen} from "../../components/ui/SplitScreen";
-import {Content, HomeBackground} from "./2-Home.ui";
 import {PageSection} from "../../components/styles/SectionContainer.styled";
+import {SplitScreenContainer} from "../../components/ui/SplitScreenContainer";
+import {HomeLeftComponent, HomeRightComponent} from "./components/2-Home.ui";
 
-const SplitScreen= lazy(() => import("../../components/ui/SplitScreen"));
 
 function Home(props) {
 
@@ -15,16 +12,10 @@ function Home(props) {
             ref={props.pageRef.home}
             $secondary
         >
-
-            <HomeBackground/>
-            <PageContainerStyled>
-                <SplitScreen
-                    left={() => {
-                    }}
-                    right={Content}>
-                </SplitScreen>
-            </PageContainerStyled>
-
+            <SplitScreenContainer>
+                <HomeLeftComponent />
+                <HomeRightComponent />
+            </SplitScreenContainer>
 
         </PageSection>
     )

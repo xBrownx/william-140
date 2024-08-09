@@ -1,31 +1,28 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    width: 100%;
-    height: 100%;
     display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
 `
 
 const Pane = styled.div`
     flex: 1;
-    display: flex;
     align-items: center;
 `
 
-const SplitScreen = ({
-    left: Left,
-    right: Right
-}) => {
+export const SplitScreenContainer = ({children}) => {
+    const [left, right] = children
     return(
         <Container>
             <Pane>
-                <Left />
+                {left}
             </Pane>
             <Pane>
-                <Right />
+                {right}
             </Pane>
         </Container>
     );
 }
 
-export default SplitScreen;

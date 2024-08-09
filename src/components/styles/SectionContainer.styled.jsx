@@ -6,10 +6,11 @@ export const PageSection= styled(motion.section)`
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
-    width: 100vw;
-    min-height: 100vh;
-    box-sizing: border-box;
+    //overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    //box-sizing: border-box;
     
     background-color: ${({ theme }) => theme.colors.bg_primary};
     

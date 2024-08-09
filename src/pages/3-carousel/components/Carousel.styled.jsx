@@ -12,6 +12,7 @@ export const CarouselContainer = styled.div`
     flex-direction: row;
     width: 100%;
     overflow: hidden;
+    height: 37.037vh;
 `
 
 export const CarouselList = styled.div`

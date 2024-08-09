@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import carousel1 from './assets/1-concierge.png'
-import carousel2 from './assets/2-lobby.png'
+import carousel2 from '../00-assets/2-lobby.png'
 import carousel3 from './assets/3-multi_room.png'
 import carousel4 from './assets/4-gym.png'
 import carousel5 from './assets/5-shower.png'
@@ -112,7 +112,7 @@ function Amenities(props) {
                                 <HeadingAnim word={"Elite services"}/>
                             </div>
                             <div className="title line-2">
-                                <HeadingAnim word={"and assets"}/>
+                                <HeadingAnim word={"and 00-assets"}/>
                             </div>
                         </div>
 

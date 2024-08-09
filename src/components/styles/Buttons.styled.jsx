@@ -38,7 +38,12 @@ export const ArrowButton = styled.div`
     z-index: 2;
     display: flex;
     background-image: url(${arrow});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     border-radius: 7%;
+    width: 100%;
+    height: 100%;
     
 
     ${props => props.$up && css`

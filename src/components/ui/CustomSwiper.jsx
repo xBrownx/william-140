@@ -24,8 +24,6 @@ const SwiperSubtitleWrapper = styled.div`
     flex: 1;
     display: flex;
     align-items:center;
-    
-
 `
 
 const SwiperNavWrapper = styled.div`
@@ -64,7 +62,7 @@ const CustomSwiper = ({imgList, subtitles}) => {
                 <SwiperSlide key={i}>
                     <div className="img-wrapper">
                         <Img />
-                        {/*<img src={img} alt={"Carousel Item"}/>*/}
+                        {/*<img src={img} alt={"Lifestyle Item"}/>*/}
                     </div>
                 </SwiperSlide>
             ))}

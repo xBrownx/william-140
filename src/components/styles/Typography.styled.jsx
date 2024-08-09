@@ -5,9 +5,9 @@ export const HeadingDisplay= styled(motion.h1)`
     //position: relative;
     z-index: 1;
     font-family: ${({ theme }) => theme.typography.display.fontFamily};
-    font-size: ${({ theme }) => theme.typography.display.fontSize };
+    font-size: 10vw;
     font-weight: 300;
-    line-height: 7.5vw;
+    line-height: 9vw;
     color: ${({ theme }) => theme.typography.display.fontColor };
     margin: 0;
     width: 100%;
@@ -19,15 +19,16 @@ export const HeadingDisplay= styled(motion.h1)`
 `
 
 export const HeadingOne = styled.h1`
-    font-family: ${({ theme }) => theme.typography.h1.fontFamily};
-    font-size: ${({ theme }) => theme.typography.h1.fontSize };
+    font-family: 'TWKEverett-Light', serif;
+    font-size: 7.901vh;
+    line-height: 9.481vh;
     font-weight: 300;
     color: ${({ theme }) => theme.typography.h1.fontColor };
     padding: 0;
     margin: 0;
     
     ${props => props.$secondary && css`
-        color: ${({ theme }) => theme.colors.bg_primary };
+        color: #164A49;
     `};
     
 `
@@ -42,11 +43,12 @@ export const HeadingTwo = styled.h2`
 
 export const HeadingThree = styled.h3`
     font-family: ${({ theme }) => theme.typography.h3.fontFamily};
-    font-size: ${({ theme }) => theme.typography.h3.fontSize };
+    font-size: 1.975vh;
+    line-height: 2.562vh;
     color: ${({ theme }) => theme.typography.h3.fontColor };
-    font-weight: 200;
+    font-weight: 700;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0.988vh 0;
 `
 
 export const ParagraphOne = styled.p`
@@ -61,8 +63,6 @@ export const ParagraphOne = styled.p`
         color: ${({ theme }) => theme.colors.bg_primary };
         opacity: 1;
     `};
-    
-    
 `
 
 export const ParagraphTwo = styled.p`

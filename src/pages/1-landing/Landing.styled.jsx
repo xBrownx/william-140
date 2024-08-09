@@ -1,18 +1,25 @@
 import styled from "styled-components";
-import background from "../assets/LandingBackground.png"
+import background from "./assets/LandingBackground.png"
 
 
-export const LandingDisplay = styled.div`
-    position: relative;
-    left: 0;
-    opacity: 1;
-    width: 100%;
-    height: 100%;
+export const TitleContainer = styled.div`
+    position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: end;
-    padding: 0 27.5% 7.5% 14.1%;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    width: 84vw;
+    height: 51vh;
+    
+    gap: 2%;
+    //align-items: center;
+    //justify-content: end;
+    margin: 0 0 4% 0;
+`
+
+export const TitleLine = styled.div`
+    padding: 0 2%;
 `
 
 export const BackgroundContainer = styled.div`
@@ -58,9 +65,12 @@ export const LandingVideo = styled.video`
 
 export const LandingButtonWrapper = styled.div`
     position: absolute;
+    display: flex;
+    width: 8vh;
+    height: 8vh;
     right: 0;
     bottom: 0;
-    margin: 0 1.5% 4.5% 0;
+    margin: 0 2vw 5vh 0;
     animation: arrow-appear 1s forwards;
     animation-delay: 1.3s;
     transform: translateY(400%);
