@@ -1,8 +1,6 @@
 import React from 'react';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
 
-import {PageSection} from "../../components/styles/SectionContainer.styled";
+import {StyledSection} from "../../components/styles/SectionContainer.styled";
 import {FullPageMin} from "../../components/styles/PageContainer.styled";
 import {
     LocationContainer,
@@ -13,20 +11,18 @@ import {
 } from "./Location.styled";
 import {HeadingOne, HeadingThree} from "../../components/styles/Typography.styled";
 
-import CustomSwiper from "../../components/ui/CustomSwiper";
-import {LocationCarousel} from "./components/LocationCarousel";
-import {LocationCarouselTrue} from "./components/4-Location.ui";
-
+import {CarouselComponent} from "./components/Carousel.Component";
+import {carouselItems} from "./components/CarouselItems";
 
 
 function Location(props) {
     return (
-        <PageSection
+        <StyledSection
             ref={props.pageRef.location}
             $secondary
         >
             <FullPageMin>
-                <LocationContainer id={"location-container"}>
+                <LocationContainer>
                     <LocationContent>
                         <LocationTitle>
                             <HeadingThree>LOCATION</HeadingThree>
@@ -44,10 +40,10 @@ function Location(props) {
                         </LocationParagraphWrapper>
                     </LocationContent>
                     {/*<LocationCarouselTrue />*/}
-                    <LocationCarousel />
+                    <CarouselComponent carouselItems={carouselItems}/>
                 </LocationContainer>
             </FullPageMin>
-        </PageSection>
+        </StyledSection>
     );
 }
 

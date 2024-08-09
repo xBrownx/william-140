@@ -1,9 +1,7 @@
 import React from 'react';
-import {PageSection} from "../../components/styles/SectionContainer.styled";
-import {FullPageContainer, PageContainerStyled} from "../../components/styles/PageContainer.styled";
-import {TitleVariantOne, TitleVariantTwo} from "../../components/ui/Titles.ui";
+import {StyledSection} from "../../components/styles/SectionContainer.styled";
+import {FullPageContainer} from "../../components/styles/PageContainer.styled";
 import {CarouselComponent} from "./components/Carousel.component";
-import {ContentContainer, ContentWrapper, ParagraphWrapper} from "../../components/styles/Content.ui";
 import {HeadingOne, HeadingThree, ParagraphOne} from "../../components/styles/Typography.styled";
 import {
     LifestyleContainer,
@@ -15,7 +13,7 @@ import {
 function Lifestyle(props) {
 
     return (
-        <PageSection $secondary ref={props.pageRef.carousel}>
+        <StyledSection ref={props.pageRef.carousel}>
             <FullPageContainer>
                 <LifestyleContainer>
                     <LifestyleContentWrapper>
@@ -34,7 +32,7 @@ function Lifestyle(props) {
                     <CarouselComponent/>
                 </LifestyleContainer>
             </FullPageContainer>
-        </PageSection>
+        </StyledSection>
     );
 }
 

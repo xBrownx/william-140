@@ -1,19 +1,32 @@
 import React, {useEffect, useRef} from 'react';
-import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
-import styled from "styled-components";
 import {ParallaxImg} from "../../components/ui/ParallaxImg";
-import {PageSection} from "../../components/styles/SectionContainer.styled";
-import {PageContainerStyled} from "../../components/styles/PageContainer.styled";
+import {StyledSection} from "../../components/styles/SectionContainer.styled";
+import styled from "styled-components";
 
 
-const FullPageImg = (props) => {
+export const FullPageImg = ({imgSrc, }) => {
     return (
-        <PageSection $secondary>
-            <PageContainerStyled $imgPadding>
+        <StyledSection>
+            <Container $imgPadding>
                 <ParallaxImg src={props.src} alt="Full Page Img"/>
-            </PageContainerStyled>
-        </PageSection>
+            </Container>
+        </StyledSection>
     );
 };
 
-export default FullPageImg;
+const Container = styled.div`
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    
+    ${props => props.$imgPadding && css`
+        padding: 11.111vh 11.111vw 11.111vh 11.111vw;
+    `};
+`
