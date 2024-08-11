@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {HeadingOne, HeadingThree} from "./styles/Typography.styled";
+import {HeadingOne, HeadingThree} from "./Typography.styled";
 
 const ContentPadding = styled.div`
     padding: 0 91px 0 91px;
