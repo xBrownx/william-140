@@ -1,72 +1,47 @@
 import React, {forwardRef} from 'react';
 
 import {StyledSection} from "../components/styles/SectionContainer.styled";
-import {amenitiesCarouselItems} from '../util/constants'
+import {AmenitiesItems} from "../assets/07-AmenitiesItems";
+import {FullPageMin, Padding} from "../components/styles/PageContainer.styled";
+import {SplitScreenContainer} from "../components/SplitScreenContainer";
+import {HeadingOne, HeadingThree} from "../components/styles/Typography.styled";
+import {CarouselComponent} from "../components/Carousel.Component";
 
-export const Amenities = forwardRef(function({id}, ref) {
-    const IImage = (props) => {
-        return (
-            <div className={"img-wrapper " + props.className} >
-                <img {...props} />
-            </div>
-        );
+export const Amenities = forwardRef(function ({id}, ref) {
 
-    }
+    const amenitiesItems = AmenitiesItems();
 
     return (
-        <StyledSection id={id}
+        <StyledSection
+            id={id}
             ref={ref}
-            $secondary
+            bgColour={'#162425'}
         >
-            <div className="page-container">
-                <div className="content-container">
-
-                    <div className="column-container">
-                        <div className="img-container">
-                            {
-                                // imgProps.map((inputProps, i) => {
-                                //         return (<IImage key={i}{...inputProps} />)
-                                //     }
-                                // )
-                            }
-                        </div>
-                    </div>
-
-                    <div className="column-container">
-                        <div className="heading-container">
-                            <div className="sub-heading">
-
-                            </div>
-                            <div className="title line-1">
-
-                            </div>
-                            <div className="title line-2">
-
-                            </div>
-                        </div>
-
-                        <div className="list-wrapper">
-                            <ul className="list">
-                                {/*{labelList.map((item, i) => (*/}
-                                {/*    <ListItem*/}
-                                {/*        key={i}*/}
-                                {/*        heading={item}*/}
-                                {/*        Icon={iconList[i]}*/}
-                                {/*        onMouseEnter={(e) => {*/}
-                                {/*            handleImgChange(e, i)*/}
-                                {/*        }}*/}
-                                {/*    />*/}
-                                {/*))}*/}
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <FullPageMin>
+                <Padding>
+                    <SplitScreenContainer>
+                        <AmenitiesList amenitiesItems={amenitiesItems}/>
+                        <CarouselComponent carouselItems={amenitiesItems}/>
+                    </SplitScreenContainer>
+                </Padding>
+            </FullPageMin>
         </StyledSection>
 
     );
 });
+
+const AmenitiesList = ({}) => {
+    return (
+        <>
+            <HeadingThree>AMENITIES</HeadingThree>
+            <HeadingOne>
+                Elite Services<br/>
+                and Amenities
+            </HeadingOne>
+        </>
+    );
+}
+
 
 const ListItem = (props) => {
     return (

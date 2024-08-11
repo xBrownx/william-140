@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {forwardRef, useState} from 'react';
 
 import {StyledSection} from "../components/styles/SectionContainer.styled";
 import {FullPageMin} from "../components/styles/PageContainer.styled";
@@ -8,17 +8,25 @@ import {
     LocationParagraph,
     LocationParagraphWrapper,
     LocationTitle
-} from "../components/styles/Location.styled";
+} from "../components/styles/05-Location.styled";
 import {HeadingOne, HeadingThree} from "../components/styles/Typography.styled";
 
-import {CarouselComponent} from "./4-location/components/Carousel.Component";
-import {locationCarouselItems} from "../util/constants";
+import {CarouselComponent} from "../components/Carousel.Component";
+import {LocationItems} from "../assets/05-LocationItems";
+import {CarouselMenu} from "../components/CarouselMenu.component";
 
-export const Location = forwardRef(function({id}, ref) {
+export const Location = forwardRef(function ({id}, ref) {
+    const [activeIdx, setActiveIdx] = useState(0);
+    const locationItems = LocationItems();
+
+    const handleSlideChange = (idx) => {
+        setActiveIdx(idx);
+    }
+
     return (
         <StyledSection id={id}
-            ref={ref}
-            $secondary
+                       ref={ref}
+                       $secondary
         >
             <FullPageMin>
                 <LocationContainer>
@@ -38,7 +46,11 @@ export const Location = forwardRef(function({id}, ref) {
                             </LocationParagraph>
                         </LocationParagraphWrapper>
                     </LocationContent>
-                    <CarouselComponent carouselItems={locationCarouselItems}/>
+                    <CarouselComponent activeIdx={activeIdx} carouselItems={locationItems}/>
+                    <CarouselMenu
+                        carouselItems={locationItems}
+                        setActiveIndex={handleSlideChange}
+                    />
                 </LocationContainer>
             </FullPageMin>
         </StyledSection>

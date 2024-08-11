@@ -1,11 +1,11 @@
 import React, {forwardRef} from 'react';
-import imgLobby from './10-agency/assets/1-Lobby.png'
-import {ReactComponent as JamPap} from "./10-agency/assets/1-James-Pappas.svg";
-import {ReactComponent as HamSut} from "./10-agency/assets/2-Hamish-Sutherland.svg";
-import {ReactComponent as GeoMur} from "./10-agency/assets/3-Georgina-Murray.svg";
-import {ReactComponent as MicDar} from "./10-agency/assets/4-Michael-Darvell.svg";
-import {ReactComponent as ShaBur} from "./10-agency/assets/5-Shane-Burns.svg";
-import {ReactComponent as OpenIcon} from "./10-agency/assets/Open-Icon.svg";
+import imgLobby from '../assets/img/1-Lobby.png'
+import {ReactComponent as JamPap} from "../assets/svg/1-James-Pappas.svg";
+import {ReactComponent as HamSut} from "../assets/svg/2-Hamish-Sutherland.svg";
+import {ReactComponent as GeoMur} from "../assets/svg/3-Georgina-Murray.svg";
+import {ReactComponent as MicDar} from "../assets/svg/4-Michael-Darvell.svg";
+import {ReactComponent as ShaBur} from "../assets/svg/5-Shane-Burns.svg";
+import {ReactComponent as OpenIcon} from "../assets/icons/Open-Icon.svg";
 
 import {StyledSection} from "../components/styles/SectionContainer.styled";
 

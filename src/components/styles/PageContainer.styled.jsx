@@ -24,6 +24,10 @@ export const FullPageMin = styled.div`
     display: flex;
 `
 
+export const Padding = styled.div`
+    padding: 0 11.111vw;
+`
+
 
 
 

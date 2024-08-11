@@ -33,3 +33,9 @@ export const LifestyleParagraph = styled.p`
     font-family: 'SuisseIntl-Light', serif;
     line-height: 2.883vh;
 `
+
+export const StyledImg = styled.img`
+    object-fit: cover;
+    height: 100%;
+    margin: 0 20px 0 20px;
+`

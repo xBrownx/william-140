@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {ReactComponent as Title} from "../assets/svg/Title.svg";
 import {TextButton} from "../components/styles/Buttons.styled";
-import {NavItems, NavBarLi, NavBarTitleWrapper, NavBarUl, NavBarWrapper, NavBarContainer} from "../components/styles/NavBar.styled";
+import {NavItems, NavBarLi, NavBarTitleWrapper, NavBarUl, NavBarWrapper, NavBarContainer} from "../components/styles/00-NavBar.styled";
 import {motion} from "framer-motion";
 
 const NavBar = ({pageRefs}) => {

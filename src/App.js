@@ -7,10 +7,10 @@ import {mainTheme} from "./themes/MainTheme";
 
 
 import NavBar from "./pages/NavBar";
-import fullPageImg1 from './pages/fullPageImg/Full-Page-Img-1.png'
-import fullPageImg2 from './pages/fullPageImg/Full-Page-Img-2.png'
-import fullPageImg3 from './pages/fullPageImg/Full-Page-Img-3.png'
-import fullPageImg4 from './pages/fullPageImg/Full-Page-Img-4.jpeg'
+import fullPageImg1 from './assets/img/Full-Page-Img-1.png'
+import fullPageImg2 from './assets/img/Full-Page-Img-2.png'
+import fullPageImg3 from './assets/img/Full-Page-Img-3.png'
+import fullPageImg4 from './assets/img/Full-Page-Img-4.jpeg'
 
 import LazyPage from "./components/LazyPage";
 import {GlobalStyles} from "./themes/GlobalStyles.css";

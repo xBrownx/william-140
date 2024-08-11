@@ -1,6 +1,6 @@
 import React, {forwardRef} from 'react';
-import './8-availability/Availability.css'
-import {ReactComponent as Img} from "./8-availability/assets/Frame 5736.svg";
+import './Availability.css'
+import {ReactComponent as Img} from "../assets/svg/Frame 5736.svg";
 import {StyledSection} from "../components/styles/SectionContainer.styled";
 
 export const Availability = forwardRef(function({id}, ref) {

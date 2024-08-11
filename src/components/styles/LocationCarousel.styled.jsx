@@ -27,14 +27,6 @@ export const CarouselSlide = styled.div`
     `};
 `
 
-export const CarouselSlideHidden = styled.div`
-    width: 100vw;
-    flex-shrink: 0;
-    transition-property: opacity;
-    
-    opacity: 0;
-`
-
 export const ImgContainer = styled.div`
     width: 100%;
     height: fit-content;

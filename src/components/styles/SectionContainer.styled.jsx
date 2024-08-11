@@ -2,14 +2,9 @@ import React, {forwardRef} from "react";
 import styled, {css} from "styled-components";
 import {createGlobalStyle} from 'styled-components';
 import LazyPage from "../LazyPage";
+import {GlobalStyles} from "../../themes/GlobalStyles.css";
 
-const GlobalStyles = createGlobalStyle`
-    html {
-        --bg-colour: #DED9D0;
-        --color-background: white;
-        --color-primary: rebeccapurple;
-    }
-`;
+
 
 export const StyledSection = forwardRef(function ({id, bgColour, children}, ref) {
     return (

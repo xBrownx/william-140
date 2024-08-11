@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
 
-export const CarouselMenu = ({icons, titles, setActiveIndex}) => {
+export const CarouselMenu = ({carouselItems, setActiveIndex}) => {
+    const slideTitles = carouselItems.map(item => {
+        return item.title
+    });
+
+    const slideIcons = carouselItems.map(item => {
+        return item.icon
+    });
+
     return (
         <Container>
             <Wrapper>
-                {icons.map((Item, index) => (
+                {slideIcons.map((Item, index) => (
                     <MenuItem key={index}>
-                        <Item/><p onClick={() => setActiveIndex(index)}>{titles[index]}</p>
+                        <Item/><p onClick={() => setActiveIndex(index)}>{slideTitles[index]}</p>
                     </MenuItem>
                 ))}
             </Wrapper>

@@ -1,5 +1,5 @@
 import React, {forwardRef, useEffect, useRef} from 'react';
-import {ParallaxImg} from "../components/ui/ParallaxImg";
+import {ParallaxImg} from "../components/ParallaxImg";
 import {StyledSection} from "../components/styles/SectionContainer.styled";
 import styled, {css} from "styled-components";
 import {GlobalStyles} from "../themes/GlobalStyles.css";

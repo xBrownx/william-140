@@ -3,10 +3,10 @@ import {
     ImgWrapper,
     LeftContainer,
     RightContainer, StyledButton, StyledH1, StyledP
-} from "./styles/Home.styled";
+} from "../styles/02-Home.styled";
 import React, {useEffect} from "react";
-import img from '../assets/img/2-lobby.png'
-import {ParallaxImg} from "./ui/ParallaxImg";
+import img from '../../assets/img/2-lobby.png'
+import {ParallaxImg} from "../ParallaxImg";
 
 
 

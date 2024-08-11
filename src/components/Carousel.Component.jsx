@@ -2,30 +2,15 @@
 import {
     CarouselContainer, CarouselSlide,
     ImgContainer,
-} from "./LocationCarousel.styled";
+} from "./styles/LocationCarousel.styled";
 import {useState} from "react";
 import {CarouselMenu} from "./CarouselMenu.component";
 
 
-export const CarouselComponent = ({carouselItems}) => {
-
-    const [activeIndex, setActiveIndex] = useState(0);
-
-    const slideTitles = carouselItems.map(item => {
-        return item.title
-    });
-
-    const slideIcons = carouselItems.map(item => {
-        return item.icon
-    });
-
+export const CarouselComponent = ({activeIdx, carouselItems}) => {
     const slideSrc = carouselItems.map(item => {
         return item.src
     });
-
-    const handleSlideChange = (idx) => {
-        setActiveIndex(idx);
-    }
 
     return (
         <div>
@@ -33,7 +18,7 @@ export const CarouselComponent = ({carouselItems}) => {
                 {slideSrc.map((Item, index) => (
                     <CarouselSlide
                         key={`${index}_cc`}
-                        $isActive={activeIndex === index}
+                        $isActive={activeIdx === index}
                     >
                         <ImgContainer>
                             <Item/>
@@ -41,11 +26,6 @@ export const CarouselComponent = ({carouselItems}) => {
                     </CarouselSlide>
                 ))}
             </CarouselContainer>
-            <CarouselMenu
-                icons={slideIcons}
-                titles={slideTitles}
-                setActiveIndex={handleSlideChange}
-            />
         </div>
     );
 }

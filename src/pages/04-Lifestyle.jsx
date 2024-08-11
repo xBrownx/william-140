@@ -1,17 +1,20 @@
 import React, {forwardRef} from 'react';
 import {StyledSection} from "../components/styles/SectionContainer.styled";
 import {FullPageContainer} from "../components/styles/PageContainer.styled";
-import {CarouselComponent} from "./3-carousel/components/Carousel.component";
-import {HeadingOne, HeadingThree, ParagraphOne} from "../components/styles/Typography.styled";
+import {InfiniteLooper} from "../components/InfiniteLooper.component";
+import {HeadingOne, HeadingThree} from "../components/styles/Typography.styled";
 import {
     LifestyleContainer,
     LifestyleContentWrapper,
     LifestyleParagraph,
-    LifestyleParagraphWrapper
-} from "../components/styles/Lifestyle.styled";
+    LifestyleParagraphWrapper,
+    StyledImg
+} from "../components/styles/04-Lifestyle.styled";
+import {LifestyleItems} from "../assets/04-LifestyleItems";
 
-export const Lifestyle = forwardRef(function({id}, ref) {
 
+export const Lifestyle = forwardRef(function ({id}, ref) {
+    const lifestyleItems = LifestyleItems();
     return (
         <StyledSection id={id} ref={ref}>
             <FullPageContainer>
@@ -29,7 +32,13 @@ export const Lifestyle = forwardRef(function({id}, ref) {
                             </LifestyleParagraph>
                         </LifestyleParagraphWrapper>
                     </LifestyleContentWrapper>
-                    <CarouselComponent/>
+                    <InfiniteLooper>
+                        {
+                            lifestyleItems.map((slide, i) => {
+                                return (<StyledImg key={`${i}_inner`} src={slide.src} alt={`Carousel ${i}`}/>);
+                            })
+                        }
+                    </InfiniteLooper>
                 </LifestyleContainer>
             </FullPageContainer>
         </StyledSection>
