@@ -20,7 +20,8 @@ export const Enquire = forwardRef(function({id}, ref) {
     }
 
     return (
-        <StyledSection id={id}
+        <StyledSection
+            id={id}
             ref={ref}
             $secondary
         >

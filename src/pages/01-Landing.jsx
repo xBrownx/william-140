@@ -1,4 +1,3 @@
-import {motion} from "framer-motion";
 import {FullPageContainer} from "../components/styles/PageContainer.styled";
 
 import {LandingTitle} from "../components/ui/01-LandingTitle";
@@ -10,7 +9,10 @@ import {forwardRef} from "react";
 export const Landing = forwardRef(function({id, scrollTo}, ref) {
 
     return (
-        <StyledSection id={id} ref={ref}>
+        <StyledSection
+            id={id}
+            ref={ref}
+        >
             <FullPageContainer >
                 <LandingBackground />
                 <LandingTitle />

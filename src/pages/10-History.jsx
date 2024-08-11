@@ -8,9 +8,9 @@ export const History = forwardRef(function({id}, ref) {
 
 
     return (
-        <StyledSection id={id}
+        <StyledSection
+            id={id}
             ref={ref}
-            $secondary
         >
             <div className="page-container">
                 <div className="heading-container">

@@ -13,7 +13,7 @@ export const CarouselComponent = ({activeIdx, carouselItems}) => {
     });
 
     return (
-        <div>
+        <>
             <CarouselContainer>
                 {slideSrc.map((Item, index) => (
                     <CarouselSlide
@@ -26,7 +26,7 @@ export const CarouselComponent = ({activeIdx, carouselItems}) => {
                     </CarouselSlide>
                 ))}
             </CarouselContainer>
-        </div>
+        </>
     );
 }
 

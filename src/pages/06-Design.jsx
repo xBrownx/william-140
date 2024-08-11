@@ -11,18 +11,20 @@ export const Design = forwardRef(function ({id}, ref) {
     return (
         <>
             <GlobalStyles/>
-            <StyledSection id={id}
-                           ref={ref}
-                           bgColour={'#162425'}
+            <StyledSection
+                id={id}
+                ref={ref}
+                bgColour={'#162425'}
             >
                 <FullPageMin>
                     <Padding>
-                        <HeadingThree>DESIGN</HeadingThree>
+                        <HeadingThree>
+                            DESIGN
+                        </HeadingThree>
                         <HeadingOne>
                             A memorable<br/>
                             arrival experience
                         </HeadingOne>
-
                     </Padding>
                 </FullPageMin>
             </StyledSection>

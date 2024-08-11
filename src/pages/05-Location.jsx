@@ -24,15 +24,18 @@ export const Location = forwardRef(function ({id}, ref) {
     }
 
     return (
-        <StyledSection id={id}
-                       ref={ref}
-                       $secondary
+        <StyledSection
+            id={id}
+            ref={ref}
+            $secondary
         >
             <FullPageMin>
                 <LocationContainer>
                     <LocationContent>
                         <LocationTitle>
-                            <HeadingThree>LOCATION</HeadingThree>
+                            <HeadingThree>
+                                LOCATION
+                            </HeadingThree>
                             <HeadingOne $secondary>
                                 Located in the heart <br/>
                                 of the city
@@ -46,7 +49,9 @@ export const Location = forwardRef(function ({id}, ref) {
                             </LocationParagraph>
                         </LocationParagraphWrapper>
                     </LocationContent>
-                    <CarouselComponent activeIdx={activeIdx} carouselItems={locationItems}/>
+                    <CarouselComponent
+                        activeIdx={activeIdx}
+                        carouselItems={locationItems}/>
                     <CarouselMenu
                         carouselItems={locationItems}
                         setActiveIndex={handleSlideChange}

@@ -15,12 +15,18 @@ import {LifestyleItems} from "../assets/04-LifestyleItems";
 
 export const Lifestyle = forwardRef(function ({id}, ref) {
     const lifestyleItems = LifestyleItems();
+
     return (
-        <StyledSection id={id} ref={ref}>
+        <StyledSection
+            id={id}
+            ref={ref}
+        >
             <FullPageContainer>
                 <LifestyleContainer>
                     <LifestyleContentWrapper>
-                        <HeadingThree>LIFESTYLE</HeadingThree>
+                        <HeadingThree>
+                            LIFESTYLE
+                        </HeadingThree>
                         <HeadingOne $secondary>
                             Everyday is an<br/>
                             experience
@@ -35,7 +41,12 @@ export const Lifestyle = forwardRef(function ({id}, ref) {
                     <InfiniteLooper>
                         {
                             lifestyleItems.map((slide, i) => {
-                                return (<StyledImg key={`${i}_inner`} src={slide.src} alt={`Carousel ${i}`}/>);
+                                return (
+                                    <StyledImg
+                                        key={`${i}_inner`}
+                                        src={slide.src}
+                                        alt={`Carousel ${i}`}/>
+                                );
                             })
                         }
                     </InfiniteLooper>

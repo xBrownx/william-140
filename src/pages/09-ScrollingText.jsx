@@ -10,7 +10,9 @@ export const ScrollingText = () => {
             <GlobalStyles/>
             <Container>
                 <InfiniteLooper>
-                    <HeadingSplit>140 WILLIAM STREET </HeadingSplit>
+                    <HeadingSplit>
+                        140 WILLIAM STREET
+                    </HeadingSplit>
                 </InfiniteLooper>
             </Container>
         </>

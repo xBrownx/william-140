@@ -10,7 +10,7 @@ export const Home = forwardRef(function ({id}, ref) {
         <StyledSection
             id={id}
             ref={ref}
-            $secondary
+
         >
             <SplitScreenContainer id={id}>
                 <HomeLeftComponent/>

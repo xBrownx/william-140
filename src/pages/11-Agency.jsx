@@ -12,7 +12,8 @@ import {StyledSection} from "../components/styles/SectionContainer.styled";
 
 export const Agency = forwardRef(function({id}, ref) {
     return (
-        <StyledSection id={id}
+        <StyledSection
+            id={id}
             ref={ref}
             $secondary
         >

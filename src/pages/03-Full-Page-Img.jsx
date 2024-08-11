@@ -9,7 +9,10 @@ export const FullPageImg = forwardRef(function ({id, imgSrc}, ref) {
     return (
         <>
             <GlobalStyles/>
-            <StyledSection id={id} ref={ref}>
+            <StyledSection
+                id={id}
+                ref={ref}
+            >
                 <Container $imgPadding>
                     <ParallaxImg src={imgSrc} alt="Full Page Img"/>
                 </Container>
