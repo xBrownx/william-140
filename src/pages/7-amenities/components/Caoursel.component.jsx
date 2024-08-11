@@ -1,14 +1,7 @@
-
-import {
-    CarouselContainer, CarouselSlide,
-    ImgContainer,
-} from "./LocationCarousel.styled";
 import {useState} from "react";
-import {CarouselMenu} from "./CarouselMenu.component";
-
+import {CarouselMenu} from "../../4-location/components/CarouselMenu.component";
 
 export const CarouselComponent = ({carouselItems}) => {
-
     const [activeIndex, setActiveIndex] = useState(0);
 
     const slideTitles = carouselItems.map(item => {
@@ -49,7 +42,3 @@ export const CarouselComponent = ({carouselItems}) => {
         </div>
     );
 }
-
-
-
-

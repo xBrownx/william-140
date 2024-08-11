@@ -6,11 +6,13 @@ export const PageContainerStyled= styled(motion.div)`
 `
 
 export const FullPageContainer = styled.div`
-    width: 100vw;
-    height: 100vh;
     position: relative;
-    overflow: hidden;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
 `
 
 export const FullPageMin = styled.div`

@@ -3,7 +3,7 @@ import {useEffect, useRef, useState} from 'react'
 const useFirstViewportEntry = (ref, observerOptions) => {
     const [entered, setEntered] = useState(false);
     const observer = useRef(
-        new IntersectionObserver((entry) => setEntered(entry.isIntersecting),
+        new IntersectionObserver(([entry]) => setEntered(entry.isIntersecting),
         observerOptions
         )
     );

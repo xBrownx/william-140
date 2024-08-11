@@ -21,7 +21,6 @@ export const CarouselSlide = styled.div`
     transition-timing-function: ease-in;
     transition-duration: 700ms;
     
-    
     ${props => props.$isActive && css`
         opacity: 1;
         transition-timing-function: ease-out;

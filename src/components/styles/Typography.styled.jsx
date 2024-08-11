@@ -5,7 +5,7 @@ export const HeadingDisplay= styled(motion.h1)`
     //position: relative;
     z-index: 1;
     font-family: ${({ theme }) => theme.typography.display.fontFamily};
-    font-size: 10vw;
+    font-size: 17.037vh;
     font-weight: 300;
     line-height: 9vw;
     color: ${({ theme }) => theme.typography.display.fontColor };
@@ -42,6 +42,7 @@ export const HeadingTwo = styled.h2`
 `
 
 export const HeadingThree = styled.h3`
+    width: fit-content;
     font-family: ${({ theme }) => theme.typography.h3.fontFamily};
     font-size: 1.975vh;
     line-height: 2.562vh;

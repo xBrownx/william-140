@@ -10,7 +10,7 @@ export const StyledImg = styled.img`
 export const CarouselContainer = styled.div`
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: fit-content;
     overflow: hidden;
     height: 37.037vh;
 `
@@ -19,6 +19,7 @@ export const CarouselList = styled.div`
     display: flex;
     justify-content: center;
     width: fit-content;
+    max-width: 100vw;
 `
 
 export const ImgContainer = styled.div`

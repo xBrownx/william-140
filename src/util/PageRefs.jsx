@@ -6,13 +6,17 @@ export const PageRefs = () => {
         main: useRef(),
         landing: useRef(),
         home: useRef(),
-        carousel: useRef(),
+        img1: useRef(),
+        lifestyle: useRef(),
         location: useRef(),
+        img2: useRef(),
         design: useRef(),
         amenities: useRef(),
         availability: useRef(),
         history: useRef(),
+        img3: useRef(),
         agency: useRef(),
+        img4: useRef(),
         enquire: useRef()
     })
 };

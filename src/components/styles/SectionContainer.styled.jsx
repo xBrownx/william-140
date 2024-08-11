@@ -1,36 +1,58 @@
-import styled, { css } from "styled-components";
-import {motion} from "framer-motion";
+import React, {forwardRef} from "react";
+import styled, {css} from "styled-components";
+import {createGlobalStyle} from 'styled-components';
+import LazyPage from "../LazyPage";
 
+const GlobalStyles = createGlobalStyle`
+    html {
+        --bg-colour: #DED9D0;
+        --color-background: white;
+        --color-primary: rebeccapurple;
+    }
+`;
 
-export const StyledSection = ({bgColour, children}) => {
+export const StyledSection = forwardRef(function ({id, bgColour, children}, ref) {
     return (
-        <PageSection
-            style={{
-                '--bg-colour': bgColour
-            }}
-        >
-            {children}
-        </PageSection>
+        <>
+            <GlobalStyles/>
+            <PageSection
+                ref={ref}
+                style={{
+                    '--background-colour': bgColour
+                }}
+            >
+                <LazyPage
+                    id=""
+                    threshold={0.01}
+                    style={{minHeight: "240px"}}
+                >
+                    <GlobalStyles/>
+                    {children}
+                </LazyPage>
+            </PageSection>
+        </>
     );
-}
+});
 
-const PageSection= styled.div`
+const PageSection = styled.section`
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     //overflow: hidden;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 50vh;
     height: 100%;
     //box-sizing: border-box;
-    
-    background-color: var(--bg-colour, #FFF);
-    
+
+    background-color: var(--background-colour, var(--color-primary-2));
+
     ${props => props.$secondary && css`
-        background-color: ${({ theme }) => theme.colors.bg_secondary};
+        background-color: ${({theme}) => theme.colors.bg_secondary};
     `};
-    
-    
-    
+`
+
+export const LoadingSection = styled.section`
+    min-width: 100vw;
+    min-height: 50vh;
 `

@@ -1,6 +1,6 @@
 import styled, {css} from "styled-components";
-import {ReactComponent as DownArrow} from "../../assets/LandingDownArrow.svg"
-import arrow from "../../assets/LandingDownArrow.svg"
+import {ReactComponent as DownArrow} from "../../assets/icons/LandingDownArrow.svg"
+import arrow from "../../assets/icons/LandingDownArrow.svg"
 
 export const TextButton = styled.div`
     border-radius: 5%;

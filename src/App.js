@@ -1,77 +1,115 @@
 import './App.css';
-import React, {lazy, Suspense} from "react";
+import React, {lazy} from "react";
 import {ThemeProvider} from "styled-components";
 
 import {PageRefs} from "./util/PageRefs";
 import {mainTheme} from "./themes/MainTheme";
 
 
-import NavBar from "./pages/0-nav/NavBar";
-import Landing from "./pages/1-landing/Landing";
-// import Home from "./pages/2-home/Home";
-//
-// import Lifestyle from "./pages/3-carousel/Lifestyle";
-// import Location from "./pages/4-location/Location";
-import FullPageImg from "./pages/fullPageImg/FullPageImg";
-// import Design from "./pages/6-design/Design";
-// import Amenities from "./pages/7-amenities/Amenities";
-// import Availability from "./pages/8-availability/Availability";
-// import History from "./pages/9-history/History";
-// import Agency from "./pages/10-agency/Agency";
-// import Enquire from "./pages/11-enquire/Enquire";
-
-import fullPageImg3 from './pages/fullPageImg/Full-Page-Img-3.png'
+import NavBar from "./pages/NavBar";
 import fullPageImg1 from './pages/fullPageImg/Full-Page-Img-1.png'
 import fullPageImg2 from './pages/fullPageImg/Full-Page-Img-2.png'
+import fullPageImg3 from './pages/fullPageImg/Full-Page-Img-3.png'
+import fullPageImg4 from './pages/fullPageImg/Full-Page-Img-4.jpeg'
 
-import RenderOnViewportEntry from "./components/RenderOnViewportEntry";
-import ScrollingText from "./pages/ScrollingText";
+import LazyPage from "./components/LazyPage";
+import {GlobalStyles} from "./themes/GlobalStyles.css";
 
-const Home= lazy(()=> import("./pages/2-home/Home"));
-const Lifestyle= lazy(() => import("./pages/3-carousel/Lifestyle"));
-const Location= lazy(() => import("./pages/4-location/Location"));
-// const FullPageImg= lazy(() => import("./components/ui/FullPageImg"));
-const Design= lazy(() => import("./pages/6-design/Design"));
-const Amenities= lazy(() => import("./pages/7-amenities/Amenities"));
-const Availability= lazy(() => import("./pages/8-availability/Availability"));
-const History= lazy(() => import("./pages/9-history/History"));
-const Agency= lazy(() => import("./pages/10-agency/Agency"));
-const Enquire= lazy(() => import("./pages/11-enquire/Enquire"));
 
-// const FullPageImg1 = lazy(()=> import ('./pages/fullPageImg/Full-Page-Img-3.png'));
+const Landing = lazy(() => import( "./pages/01-Landing").then(m => ({ default: m.Landing})));
+const Home = lazy(() => import("./pages/02-Home").then(m => ({ default: m.Home })));
+const FullPageImg = lazy(() => import("./pages/03-Full-Page-Img").then(m => ({ default: m.FullPageImg })));
+const Lifestyle = lazy(() => import("./pages/04-Lifestyle").then(m => ({ default: m.Lifestyle })));
+const Location = lazy(() => import("./pages/05-Location").then(m => ({ default: m.Location })));
+const Design = lazy(() => import("./pages/06-Design").then(m => ({ default: m.Design })));
+const Amenities = lazy(() => import("./pages/07-Amenities").then(m => ({ default: m.Amenities })));
+const Availability = lazy(() => import("./pages/08-Availability").then(m => ({ default: m.Availability })));
+const ScrollingText = lazy(()=> import ("./pages/09-ScrollingText").then(m => ({ default: m.ScrollingText })));
+const History = lazy(() => import("./pages/10-History").then(m => ({ default: m.History })));
+const Agency = lazy(() => import("./pages/11-Agency").then(m => ({ default: m.Agency })));
+const Enquire = lazy(() => import("./pages/13-Enquire").then(m => ({ default: m.Enquire })));
+
+// const FullPageImg1 = lazy(()=> import ('./pages/fullPageImg/Full-Page-Img-1.png'));
 function App() {
 
     const pageRefs = PageRefs()
-
     return (
-        <ThemeProvider theme={mainTheme}>
-            <div className="App">
-                <div ref={pageRefs.main} className="app-container">
+        <><GlobalStyles/>
+            <div ref={pageRefs.main} className="app-container">
 
-                    <Landing pageRef={pageRefs} scrollTo={() => {
-                        pageRefs.home.current.scrollIntoView({behavior: "smooth"});
-                    }}/>
-                    <Suspense>
-                        <Home pageRef={pageRefs}/>
-                    </Suspense>
-                    <Suspense>
-                    <FullPageImg pageRef={pageRefs} src={fullPageImg3}/></Suspense>
-                    <Suspense><Lifestyle pageRef={pageRefs}/></Suspense>
-                    <Suspense><Location pageRef={pageRefs}/></Suspense>
-                    <Suspense><FullPageImg pageRef={pageRefs} src={fullPageImg1}/></Suspense>
-                    <Suspense><Design pageRef={pageRefs}/></Suspense>
-                    <Suspense><Amenities pageRef={pageRefs}/></Suspense>
-                    <Suspense><Availability pageRef={pageRefs}/></Suspense>
-                    <Suspense><ScrollingText/></Suspense>
-                    <Suspense><History pageRef={pageRefs}/></Suspense>
-                    <Suspense><FullPageImg pageRef={pageRefs} src={fullPageImg2}/></Suspense>
-                    <Suspense><Agency pageRef={pageRefs}/></Suspense>
-                    <Suspense><FullPageImg pageRef={pageRefs} src={fullPageImg3}/></Suspense>
-                    <Suspense><Enquire pageRef={pageRefs}/></Suspense>
-                    <NavBar pageRefs={pageRefs}/>
-                </div>
+                <ThemeProvider theme={mainTheme}>
+                    <Landing
+                        id="landing"
+                        ref={pageRefs.landing}
+                        scrollTo={() => {
+                            pageRefs.home.current.scrollIntoView({behavior: "smooth"});
+                        }}/>
+
+                    <Home
+                        id="home"
+                        ref={pageRefs.home}/>
+
+                    <FullPageImg
+                        id="FullPageImg"
+                        ref={pageRefs.img1}
+                        imgSrc={fullPageImg1}/>
+
+                    <Lifestyle
+                        id="Lifestyle"
+                        ref={pageRefs.lifestyle}/>
+
+                    <Location
+                        id="Location"
+                        ref={pageRefs.location}/>
+
+                    <FullPageImg
+                        id="FullPageImg"
+                        ref={pageRefs.img2}
+                        imgSrc={fullPageImg2}/>
+
+                    <Design
+                        id="Design"
+                        ref={pageRefs.design}/>
+
+                    <Amenities
+                        id="Amenities"
+                        ref={pageRefs.amenities}/>
+
+                    <Availability
+                        id="Availability"
+                        ref={pageRefs.availability}/>
+
+                    <ScrollingText/>
+
+                    <History
+                        id="History"
+                        ref={pageRefs.history}/>
+
+                    <FullPageImg
+                        id="FullPageImg2"
+                        ref={pageRefs.img3}
+                        imgSrc={fullPageImg3}/>
+
+                    <Agency
+                        id="Agency"
+                        ref={pageRefs.agency}/>
+
+                    <FullPageImg
+                        id="FullPageImg4"
+                        ref={pageRefs.img4}
+                        imgSrc={fullPageImg4}/>
+
+                    <Enquire
+                        id="enquire"
+                        ref={pageRefs.enquire}/>
+
+                    <NavBar
+                        id="navbar"
+                        pageRefs={pageRefs}
+                    />
+                </ThemeProvider>
             </div>
-        </ThemeProvider>
+        </>
     );
 }
 

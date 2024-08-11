@@ -58,10 +58,10 @@ const InfiniteLooper = () => {
         <CarouselContainer ref={outerRef}>
             <CarouselList ref={innerRef}>
                 {[...Array(looperInstances)].map((_, ind) => (
-                    <ImgContainer key={ind}>
+                    <ImgContainer key={`${ind}_outer`}>
                         {
                             slides.map((slide, i) => {
-                                return (<StyledImg src={slide.src} alt={`Carousel ${i}`}/>);
+                                return (<StyledImg key={`${i}_inner`} src={slide.src} alt={`Carousel ${i}`}/>);
                             })
                         }
                     </ImgContainer>
