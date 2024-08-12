@@ -13,11 +13,12 @@ const ImgContainer = styled.div`
 
 const StyledImg = styled(motion.img)`
     object-fit: cover;
-    height: 100%;
     width: 100%;
+    height: 100%;
+
 `
 
-export const ParallaxImg = ({src, alt}) => {
+export const ParallaxImg = ({src, alt, width, height}) => {
 
     const targetRef = useRef(null);
     const {scrollYProgress, scrollY} = useScroll({
@@ -33,12 +34,16 @@ export const ParallaxImg = ({src, alt}) => {
 
 
     return (
-        <ImgContainer ref={targetRef} id={"img-container"}>
+        <ImgContainer
+            ref={targetRef}
+            id={"img-container"}
+        >
             <StyledImg
                 as={motion.img}
                 style={{y: y1}}
                 src={src}
                 alt={alt}
+                PlaceHolderSrc={<>Loading...</>}
             />
         </ImgContainer>
     );

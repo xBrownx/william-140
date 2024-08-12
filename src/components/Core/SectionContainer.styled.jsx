@@ -6,7 +6,14 @@ import {GlobalStyles} from "../themes/GlobalStyles.css";
 
 
 
-export const StyledSection = forwardRef(function ({id, bgColour, children}, ref) {
+export const StyledSection = forwardRef(function (
+    {
+        id,
+        bgColour,
+        minHeight,
+        children
+    }, ref
+) {
     return (
         <>
             <GlobalStyles/>
@@ -19,7 +26,7 @@ export const StyledSection = forwardRef(function ({id, bgColour, children}, ref)
                 <LazyPage
                     id=""
                     threshold={0.01}
-                    style={{minHeight: "240px"}}
+                    style={{minHeight: minHeight}}
                 >
                     <GlobalStyles/>
                     {children}

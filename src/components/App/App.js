@@ -11,10 +11,8 @@ import fullPageImg1 from '../../assets/img/Full-Page-Img-1.png'
 import fullPageImg2 from '../../assets/img/Full-Page-Img-2.png'
 import fullPageImg3 from '../../assets/img/Full-Page-Img-3.png'
 import fullPageImg4 from '../../assets/img/Full-Page-Img-4.jpeg'
-
-import LazyPage from "../LazyComponents/LazyPage";
 import {GlobalStyles} from "../themes/GlobalStyles.css";
-
+import {PageMinHeights} from "../../constants";
 
 const Landing = lazy(() => import( "../Pages/01-Landing/").then(m => ({ default: m.Landing})));
 const Home = lazy(() => import("../Pages/02-Home/").then(m => ({ default: m.Home })));
@@ -28,6 +26,7 @@ const ScrollingText = lazy(()=> import ("../Pages/09-ScrollingText/").then(m => 
 const History = lazy(() => import("../Pages/10-History/").then(m => ({ default: m.History })));
 const Agency = lazy(() => import("../Pages/11-Agency/").then(m => ({ default: m.Agency })));
 const Enquire = lazy(() => import("../Pages/13-Enquire/").then(m => ({ default: m.Enquire })));
+
 
 // const FullPageImg1 = lazy(()=> import ('./pages/fullPageImg/Full-Page-Img-1.png'));
 function App() {
@@ -48,63 +47,90 @@ function App() {
 
                     <Home
                         id="home"
-                        ref={pageRefs.home}/>
+                        ref={pageRefs.home}
+                        minHeight={PageMinHeights.home}
+                    />
 
                     <FullPageImg
                         id="FullPageImg"
                         ref={pageRefs.img1}
-                        imgSrc={fullPageImg1}/>
+                        imgSrc={fullPageImg1}
+                        minHeight={PageMinHeights.fullPageImg}
+                    />
 
                     <Lifestyle
                         id="Lifestyle"
-                        ref={pageRefs.lifestyle}/>
+                        ref={pageRefs.lifestyle}
+                        minHeight={PageMinHeights.lifestyle}
+                    />
 
                     <Location
                         id="Location"
-                        ref={pageRefs.location}/>
+                        ref={pageRefs.location}
+                        minHeight={PageMinHeights.location}
+                    />
 
                     <FullPageImg
                         id="FullPageImg"
                         ref={pageRefs.img2}
                         imgSrc={fullPageImg2}
+                        minHeight={PageMinHeights.fullPageImg}
                         bgColour={'#162425'}
                     />
 
                     <Design
                         id="Design"
-                        ref={pageRefs.design}/>
+                        ref={pageRefs.design}
+                        minHeight={PageMinHeights.design}
+                    />
 
                     <Amenities
                         id="Amenities"
-                        ref={pageRefs.amenities}/>
+                        ref={pageRefs.amenities}
+                        minHeight={PageMinHeights.amenities}
+                    />
 
                     <Availability
                         id="Availability"
-                        ref={pageRefs.availability}/>
+                        ref={pageRefs.availability}
+                        minHeight={PageMinHeights.availability}
+                    />
 
-                    <ScrollingText />
+                    <ScrollingText
+                        minHeight={PageMinHeights.scrollingText}
+                    />
 
                     <History
                         id="History"
-                        ref={pageRefs.history}/>
+                        ref={pageRefs.history}
+                        minHeight={PageMinHeights.history}
+                    />
 
                     <FullPageImg
                         id="FullPageImg2"
                         ref={pageRefs.img3}
-                        imgSrc={fullPageImg3}/>
+                        imgSrc={fullPageImg3}
+                        minHeight={PageMinHeights.home}
+                    />
 
                     <Agency
                         id="Agency"
-                        ref={pageRefs.agency}/>
+                        ref={pageRefs.agency}
+                        minHeight={PageMinHeights.agency}
+                    />
 
                     <FullPageImg
                         id="FullPageImg4"
                         ref={pageRefs.img4}
-                        imgSrc={fullPageImg4}/>
+                        imgSrc={fullPageImg4}
+                        minHeight={PageMinHeights.fullPageImg}
+                    />
 
                     <Enquire
                         id="enquire"
-                        ref={pageRefs.enquire}/>
+                        ref={pageRefs.enquire}
+                        minHeight={PageMinHeights.enquire}
+                    />
 
                     <NavBar
                         id="navbar"

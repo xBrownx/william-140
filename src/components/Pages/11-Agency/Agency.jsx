@@ -5,15 +5,21 @@ import {StyledSection} from "../../Core/SectionContainer.styled";
 import imgLobby from '../../../assets/img/1-Lobby.png';
 import {FullPageMin, Padding} from "../../Core/PageContainer.styled";
 import {SplitScreen} from "../07-Amenities/Amenities.styled";
-import {HeadingTwo} from "../../Core/Typography.styled";
 import styled from "styled-components";
 import {Agent} from "./AgencyAgent";
 
-export const Agency = forwardRef(function ({id}, ref) {
+export const Agency = forwardRef(function (
+    {
+        id,
+        minHeight
+    },
+    ref
+) {
     return (
         <StyledSection
             id={id}
             ref={ref}
+            minHeight={minHeight}
             bgColour={'#162425'}
         >
             <FullPageMin id="full-page-min">

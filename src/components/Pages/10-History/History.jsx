@@ -13,10 +13,15 @@ import {
 import {HeadingOne, HeadingThree} from "../../Core/Typography.styled";
 import * as CONSTANTS from "./History.constants";
 import {FullPageMin} from "../../Core/PageContainer.styled";
-import video from "../../../assets/vid/01-Landing.mp4";
 import {HistoryVideo} from "./HistoryVideo";
 
-export const History = forwardRef(function ({id}, ref) {
+export const History = forwardRef(function (
+    {
+        id,
+        minHeight
+    },
+    ref
+) {
 
     return (
         <>
@@ -24,6 +29,7 @@ export const History = forwardRef(function ({id}, ref) {
             <StyledSection
                 id={id}
                 ref={ref}
+                minHeight={minHeight}
             >
                 <FullPageMin>
                     <LocationContent>

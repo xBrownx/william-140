@@ -15,13 +15,20 @@ import * as CONSTANTS from "./Lifestyle.constants";
 import {TitleColumn} from "../../Titles/TitleColumn";
 
 
-export const Lifestyle = forwardRef(function ({id}, ref) {
+export const Lifestyle = forwardRef(function (
+    {
+        id,
+        minHeight
+    },
+    ref
+) {
     const lifestyleItems = CONSTANTS.LifestyleItems();
 
     return (
         <StyledSection
             id={id}
             ref={ref}
+            minHeight={minHeight}
         >
             <FullPageContainer>
                 <LifestyleContainer>

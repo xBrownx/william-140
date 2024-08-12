@@ -8,12 +8,17 @@ import {AmenitiesLeftContainer, AmenitiesRightContainer, ImgContainer, SplitScre
 import {AmenitiesList} from "./AmenitiesList";
 import {StyledHeading, StyledSubheading} from "../../Titles/Title.styled";
 
-export const Amenities = forwardRef(function ({id}, ref) {
+export const Amenities = forwardRef(function (
+    {
+        id,
+        minHeight
+    },
+    ref
+) {
     const amenitiesItems = CONSTANTS.AmenitiesItems();
     const [activeIdx, setActiveIdx] = useState(0);
 
     const handleSlideChange = (idx) => {
-        console.log(idx)
         setActiveIdx(idx);
     }
 
@@ -21,6 +26,7 @@ export const Amenities = forwardRef(function ({id}, ref) {
         <StyledSection
             id={id}
             ref={ref}
+            minHeight={minHeight}
             bgColour={'#162425'}
         >
             <FullPageMin id="full-page-min">

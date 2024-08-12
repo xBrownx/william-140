@@ -5,7 +5,15 @@ import styled, {css} from "styled-components";
 import {GlobalStyles} from "../../themes/GlobalStyles.css";
 
 
-export const FullPageImg = forwardRef(function ({id, imgSrc, bgColour}, ref) {
+export const FullPageImg = forwardRef(function (
+    {
+        id,
+        imgSrc,
+        bgColour,
+        minHeight,
+    },
+    ref
+) {
     return (
         <>
             <GlobalStyles/>
@@ -13,6 +21,7 @@ export const FullPageImg = forwardRef(function ({id, imgSrc, bgColour}, ref) {
                 id={id}
                 ref={ref}
                 bgColour={bgColour}
+                minHeight={minHeight}
             >
                 <Container $imgPadding>
                     <ParallaxImg src={imgSrc} alt="Full Page Img"/>

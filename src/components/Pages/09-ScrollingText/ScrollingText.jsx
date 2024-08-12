@@ -8,7 +8,9 @@ export const ScrollingText = () => {
     return (
         <>
             <GlobalStyles/>
-            <Container id="scrolling-text-container">
+            <Container
+                id="scrolling-text-container"
+            >
                 <InfiniteLooper>
                     <HeadingSplit>
                         140 WILLIAM STREET

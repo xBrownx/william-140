@@ -3,7 +3,13 @@ import {ReactComponent as FooterLogo} from "../../../assets/svg/140W_Logo_RGB_St
 
 import {StyledSection} from "../../Core/SectionContainer.styled";
 
-export const Enquire = forwardRef(function({id}, ref) {
+export const Enquire = forwardRef(function(
+    {
+        id,
+        minHeight
+    },
+    ref
+) {
 
     const [inputs, setInputs] = useState({});
 
@@ -23,6 +29,7 @@ export const Enquire = forwardRef(function({id}, ref) {
         <StyledSection
             id={id}
             ref={ref}
+            minHeight={minHeight}
             $secondary
         >
             <div className="page-container">

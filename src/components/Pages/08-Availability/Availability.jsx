@@ -3,14 +3,18 @@ import '../Availability.css'
 import {ReactComponent as Img} from "../../../assets/svg/Frame 5736.svg";
 import {StyledSection} from "../../Core/SectionContainer.styled";
 
-export const Availability = forwardRef(function({id}, ref) {
-
-    // const anim = useHomeAnim(props.mainRef, ScrollConst.availabilityHead, ScrollConst.homeBody);
+export const Availability = forwardRef(function(
+    {
+        id,
+        minHeight
+    },
+    ref) {
 
     return (
         <StyledSection
             id={id}
             ref={ref}
+            minHeight={minHeight}
         >
             <Img
                 style={{
