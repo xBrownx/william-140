@@ -1,7 +1,7 @@
 import React from "react";
 
 import {TitleContainer, TitleLine} from "./Landing.styled";
-import {HeadingDisplay} from "../../Typography.styled";
+import {Heading138px, HeadingDisplay} from "../../Core/Typography.styled";
 import {LandingAnimation} from "./LandingAnimation";
 import {displayHeading} from "./Landing.constants";
 
@@ -22,9 +22,9 @@ export const LandingTitle = () => {
                             align={item.align}
                         >
                             <TitleLine>
-                                <HeadingDisplay justify={item.justify}>
+                                <Heading138px justify={item.justify}>
                                     {item.title}
-                                </HeadingDisplay>
+                                </Heading138px>
                             </TitleLine>
                         </LandingAnimation>);
                 })

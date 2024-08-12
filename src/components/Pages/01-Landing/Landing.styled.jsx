@@ -7,17 +7,15 @@ export const TitleContainer = styled.div`
     left: 0;
     bottom: 0;
     opacity: 1;
-    width: 84vw;
-    height: 51vh;
+    min-width: 82.222vw;
+    min-height: 51vh;
     
-    gap: 2%;
-    //align-items: center;
-    //justify-content: end;
-    margin: 0 0 4vh 0;
+    gap: var(--height-32px);
+    margin: 0 0 var(--height-32px) 0;
 `
 
 export const TitleLine = styled.div`
-    padding: 0 2%;
+    padding: 0 2.222vw;
 `
 
 export const BackgroundContainer = styled.div`
@@ -66,7 +64,7 @@ export const LandingButtonWrapper = styled.div`
     height: 8vh;
     right: 0;
     bottom: 0;
-    margin: 0 2vw 5vh 0;
+    margin: 0 2vw var(--height-41px) 0;
     animation: arrow-appear 1s forwards;
     animation-delay: 1.3s;
     transform: translateY(400%);

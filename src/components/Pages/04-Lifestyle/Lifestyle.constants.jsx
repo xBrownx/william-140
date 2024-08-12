@@ -23,17 +23,19 @@ export const LifestyleItems = () => {
     );
 };
 
-export const SubHeading =
-    <>LIFESTYLE</>;
+export const subHeadingText =
+    <>
+        LIFESTYLE
+    </>
 
-export const Heading =
+export const headingText =
     <>
         Everyday is an<br/>
         experience
     </>
 
-export const Paragraph =
+export const paragraphText =
     <>
-        Everyday is an experience that captures the essence of Melbourne’s vibrant<br/>
-        lifestyle, offering a perfect blend of convenience, culture, and connectivity.
+        The essence of Melbourne’s vibrant lifestyle, offering a perfect blend of<br/>
+        convenience, culture, and connectivity.
     </>

@@ -1,7 +1,7 @@
-import {FullPageContainer} from "../../PageContainer.styled";
+import {FullPageContainer} from "../../Core/PageContainer.styled";
 
 import {LandingTitle} from "./LandingTitle";
-import {StyledSection} from "../../SectionContainer.styled";
+import {StyledSection} from "../../Core/SectionContainer.styled";
 import {LandingBackground} from "./LandingVideo";
 import {LandingButton} from "./LandingButton";
 import {forwardRef} from "react";

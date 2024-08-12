@@ -1,17 +1,18 @@
 import React, {forwardRef, useEffect, useRef} from 'react';
 import {ParallaxImg} from "../../ParallaxComponents/ParallaxImg";
-import {StyledSection} from "../../SectionContainer.styled";
+import {StyledSection} from "../../Core/SectionContainer.styled";
 import styled, {css} from "styled-components";
 import {GlobalStyles} from "../../themes/GlobalStyles.css";
 
 
-export const FullPageImg = forwardRef(function ({id, imgSrc}, ref) {
+export const FullPageImg = forwardRef(function ({id, imgSrc, bgColour}, ref) {
     return (
         <>
             <GlobalStyles/>
             <StyledSection
                 id={id}
                 ref={ref}
+                bgColour={bgColour}
             >
                 <Container $imgPadding>
                     <ParallaxImg src={imgSrc} alt="Full Page Img"/>

@@ -17,53 +17,38 @@ export const RightContainer = styled.div`
 
 export const ImgWrapper = styled.div`
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+    width: 31.042vw;
+    height: 82.222vh;
+    max-width: 31.042vw;
+    max-height: 82.222vh;
+    overflow: hidden;
 `
 
 export const ContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 1.11vw;
+    gap: var(--height-32px);
 `
 
 export const StyledH1 = styled.h1`
     font-family: "SuisseIntl-Bold", serif;
+    font-size: var(--font-size-16px);
     font-weight: 700;
-    color: #164A49;
-    font-size: 1.975vh;
-    margin: 0 0 1vh 0;
+    color: var(--color-primary-5);
+    margin: 0;
     padding: 0;
 `
 
 export const StyledP = styled.p`
     font-family: "SuisseIntl-Light", serif;
-    font-weight: 300;
-    color: #164A49;
-    font-size: 4.444vh;
-    line-height: 5.764vh;
-    padding: 0;
-    margin: 0 0  3.951vh 0;
-`
-
-export const StyledButton = styled.div`
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'SuisseIntl-Light', serif;
-    width: 15vw;
-    height: 6.79vh;
-    color: #164A49;
-    border: 1px solid #164A49;
-    font-size: 2.222vh;
+    font-size: var(--font-size-36px);
+    line-height: var(--line-height-36px);
     font-weight: 400;
-
-    &:hover {
-        cursor: pointer;
-    }
+    color: #164A49;
+    opacity: 0.7;
+    padding: 0;
+    margin: 0;
 `
 
 

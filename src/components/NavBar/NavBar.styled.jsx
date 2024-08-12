@@ -21,7 +21,7 @@ export const NavBarContainer = styled(motion.div)`
     align-items: center;
     justify-content: center;
     top: 0;
-    height: 91px;
+    height: var(--height-90px);
     width: 100%;
 `
 
@@ -33,9 +33,16 @@ export const NavBarWrapper = styled.div`
 
 export const NavBarTitleWrapper = styled.div`
     display: flex;
-    padding: 0 0 0 32px;
+    padding: 0 0 0 var(--width-32px);
     align-items: center;
     width: 100%;
+    object-fit: cover;
+    
+    svg {
+        height: 2.099vh;
+        width: 19.097vw;
+        object-fit: cover;
+    }
     
     &:hover {
         cursor: pointer;
@@ -44,8 +51,9 @@ export const NavBarTitleWrapper = styled.div`
 export const NavBarUl = styled.ul`
     list-style: none;
     display: flex;
-    gap: 2rem;
-    padding: 0 32px 0 0;
+    gap: var(--width-32px);
+    padding: var(--height-26px) var(--width-32px) var(--height-26px) 0;
+    margin: 0;
 `
 
 export const NavBarLi = styled.li`
@@ -56,9 +64,9 @@ export const NavBarLi = styled.li`
     
     text-decoration: none;
     
-    font-size: 18px;
-    font-family: ${({ theme }) => theme.typography.p1.fontFamily};
-    font-weight: 300;
+    font-size: var(--font-size-18px);
+    font-family: var(--font-fmaily-secondary-light), serif;
+    font-weight: 400;
     color: white;
     margin: 0;
     padding: 0;

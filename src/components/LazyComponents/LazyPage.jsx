@@ -1,7 +1,7 @@
 import React, {Suspense, useEffect, useRef, useState} from 'react';
 import useFirstViewportEntry from "../../hooks/useFirstViewportEntry";
 
-import {LoadingSection} from "../SectionContainer.styled";
+import {LoadingSection} from "../Core/SectionContainer.styled";
 import {useMotionValueEvent, useScroll} from "framer-motion";
 
 const LazyPage = (

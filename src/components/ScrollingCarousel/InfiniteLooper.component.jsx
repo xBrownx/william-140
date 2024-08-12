@@ -43,21 +43,23 @@ export const InfiniteLooper = ({children}) => {
 const OuterContainer = styled.div`
     display: flex;
     flex-direction: row;
-    width: fit-content;
+    width: max-content;
     overflow: hidden;
-    //height: 37.037vh;
+    height: 100%;
+    max-width: 100vw;
 `
 
 const OuterWrapper = styled.div`
     display: flex;
     justify-content: center;
     width: fit-content;
-    max-width: 100vw;
 `
 
 const InnerContainer = styled.div`
     display: flex;
     width: max-content;
+    height: max-content;
+
 
     animation: slideAnimation 8s linear infinite;
 

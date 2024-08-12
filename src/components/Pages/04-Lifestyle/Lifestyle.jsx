@@ -1,9 +1,10 @@
 import React, {forwardRef} from 'react';
-import {StyledSection} from "../../SectionContainer.styled";
-import {FullPageContainer} from "../../PageContainer.styled";
+import {StyledSection} from "../../Core/SectionContainer.styled";
+import {FullPageContainer} from "../../Core/PageContainer.styled";
 import {InfiniteLooper} from "../../ScrollingCarousel/InfiniteLooper.component";
-import {HeadingOne, HeadingThree} from "../../Typography.styled";
+import {HeadingOne, HeadingThree} from "../../Core/Typography.styled";
 import {
+    LifestyleCarouselContainer,
     LifestyleContainer,
     LifestyleContentWrapper,
     LifestyleParagraph,
@@ -11,7 +12,7 @@ import {
     StyledImg
 } from "./Lifestyle.styled";
 import * as CONSTANTS from "./Lifestyle.constants";
-
+import {TitleColumn} from "../../Titles/TitleColumn";
 
 
 export const Lifestyle = forwardRef(function ({id}, ref) {
@@ -24,31 +25,25 @@ export const Lifestyle = forwardRef(function ({id}, ref) {
         >
             <FullPageContainer>
                 <LifestyleContainer>
-                    <LifestyleContentWrapper>
-                        <HeadingThree>
-                            {CONSTANTS.SubHeading}
-                        </HeadingThree>
-                        <HeadingOne $secondary>
-                            {CONSTANTS.Heading}
-                        </HeadingOne>
-                        <LifestyleParagraphWrapper>
-                            <LifestyleParagraph>
-                                {CONSTANTS.Paragraph}
-                            </LifestyleParagraph>
-                        </LifestyleParagraphWrapper>
-                    </LifestyleContentWrapper>
-                    <InfiniteLooper>
-                        {
-                            lifestyleItems.map((slide, i) => {
-                                return (
-                                    <StyledImg
-                                        key={`${i}_inner`}
-                                        src={slide.src}
-                                        alt={`Carousel ${i}`}/>
-                                );
-                            })
-                        }
-                    </InfiniteLooper>
+                    <TitleColumn>
+                        {CONSTANTS.subHeadingText}
+                        {CONSTANTS.headingText}
+                        {CONSTANTS.paragraphText}
+                    </TitleColumn>
+                    <LifestyleCarouselContainer>
+                        <InfiniteLooper>
+                            {
+                                lifestyleItems.map((slide, i) => {
+                                    return (
+                                        <StyledImg
+                                            key={`${i}_inner`}
+                                            src={slide.src}
+                                            alt={`Carousel ${i}`}/>
+                                    );
+                                })
+                            }
+                        </InfiniteLooper>
+                    </LifestyleCarouselContainer>
                 </LifestyleContainer>
             </FullPageContainer>
         </StyledSection>

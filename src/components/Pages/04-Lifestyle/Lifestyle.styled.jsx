@@ -37,5 +37,10 @@ export const LifestyleParagraph = styled.p`
 export const StyledImg = styled.img`
     object-fit: cover;
     height: 100%;
+    width: 100%;
     margin: 0 20px 0 20px;
+`
+
+export const LifestyleCarouselContainer = styled.div`
+    height: 37.037vh;
 `

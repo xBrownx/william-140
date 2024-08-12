@@ -18,23 +18,24 @@ import {GlobalStyles} from "../themes/GlobalStyles.css";
 
 const Landing = lazy(() => import( "../Pages/01-Landing/").then(m => ({ default: m.Landing})));
 const Home = lazy(() => import("../Pages/02-Home/").then(m => ({ default: m.Home })));
-const FullPageImg = lazy(() => import("../Pages/03-FullPageImg/FullPageImg").then(m => ({ default: m.FullPageImg })));
-const Lifestyle = lazy(() => import("../Pages/04-Lifestyle/Lifestyle").then(m => ({ default: m.Lifestyle })));
-const Location = lazy(() => import("../Pages/05-Location/05-Location").then(m => ({ default: m.Location })));
-const Design = lazy(() => import("../Pages/06-Design/06-Design").then(m => ({ default: m.Design })));
-const Amenities = lazy(() => import("../Pages/07-Amenities/07-Amenities").then(m => ({ default: m.Amenities })));
-const Availability = lazy(() => import("../Pages/08-Availability/08-Availability").then(m => ({ default: m.Availability })));
-const ScrollingText = lazy(()=> import ("../09-ScrollingText").then(m => ({ default: m.ScrollingText })));
-const History = lazy(() => import("../Pages/10-History/10-History").then(m => ({ default: m.History })));
-const Agency = lazy(() => import("../Pages/11-Agency/11-Agency").then(m => ({ default: m.Agency })));
-const Enquire = lazy(() => import("../Pages/13-Enquire/13-Enquire").then(m => ({ default: m.Enquire })));
+const FullPageImg = lazy(() => import("../Pages/03-FullPageImg/").then(m => ({ default: m.FullPageImg })));
+const Lifestyle = lazy(() => import("../Pages/04-Lifestyle/").then(m => ({ default: m.Lifestyle })));
+const Location = lazy(() => import("../Pages/05-Location/").then(m => ({ default: m.Location })));
+const Design = lazy(() => import("../Pages/06-Design/").then(m => ({ default: m.Design })));
+const Amenities = lazy(() => import("../Pages/07-Amenities/").then(m => ({ default: m.Amenities })));
+const Availability = lazy(() => import("../Pages/08-Availability/").then(m => ({ default: m.Availability })));
+const ScrollingText = lazy(()=> import ("../Pages/09-ScrollingText/").then(m => ({ default: m.ScrollingText })));
+const History = lazy(() => import("../Pages/10-History/").then(m => ({ default: m.History })));
+const Agency = lazy(() => import("../Pages/11-Agency/").then(m => ({ default: m.Agency })));
+const Enquire = lazy(() => import("../Pages/13-Enquire/").then(m => ({ default: m.Enquire })));
 
 // const FullPageImg1 = lazy(()=> import ('./pages/fullPageImg/Full-Page-Img-1.png'));
 function App() {
 
     const pageRefs = PageRefs()
     return (
-        <><GlobalStyles/>
+        <>
+            <GlobalStyles/>
             <div ref={pageRefs.main} className="app-container">
 
                 <ThemeProvider theme={mainTheme}>
@@ -65,7 +66,9 @@ function App() {
                     <FullPageImg
                         id="FullPageImg"
                         ref={pageRefs.img2}
-                        imgSrc={fullPageImg2}/>
+                        imgSrc={fullPageImg2}
+                        bgColour={'#162425'}
+                    />
 
                     <Design
                         id="Design"
@@ -79,7 +82,7 @@ function App() {
                         id="Availability"
                         ref={pageRefs.availability}/>
 
-                    <ScrollingText/>
+                    <ScrollingText />
 
                     <History
                         id="History"
