@@ -12,6 +12,14 @@ export const TitleContainer = styled.div`
     
     gap: var(--height-32px);
     margin: 0 0 var(--height-32px) 0;
+    
+    @media only screen and (max-width: 750px) {
+        gap: 0;
+        margin: 0 0 160px 0;
+        width: 100vw;
+        min-width: 100vw;
+        min-height: 0;
+    }
 `
 
 export const TitleLine = styled.div`

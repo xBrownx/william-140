@@ -23,6 +23,10 @@ export const NavBarContainer = styled(motion.div)`
     top: 0;
     height: var(--height-90px);
     width: 100%;
+    
+    @media only screen and (max-width: 750px) {
+        height: 70px;
+    }
 `
 
 export const NavBarWrapper = styled.div`
@@ -42,6 +46,10 @@ export const NavBarTitleWrapper = styled.div`
         height: 2.099vh;
         width: 19.097vw;
         object-fit: cover;
+        @media only screen and (max-width: 750px) {
+            height: 11px;
+            width: 190px;
+    }
     }
     
     &:hover {
@@ -54,6 +62,11 @@ export const NavBarUl = styled.ul`
     gap: var(--width-32px);
     padding: var(--height-26px) var(--width-32px) var(--height-26px) 0;
     margin: 0;
+    
+    @media only screen and (max-width: 750px) {
+        display: none;
+    }
+    
 `
 
 export const NavBarLi = styled.li`

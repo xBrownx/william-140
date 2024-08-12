@@ -5,11 +5,19 @@ const Container = styled.div`
     flex-direction: row;
     width: 100vw;
     height: 100vh;
+    
+    @media only screen and (max-width: 750px) {
+        flex-direction: column;
+    }
 `
 
 const Pane = styled.div`
     flex: 1;
     align-items: center;
+    
+    @media only screen and (max-width: 750px) {
+        flex: auto;
+    }
 `
 
 export const SplitScreenContainer = ({children}) => {

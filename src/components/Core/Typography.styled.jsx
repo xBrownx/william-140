@@ -33,6 +33,14 @@ export const Heading138px = styled(motion.h1)`
     padding: 0;
     
     animation-fill-mode: both;
+    
+    @media only screen and (max-width: 750px) {
+        justify-content: start;
+        font-size: 48px;
+        line-height: 48px;
+        margin: 0;
+        padding: 0;
+    }
 `
 
 export const HeadingOne = styled.h1`
