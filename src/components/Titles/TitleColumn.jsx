@@ -27,13 +27,29 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: fit-content;
+    
+    @media only screen and (max-width: 750px) {
+        padding: 16px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
 `
-
 
 const ParagraphWrapper = styled.div`
     border-left: 1px solid var(--color-primary-4);
     margin: var(--height-38px) 0 0 0;
     padding: 0 0 var(--height-32px) var(--width-32px);
+    
+    @media only screen and (max-width: 750px) {
+        padding: 0 16px 16px 16px;
+        margin: 16px 0 0 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
 `
 
 const StyledParagraph = styled.p`
@@ -44,4 +60,12 @@ const StyledParagraph = styled.p`
     font-size: var(--font-size-18px);
     font-family: var(--font-fmaily-secondary-light), serif;
     line-height: var(--line-height-18px);
+    
+    @media only screen and (max-width: 750px) {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        font-size: 10pt;
+        line-height: 11pt;
+    }
 `

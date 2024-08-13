@@ -3,12 +3,12 @@ import LocationCar01 from '../../../assets/svg/Location-1.svg'
 import LocationCar02 from '../../../assets/svg/Location-2.svg'
 import LocationCar03 from '../../../assets/svg/Location-3.svg'
 import LocationCar04 from '../../../assets/svg/Location-4.svg'
-import {ReactComponent as LocationIcon01} from '../../../assets/icons/1-FB.svg'
-import {ReactComponent as LocationIcon02} from '../../../assets/icons/2-Retail.svg'
-import {ReactComponent as LocationIcon03} from '../../../assets/icons/3-Trains.svg'
-import {ReactComponent as LocationIcon04} from '../../../assets/icons/4-Hotels.svg'
-import {ReactComponent as LocationIcon05} from '../../../assets/icons/5-Trams.svg'
-import {ReactComponent as LocationIcon06} from '../../../assets/icons/6-Access.svg'
+import {ReactComponent as LocationIcon01} from '../../../assets/icons/05-Location-01-FB.svg'
+import {ReactComponent as LocationIcon02} from '../../../assets/icons/05-Location-02-Retail.svg'
+import {ReactComponent as LocationIcon03} from '../../../assets/icons/05-Location-03-Trains.svg'
+import {ReactComponent as LocationIcon04} from '../../../assets/icons/05-Location-04-Hotels.svg'
+import {ReactComponent as LocationIcon05} from '../../../assets/icons/05-Location-05-Trams.svg'
+import {ReactComponent as LocationIcon06} from '../../../assets/icons/05-Location-06-Access.svg'
 
 export const LocationItems = () => {
     return (
@@ -30,13 +30,13 @@ export const subHeadingText =
 
 export const headingText =
     <>
-        Located in the heart <br/>
+        Located in the heart
         of the city
     </>
 
 export const paragraphText =
     <>
-        Ideally located in the heart of Melbourne CBD,<br/>
-        enjoying a prime position on the corner of Bourke<br/>
+        Ideally located in the heart of Melbourne CBD,
+        enjoying a prime position on the corner of Bourke
         Street and William Street.
     </>

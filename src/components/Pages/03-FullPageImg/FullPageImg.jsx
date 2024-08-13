@@ -11,6 +11,7 @@ export const FullPageImg = forwardRef(function (
         imgSrc,
         bgColour,
         minHeight,
+        imgPadding
     },
     ref
 ) {
@@ -23,7 +24,7 @@ export const FullPageImg = forwardRef(function (
                 bgColour={bgColour}
                 minHeight={minHeight}
             >
-                <Container $imgPadding>
+                <Container id="container" $imgPadding={imgPadding}>
                     <ParallaxImg src={imgSrc} alt="Full Page Img"/>
                 </Container>
             </StyledSection>
@@ -46,4 +47,10 @@ const Container = styled.div`
     ${props => props.$imgPadding && css`
         padding: 11.111vh 11.111vw 11.111vh 11.111vw;
     `};
+    
+    @media only screen and (max-width: 750px) {
+        padding: 16px;
+        min-height: 0;
+    }
+    
 `

@@ -30,29 +30,28 @@ export const Lifestyle = forwardRef(function (
             ref={ref}
             minHeight={minHeight}
         >
-            <FullPageContainer>
-                <LifestyleContainer>
-                    <TitleColumn>
-                        {CONSTANTS.subHeadingText}
-                        {CONSTANTS.headingText}
-                        {CONSTANTS.paragraphText}
-                    </TitleColumn>
-                    <LifestyleCarouselContainer>
-                        <InfiniteLooper>
-                            {
-                                lifestyleItems.map((slide, i) => {
-                                    return (
-                                        <StyledImg
-                                            key={`${i}_inner`}
-                                            src={slide.src}
-                                            alt={`Carousel ${i}`}/>
-                                    );
-                                })
-                            }
-                        </InfiniteLooper>
-                    </LifestyleCarouselContainer>
-                </LifestyleContainer>
-            </FullPageContainer>
+
+            <LifestyleContainer id="lifestyle-container">
+                <TitleColumn>
+                    {CONSTANTS.subHeadingText}
+                    {CONSTANTS.headingText}
+                    {CONSTANTS.paragraphText}
+                </TitleColumn>
+                <LifestyleCarouselContainer>
+                    <InfiniteLooper>
+                        {
+                            lifestyleItems.map((slide, i) => {
+                                return (
+                                    <StyledImg
+                                        key={`${i}_inner`}
+                                        src={slide.src}
+                                        alt={`Carousel ${i}`}/>
+                                );
+                            })
+                        }
+                    </InfiniteLooper>
+                </LifestyleCarouselContainer>
+            </LifestyleContainer>
         </StyledSection>
     );
 });

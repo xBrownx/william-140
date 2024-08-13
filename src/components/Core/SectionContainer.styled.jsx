@@ -11,7 +11,8 @@ export const StyledSection = forwardRef(function (
         id,
         bgColour,
         minHeight,
-        children
+        children,
+        justify
     }, ref
 ) {
     return (
@@ -22,11 +23,13 @@ export const StyledSection = forwardRef(function (
                 style={{
                     '--background-colour': bgColour
                 }}
+
             >
                 <LazyPage
                     id=""
                     threshold={0.01}
-                    style={{minHeight: minHeight}}
+                    minHeight={minHeight}
+                    justify={justify}
                 >
                     <GlobalStyles/>
                     {children}
@@ -40,7 +43,6 @@ const PageSection = styled.section`
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     //overflow: hidden;
     min-width: 100%;
     min-height: 50vh;
@@ -52,9 +54,17 @@ const PageSection = styled.section`
     ${props => props.$secondary && css`
         background-color: ${({theme}) => theme.colors.bg_secondary};
     `};
+    
+    //@media only screen and (max-width: 750px) {
+    //    min-height: 0vh;
+    //}
 `
 
 export const LoadingSection = styled.section`
     min-width: 100vw;
     min-height: 50vh;
+    
+    @media only screen and (max-width: 750px) {
+        min-height: 0;
+    }
 `

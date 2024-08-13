@@ -32,6 +32,9 @@ const Enquire = lazy(() => import("../Pages/13-Enquire/").then(m => ({ default: 
 function App() {
 
     const pageRefs = PageRefs()
+    const scrollTo = (page) => {
+        page.current.scrollIntoView({behavior: "smooth"})
+    }
     return (
         <>
             <GlobalStyles/>
@@ -41,14 +44,13 @@ function App() {
                     <Landing
                         id="landing"
                         ref={pageRefs.landing}
-                        scrollTo={() => {
-                            pageRefs.home.current.scrollIntoView({behavior: "smooth"});
-                        }}/>
+                        scrollTo={() => scrollTo(pageRefs.home)}/>
 
                     <Home
                         id="home"
                         ref={pageRefs.home}
                         minHeight={PageMinHeights.home}
+                        onDiscoverClick={() => scrollTo(pageRefs.availability)}
                     />
 
                     <FullPageImg
@@ -56,6 +58,7 @@ function App() {
                         ref={pageRefs.img1}
                         imgSrc={fullPageImg1}
                         minHeight={PageMinHeights.fullPageImg}
+                        imgPadding={true}
                     />
 
                     <Lifestyle
@@ -76,6 +79,7 @@ function App() {
                         imgSrc={fullPageImg2}
                         minHeight={PageMinHeights.fullPageImg}
                         bgColour={'#162425'}
+                        imgPadding={true}
                     />
 
                     <Design
@@ -107,7 +111,7 @@ function App() {
                     />
 
                     <FullPageImg
-                        id="FullPageImg2"
+                        id="FullPageImg3"
                         ref={pageRefs.img3}
                         imgSrc={fullPageImg3}
                         minHeight={PageMinHeights.home}
@@ -124,6 +128,8 @@ function App() {
                         ref={pageRefs.img4}
                         imgSrc={fullPageImg4}
                         minHeight={PageMinHeights.fullPageImg}
+                        bgColour={'#162425'}
+                        imgPadding={true}
                     />
 
                     <Enquire

@@ -7,12 +7,12 @@ export const headingText =
 
 export const paragraphText =
     <>
-        Presenting a range of fully fitted<br/>
-        tenancies available to lease.<br/>
-        These opportunities, offer<br/>
-        stunning views and natural light<br/>
-        with access to the building’s<br/>
-        first class facilities and<br/>
+        Presenting a range of fully fitted
+        tenancies available to lease.
+        These opportunities, offer
+        stunning views and natural light
+        with access to the building’s
+        first class facilities and
         amenities.
     </>
 

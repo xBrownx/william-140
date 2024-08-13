@@ -1,5 +1,4 @@
 import React, {forwardRef} from 'react';
-import '../Availability.css'
 import {ReactComponent as Img} from "../../../assets/svg/Frame 5736.svg";
 import {StyledSection} from "../../Core/SectionContainer.styled";
 

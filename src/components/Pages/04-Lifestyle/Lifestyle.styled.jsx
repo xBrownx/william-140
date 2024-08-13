@@ -5,10 +5,16 @@ export const LifestyleContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: end;
     height: 100%;
     width: 100%;
     overflow: hidden;
     gap: 3.951vh;
+    
+    @media only screen and (max-width: 750px) {
+        gap: 16px;
+        height: auto;
+    }
 `
 
 export const LifestyleContentWrapper = styled.div`
@@ -39,8 +45,17 @@ export const StyledImg = styled.img`
     height: 100%;
     width: 100%;
     margin: 0 20px 0 20px;
+    @media only screen and (max-width: 750px) {
+        height: 120px;
+        margin: 0 8px;
+    }
 `
 
 export const LifestyleCarouselContainer = styled.div`
     height: 37.037vh;
+    @media only screen and (max-width: 750px) {
+        height: 120px;
+    }
+
+
 `

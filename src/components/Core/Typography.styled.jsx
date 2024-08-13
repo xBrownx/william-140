@@ -76,6 +76,11 @@ export const HeadingThree = styled.h3`
     font-weight: 700;
     padding: 0;
     margin: 0 0 0.988vh 0;
+
+    @media only screen and (max-width: 750px) {
+
+    }
+    
 `
 
 export const ParagraphOne = styled.p`

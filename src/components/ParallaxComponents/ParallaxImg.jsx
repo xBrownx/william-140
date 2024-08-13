@@ -1,26 +1,11 @@
-import {motion, useScroll, useTransform} from "framer-motion";
+import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
 import React, {useRef} from "react";
 import styled from "styled-components";
 
-const ImgContainer = styled.div`
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
 
-const StyledImg = styled(motion.img)`
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+export const ParallaxImg = ({src, alt}) => {
 
-`
-
-export const ParallaxImg = ({src, alt, width, height}) => {
-
-    const targetRef = useRef(null);
+    const targetRef = useRef();
     const {scrollYProgress, scrollY} = useScroll({
         target: targetRef,
         offset: ["start end", "end start"]
@@ -32,21 +17,56 @@ export const ParallaxImg = ({src, alt, width, height}) => {
         ["-50%", "-25%", "25%", "50%"]
     );
 
+    useMotionValueEvent(
+        scrollYProgress,
+        "change",
+            latest => console.log(latest)
+    )
 
     return (
         <ImgContainer
             ref={targetRef}
-            id={"img-container"}
+            id={"parallax-img-container"}
         >
             <StyledImg
                 as={motion.img}
                 style={{y: y1}}
                 src={src}
                 alt={alt}
-                PlaceHolderSrc={<>Loading...</>}
             />
         </ImgContainer>
     );
 
 
 }
+
+const ImgContainer = styled.div`
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //@media only screen and (max-width: 750px) {
+    //    height: auto;
+    //    align-items: start;
+    //}
+`
+
+const StyledImg = styled(motion.img)`
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+
+    //@media only screen and (max-width: 750px) {
+    //    border: 1px solid black;
+    //    box-sizing: border-box;
+    //    object-fit: contain;
+    //    height: auto;
+    //}
+
+`
+

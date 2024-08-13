@@ -4,7 +4,7 @@ import {
     ImgContainer,
 } from "./FadeCarousel.styled";
 import {useEffect, useState} from "react";
-import {CarouselMenu} from "./CarouselMenu.component";
+import {CarouselMenu} from "./CarouselMenu";
 
 
 export const FadeCarousel = ({activeIdx, carouselItems}) => {

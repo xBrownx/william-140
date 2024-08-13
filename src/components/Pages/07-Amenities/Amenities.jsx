@@ -28,6 +28,7 @@ export const Amenities = forwardRef(function (
             ref={ref}
             minHeight={minHeight}
             bgColour={'#162425'}
+            justify={'center'}
         >
             <FullPageMin id="full-page-min">
                 <Padding id="padding">

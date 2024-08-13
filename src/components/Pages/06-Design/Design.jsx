@@ -6,6 +6,8 @@ import {HeadingOne, HeadingThree} from "../../Core/Typography.styled";
 import {FullPageMin, Padding} from "../../Core/PageContainer.styled";
 import * as CONSTANTS from './Design.constants'
 import {DesignContainer} from "./Design.styled";
+import {StyledHeading, StyledSubheading} from "../../Titles/Title.styled";
+import styled from "styled-components";
 
 export const Design = forwardRef(function (
     {
@@ -15,6 +17,7 @@ export const Design = forwardRef(function (
     ref
 ) {
     const designItems = CONSTANTS.DesignItems();
+
     return (
         <>
             <GlobalStyles/>
@@ -24,19 +27,30 @@ export const Design = forwardRef(function (
                 minHeight={minHeight}
                 bgColour={'#162425'}
             >
-                <FullPageMin>
-                    <Padding>
+                <FullPageMin id="full-page-min">
+                    <Padding id="padding">
                         <DesignContainer>
-                            <HeadingThree>
+                            <StyledSubheading>
                                 {CONSTANTS.subHeadingText}
-                            </HeadingThree>
-                            <HeadingOne>
+                            </StyledSubheading>
+                            <StyledHeading $secondary>
                                 {CONSTANTS.headingText}
-                            </HeadingOne>
+                            </StyledHeading>
+
                         </DesignContainer>
+                        <Placeholder />
                     </Padding>
                 </FullPageMin>
             </StyledSection>
         </>
     );
 });
+const Placeholder = styled.div`
+    @media only screen and (max-width: 750px) {
+        margin: 16px 0;
+        width: 100%;
+        height: 219px;
+        background-color: red;
+        padding: 0;
+    }
+`

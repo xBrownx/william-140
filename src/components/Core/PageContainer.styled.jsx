@@ -12,7 +12,12 @@ export const FullPageContainer = styled.div`
     align-items: center;
     min-width: 100vw;
     min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
+
+    @media only screen and (max-width: 750px) {
+        min-height: auto;
+    }
 `
 
 export const FullPageMin = styled.div`
@@ -22,6 +27,12 @@ export const FullPageMin = styled.div`
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    
+    @media only screen and (max-width: 750px) {
+        min-height: 0;
+        gap:0;
+        height: fit-content;
+    }
 `
 
 export const Padding = styled.div`
@@ -30,6 +41,10 @@ export const Padding = styled.div`
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    
+    @media only screen and (max-width: 750px) {
+        padding: 0 0 0 0;
+    }
 `
 
 

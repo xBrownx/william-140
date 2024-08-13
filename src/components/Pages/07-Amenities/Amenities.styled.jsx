@@ -7,6 +7,13 @@ export const SplitScreen = styled.div`
     max-width: 100%;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 750px) {
+        flex-direction: column;
+        padding: 16px;
+    }
 `
 
 export const AmenitiesLeftContainer = styled.div`

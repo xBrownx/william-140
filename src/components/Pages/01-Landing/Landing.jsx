@@ -5,6 +5,7 @@ import {StyledSection} from "../../Core/SectionContainer.styled";
 import {LandingBackground} from "./LandingVideo";
 import {LandingButton} from "./LandingButton";
 import {forwardRef} from "react";
+import {LandingTitleVariant} from "./LandingTitleVariant";
 
 export const Landing = forwardRef(function({id, scrollTo}, ref) {
 
@@ -15,7 +16,7 @@ export const Landing = forwardRef(function({id, scrollTo}, ref) {
         >
             <FullPageContainer >
                 <LandingBackground />
-                <LandingTitle />
+                <LandingTitleVariant />
                 <LandingButton onClick={scrollTo}/>
             </FullPageContainer>
         </StyledSection>

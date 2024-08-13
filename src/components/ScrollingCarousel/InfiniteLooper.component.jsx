@@ -27,10 +27,10 @@ export const InfiniteLooper = ({children}) => {
     }, []);
 
     return (
-        <OuterContainer ref={outerRef}>
-            <OuterWrapper ref={innerRef}>
+        <OuterContainer ref={outerRef} id="looper-outer-container">
+            <OuterWrapper ref={innerRef} id="looper-outer-wrapper">
                 {[...Array(looperInstances)].map((_, ind) => (
-                    <InnerContainer key={`${ind}_outer`}>
+                    <InnerContainer key={`${ind}_outer`} id="looper-inner-container">
                         {children}
                     </InnerContainer>
                 ))
@@ -58,7 +58,7 @@ const OuterWrapper = styled.div`
 const InnerContainer = styled.div`
     display: flex;
     width: max-content;
-    height: max-content;
+    height: 100%;
 
 
     animation: slideAnimation 8s linear infinite;

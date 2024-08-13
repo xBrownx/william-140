@@ -25,24 +25,26 @@ export const TextButton = styled.div`
 
     &:hover {
         cursor: pointer;
+        animation: y-button-hover 300ms ease-in-out;
+        animation-fill-mode: both;
     }
 
-    ${props => props.$secondary && css`
-        background-color: ${({theme}) => theme.buttons.secondary.backgroundColor};
-        color: ${({theme}) => theme.buttons.secondary.fontColour};
-            //border: 2px solid ${({theme}) => theme.buttons.secondary.fontColour};
-    `};
-
-    ${props => props.$variant && css`
-        background-color: ${({theme}) => theme.buttons.variant.backgroundColor};
-        color: ${({theme}) => theme.buttons.variant.fontColour};
-    `};
-
-    ${props => props.$large && css`
-        padding: 1em 1.5em;
-        font-size: 18px;
-        border-radius: 2%;
-    `};
+    @keyframes y-button-hover {
+        0% {
+            scale: 1;
+        }
+        40% {
+            scale: 1.03;
+        }
+        60% {
+            scale: 1;
+        }
+        100% {
+            color: #FFF;
+            background-color: #DED9D0;
+        }
+    }
+    
 `
 
 export const HomeButton = styled.div`
@@ -80,10 +82,14 @@ export const HomeButton = styled.div`
             background-color: #164A49;
         }
     }
+    
+    @media only screen and (max-width: 750px) {
+        width: 159px;
+        font-size: 10pt;
+        margin: 0 0 0 16px;
+        height: 34px;
+    }
 `
-
-
-
 
 export const ArrowButton = styled.div`
     z-index: 2;
@@ -132,11 +138,11 @@ export const ArrowButton = styled.div`
             scale: 1;
         }
         100% {
-            background-color: ${({theme}) => theme.buttons.primary.backgroundColor};
+            background-color: #DED9D0;
 
         }
-
     }
+    
 
 `
 

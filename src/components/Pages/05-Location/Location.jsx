@@ -4,7 +4,7 @@ import {StyledSection} from "../../Core/SectionContainer.styled";
 import {FullPageMin} from "../../Core/PageContainer.styled";
 import {CarouselContainer, LocationContainer} from "./Location.styled";
 import {FadeCarousel} from "../../FadeCarousel/FadeCarousel";
-import {CarouselMenu} from "../../FadeCarousel/CarouselMenu.component";
+import {CarouselMenu} from "../../FadeCarousel/CarouselMenu";
 import * as CONSTANTS from './Location.constants'
 import {TitleRow} from "../../Titles/TitleRow";
 
@@ -27,7 +27,7 @@ export const Location = forwardRef(function (
             id={id}
             ref={ref}
             minHeight={minHeight}
-            $secondary
+            justify={'end'}
         >
             <FullPageMin>
                 <LocationContainer>
@@ -43,6 +43,7 @@ export const Location = forwardRef(function (
                     </CarouselContainer>
                     <CarouselMenu
                         carouselItems={locationItems}
+                        activeIdx={activeIdx}
                         setActiveIndex={handleSlideChange}
                     />
 

@@ -1,7 +1,7 @@
 import {motion, useScroll, useTransform} from "framer-motion";
 import React, {useRef, useState} from "react";
 import styled from "styled-components";
-import {CharSpan} from "../../hooks/TextAnim";
+
 
 const DURATION = 0.15;
 const STAGGER = 0.015;

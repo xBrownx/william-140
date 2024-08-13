@@ -1,9 +1,13 @@
-import React, {forwardRef, useState} from 'react';
-import {ReactComponent as FooterLogo} from "../../../assets/svg/140W_Logo_RGB_Stacked_White.svg";
+import React, {forwardRef} from 'react';
 
 import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledHeading} from "../../Titles/Title.styled";
+import {EnquireForm} from "./EnquireForm";
+import {EnquireFooter} from "./Enquire.footer";
+import * as CONSTANTS from "./Enquire.constants";
+import styled from "styled-components";
 
-export const Enquire = forwardRef(function(
+export const Enquire = forwardRef(function (
     {
         id,
         minHeight
@@ -11,114 +15,52 @@ export const Enquire = forwardRef(function(
     ref
 ) {
 
-    const [inputs, setInputs] = useState({});
-
-
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInputs(values => ({...values, [name]: value}))
-    }
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
-    }
 
     return (
         <StyledSection
             id={id}
             ref={ref}
             minHeight={minHeight}
-            $secondary
+            bgColour={'#162425'}
         >
-            <div className="page-container">
-                <div className="content-container">
-                    <div className="heading-wrapper">
-                        <div className="title">
-
-                        </div>
-                    </div>
-
-                    <div className="content-wrapper">
-                        <div className="form-container">
-                            <div className="form-wrapper">
-                                <form onSubmit={handleSubmit}>
-                                    <div className="enquiry-row two">
-
-                                        <input
-                                            type="text"
-                                            name={"lastName"}
-                                            value={inputs.lastName || ""}
-                                            placeholder="Last Name"
-                                            onChange={handleChange}
-                                        />
-
-                                        <input
-                                            type="text"
-                                            name={"firstName"}
-                                            value={inputs.firstName || ""}
-                                            placeholder="First Name"
-                                            onChange={handleChange}
-                                        />
-
-                                    </div>
-
-                                    <div className="enquiry-row one">
-
-                                        <input
-                                            type="text"
-                                            name={"email"}
-                                            value={inputs.email || ""}
-                                            placeholder="Email"
-                                            onChange={handleChange}
-                                        />
-
-                                    </div>
-
-                                    <div className="enquiry-row one">
-                                        <input
-                                            type="text"
-                                            name={"phone"}
-                                            value={inputs.phone || ""}
-                                            placeholder="Phone Number"
-                                            onChange={handleChange}
-                                        />
-                                    </div>
-
-                                    <div className="enquiry-row one">
-                                        <textarea
-                                            className="enquiry-input-msg"
-                                            name={"message"}
-                                            value={inputs.message || ""}
-                                            placeholder="Message"
-                                            onChange={handleChange}
-                                            rows="4"
-                                        />
-                                    </div>
-                                    <div className="btn-wrapper">
-                                        <button type="submit">Submit</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="footer-container">
-                <div className="footer-wrapper">
-                    <div className="footer-div left">
-                        <p>Privacy Policy</p>
-                    </div>
-                    <div className="footer-div centre">
-                        <FooterLogo/>
-                    </div>
-                    <div className="footer-div right">
-                        <p>Website designed by Replika.</p>
-                    </div>
-                </div>
-            </div>
+            <Container id="container">
+                <ContentWrapper>
+                    <StyledHeading $secondary>
+                        {CONSTANTS.headingText}
+                    </StyledHeading>
+                    <EnquireForm/>
+                </ContentWrapper>
+                <EnquireFooter/>
+            </Container>
         </StyledSection>
     )
         ;
 });
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    padding: var(--height-140px);
+    overflow: hidden;
+    box-sizing: border-box;
+    
+    @media only screen and (max-width: 750px) {
+        padding: 16px;
+        h1 {
+            text-align: center;
+        }
+    }
+    
+`
+
+const ContentWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--width-32px);
+`
