@@ -10,6 +10,7 @@ import styled from "styled-components";
 export const Enquire = forwardRef(function (
     {
         id,
+        bgColour,
         minHeight
     },
     ref
@@ -20,8 +21,8 @@ export const Enquire = forwardRef(function (
         <StyledSection
             id={id}
             ref={ref}
+            bgColour={bgColour}
             minHeight={minHeight}
-            bgColour={'#162425'}
         >
             <Container id="container">
                 <ContentWrapper>

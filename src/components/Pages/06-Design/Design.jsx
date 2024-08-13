@@ -12,6 +12,7 @@ import styled from "styled-components";
 export const Design = forwardRef(function (
     {
         id,
+        bgColour,
         minHeight
     },
     ref
@@ -19,30 +20,24 @@ export const Design = forwardRef(function (
     const designItems = CONSTANTS.DesignItems();
 
     return (
-        <>
-            <GlobalStyles/>
-            <StyledSection
-                id={id}
-                ref={ref}
-                minHeight={minHeight}
-                bgColour={'#162425'}
-            >
-                <FullPageMin id="full-page-min">
-                    <Padding id="padding">
-                        <DesignContainer>
-                            <StyledSubheading>
-                                {CONSTANTS.subHeadingText}
-                            </StyledSubheading>
-                            <StyledHeading $secondary>
-                                {CONSTANTS.headingText}
-                            </StyledHeading>
+        <StyledSection
+            id={id}
+            ref={ref}
+            bgColour={bgColour}
+            minHeight={minHeight}
+        >
+            <DesignContainer>
+                <StyledSubheading>
+                    {CONSTANTS.subHeadingText}
+                </StyledSubheading>
+                <StyledHeading $secondary>
+                    {CONSTANTS.headingText}
+                </StyledHeading>
 
-                        </DesignContainer>
-                        <Placeholder />
-                    </Padding>
-                </FullPageMin>
-            </StyledSection>
-        </>
+            </DesignContainer>
+            <Placeholder/>
+        </StyledSection>
+
     );
 });
 const Placeholder = styled.div`

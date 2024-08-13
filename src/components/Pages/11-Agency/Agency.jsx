@@ -11,6 +11,7 @@ import {Agent} from "./AgencyAgent";
 export const Agency = forwardRef(function (
     {
         id,
+        bgColour,
         minHeight
     },
     ref
@@ -19,27 +20,22 @@ export const Agency = forwardRef(function (
         <StyledSection
             id={id}
             ref={ref}
+            bgColour={bgColour}
             minHeight={minHeight}
-            bgColour={'#162425'}
             justify={'center'}
         >
-            <FullPageMin id="full-page-min">
-                <Padding id="padding">
-                    <SplitScreen id="split-screen">
-                        <LeftHand/>
-                        <RightHand/>
-                    </SplitScreen>
-                </Padding>
-            </FullPageMin>
+            <SplitScreen id="split-screen">
+                <LeftHand/>
+                <RightHand/>
+            </SplitScreen>
+
         </StyledSection>
     );
 });
 
 const LeftHand = () => {
     return (
-        <>
-            <img src={imgLobby} alt="Lobby"/>
-        </>
+        <img src={imgLobby} alt="Lobby"/>
     );
 }
 

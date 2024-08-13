@@ -11,6 +11,7 @@ import {StyledHeading, StyledSubheading} from "../../Titles/Title.styled";
 export const Amenities = forwardRef(function (
     {
         id,
+        bgColour,
         minHeight
     },
     ref
@@ -26,31 +27,27 @@ export const Amenities = forwardRef(function (
         <StyledSection
             id={id}
             ref={ref}
+            bgColour={bgColour}
             minHeight={minHeight}
-            bgColour={'#162425'}
             justify={'center'}
         >
-            <FullPageMin id="full-page-min">
-                <Padding id="padding">
-                    <SplitScreen id="split-screen">
-                        <AmenitiesLeftContainer id="left-container">
-                            <AmenitiesHeading/>
-                            <AmenitiesList
-                                amenitiesItems={amenitiesItems}
-                                handleSlideChange={handleSlideChange}
-                            />
-                        </AmenitiesLeftContainer>
-                        <AmenitiesRightContainer id="right-container">
-                            <ImgContainer>
-                                <FadeCarousel
-                                    activeIdx={activeIdx}
-                                    carouselItems={amenitiesItems}
-                                />
-                            </ImgContainer>
-                        </AmenitiesRightContainer>
-                    </SplitScreen>
-                </Padding>
-            </FullPageMin>
+            <SplitScreen id="split-screen">
+                <AmenitiesLeftContainer id="left-container">
+                    <AmenitiesHeading/>
+                    <AmenitiesList
+                        amenitiesItems={amenitiesItems}
+                        handleSlideChange={handleSlideChange}
+                    />
+                </AmenitiesLeftContainer>
+                <AmenitiesRightContainer id="right-container">
+                    <ImgContainer>
+                        <FadeCarousel
+                            activeIdx={activeIdx}
+                            carouselItems={amenitiesItems}
+                        />
+                    </ImgContainer>
+                </AmenitiesRightContainer>
+            </SplitScreen>
         </StyledSection>
 
     );
@@ -62,7 +59,7 @@ const AmenitiesHeading = ({}) => {
             <StyledSubheading>
                 {CONSTANTS.subheadingText}
             </StyledSubheading>
-            <StyledHeading $secondary >
+            <StyledHeading $secondary>
                 {CONSTANTS.headingText}
             </StyledHeading>
         </>

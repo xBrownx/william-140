@@ -23,7 +23,7 @@ export const Heading138px = styled(motion.h1)`
     font-family: var(--font-fmaily-primary-light), serif;
     font-size: var(--font-size-138px);
     font-weight: 300;
-    line-height: var(--line-height-138px);
+    line-height: var(--font-size-138px);
     color: var(--color-primary-2);
     justify-content: ${({ justify }) => justify };
     

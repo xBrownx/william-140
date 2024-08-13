@@ -9,28 +9,27 @@ import {TitleRow} from "../../Titles/TitleRow";
 export const History = forwardRef(function (
     {
         id,
+        bgColour,
         minHeight
     },
     ref
 ) {
 
     return (
-        <>
-            <GlobalStyles/>
-            <StyledSection
-                id={id}
-                ref={ref}
-                minHeight={minHeight}
-            >
-                <FullPageMin>
-                    <TitleRow>
-                        {CONSTANTS.subHeadingText}
-                        {CONSTANTS.headingText}
-                        {CONSTANTS.paragraphText}
-                    </TitleRow>
-                    <HistoryVideo/>
-                </FullPageMin>
-            </StyledSection>
-        </>
+        <StyledSection
+            id={id}
+            ref={ref}
+            bgColour={bgColour}
+            minHeight={minHeight}
+            justify={"center"}
+        >
+            <TitleRow>
+                {CONSTANTS.subHeadingText}
+                {CONSTANTS.headingText}
+                {CONSTANTS.paragraphText}
+            </TitleRow>
+            <HistoryVideo/>
+        </StyledSection>
+
     );
 });

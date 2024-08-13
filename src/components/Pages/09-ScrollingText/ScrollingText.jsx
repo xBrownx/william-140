@@ -6,18 +6,17 @@ import {InfiniteLooper} from "../../ScrollingCarousel/InfiniteLooper.component";
 export const ScrollingText = () => {
 
     return (
-        <>
-            <GlobalStyles/>
-            <Container
-                id="scrolling-text-container"
-            >
-                <InfiniteLooper>
-                    <HeadingSplit>
-                        140 WILLIAM STREET
-                    </HeadingSplit>
-                </InfiniteLooper>
-            </Container>
-        </>
+
+        <Container
+            id="scrolling-text-container"
+        >
+            <InfiniteLooper>
+                <HeadingSplit>
+                    140 WILLIAM STREET
+                </HeadingSplit>
+            </InfiniteLooper>
+        </Container>
+
     );
 };
 

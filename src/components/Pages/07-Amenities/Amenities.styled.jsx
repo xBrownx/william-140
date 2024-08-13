@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SplitScreen = styled.div`
+    padding: 0 var(--width-160px);
     width: 100%;
     height: 100vh;
     min-height: 100vh;

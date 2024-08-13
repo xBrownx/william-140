@@ -7,6 +7,7 @@ import {SplitScreen} from "./Home.splitScreen";
 export const Home = forwardRef(function (
     {
         id,
+        bgColour,
         minHeight,
         onDiscoverClick
     },
@@ -17,6 +18,7 @@ export const Home = forwardRef(function (
         <StyledSection
             id={id}
             ref={ref}
+            bgColour={bgColour}
             minHeight={minHeight}
         >
             <SplitScreen id={id}>

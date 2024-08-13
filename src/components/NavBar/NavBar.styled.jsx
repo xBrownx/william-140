@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 export const NavItems = (props) => {
 
     return [
-        {name: "Home", pageRef:  props.mainRefs.home},
+        {name: "Home", pageRef: props.mainRefs.home},
         {name: "Location", pageRef: props.mainRefs.location},
         {name: "Design", pageRef: props.mainRefs.design},
         {name: "Amenities", pageRef: props.mainRefs.amenities},
@@ -23,7 +23,7 @@ export const NavBarContainer = styled(motion.div)`
     top: 0;
     height: var(--height-90px);
     width: 100%;
-    
+
     @media only screen and (max-width: 750px) {
         height: 70px;
     }
@@ -41,17 +41,18 @@ export const NavBarTitleWrapper = styled.div`
     align-items: center;
     width: 100%;
     object-fit: cover;
-    
+
     svg {
         height: 2.099vh;
         width: 19.097vw;
         object-fit: cover;
-        @media only screen and (max-width: 750px) {
+        
+        @media only screen and (max-width: 900px) {
             height: 11px;
             width: 190px;
+        }
     }
-    }
-    
+
     &:hover {
         cursor: pointer;
     }
@@ -62,11 +63,11 @@ export const NavBarUl = styled.ul`
     gap: var(--width-32px);
     padding: var(--height-26px) var(--width-32px) var(--height-26px) 0;
     margin: 0;
-    
-    @media only screen and (max-width: 750px) {
+
+    @media only screen and (max-width: 900px) {
         display: none;
     }
-    
+
 `
 
 export const NavBarLi = styled.li`
@@ -74,18 +75,28 @@ export const NavBarLi = styled.li`
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     text-decoration: none;
-    
-    font-size: var(--font-size-18px);
+
+    font-size: max(var(--font-size-18px), 1em);
     font-family: var(--font-fmaily-secondary-light), serif;
     font-weight: 400;
     color: white;
     margin: 0;
     padding: 0;
-    
+
     &:hover {
         color: black;
         cursor: pointer;
+    }
+`
+
+export const MenuWrapper = styled.div`
+    display: none;
+    padding: var(--height-26px) var(--width-32px) var(--height-26px) 0;
+    margin: 0;
+    
+    @media only screen and (max-width: 860px) {
+        display: flex;
     }
 `

@@ -39,7 +39,7 @@ const Container = styled.div`
 const TitleWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: var(--width-640px);
+    min-width: var(--width-640px);
     
     @media only screen and (max-width: 750px) {
         width: 100%;
