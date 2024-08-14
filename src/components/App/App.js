@@ -1,17 +1,11 @@
 import './App.css';
 import React, {lazy} from "react";
-import {ThemeProvider} from "styled-components";
-
 import {PageRefs} from "../../util/PageRefs";
-import {mainTheme} from "../themes/MainTheme";
-
-
 import NavBar from "../NavBar/NavBar";
 import fullPageImg1 from '../../assets/img/Full-Page-Img-1.png'
 import fullPageImg2 from '../../assets/img/Full-Page-Img-2.png'
 import fullPageImg3 from '../../assets/img/Full-Page-Img-3.png'
 import fullPageImg4 from '../../assets/img/Full-Page-Img-4.jpeg'
-import {GlobalStyles} from "../themes/GlobalStyles.css";
 import {PageMinHeights} from "../../constants";
 
 const Landing = lazy(() => import( "../Pages/01-Landing/").then(m => ({default: m.Landing})));
@@ -28,7 +22,6 @@ const Agency = lazy(() => import("../Pages/11-Agency/").then(m => ({default: m.A
 const Enquire = lazy(() => import("../Pages/13-Enquire/").then(m => ({default: m.Enquire})));
 
 
-// const FullPageImg1 = lazy(()=> import ('./pages/fullPageImg/Full-Page-Img-1.png'));
 function App() {
 
     const pageRefs = PageRefs()

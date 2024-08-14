@@ -1,13 +1,9 @@
 import React, {forwardRef} from 'react';
-
 import {StyledSection} from "../../Core/SectionContainer.styled";
-import {GlobalStyles} from "../../themes/GlobalStyles.css";
-import {HeadingOne, HeadingThree} from "../../Core/Typography.styled";
-import {FullPageMin, Padding} from "../../Core/PageContainer.styled";
 import * as CONSTANTS from './Design.constants'
 import {DesignContainer} from "./Design.styled";
-import {StyledHeading, StyledSubheading} from "../../Titles/Title.styled";
 import styled from "styled-components";
+import {StyledHeading, StyledSubheading} from "../../Styled";
 
 export const Design = forwardRef(function (
     {

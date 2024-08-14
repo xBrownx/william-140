@@ -7,7 +7,7 @@ import {
     StyledImg
 } from "./Lifestyle.styled";
 import * as CONSTANTS from "./Lifestyle.constants";
-import {TitleColumn} from "../../Titles/TitleColumn";
+import {ColumnTitle} from "../../PageTitles/Column/ColumnTitle";
 
 
 export const Lifestyle = forwardRef(function (
@@ -30,11 +30,11 @@ export const Lifestyle = forwardRef(function (
         >
 
             <LifestyleContainer id="lifestyle-container">
-                <TitleColumn>
+                <ColumnTitle>
                     {CONSTANTS.subHeadingText}
                     {CONSTANTS.headingText}
                     {CONSTANTS.paragraphText}
-                </TitleColumn>
+                </ColumnTitle>
                 <LifestyleCarouselContainer>
                     <InfiniteLooper>
                         {

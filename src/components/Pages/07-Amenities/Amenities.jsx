@@ -1,12 +1,11 @@
 import React, {forwardRef, useState} from 'react';
-
 import {StyledSection} from "../../Core/SectionContainer.styled";
-import {FullPageMin, Padding} from "../../Core/PageContainer.styled";
 import {FadeCarousel} from "../../FadeCarousel/FadeCarousel";
 import * as CONSTANTS from './Amenities.constants'
-import {AmenitiesLeftContainer, AmenitiesRightContainer, ImgContainer, SplitScreen} from "./Amenities.styled";
+import * as Styled from "./Amenities.styled";
 import {AmenitiesList} from "./AmenitiesList";
-import {StyledHeading, StyledSubheading} from "../../Titles/Title.styled";
+import {StyledHeading, StyledSubheading} from "../../Styled";
+
 
 export const Amenities = forwardRef(function (
     {
@@ -31,23 +30,23 @@ export const Amenities = forwardRef(function (
             minHeight={minHeight}
             justify={'center'}
         >
-            <SplitScreen id="split-screen">
-                <AmenitiesLeftContainer id="left-container">
+            <Styled.SplitScreen id="split-screen">
+                <Styled.AmenitiesLeftContainer id="left-container">
                     <AmenitiesHeading/>
                     <AmenitiesList
                         amenitiesItems={amenitiesItems}
                         handleSlideChange={handleSlideChange}
                     />
-                </AmenitiesLeftContainer>
-                <AmenitiesRightContainer id="right-container">
-                    <ImgContainer>
+                </Styled.AmenitiesLeftContainer>
+                <Styled.AmenitiesRightContainer id="right-container">
+                    <Styled.ImgContainer>
                         <FadeCarousel
                             activeIdx={activeIdx}
                             carouselItems={amenitiesItems}
                         />
-                    </ImgContainer>
-                </AmenitiesRightContainer>
-            </SplitScreen>
+                    </Styled.ImgContainer>
+                </Styled.AmenitiesRightContainer>
+            </Styled.SplitScreen>
         </StyledSection>
 
     );

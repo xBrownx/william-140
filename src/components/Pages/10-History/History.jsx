@@ -1,10 +1,9 @@
 import React, {forwardRef} from 'react';
 import {StyledSection} from "../../Core/SectionContainer.styled";
-import {GlobalStyles} from "../../themes/GlobalStyles.css";
 import * as CONSTANTS from "./History.constants";
-import {FullPageMin} from "../../Core/PageContainer.styled";
 import {HistoryVideo} from "./HistoryVideo";
-import {TitleRow} from "../../Titles/TitleRow";
+import {TitleRow} from "../../PageTitles";
+
 
 export const History = forwardRef(function (
     {

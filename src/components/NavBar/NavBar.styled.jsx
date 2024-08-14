@@ -1,18 +1,6 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
-
-export const NavItems = (props) => {
-
-    return [
-        {name: "Home", pageRef: props.mainRefs.home},
-        {name: "Location", pageRef: props.mainRefs.location},
-        {name: "Design", pageRef: props.mainRefs.design},
-        {name: "Amenities", pageRef: props.mainRefs.amenities},
-        {name: "Availability", pageRef: props.mainRefs.availability},
-        {name: "History", pageRef: props.mainRefs.history},
-        {name: "Agencies", pageRef: props.mainRefs.agency},
-    ]
-}
+import {_18px} from "../Styled/Font/FontSize";
 
 export const NavBarContainer = styled(motion.div)`
     z-index: 2;
@@ -75,10 +63,7 @@ export const NavBarLi = styled.li`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    text-decoration: none;
-
-    font-size: max(var(--font-size-18px), 1em);
+    ${_18px};
     font-family: var(--font-fmaily-secondary-light), serif;
     font-weight: 400;
     color: white;

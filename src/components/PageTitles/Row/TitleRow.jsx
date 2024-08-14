@@ -1,18 +1,19 @@
-import React from 'react';
 import styled from "styled-components";
-import {StyledHeading, StyledSubheading} from "./Title.styled";
+import {StyledHeading, StyledSubheading} from "../../Styled";
 
-export const TitleColumn = ({children}) => {
+export const TitleRow = ({children}) => {
     const [subheading, heading, paragraph] = children;
 
-    return(
+    return (
         <Container>
-            <StyledSubheading>
-                {subheading}
-            </StyledSubheading>
-            <StyledHeading>
-                {heading}
-            </StyledHeading>
+            <TitleWrapper>
+                <StyledSubheading>
+                    {subheading}
+                </StyledSubheading>
+                <StyledHeading>
+                    {heading}
+                </StyledHeading>
+            </TitleWrapper>
             <ParagraphWrapper>
                 <StyledParagraph>
                     {paragraph}
@@ -25,22 +26,33 @@ export const TitleColumn = ({children}) => {
 const Container = styled.div`
     padding: 0 var(--width-160px);
     display: flex;
-    flex-direction: column;
-    width: fit-content;
+    flex-direction: row;
+    gap: var(--width-32px);
     
     @media only screen and (max-width: 750px) {
+        flex-direction: column;
+        gap: 0;
         padding: 16px;
+    }
+`
+
+const TitleWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-width: var(--width-640px);
+    
+    @media only screen and (max-width: 750px) {
         width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
     }
 `
 
 const ParagraphWrapper = styled.div`
     border-left: 1px solid var(--color-primary-4);
-    margin: var(--height-38px) 0 0 0;
-    padding: 0 0 var(--height-32px) var(--width-32px);
+    margin: 0;
+    padding: 0 0 0 var(--width-32px);
+    display: flex;
+    align-items: end;
+    justify-content: end;
     
     @media only screen and (max-width: 750px) {
         padding: 0 16px 16px 16px;
@@ -49,6 +61,7 @@ const ParagraphWrapper = styled.div`
         max-width: 100%;
         box-sizing: border-box;
         overflow: hidden;
+        justify-content: start;
     }
 `
 

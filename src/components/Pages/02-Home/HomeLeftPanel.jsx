@@ -2,12 +2,13 @@ import {ParallaxImg} from "../../ParallaxComponents";
 import img from "../../../assets/img/07-Amenities-02-Flexible.png";
 import React from "react";
 import styled from "styled-components";
+import * as Padding from '../../Styled/'
 
 export const HomeLeftComponent = () => {
     return (
         <LeftContainer id="home-left">
             <ImgWrapper>
-                <ParallaxImg src={img} alt={""}/>
+                <img src={img} alt={""}/>
             </ImgWrapper>
         </LeftContainer>
     );
@@ -18,7 +19,8 @@ export const LeftContainer = styled.div`
     display: flex;
     justify-content: center;
     height: 100%;
-    padding: 8.889vh 7.847vw 8.889vh 11.111vw;
+    ${Padding.x160};
+    ${Padding.y72};
     box-sizing: border-box;
     
     @media only screen and (max-width: 750px) {
@@ -29,8 +31,11 @@ export const LeftContainer = styled.div`
 export const ImgWrapper = styled.div`
     position: relative;
     display: flex;
-    width: 31.042vw;
-    height: 82.222vh;
+    //width: 31.042vw;
+    width: 447px;
+    height: 666px;
+    //height: 82.222vh;
+    
     max-width: 31.042vw;
     max-height: 82.222vh;
     overflow: hidden;

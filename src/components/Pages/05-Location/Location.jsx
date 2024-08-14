@@ -5,7 +5,7 @@ import {CarouselContainer, Container} from "./Location.styled";
 import {FadeCarousel} from "../../FadeCarousel/FadeCarousel";
 import {CarouselMenu} from "../../FadeCarousel/CarouselMenu";
 import * as CONSTANTS from './Location.constants'
-import {TitleRow} from "../../Titles/TitleRow";
+import {TitleRow} from "../../PageTitles/Row/TitleRow";
 
 export const Location = forwardRef(function (
     {

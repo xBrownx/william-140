@@ -1,8 +1,8 @@
 import React, {forwardRef, useEffect, useRef} from 'react';
-import {ParallaxImg} from "../../ParallaxComponents/ParallaxImg";
+import {ParallaxImg} from "../../ParallaxComponents";
 import {StyledSection} from "../../Core/SectionContainer.styled";
 import styled, {css} from "styled-components";
-import {GlobalStyles} from "../../themes/GlobalStyles.css";
+
 
 
 export const FullPageImg = forwardRef(function (
