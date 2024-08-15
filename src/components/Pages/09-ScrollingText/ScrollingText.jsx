@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {InfiniteLooper} from "../../ScrollingCarousel/InfiniteLooper.component";
+import {media} from '../../Media'
 
 export const ScrollingText = () => {
 
@@ -36,6 +37,9 @@ const Container = styled.div`
     overflow: hidden;
     min-width: 100vw;
     //width: 100vw;
+    ${media.md`
+        min-height: auto;
+    `}
 `
 
 

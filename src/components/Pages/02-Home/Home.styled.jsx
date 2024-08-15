@@ -1,7 +1,6 @@
 import styled, {css} from "styled-components";
 import {media} from "../../Media";
-import * as Padding from "../../Styled";
-import {y16Mobile} from "../../Styled";
+import * as Padding from "../../Styled/Padding";
 
 export const SplitScreen = styled.div`
     display: flex;
@@ -12,7 +11,7 @@ export const SplitScreen = styled.div`
     ${Padding.y72};
 
     ${media.md`
-        padding-inline: 4.071vw;
+        ${Padding.x16Mobile};
         flex-flow: column;
         height: auto;
         

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {StyledHeading, StyledSubheading} from "../../Styled";
-
+import {media} from '../../Media'
+import * as Padding from '../../Styled/Padding';
 export const TitleRow = ({children}) => {
     const [subheading, heading, paragraph] = children;
 
@@ -29,11 +30,11 @@ const Container = styled.div`
     flex-direction: row;
     gap: var(--width-32px);
     
-    @media only screen and (max-width: 750px) {
+    ${media.md`
         flex-direction: column;
         gap: 0;
-        padding: 16px;
-    }
+        ${Padding.x16Mobile};
+    `};
 `
 
 const TitleWrapper = styled.div`
@@ -41,9 +42,9 @@ const TitleWrapper = styled.div`
     flex-direction: column;
     min-width: var(--width-640px);
     
-    @media only screen and (max-width: 750px) {
+    ${media.md`
         width: 100%;
-    }
+    `};
 `
 
 const ParagraphWrapper = styled.div`
@@ -54,7 +55,7 @@ const ParagraphWrapper = styled.div`
     align-items: end;
     justify-content: end;
     
-    @media only screen and (max-width: 750px) {
+    ${media.md`
         padding: 0 16px 16px 16px;
         margin: 16px 0 0 0;
         width: 100%;
@@ -62,7 +63,7 @@ const ParagraphWrapper = styled.div`
         box-sizing: border-box;
         overflow: hidden;
         justify-content: start;
-    }
+    `}
 `
 
 const StyledParagraph = styled.p`
@@ -74,11 +75,11 @@ const StyledParagraph = styled.p`
     font-family: var(--font-fmaily-secondary-light), serif;
     line-height: var(--line-height-18px);
     
-    @media only screen and (max-width: 750px) {
+    ${media.md`
         padding: 0;
         width: 100%;
         max-width: 100%;
-        font-size: 10pt;
-        line-height: 11pt;
-    }
+        font-size: 1rem;
+        line-height: 1.1rem;
+    `}
 `

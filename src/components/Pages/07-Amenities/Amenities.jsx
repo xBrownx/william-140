@@ -32,7 +32,12 @@ export const Amenities = forwardRef(function (
         >
             <Styled.SplitScreen id="split-screen">
                 <Styled.AmenitiesLeftContainer id="left-container">
-                    <AmenitiesHeading/>
+                    <StyledSubheading>
+                        {CONSTANTS.subheadingText}
+                    </StyledSubheading>
+                    <StyledHeading $secondary>
+                        {CONSTANTS.headingText}
+                    </StyledHeading>
                     <AmenitiesList
                         amenitiesItems={amenitiesItems}
                         handleSlideChange={handleSlideChange}
@@ -51,20 +56,6 @@ export const Amenities = forwardRef(function (
 
     );
 });
-
-const AmenitiesHeading = ({}) => {
-    return (
-        <>
-            <StyledSubheading>
-                {CONSTANTS.subheadingText}
-            </StyledSubheading>
-            <StyledHeading $secondary>
-                {CONSTANTS.headingText}
-            </StyledHeading>
-        </>
-    );
-}
-
 
 
 

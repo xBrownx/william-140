@@ -2,8 +2,8 @@ import video from "../../../assets/vid/10-History.mp4";
 import React, {useRef, useState} from "react";
 import styled from "styled-components";
 import placeholder from "../../../assets/img/10-History-Placeholder.png"
-import {motion} from "framer-motion";
-
+import {media} from '../../Media'
+import * as Padding from '../../Styled/Padding'
 export const HistoryVideo = () => {
     const videoRef = useRef();
     const [isPlaying, setIsPlaying] = useState(false);
@@ -47,6 +47,13 @@ const Wrapper = styled.div`
     padding: var(--height-32px) var(--width-160px) 0 var(--width-160px);
     box-sizing: border-box;
     border-radius: 4px;
+    
+    ${media.md`
+        ${Padding.x16Mobile};
+        ${Padding.y32Mobile};
+    `}
+    
+    
 `
 
 const StyledVideo = styled.video`

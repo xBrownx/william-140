@@ -96,7 +96,7 @@ const InputRow = styled.div`
     margin: 0 0 20px 0;
 
     ::placeholder {
-        color: var(--primary-text-colour);
+        color: white;
 `
 
 const StyledInput = styled.input`
@@ -105,7 +105,7 @@ const StyledInput = styled.input`
     font-size: 16px;
     font-family: 'SuisseIntl-Regular', serif;
     background-color: transparent;
-    color: var(--primary-text-colour);
+    color: white;
     box-sizing: border-box;
     border: 1px solid #E6E6E6;
     padding: 0 0 0 20px;
@@ -115,7 +115,7 @@ const StyledInput = styled.input`
 const StyledTextArea = styled.textarea`
     width: 100%;
     background-color: transparent;
-    color: var(--primary-text-colour);
+    color: white;
     box-sizing: border-box;
     border: 1px solid #E6E6E6;
     padding: 15px 0 0 20px;
@@ -129,7 +129,7 @@ const StyledButton = styled.button`
     margin: 0;
     width: 100%;
     height: 51px;
-    color: var(--primary-bg-colour);
+    color: white;
     font-size: 16px;
     font-family: 'SuisseIntl-Regular', serif;
     text-align: center;

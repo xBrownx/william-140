@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import {ListItem} from "./AmenitiesListItem";
+import {ListItemStyled, AmenitiesListWrapper} from "./Amenities.styled";
 
 export const AmenitiesList = ({amenitiesItems, handleSlideChange}) => {
     return (
@@ -20,14 +19,15 @@ export const AmenitiesList = ({amenitiesItems, handleSlideChange}) => {
     );
 }
 
-const AmenitiesListWrapper = styled.ul`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    list-style: none;
-    border-left: 1px solid #84936E;
-    gap: var(--height-16px);
-    margin: var(--height-32px) 0 0 0;
-    padding: 0 0 0 var(--width-32px);
-    
-`
+const ListItem = ({Icon, title, idx, handleSlideChange}) => {
+    return (
+        <ListItemStyled
+            key={`${idx}_li`}
+            onMouseEnter={() => handleSlideChange(idx)}
+            onMouseLeave={() => handleSlideChange(0)}
+        >
+            <Icon/>
+            <h3>{title}</h3>
+        </ListItemStyled>
+    );
+}
