@@ -1,20 +1,24 @@
 import {StyledSection} from "../../Core/SectionContainer.styled";
 import {LandingBackground} from "./LandingVideo";
-import {LandingButton} from "./LandingButton";
-import {forwardRef} from "react";
+import React, {forwardRef} from "react";
 import {LandingTitleVariant} from "./LandingTitleVariant";
-import {Container} from "./Landing.styled";
+import * as Styled from "./Landing.styled";
+import {ArrowButton} from "../../Buttons/Buttons.styled";
 
 
-export const Landing = forwardRef(function({id, scrollTo}, ref) {
+export const Landing = forwardRef(function ({id, scrollTo}, ref) {
 
     return (
         <StyledSection id={id} ref={ref}>
-            <Container id="container">
-                <LandingBackground />
-                <LandingTitleVariant />
-                <LandingButton onClick={scrollTo}/>
-            </Container>
+            <Styled.Container id="container">
+                <LandingBackground/>
+                <Styled.TitleContainer>
+                    <LandingTitleVariant />
+                </Styled.TitleContainer>
+                <Styled.LandingButtonWrapper>
+                    <ArrowButton hoverColour={'#DED9D0'} onClick={scrollTo}/>
+                </Styled.LandingButtonWrapper>
+            </Styled.Container>
         </StyledSection>
     );
 });

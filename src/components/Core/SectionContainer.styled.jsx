@@ -1,5 +1,6 @@
 import React, {forwardRef} from "react";
 import styled, {css} from "styled-components";
+import {media} from "../Media";
 
 export const StyledSection = forwardRef(function (
     {
@@ -37,7 +38,7 @@ const PageSection = styled.section`
         background-color: ${({theme}) => theme.colors.bg_secondary};
     `};
 
-    @media only screen and (max-width: 750px) {
+    ${media.md`
         min-height: 0vh;
-    }
+    `};
 `

@@ -1,19 +1,22 @@
 import styled from "styled-components";
+import {media} from "../Media";
+import * as COLOUR from './Font/FontColour'
+import * as FAMILY from './Font/FontFamily'
+import * as SIZE from './Font/FontSize'
+import {primaryLight} from "./Font/FontFamily";
 
 export const StyledSubheading = styled.h3`
-    font-family: var(--font-family-secondary-light), serif;
-    font-size: var(--font-size-16px);
-    line-height: var(--line-height-16px);
-    color: var(--color-primary-4);
+    ${FAMILY.secondaryBold}
+    ${COLOUR.secondaryOne};
+    ${SIZE._16px};
     font-weight: 700;
     padding: 0;
     margin: 0 0 var(--height-8px) 0;
-    
-    @media only screen and (max-width: 750px) {
-        font-family: var(--font-fmaily-primary-bold), serif;
+
+    ${media.md`
         padding: 0;
         width: 100%;
-        font-size: 9pt;
-        line-height: 10pt;
-    }
+        font-size: 1rem;
+        line-height: 1.1rem;
+    `};
 `

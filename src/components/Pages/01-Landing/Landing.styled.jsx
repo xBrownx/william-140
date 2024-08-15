@@ -15,6 +15,33 @@ export const Container = styled.div`
     }
 `
 
+export const TitleContainer = styled.div`
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    min-width: 82.222vw;
+    min-height: 51vh;
+
+    gap: var(--height-32px);
+    margin: 0 0 var(--height-32px) 0;
+
+    @media only screen and (max-width: 750px) {
+        gap: 0;
+        margin: 0 0 160px 0;
+        width: 100vw;
+        min-width: 100vw;
+        min-height: 0;
+    }
+`
+
+export const Title = styled.div`
+    padding: 0 2.222vw;
+    overflow: hidden;
+`
+
 export const LandingButtonWrapper = styled.div`
     position: absolute;
     display: flex;

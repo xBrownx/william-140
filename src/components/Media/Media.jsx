@@ -10,43 +10,48 @@ const device = {
 }
 
 export const media = {
-  xs: (...args) => css`
-    @media (max-width: ${device.xs}) {
-      ${css(...args)};
-    }
-  `,
-  sm: (...args) => css`
-    @media (max-width: ${device.sm}) {
-      ${css(...args)};
-    }
-  `,
-  md: (...args) => css`
-    @media (max-width: ${device.md}) {
-      ${css(...args)};
-    }
-  `,
-  lg: (...args) => css`
-    @media (max-width: ${device.lg}) {
-      ${css(...args)};
-    }
-  `,
-  xl: (...args) => css`
-    @media (max-width: ${device.xl}) {
-      ${css(...args)};
-    }
-  `,
-  xxl: (...args) => css`
-    @media (max-width: ${device.xxl}) {
-      ${css(...args)};
-    }
-  `,
+    xs: (...args) => css`
+        @media (max-width: ${device.xs}) {
+            ${css(...args)};
+        }
+    `,
+    sm: (...args) => css`
+        @media (max-width: ${device.sm}) {
+            ${css(...args)};
+        }
+    `,
+    md: (...args) => css`
+        @media (max-width: ${device.md}) {
+            ${css(...args)};
+        }
+    `,
+    mdMin: (...args) => css`
+        @media (min-width: ${device.md}) {
+            ${css(...args)};
+        }
+    `,
+    lg: (...args) => css`
+        @media (max-width: ${device.lg}) {
+            ${css(...args)};
+        }
+    `,
+    xl: (...args) => css`
+        @media (max-width: ${device.xl}) {
+            ${css(...args)};
+        }
+    `,
+    xxl: (...args) => css`
+        @media (max-width: ${device.xxl}) {
+            ${css(...args)};
+        }
+    `,
 }
 
 const BlogCardsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 
-  ${media.sm`
+    ${media.sm`
     flex-direction: column;
   `}
 `

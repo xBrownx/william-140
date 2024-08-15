@@ -1,6 +1,28 @@
-import styled, {css} from "styled-components";
-import {ReactComponent as DownArrow} from "../../assets/icons/LandingDownArrow.svg"
+import styled, {css, keyframes} from "styled-components";
 import arrow from "../../assets/icons/LandingDownArrow.svg"
+import {media} from "../Media";
+
+
+const bounce = keyframes`
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.1;
+    }
+    100% {
+        scale: 1;
+    }
+`
+
+export const buttonAnim = css`
+    transition: all 150ms;
+    &:hover {
+        cursor: pointer;
+        animation: ${bounce} ease-in 200ms;
+        animation-fill-mode: both;
+    }
+`
 
 export const TextButton = styled.div`
     border-radius: 3%;
@@ -13,7 +35,8 @@ export const TextButton = styled.div`
     justify-content: center;
     align-items: center;
     border: 1px solid #fff;
-
+    ${buttonAnim};
+    
     p {
         font-family: var(--font-fmaily-secondary-regular), serif;
         font-size: var(--font-size-18px);
@@ -22,29 +45,10 @@ export const TextButton = styled.div`
         margin: 0;
         padding: 0;
     }
-
-    &:hover {
-        cursor: pointer;
-        animation: y-button-hover 300ms ease-in-out;
-        animation-fill-mode: both;
-    }
-
-    @keyframes y-button-hover {
-        0% {
-            scale: 1;
-        }
-        40% {
-            scale: 1.03;
-        }
-        60% {
-            scale: 1;
-        }
-        100% {
-            color: #FFF;
-            background-color: #DED9D0;
-        }
-    }
     
+    &:hover {
+        background-color: #DED9D0;
+    }
 `
 
 export const HomeButton = styled.div`
@@ -61,34 +65,19 @@ export const HomeButton = styled.div`
     font-size: 2.222vh;
     font-weight: 400;
     
+    ${buttonAnim};
+    
     &:hover {
-        cursor: pointer;
-        animation: x-button-hover 300ms ease-in-out;
-        animation-fill-mode: both;
-    }
-
-    @keyframes x-button-hover {
-        0% {
-            scale: 1;
-        }
-        40% {
-            scale: 1.03;
-        }
-        60% {
-            scale: 1;
-        }
-        100% {
-            color: #FFF;
-            background-color: #164A49;
-        }
+        background-color: ${({hoverColour}) => hoverColour};
+        color: #fff;
     }
     
-    @media only screen and (max-width: 750px) {
-        width: 159px;
-        font-size: 10pt;
-        margin: 0 0 0 16px;
-        height: 34px;
-    }
+    ${media.md`
+        padding: 8px 16px 8px 16px;
+        width: fit-content;
+        font-size: 1rem;
+        height: fit-content;
+    `};
 `
 
 export const ArrowButton = styled.div`
@@ -102,6 +91,7 @@ export const ArrowButton = styled.div`
     width: 100%;
     height: 100%;
 
+    ${buttonAnim}
 
     ${props => props.$up && css`
         rotate: 180deg;
@@ -120,31 +110,14 @@ export const ArrowButton = styled.div`
     `};
 
     &:hover {
-        cursor: pointer;
-        animation: button-hover 300ms ease-in-out;
-        animation-fill-mode: both;
         filter: none;
+        background-color: ${({hoverColour}) => hoverColour};
     }
-
-
-    @keyframes button-hover {
-        0% {
-            scale: 1;
-        }
-        40% {
-            scale: 1.1;
-        }
-        60% {
-            scale: 1;
-        }
-        100% {
-            background-color: #DED9D0;
-
-        }
-    }
-    
-
 `
+
+
+
+
 
 
 

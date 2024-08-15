@@ -2,7 +2,8 @@ import React, {forwardRef, useEffect, useRef} from 'react';
 import {ParallaxImg} from "../../ParallaxComponents";
 import {StyledSection} from "../../Core/SectionContainer.styled";
 import styled, {css} from "styled-components";
-
+import {media} from "../../Media";
+import * as Padding from '../../Styled/Padding'
 
 
 export const FullPageImg = forwardRef(function (
@@ -42,12 +43,14 @@ const Container = styled.div`
     align-items: center;
 
     ${props => props.$imgPadding && css`
-        padding: 11.111vh 11.111vw 11.111vh 11.111vw;
+        ${Padding.x160};
+        ${Padding.y90};
     `};
 
-    @media only screen and (max-width: 750px) {
-        padding: 16px;
+    ${media.md`
+        ${Padding.x16Mobile};
+        ${Padding.y32Mobile};
         min-height: 0;
-    }
+    `};
 
 `

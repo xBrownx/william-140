@@ -2,6 +2,7 @@ import styled, {css} from "styled-components";
 import * as COLOUR from './Font/FontColour'
 import * as FAMILY from './Font/FontFamily'
 import * as SIZE from './Font/FontSize'
+import {media} from "../Media";
 
 export const Heading300px = styled.h1`
   ${FAMILY.primaryLight}
@@ -20,10 +21,10 @@ export const StyledHeading = styled.h1`
         color: #FFF;
     `};
     
-    @media only screen and (max-width: 750px) {
+    ${media.md`
         padding: 0;
         width: 100%;
-        font-size: 24pt;
-        line-height: 27pt;
-    }
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+    `};
 `

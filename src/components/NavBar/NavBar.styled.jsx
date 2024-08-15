@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
 import {_18px} from "../Styled/Font/FontSize";
+import {media} from "../Media";
 
 export const NavBarContainer = styled(motion.div)`
     z-index: 2;
@@ -11,10 +12,6 @@ export const NavBarContainer = styled(motion.div)`
     top: 0;
     height: var(--height-90px);
     width: 100%;
-
-    @media only screen and (max-width: 750px) {
-        height: 70px;
-    }
 `
 
 export const NavBarWrapper = styled.div`
@@ -31,14 +28,10 @@ export const NavBarTitleWrapper = styled.div`
     object-fit: cover;
 
     svg {
-        height: 2.099vh;
-        width: 19.097vw;
+        min-height: 2.099vh;
+        min-width: 19.097vw;
         object-fit: cover;
         
-        @media only screen and (max-width: 900px) {
-            height: 11px;
-            width: 190px;
-        }
     }
 
     &:hover {
@@ -52,9 +45,9 @@ export const NavBarUl = styled.ul`
     padding: var(--height-26px) var(--width-32px) var(--height-26px) 0;
     margin: 0;
 
-    @media only screen and (max-width: 900px) {
-        display: none;
-    }
+    ${media.md`
+        display: none  
+    `};
 
 `
 
@@ -81,7 +74,7 @@ export const MenuWrapper = styled.div`
     padding: var(--height-26px) var(--width-32px) var(--height-26px) 0;
     margin: 0;
     
-    @media only screen and (max-width: 860px) {
+    ${media.md`
         display: flex;
-    }
+    `};
 `
