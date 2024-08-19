@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import {media} from "../../Media";
-
+import * as STYLES from '../../Styled/GlobalStyles'
 
 export const LifestyleContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+    ${STYLES.flexColumn};
     justify-content: center;
     align-self: end;
     height: 100%;

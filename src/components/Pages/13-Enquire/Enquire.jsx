@@ -1,6 +1,6 @@
 import React, {forwardRef} from 'react';
 import styled from "styled-components";
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 import {EnquireForm} from "./EnquireForm";
 import {EnquireFooter} from "./Enquire.footer";
 import * as CONSTANTS from "./Enquire.constants";

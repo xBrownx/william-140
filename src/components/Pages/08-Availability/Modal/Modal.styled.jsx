@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import * as STYLES from '../../../Styled/GlobalStyles'
 
 export const Overlay = styled.div`
     position: fixed;
@@ -22,35 +23,32 @@ export const Overlay = styled.div`
 `
 
 export const Modal = styled.div`
-    pointer-events: none;
-    transition: opacity 2000ms ease-in-out;
+    ${STYLES.flexColumn};
+    ${STYLES.imgBorderRadius};
     position: fixed;
+    z-index: 1000;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
     width: 64.444vw;
     height: 70.988vh;
-    display: flex;
+    transform: translate(-50%, -50%);
     overflow: hidden;
     box-sizing: border-box;
-    flex-direction: column;
-    border-radius: 50px;
+    pointer-events: none;
+    transition: opacity 2000ms ease-in-out;
+    
+    animation: fadeIn 500ms;
+    background: rgba(22, 74, 73, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 
+    
     ${props => props.$open && css`
         opacity: 1;
         pointer-events: visible;
     `};
     
-    animation: fadeIn 500ms;
-    
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-    //filter: blur(8px);
-    //-webkit-filter: blur(8px);
-
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -64,15 +62,6 @@ export const Modal = styled.div`
 export const ModalTitleContainer = styled.div`
     padding: 4.444vh 0 0 4.444vw;
 `
-
-export const ModalBgImg = styled.img`
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-`
-
 
 export const CloseWrapper = styled.div`
     position: absolute;

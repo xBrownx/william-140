@@ -1,10 +1,10 @@
 import React from 'react';
 import * as Styled from "./Modal.styled";
-import {SlideCarousel} from "../../SlideCarousel/SlideCarousel";
-import * as CONSTANTS from "./Availability.constants";
-import {StyledParagraph} from "../../PageTitles/Column/ColumnTitle.styled";
-import {StyledHeading, StyledSubheading} from "../../Styled";
-import * as Padding from "../../../components/Styled/Padding"
+import {SlideCarousel} from "../../../SlideCarousel/SlideCarousel";
+import * as CONSTANTS from "../Availability.constants";
+import {StyledParagraph} from "../../../PageTitles/Column/ColumnTitle.styled";
+import {StyledHeading, StyledSubheading} from "../../../Styled";
+import * as Padding from "../../../Styled/Padding"
 import styled from "styled-components";
 
 const CarouselContainer = styled.div`

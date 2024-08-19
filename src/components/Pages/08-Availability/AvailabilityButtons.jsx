@@ -1,7 +1,7 @@
 import {AvailButton} from "../../Buttons/Buttons.styled";
-import {ModalThirdSpace} from "./Modal.ThirdSpace";
+import {ModalThirdSpace} from "./Modal/Modal.ThirdSpace";
 import * as CONSTANTS from "./Availability.constants";
-import {ModalGeneric} from "./Modal.generic";
+import {ModalGeneric} from "./Modal/Modal.generic";
 import React from "react";
 
 export const LevelButtons = ({setOpen, setModalBody}) => {
@@ -22,8 +22,7 @@ export const LevelButtons = ({setOpen, setModalBody}) => {
 
                 <LevelItem
                     key={i}
-                    levelItem={item}
-                    body={item.modalBody}
+                    item={item}
                     setOpen={setOpen}
                     setModalBody={setModalBody}
                 />
@@ -32,22 +31,21 @@ export const LevelButtons = ({setOpen, setModalBody}) => {
     );
 }
 
-const LevelItem = ({levelItem, body, setOpen, setModalBody}) => {
-    console.log(typeof body)
+const LevelItem = ({item, setOpen, setModalBody}) => {
+
     return (
         <AvailButton
-            margin={levelItem.btnMargin}
+            margin={item.btnMargin}
             onClick={() => {
                 setOpen(true)
                 setModalBody(
                     <ModalGeneric
-                        heading={levelItem.modalTitle}>
-                        items={body},
-                    </ModalGeneric>
+                        item={item}
+                    />
                 )
             }}
         >
-            {levelItem.btnName}
+            {item.btnName}
         </AvailButton>
     )
 }

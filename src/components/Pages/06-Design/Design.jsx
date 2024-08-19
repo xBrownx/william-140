@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 import * as CONSTANTS from './Design.constants'
 import {DesignContainer} from "./Design.styled";
 import styled from "styled-components";

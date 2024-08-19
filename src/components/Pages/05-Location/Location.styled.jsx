@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import * as STYLES from "../../Styled/GlobalStyles"
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
+    ${STYLES.flexColumn};
     height: 100%;
     width: 100%;
     align-self: end;

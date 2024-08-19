@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 import * as CONSTANTS from './Gallary.constants'
 import {SlideCarousel} from "../../SlideCarousel/SlideCarousel";
 

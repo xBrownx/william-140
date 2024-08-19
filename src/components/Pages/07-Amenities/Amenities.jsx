@@ -1,5 +1,5 @@
 import React, {forwardRef, useState} from 'react';
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 import {FadeCarousel} from "../../FadeCarousel/FadeCarousel";
 import * as CONSTANTS from './Amenities.constants'
 import * as Styled from "./Amenities.styled";

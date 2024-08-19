@@ -1,18 +1,19 @@
 import React from 'react';
 import styled, {css} from "styled-components";
-import * as CONSTANTS from "./Availability.constants";
-import * as FontSize from '../../Styled/Font/FontSize'
-import * as FontFamily from '../../Styled/Font/FontFamily'
+import * as FontSize from '../../../Styled/Font/FontSize'
+import * as FontFamily from '../../../Styled/Font/FontFamily'
+import {ModalNav} from "./Modal.nav";
 
-export const ModalGeneric = ({heading, items}) => {
-    console.log(items);
+export const ModalGeneric = ({item}) => {
+
     return (
         <ModalContainer>
+            <ModalNav />
             <ModalContentContainer>
                 <ModalTitleWrapper>
-                    <Title>{heading}</Title>
+                    <Title>{item.modalTitle}</Title>
                 </ModalTitleWrapper>
-                <ModalContentGeneric items={CONSTANTS.l33}/>
+                <ModalContentGeneric item={item}/>
             </ModalContentContainer>
             <ModalRenderContainer>
 
@@ -21,25 +22,21 @@ export const ModalGeneric = ({heading, items}) => {
     );
 };
 
-const ModalContentGeneric = ({items}) => {
+const ModalContentGeneric = ({item}) => {
     return (
-        <>
-            <BlurbText>
-                Fully refurbished - warm shell. Lift lobby, bathroom and on floor.
-            </BlurbText>
-            <ModalContentWrapper>
-                {items !== null ? items.map((item, i) => (
-                    <Row>
-                        {item.variant
-                            ? <BottomText>{item.title}</BottomText>
-                            : <TopText >{item.title}</TopText>
-                        }
-                        <TopText $secondary>{item.value}</TopText>
-                    </Row>
-                    )
-                ) : <></> }
-            </ModalContentWrapper>
-        </>
+        <ModalContentWrapper>
+            <BlurbText>{item.subText}</BlurbText>
+            {item.modalBody !== null ? item.modalBody.map((item, i) => (
+                <Row>
+                    {item.variant
+                        ? <BottomText>{item.title}</BottomText>
+                        : <TopText>{item.title}</TopText>
+                    }
+                    <TopText $secondary>{item.value}</TopText>
+                </Row>
+            )) : <></>
+            }
+        </ModalContentWrapper>
     );
 }
 
@@ -57,6 +54,8 @@ const Row = ({children}) => {
 const ModalContainer = styled.div`
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: 100%;
 `
 
 const ModalTitleWrapper = styled.div`
@@ -113,11 +112,10 @@ const TopText = styled.p`
     font-weight: 400;
     color: #164A49;
 
-    ${props =>  props.$secondary && css`
+    ${props => props.$secondary && css`
         font-weight: 700;
         padding: 0 0 0 1.111vw;
     `}
-    
     sup {
         font-size: small;
     }

@@ -26,3 +26,8 @@ export const noMarginPadding = css`
     margin: 0;
     padding: 0;
 `
+
+export const fullScreen = css`
+    width: 100vw;
+    height: 100vh;
+`

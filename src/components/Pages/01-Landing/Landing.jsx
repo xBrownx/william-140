@@ -1,4 +1,4 @@
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 import {LandingBackground} from "./LandingVideo";
 import React, {forwardRef} from "react";
 import * as Styled from "./Landing.styled";

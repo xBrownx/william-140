@@ -1,6 +1,6 @@
 import React, {forwardRef, useEffect, useRef} from 'react';
 import {ParallaxImg} from "../../ParallaxComponents";
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 import styled, {css} from "styled-components";
 import {media} from "../../Media";
 import * as Padding from '../../Styled/Padding'
@@ -31,13 +31,11 @@ export const FullPageImg = forwardRef(function (
 });
 
 const Container = styled.div`
+    ${STYLES.noMarginPadding};
+    ${STYLES.fullScreen};
     position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
     display: flex;
-    width: 100vw;
-    min-height: 100vh;
+    overflow: hidden;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;

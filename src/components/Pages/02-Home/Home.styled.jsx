@@ -4,12 +4,10 @@ import * as Padding from "../../Styled/Padding";
 import * as STYLES from "../../Styled/GlobalStyles";
 export const SplitScreen = styled.div`
     ${STYLES.flexRow};
+    ${STYLES.fullScreen};
     ${Padding.x160};
     ${Padding.y72};
     
-    width: 100vw;
-    height: 100vh;
-
     ${media.md`
         ${Padding.x16Mobile};
         ${STYLES.flexColumn};

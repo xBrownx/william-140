@@ -1,6 +1,6 @@
 import React, {forwardRef, useState} from 'react';
 
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 import {CarouselContainer, Container} from "./Location.styled";
 import {FadeCarousel} from "../../FadeCarousel/FadeCarousel";
 import {CarouselMenu} from "../../FadeCarousel/CarouselMenu";

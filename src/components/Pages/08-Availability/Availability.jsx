@@ -2,12 +2,12 @@ import React, {forwardRef} from 'react';
 import img from "../../../assets/img/08-Availability-02.png";
 import * as CONSTANTS from './Availability.constants'
 import * as Styled from './Availability.styled'
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 
 import {StyledHeading, StyledSubheading} from "../../Styled";
 import {StyledParagraph} from "../../PageTitles/Column/ColumnTitle.styled";
 
-import Modal from "./Modal";
+import {Modal} from "./Modal";
 import {LevelButtons} from "./AvailabilityButtons";
 
 export const Availability = forwardRef(function (
@@ -28,7 +28,8 @@ export const Availability = forwardRef(function (
         >
             <Styled.StyledImg src={img} alt="availibiility"/>
             <Modal open={open}
-                   onClose={() => setOpen(false)}>
+                   onClose={() => setOpen(false)}
+            >
                 {modalBody}
             </Modal>
 

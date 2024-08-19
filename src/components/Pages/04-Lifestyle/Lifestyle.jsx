@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 import {InfiniteLooper} from "../../ScrollingCarousel/InfiniteLooper.component";
 import * as Styled from "./Lifestyle.styled";
 import * as CONSTANTS from "./Lifestyle.constants";

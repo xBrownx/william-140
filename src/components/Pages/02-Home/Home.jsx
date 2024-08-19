@@ -1,6 +1,6 @@
 import React, {forwardRef} from "react";
 import img from "../../../assets/img/02-Home-Final.jpg";
-import {StyledSection} from "../../Core/SectionContainer.styled";
+import {StyledSection} from "../../Styled/SectionContainer.styled";
 import {TextButtonVariant} from "../../Buttons/Buttons.styled";
 import {ParallaxImg} from "../../ParallaxComponents";
 import * as Styles from "./Home.styled";

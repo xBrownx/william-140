@@ -35,13 +35,14 @@ export const TextButtonVariant = styled.button`
     ${GLOBAL_STYLES.imgBorderRadius};
     ${FontFamily.secondaryRegular};
     ${FontSize._18px};
-    ${GLOBAL_STYLES.noMargin}
+    ${GLOBAL_STYLES.noMargin};
     
     background: transparent;
-    border: 1px solid var(--colour-primary);
+    border-width: 1px solid;
+    border-color: ${props => props.$secondary ? "#164A49" : "#FFF" };
     padding: 0.5em 1.5em;
     overflow: hidden;
-    color: var(--colour-primary);
+    color: ${props => props.$secondary ? "#164A49" : "#FFF" };
     position: relative;
     width: fit-content;
     z-index: 1;
@@ -73,62 +74,6 @@ export const TextButtonVariant = styled.button`
         transition: all 0.35s;
     }
 `
-
-// export const TextButton = styled.div`
-//     border-radius: 3%;
-//     text-align: center;
-//     padding: 0.5em 1.5em;
-//
-//     width: fit-content;
-//     color: #fff;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     border: 1px solid #fff;
-//     ${buttonAnim};
-//
-//     p {
-//         font-family: var(--font-fmaily-secondary-regular), serif;
-//         font-size: var(--font-size-18px);
-//         font-weight: 400;
-//         color: white;
-//         margin: 0;
-//         padding: 0;
-//     }
-//
-//     &:hover {
-//         background-color: #DED9D0;
-//     }
-// `
-
-// export const HomeButton = styled.div`
-//     border-radius: 4px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-//     font-family: 'SuisseIntl-Light', serif;
-//     width: 15vw;
-//     height: 6.79vh;
-//     color: #164A49;
-//     border: 1px solid #164A49;
-//     font-size: 2.222vh;
-//     font-weight: 400;
-//
-//     ${buttonAnim};
-//
-//     &:hover {
-//         background-color: ${({hoverColour}) => hoverColour};
-//         color: #fff;
-//     }
-//
-//     ${media.md`
-//         padding: 8px 16px 8px 16px;
-//         width: fit-content;
-//         font-size: 1rem;
-//         height: fit-content;
-//     `};
-// `
 
 export const ArrowButton = styled.div`
     z-index: 2;
