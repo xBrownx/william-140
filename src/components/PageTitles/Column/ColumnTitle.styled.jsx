@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {media} from "../../Media";
 
 export const Container = styled.div`
@@ -21,6 +21,8 @@ export const ParagraphWrapper = styled.div`
     margin: var(--height-38px) 0 0 0;
     padding: 0 0 var(--height-32px) var(--width-32px);
 
+    
+    
     ${media.md`
         padding: 0 16px 16px 16px;
         margin: 16px 0 0 0;
@@ -40,6 +42,10 @@ export const StyledParagraph = styled.p`
     font-family: var(--font-fmaily-secondary-light), serif;
     line-height: var(--line-height-18px);
 
+    ${props => props.$secondary && css`
+        color: white;
+    `}
+    
     ${media.md`
         padding: 0;
         width: 100%;
@@ -49,3 +55,4 @@ export const StyledParagraph = styled.p`
     `};
 
 `
+

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AmenitiesCarousel00 from '../../../assets/img/07-Amenities-00-Default.png'
+import AmenitiesCarousel00 from '../../../assets/img/07-Amenities-00-Default.jpg'
 import AmenitiesCarousel01 from '../../../assets/img/07-Amenities-01-Concierge.png'
 import AmenitiesCarousel02 from '../../../assets/img/07-Amenities-02-Flexible.png'
 import AmenitiesCarousel03 from '../../../assets/img/07-Amenities-03-Multi-Room.png'

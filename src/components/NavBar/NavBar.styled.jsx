@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
-import {_18px} from "../Styled/Font/FontSize";
+import {_18px} from "../Styled/Font";
 import {media} from "../Media";
 
 export const NavBarContainer = styled(motion.div)`
-    z-index: 2;
+    z-index: 5;
     display: flex;
     position: fixed;
     align-items: center;

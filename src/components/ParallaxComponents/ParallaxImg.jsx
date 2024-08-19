@@ -29,6 +29,7 @@ export const ParallaxImg = ({src, alt}) => {
             id={"parallax-img-container"}
         >
             <StyledImg
+                loading={"lazy"}
                 as={motion.img}
                 style={{y: y1}}
                 src={src}

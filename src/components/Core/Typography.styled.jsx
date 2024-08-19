@@ -31,6 +31,7 @@ export const Heading138px = styled(motion.h1)`
     width: 100%;
     margin: 0;
     padding: 0;
+    opacity: 0.7;
     
     animation-fill-mode: both;
     

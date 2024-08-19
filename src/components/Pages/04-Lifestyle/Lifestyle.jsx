@@ -1,13 +1,9 @@
 import React, {forwardRef} from 'react';
 import {StyledSection} from "../../Core/SectionContainer.styled";
 import {InfiniteLooper} from "../../ScrollingCarousel/InfiniteLooper.component";
-import {
-    LifestyleCarouselContainer,
-    LifestyleContainer,
-    StyledImg
-} from "./Lifestyle.styled";
+import * as Styled from "./Lifestyle.styled";
 import * as CONSTANTS from "./Lifestyle.constants";
-import {ColumnTitle} from "../../PageTitles/Column/ColumnTitle";
+import {ColumnTitle} from "../../PageTitles";
 
 
 export const Lifestyle = forwardRef(function (
@@ -29,18 +25,18 @@ export const Lifestyle = forwardRef(function (
             justify={"end"}
         >
 
-            <LifestyleContainer id="lifestyle-container">
+            <Styled.LifestyleContainer id="lifestyle-container">
                 <ColumnTitle>
                     {CONSTANTS.subHeadingText}
                     {CONSTANTS.headingText}
                     {CONSTANTS.paragraphText}
                 </ColumnTitle>
-                <LifestyleCarouselContainer>
+                <Styled.LifestyleCarouselContainer>
                     <InfiniteLooper>
                         {
                             lifestyleItems.map((slide, i) => {
                                 return (
-                                    <StyledImg
+                                    <Styled.StyledImg
                                         key={`${i}_inner`}
                                         src={slide.src}
                                         alt={`Carousel ${i}`}/>
@@ -48,8 +44,8 @@ export const Lifestyle = forwardRef(function (
                             })
                         }
                     </InfiniteLooper>
-                </LifestyleCarouselContainer>
-            </LifestyleContainer>
+                </Styled.LifestyleCarouselContainer>
+            </Styled.LifestyleContainer>
         </StyledSection>
     );
 });

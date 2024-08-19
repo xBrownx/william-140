@@ -129,7 +129,7 @@ const StyledButton = styled.button`
     margin: 0;
     width: 100%;
     height: 51px;
-    color: white;
+    color: black;
     font-size: 16px;
     font-family: 'SuisseIntl-Regular', serif;
     text-align: center;

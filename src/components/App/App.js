@@ -2,11 +2,12 @@ import './App.css';
 import React, {lazy} from "react";
 import {PageRefs} from "../../util/PageRefs";
 import NavBar from "../NavBar/NavBar";
-import fullPageImg1 from '../../assets/img/Full-Page-Img-1.png'
-import fullPageImg2 from '../../assets/img/Full-Page-Img-2.png'
+import fullPageImg1 from '../../assets/img/03-FullPage-01.png'
+import fullPageImg2 from '../../assets/img/05-FullPage-02.png'
 import fullPageImg3 from '../../assets/img/Full-Page-Img-3.png'
 import fullPageImg4 from '../../assets/img/Full-Page-Img-4.jpeg'
 import {PageMinHeights} from "../../constants";
+import {Gallery} from "../Pages/11--Gallery/Gallery";
 
 const Landing = lazy(() => import( "../Pages/01-Landing/").then(m => ({default: m.Landing})));
 const Home = lazy(() => import("../Pages/02-Home/").then(m => ({default: m.Home})));
@@ -112,10 +113,9 @@ function App() {
                 minHeight={PageMinHeights.history}
             />
 
-            <FullPageImg
-                id="FullPageImg3"
-                ref={pageRefs.img3}
-                imgSrc={fullPageImg3}
+            <Gallery
+                id="Gallery"
+                ref={pageRefs.img4}
                 bgColour={'--color-primary-2'}
                 minHeight={PageMinHeights.home}
             />

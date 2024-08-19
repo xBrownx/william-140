@@ -4,7 +4,7 @@ import {StyledSection} from "../../Core/SectionContainer.styled";
 import styled, {css} from "styled-components";
 import {media} from "../../Media";
 import * as Padding from '../../Styled/Padding'
-
+import * as STYLES from '../../Styled/GlobalStyles';
 
 export const FullPageImg = forwardRef(function (
     {
@@ -41,10 +41,14 @@ const Container = styled.div`
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
+    
 
     ${props => props.$imgPadding && css`
         ${Padding.x160};
         ${Padding.y90};
+        #parallax-img-container, img {
+            ${STYLES.imgBorderRadius}
+        }
     `};
 
     ${media.md`

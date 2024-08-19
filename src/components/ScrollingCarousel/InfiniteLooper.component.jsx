@@ -43,7 +43,7 @@ export const InfiniteLooper = ({children}) => {
 const OuterContainer = styled.div`
     display: flex;
     flex-direction: row;
-    width: max-content;
+    //width: 200%;
     overflow: hidden;
     height: 100%;
     max-width: 100vw;
@@ -53,15 +53,15 @@ const OuterWrapper = styled.div`
     display: flex;
     justify-content: center;
     width: fit-content;
+
 `
 
 const InnerContainer = styled.div`
     display: flex;
     width: max-content;
     height: 100%;
-
-
-    animation: slideAnimation 8s linear infinite;
+    
+    animation: slideAnimation 16s linear infinite;
 
     @keyframes slideAnimation {
         from {

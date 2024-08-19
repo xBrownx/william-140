@@ -21,7 +21,7 @@ export const LifestyleContainer = styled.div`
 export const StyledImg = styled.img`
     object-fit: cover;
     height: 100%;
-    width: 100%;
+    width: fit-content;
     margin: 0 20px 0 20px;
     
     ${media.md`
@@ -32,6 +32,7 @@ export const StyledImg = styled.img`
 
 export const LifestyleCarouselContainer = styled.div`
     height: 37.037vh;
+    width: fit-content;
     
     ${media.md`
         height: 120px;

@@ -66,6 +66,15 @@ const RightHand = () => {
     );
 }
 
+const SubHeading = ({title}) => {
+    return (
+        <SubheadingWrapper>
+            <StyledSubheading>{title}</StyledSubheading>
+            <OpenIcon/>
+        </SubheadingWrapper>
+    );
+}
+
 const RightHandPane = styled.div`
     padding: 0 0 0 var(--width-48px);
 `
@@ -98,13 +107,22 @@ const StyledParagraph = styled.p`
 const SubheadingWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: end;
-    margin: 0 0 0 0;
+    align-items: center;
+    margin: var(--height-32px) 0 0 0;
+    
+    padding: var(--height-8px) 0;
+
+    svg {
+        padding: 0;
+        margin: 0 0 0 10px;
+        height: var(--font-size-18px);
+        width: var(--font-size-18px);
+    }
 `
 
 const StyledSubheading = styled.h1`
-    margin: var(--height-32px) 0 0 0;
-    padding: var(--height-8px) 0;
+    margin: 0 0 0 0;
+    padding: 0;
     color: #5178E1;
     font-family: "SuisseIntl-Bold", serif;
     font-size: var(--font-size-20px);
@@ -120,13 +138,6 @@ const StyledUl = styled.ul`
     //margin: var(--height-32px) 0 0 0;
 `
 
-const SubHeading = ({title}) => {
-    return (
-        <SubheadingWrapper>
-            <StyledSubheading>{title}</StyledSubheading>
-            <OpenIcon/>
-        </SubheadingWrapper>
-    );
-}
+
 
 

@@ -1,11 +1,19 @@
 import {css} from "styled-components";
 
+export const primaryNeutral = css`
+    color: #FFF;
+`
+
 export const primaryOne = css`
   color: #DED9D0
 `
 
 export const primaryTwo = css`
   color: #164A49
+`
+
+export const secondaryNeutral = css`
+    color: #000;
 `
 
 export const secondaryOne = css`

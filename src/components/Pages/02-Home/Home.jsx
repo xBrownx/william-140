@@ -1,11 +1,12 @@
 import React, {forwardRef} from "react";
-import img from "../../../assets/img/07-Amenities-02-Flexible.png";
+import img from "../../../assets/img/02-Home-Final.jpg";
 import {StyledSection} from "../../Core/SectionContainer.styled";
-import {HomeButton} from "../../Buttons/Buttons.styled";
+import {TextButtonVariant} from "../../Buttons/Buttons.styled";
 import {ParallaxImg} from "../../ParallaxComponents";
 import * as Styles from "./Home.styled";
 import * as CONSTANTS from './Home.constants'
-
+import {Home as Heading} from "../../Styled/Heading";
+import {Home as Paragraph} from "../../Styled/Paragraph";
 export const Home = forwardRef(function (
     {
         id,
@@ -34,15 +35,18 @@ export const Home = forwardRef(function (
                 <Styles.Pane id="right-pane">
                     <Styles.RightContainer>
                         <Styles.ContentWrapper>
-                            <Styles.StyledH1>
+                            <Heading>
                                 {CONSTANTS.headingText}
-                            </Styles.StyledH1>
-                            <Styles.StyledP>
+                            </Heading>
+                            <Paragraph>
                                 {CONSTANTS.paragraphText}
-                            </Styles.StyledP>
-                            <HomeButton hoverColour={'#164A49'} onClick={onDiscoverClick}>
+                            </Paragraph>
+                            <TextButtonVariant
+                                $secondary
+                                onClick={onDiscoverClick}
+                            >
                                 {CONSTANTS.buttonText}
-                            </HomeButton>
+                            </TextButtonVariant>
                         </Styles.ContentWrapper>
                     </Styles.RightContainer>
                 </Styles.Pane>

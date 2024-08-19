@@ -2,7 +2,7 @@ import React from 'react';
 import {motion} from "framer-motion";
 import {ReactComponent as Title} from "../../assets/svg/Title.svg";
 import {ReactComponent as Menu} from "../../assets/icons/00-Nav-Menu.svg";
-import {TextButton} from "../Buttons/Buttons.styled";
+import {TextButton, TextButtonVariant} from "../Buttons/Buttons.styled";
 import * as Styled from "./NavBar.styled";
 import {NavItems} from "./NavBar.constants";
 
@@ -43,7 +43,7 @@ const NavBar = ({pageRefs}) => {
                     })}
 
                     <Styled.NavBarLi onClick={() => pageRefs.enquire.current.scrollIntoView({behavior: "smooth"})}>
-                        <TextButton>Enquire</TextButton>
+                        <TextButtonVariant>Enquire</TextButtonVariant>
                     </Styled.NavBarLi>
                 </Styled.NavBarUl>
             </Styled.NavBarWrapper>

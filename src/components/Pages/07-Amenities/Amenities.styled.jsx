@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {media} from "../../Media";
 import * as Padding from "../../Styled/Padding";
+import * as STYLES from '../../Styled/GlobalStyles'
 import {buttonAnim} from "../../Buttons/Buttons.styled";
 
 export const SplitScreen = styled.div`
@@ -39,13 +40,18 @@ export const AmenitiesRightContainer = styled.div`
     min-width: 50%;
     justify-content: center;
     height: 100%;
+    
+    
 `
 
 export const ImgContainer = styled.div`
     max-width: 37.778vw;
     max-height: 100vh;
     overflow: hidden;
-    
+    ${STYLES.imgBorderRadius};
+    img {
+        ${STYLES.imgBorderRadius};
+    }
     ${media.md`
        max-width: 100vw;
        overflow: visible;
