@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import {media} from "../../Media";
+import {media} from "../../Styled/Media";
 import * as Padding from "../../Styled/Padding";
 import * as STYLES from "../../Styled/GlobalStyles";
 export const SplitScreen = styled.div`

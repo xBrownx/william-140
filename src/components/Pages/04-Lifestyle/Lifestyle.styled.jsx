@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {media} from "../../Media";
+import {media} from "../../Styled/Media";
 import * as STYLES from '../../Styled/GlobalStyles'
 
 export const LifestyleContainer = styled.div`

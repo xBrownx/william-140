@@ -1,7 +1,7 @@
 import React, {forwardRef} from "react";
 import img from "../../../assets/img/02-Home-Final.jpg";
 import {StyledSection} from "../../Styled/SectionContainer.styled";
-import {TextButtonVariant} from "../../Buttons/Buttons.styled";
+import {TextButtonVariant} from "../../Styled/Buttons/Buttons.styled";
 import {ParallaxImg} from "../../ParallaxComponents";
 import * as Styles from "./Home.styled";
 import * as CONSTANTS from './Home.constants'

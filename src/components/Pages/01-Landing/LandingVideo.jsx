@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const LandingBackground = () => {
     return (
         <BackgroundContainer>
-            <LandingVideo autoPlay loop muted controls={false}>
+            <LandingVideo loading={"lazy"} autoPlay loop muted controls={false}>
                 <source src={video} type="video/mp4"/>
             </LandingVideo>
         </BackgroundContainer>

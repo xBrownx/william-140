@@ -1,10 +1,10 @@
 import styled, {css, keyframes} from "styled-components";
-import arrow from "../../assets/icons/LandingDownArrow.svg"
+import arrow from "../../../assets/icons/LandingDownArrow.svg"
 import {media} from "../Media";
-import * as FontSize from '../Styled/Font/FontSize'
-import * as FontFamily from '../Styled/Font/FontFamily'
-import * as FontColour from '../Styled/Font/FontColour'
-import * as GLOBAL_STYLES from '../Styled/GlobalStyles'
+import * as FontSize from '../Font/FontSize'
+import * as FontFamily from '../Font/FontFamily'
+import * as FontColour from '../Font/FontColour'
+import * as GLOBAL_STYLES from '../GlobalStyles'
 
 const bounce = keyframes`
     0% {

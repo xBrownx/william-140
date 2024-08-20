@@ -3,12 +3,26 @@ import * as COLOUR from './Font/FontColour'
 import * as FAMILY from './Font/FontFamily'
 import * as SIZE from './Font/FontSize'
 import * as GLOBAL_STYLES from './GlobalStyles'
-import {media} from "../Media";
+import {media} from "./Media";
 
 export const Heading300px = styled.h1`
   ${FAMILY.primaryLight}
   ${COLOUR.primaryOne};
   ${SIZE._300px};
+`
+
+export const Dark64Primary = styled.h1`
+    ${FAMILY.primaryLight};
+    ${SIZE._64px};
+    ${COLOUR.primaryTwo};
+    ${GLOBAL_STYLES.noMarginPadding};
+`
+
+export const Light64Primary = styled.h1`
+    ${FAMILY.primaryLight};
+    ${SIZE._64px};
+    ${COLOUR.primaryNeutral};
+    ${GLOBAL_STYLES.noMarginPadding};
 `
 
 export const StyledHeading = styled.h1`

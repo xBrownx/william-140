@@ -2,7 +2,7 @@ import React, {forwardRef, useEffect, useRef} from 'react';
 import {ParallaxImg} from "../../ParallaxComponents";
 import {StyledSection} from "../../Styled/SectionContainer.styled";
 import styled, {css} from "styled-components";
-import {media} from "../../Media";
+import {media} from "../../Styled/Media";
 import * as Padding from '../../Styled/Padding'
 import * as STYLES from '../../Styled/GlobalStyles';
 

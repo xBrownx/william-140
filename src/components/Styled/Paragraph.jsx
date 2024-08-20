@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import {media} from "../Media";
+import {media} from "./Media";
 import * as COLOUR from './Font/FontColour'
 import * as FAMILY from './Font/FontFamily'
 import * as SIZE from './Font/FontSize'

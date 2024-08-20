@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import {media} from "../../Media";
+import {media} from "../../Styled/Media";
 
 export const Container = styled.div`
     padding: 0 var(--width-160px);

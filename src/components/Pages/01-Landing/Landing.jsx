@@ -2,7 +2,7 @@ import {StyledSection} from "../../Styled/SectionContainer.styled";
 import {LandingBackground} from "./LandingVideo";
 import React, {forwardRef} from "react";
 import * as Styled from "./Landing.styled";
-import {ArrowButton} from "../../Buttons/Buttons.styled";
+import {ArrowButton} from "../../Styled/Buttons/Buttons.styled";
 import {LandingTitle} from "./LandingTitle";
 
 

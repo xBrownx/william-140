@@ -1,6 +1,6 @@
 import React, {forwardRef} from "react";
 import styled, {css} from "styled-components";
-import {media} from "../Media";
+import {media} from "./Media";
 
 export const StyledSection = forwardRef(function (
     {

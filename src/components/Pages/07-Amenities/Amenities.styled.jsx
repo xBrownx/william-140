@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import {media} from "../../Media";
+import {media} from "../../Styled/Media";
 import * as Padding from "../../Styled/Padding";
 import * as STYLES from '../../Styled/GlobalStyles'
-import {buttonAnim} from "../../Buttons/Buttons.styled";
+import {buttonAnim} from "../../Styled/Buttons/Buttons.styled";
 
 export const SplitScreen = styled.div`
     padding: 0 var(--width-160px);

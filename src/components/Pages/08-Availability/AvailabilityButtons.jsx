@@ -1,4 +1,4 @@
-import {AvailButton} from "../../Buttons/Buttons.styled";
+import {AvailButton} from "../../Styled/Buttons/Buttons.styled";
 import {ModalThirdSpace} from "./Modal/Modal.ThirdSpace";
 import * as CONSTANTS from "./Availability.constants";
 import React from "react";

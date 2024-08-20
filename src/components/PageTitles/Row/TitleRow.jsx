@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {StyledHeading, StyledSubheading} from "../../Styled";
-import {media} from '../../Media'
+import {media} from '../../Styled/Media'
 import * as Padding from '../../Styled/Padding';
 export const TitleRow = ({children}) => {
     const [subheading, heading, paragraph] = children;
