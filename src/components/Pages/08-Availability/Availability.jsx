@@ -7,8 +7,9 @@ import {StyledSection} from "../../Styled/SectionContainer.styled";
 import {StyledHeading, StyledSubheading} from "../../Styled";
 import {StyledParagraph} from "../../PageTitles/Column/ColumnTitle.styled";
 
-import {Modal} from "./Modal";
+import {ModalWindow} from "./Modal";
 import {LevelButtons} from "./AvailabilityButtons";
+import {ModalGeneric} from "./Modal/Modal.generic";
 
 export const Availability = forwardRef(function (
     {
@@ -16,9 +17,15 @@ export const Availability = forwardRef(function (
         minHeight
     },
     ref) {
-    const [open, setOpen] = React.useState(false);
 
-    const [modalBody, setModalBody] = React.useState(null);
+    const [open, setOpen] = React.useState(false);
+    const [modal, setModal] = React.useState(null);
+    const [modalIdx, setModalIdx] = React.useState(0);
+
+    const onButtonClick = (idx) => {
+        setModal(CONSTANTS.floorItems[idx])
+    }
+
 
     return (
         <StyledSection
@@ -27,11 +34,11 @@ export const Availability = forwardRef(function (
             minHeight={minHeight}
         >
             <Styled.StyledImg src={img} alt="availibiility"/>
-            <Modal open={open}
-                   onClose={() => setOpen(false)}
-            >
-                {modalBody}
-            </Modal>
+
+            <LevelButtons
+                setModal={setModal}
+                setOpen={setOpen}
+            />
 
             <Styled.TitleWrapper>
                 <StyledSubheading $secondary>
@@ -46,10 +53,6 @@ export const Availability = forwardRef(function (
                     </StyledParagraph>
                 </Styled.ParagraphWrapper>
             </Styled.TitleWrapper>
-            <LevelButtons
-                setModalBody={setModalBody}
-                setOpen={setOpen}
-            />
         </StyledSection>
 
     );

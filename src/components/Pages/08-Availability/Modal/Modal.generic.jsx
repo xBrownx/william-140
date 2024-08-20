@@ -2,16 +2,19 @@ import React from 'react';
 import styled, {css} from "styled-components";
 import * as FontSize from '../../../Styled/Font/FontSize'
 import * as FontFamily from '../../../Styled/Font/FontFamily'
-import {ModalNav} from "./Modal.nav";
+import * as CONSTANTS from '../Availability.constants'
+import Modal from "./Modal";
 
-export const ModalGeneric = ({item}) => {
+export const ModalGeneric = ({idx}) => {
+    const [item, setItem] = React.useState(CONSTANTS.floorItems[idx]);
+    const onSelectLevel = (lvlNum) => setItem(CONSTANTS.floorItems[lvlNum]);
 
     return (
         <ModalContainer>
-            <ModalNav />
+            <Modal.Nav/>
             <ModalContentContainer>
                 <ModalTitleWrapper>
-                    <Title>{item.modalTitle}</Title>
+                    <Title>{item.title}</Title>
                 </ModalTitleWrapper>
                 <ModalContentGeneric item={item}/>
             </ModalContentContainer>
@@ -25,7 +28,7 @@ export const ModalGeneric = ({item}) => {
 const ModalContentGeneric = ({item}) => {
     return (
         <ModalContentWrapper>
-            <BlurbText>{item.subText}</BlurbText>
+            <BlurbText>{item.condition}</BlurbText>
             {item.modalBody !== null ? item.modalBody.map((item, i) => (
                 <Row>
                     {item.variant
