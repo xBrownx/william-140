@@ -45,7 +45,7 @@ const Container = styled.div`
         ${Padding.x160};
         ${Padding.y90};
         #parallax-img-container, img {
-            ${STYLES.imgBorderRadius}
+            ${STYLES.borderRadius}
         }
     `};
 

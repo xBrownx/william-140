@@ -10,7 +10,7 @@ export const flexRow = css`
     flex-direction: row;
 `
 
-export const imgBorderRadius = css`
+export const borderRadius = css`
     border-radius: 0.278vw;
 `
 

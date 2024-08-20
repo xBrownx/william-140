@@ -7,6 +7,7 @@ import * as Styles from "./Home.styled";
 import * as CONSTANTS from './Home.constants'
 import {Home as Heading} from "../../Styled/Heading";
 import {Home as Paragraph} from "../../Styled/Paragraph";
+import {HomeImg as Image} from "../../Styled/Images";
 export const Home = forwardRef(function (
     {
         id,
@@ -27,9 +28,9 @@ export const Home = forwardRef(function (
             <Styles.SplitScreen>
                 <Styles.Pane id="left-pane">
                     <Styles.LeftContainer id="home-left">
-                        <Styles.ImgWrapper>
+                        <Image>
                             <ParallaxImg src={img} alt={""}/>
-                        </Styles.ImgWrapper>
+                        </Image>
                     </Styles.LeftContainer>
                 </Styles.Pane>
                 <Styles.Pane id="right-pane">

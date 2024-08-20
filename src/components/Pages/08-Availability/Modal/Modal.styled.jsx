@@ -24,7 +24,7 @@ export const Overlay = styled.div`
 
 export const Modal = styled.div`
     ${STYLES.flexColumn};
-    ${STYLES.imgBorderRadius};
+    ${STYLES.borderRadius};
     position: fixed;
     z-index: 1000;
     top: 50%;

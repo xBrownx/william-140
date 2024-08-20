@@ -121,7 +121,7 @@ export default Modal;
 const Button = styled.div`
     flex: 1;
     border: 1px solid white;
-    ${STYLED.imgBorderRadius}
+    ${STYLED.borderRadius}
     width: 64px;
     max-height: 64px;
     color: white;

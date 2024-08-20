@@ -48,9 +48,9 @@ export const ImgContainer = styled.div`
     max-width: 37.778vw;
     max-height: 100vh;
     overflow: hidden;
-    ${STYLES.imgBorderRadius};
+    ${STYLES.borderRadius};
     img {
-        ${STYLES.imgBorderRadius};
+        ${STYLES.borderRadius};
     }
     ${media.md`
        max-width: 100vw;

@@ -54,31 +54,8 @@ export const RightContainer = styled.div`
     `};
 `
 
-export const ImgWrapper = styled.div`
-    position: relative;
-    display: flex;
-    width: 28.05vw;
-    height: 100%;
-    max-width: 31.042vw;
-    max-height: 82.222vh;
-    overflow: hidden;
-    ${STYLES.imgBorderRadius};
-    
-    img {
-        ${STYLES.imgBorderRadius};
-    }
-    
-    ${media.md`
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        max-width: 100%;
-    `};
-`
-
 export const ContentWrapper = styled.div`
     ${STYLES.flexColumn};
-    
     ${Padding.x16};
     
     ${media.md`

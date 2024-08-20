@@ -32,7 +32,7 @@ export const TextButtonVariant = styled.button`
     --colour-primary: ${props => props.$secondary ? "#164A49" : "#FFF" };
     --colour-secondary: ${props => props.$secondary ? "#FFF" : "#164A49"};
     
-    ${GLOBAL_STYLES.imgBorderRadius};
+    ${GLOBAL_STYLES.borderRadius};
     ${FontFamily.secondaryRegular};
     ${FontSize._18px};
     ${GLOBAL_STYLES.noMargin};
