@@ -46,12 +46,3 @@ export const Media = {
         }
     `,
 }
-
-const BlogCardsContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-
-    ${media.sm`
-    flex-direction: column;
-  `}
-`
