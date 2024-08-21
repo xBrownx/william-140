@@ -1,7 +1,5 @@
 import {StyledHeading} from "./styles";
 
-const Heading = props => {
+export const Heading = props => {
     return <StyledHeading {...props}>{props.children}</StyledHeading>;
 }
-
-export default Heading;
