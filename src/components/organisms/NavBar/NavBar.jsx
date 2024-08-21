@@ -1,8 +1,8 @@
 import React from 'react';
 import {motion} from "framer-motion";
-import {ReactComponent as Title} from "../../assets/svg/Title.svg";
-import {ReactComponent as Menu} from "../../assets/icons/00-Nav-Menu.svg";
-import {TextButton, TextButtonVariant} from "../Styled/Buttons/Buttons.styled";
+import {ReactComponent as Title} from "../../../assets/svg/Title.svg";
+import {ReactComponent as Menu} from "../../../assets/icons/00-Nav-Menu.svg";
+import {TextButton, TextButtonVariant} from "../../Styled/Buttons/Buttons.styled";
 import * as Styled from "./NavBar.styled";
 import {NavItems} from "./NavBar.constants";
 

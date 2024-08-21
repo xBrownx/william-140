@@ -3,7 +3,6 @@ import {media} from "./Media";
 import * as COLOUR from './Font/FontColour'
 import * as FAMILY from './Font/FontFamily'
 import * as SIZE from './Font/FontSize'
-import {primaryLight} from "./Font/FontFamily";
 
 export const StyledSubheading = styled.h3`
     ${FAMILY.secondaryRegular}

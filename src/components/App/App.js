@@ -1,7 +1,7 @@
 import './App.css';
 import React, {lazy} from "react";
 import {PageRefs} from "../../util/PageRefs";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../organisms/NavBar/NavBar";
 import fullPageImg1 from '../../assets/img/03-FullPage-01.png'
 import fullPageImg2 from '../../assets/img/05-FullPage-02.png'
 import fullPageImg3 from '../../assets/img/Full-Page-Img-3.png'

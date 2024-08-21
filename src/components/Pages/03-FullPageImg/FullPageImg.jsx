@@ -1,5 +1,5 @@
 import React, {forwardRef, useEffect, useRef} from 'react';
-import {ParallaxImg} from "../../ParallaxComponents";
+import {ParallaxImg} from "../../organisms/ParallaxComponents";
 import {StyledSection} from "../../Styled/SectionContainer.styled";
 import styled, {css} from "styled-components";
 import {media} from "../../Styled/Media";

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
-import {_18px} from "../Styled/Font";
-import {media} from "../Styled/Media";
+import {_18px} from "../../Styled/Font";
+import {media} from "../../Styled/Media";
 
 export const NavBarContainer = styled(motion.div)`
     z-index: 5;

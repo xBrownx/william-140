@@ -1,7 +1,7 @@
 import React from "react";
 import {LandingAnimation} from "./LandingAnimation";
 import {Title} from "./Landing.styled";
-import {Heading138px} from "../../Core/Typography.styled";
+
 import {displayHeading} from "./Landing.constants";
 
 
@@ -26,9 +26,9 @@ const TitleRow = ({key, item}) => {
             align={item.align}
         >
             <Title>
-                <Heading138px justify={item.justify}>
-                    {item.title}
-                </Heading138px>
+                {/*<Heading138px justify={item.justify}>*/}
+                {/*    {item.title}*/}
+                {/*</Heading138px>*/}
             </Title>
         </LandingAnimation>
     );

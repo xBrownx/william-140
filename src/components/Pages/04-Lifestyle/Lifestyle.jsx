@@ -1,9 +1,10 @@
 import React, {forwardRef} from 'react';
 import {StyledSection} from "../../Styled/SectionContainer.styled";
-import {InfiniteLooper} from "../../ScrollingCarousel/InfiniteLooper.component";
+import {InfiniteLooper} from "../../organisms/ScrollingCarousel/InfiniteLooper.component";
 import * as Styled from "./Lifestyle.styled";
 import * as CONSTANTS from "./Lifestyle.constants";
 import {ColumnTitle} from "../../PageTitles";
+import {Title} from "../../molecules/title";
 
 
 export const Lifestyle = forwardRef(function (
@@ -26,11 +27,11 @@ export const Lifestyle = forwardRef(function (
         >
 
             <Styled.LifestyleContainer id="lifestyle-container">
-                <ColumnTitle>
+                <Title $column>
                     {CONSTANTS.subHeadingText}
                     {CONSTANTS.headingText}
                     {CONSTANTS.paragraphText}
-                </ColumnTitle>
+                </Title>
                 <Styled.LifestyleCarouselContainer>
                     <InfiniteLooper>
                         {

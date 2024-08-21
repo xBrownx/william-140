@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {InfiniteLooper} from "../../ScrollingCarousel/InfiniteLooper.component";
+import {InfiniteLooper} from "../../organisms/ScrollingCarousel/InfiniteLooper.component";
 import {media} from '../../Styled/Media'
 
 export const ScrollingText = () => {

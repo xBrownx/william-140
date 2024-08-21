@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Styled from "./Modal.styled";
-import {SlideCarousel} from "../../../SlideCarousel/SlideCarousel";
+import {SlideCarousel} from "../../../organisms/SlideCarousel/SlideCarousel";
 import * as CONSTANTS from "../Availability.constants";
 import {StyledParagraph} from "../../../PageTitles/Column/ColumnTitle.styled";
 import {StyledHeading, StyledSubheading} from "../../../Styled";

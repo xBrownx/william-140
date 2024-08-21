@@ -1,26 +1,33 @@
-import styled, {css, keyframes} from "styled-components";
+import styled from "styled-components";
+import {
+    Style as S,
+    Font as F,
+    Colour as C,
+    Media as M
+} from "../globalStyles/";
 
-const A.TextButton = styled.button`
-    ${GLOBAL_STYLES.borderRadius};
-    ${FontFamily.secondaryRegular};
-    ${FontSize._18px};
-    ${GLOBAL_STYLES.noMargin};
+
+export const StyledButton = styled.button`
+    
+    ${F.size._18px};
+    ${F.family.secondaryRegular};
+    ${S.borderRadius};
+    ${S.margin.none};
     
     background: transparent;
-    border-width: 1px solid;
-    border-color: ${props => props.$secondary ? "#164A49" : "#FFF" };
+    border-width: 1px;
+    border-style: solid;
     padding: 0.5em 1.5em;
     overflow: hidden;
-    color: ${props => props.$secondary ? "#164A49" : "#FFF" };
     position: relative;
     width: fit-content;
     z-index: 1;
-
+    
     &:hover {
         cursor: pointer;
         color: #FFF;
     }
-
+    
     &::after {
         content: "";
         background: #164A49;
@@ -42,4 +49,6 @@ const A.TextButton = styled.button`
         bottom: 0;
         transition: all 0.35s;
     }
-  `
+    
+`
+

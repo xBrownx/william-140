@@ -3,7 +3,6 @@ import {ReactComponent as OpenIcon} from "../../../assets/icons/Open-Icon.svg";
 import * as CONSTANTS from './Agency.constants'
 import {StyledSection} from "../../Styled/SectionContainer.styled";
 import imgLobby from '../../../assets/img/1-Lobby.png';
-import {FullPageMin, Padding} from "../../Styled/PageContainer.styled";
 import {SplitScreen} from "../07-Amenities/Amenities.styled";
 import styled from "styled-components";
 import {Agent} from "./AgencyAgent";

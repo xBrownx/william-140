@@ -1,7 +1,7 @@
 import React, {forwardRef} from 'react';
 import {StyledSection} from "../../Styled/SectionContainer.styled";
 import * as CONSTANTS from './Gallary.constants'
-import {SlideCarousel} from "../../SlideCarousel/SlideCarousel";
+import {SlideCarousel} from "../../organisms/SlideCarousel/SlideCarousel";
 
 export const Gallery = forwardRef(function (
         {
