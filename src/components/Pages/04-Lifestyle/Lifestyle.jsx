@@ -4,7 +4,7 @@ import {InfiniteLooper} from "../../organisms/ScrollingCarousel/InfiniteLooper.c
 import * as Styled from "./Lifestyle.styled";
 import * as CONSTANTS from "./Lifestyle.constants";
 import {ColumnTitle} from "../../PageTitles";
-import {Title} from "../../molecules/title";
+import {PageTitle} from "../../molecules/pageTitle";
 
 
 export const Lifestyle = forwardRef(function (
@@ -27,11 +27,11 @@ export const Lifestyle = forwardRef(function (
         >
 
             <Styled.LifestyleContainer id="lifestyle-container">
-                <Title $column>
+                <PageTitle $column>
                     {CONSTANTS.subHeadingText}
                     {CONSTANTS.headingText}
                     {CONSTANTS.paragraphText}
-                </Title>
+                </PageTitle>
                 <Styled.LifestyleCarouselContainer>
                     <InfiniteLooper>
                         {

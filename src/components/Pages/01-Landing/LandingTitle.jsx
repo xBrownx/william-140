@@ -27,7 +27,7 @@ const TitleRow = ({key, item}) => {
         >
             <Title>
                 {/*<Heading138px justify={item.justify}>*/}
-                {/*    {item.title}*/}
+                {/*    {item.pageTitle}*/}
                 {/*</Heading138px>*/}
             </Title>
         </LandingAnimation>

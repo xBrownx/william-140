@@ -23,7 +23,7 @@ const NavBar = ({pageRefs}) => {
         //     transition={{type: "spring", duration: 2, delay: 1.5}}
         // >
         //     <Styled.NavBarWrapper id="nav-bar-wrapper">
-        //         <Styled.NavBarTitleWrapper id="nav-title-bar-wrapper">
+        //         <Styled.NavBarTitleWrapper id="nav-pageTitle-bar-wrapper">
         //             <Title onClick={() => {
         //             }}/>
         //         </Styled.NavBarTitleWrapper>

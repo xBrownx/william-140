@@ -102,7 +102,7 @@ const lvl22 = {
 //     lvlNum: 25,
 //     btnName: "LVL 25",
 //     btnMargin: "132.593vh 0 0 68.681vw",
-//     title: "Level 25",
+//     pageTitle: "Level 25",
 //     condition: "",
 //     totalArea: "",
 //     timing: "Immediate",

@@ -3,7 +3,7 @@ import { Subheading, Heading } from '../../atoms/'
 import { IndentParagraph } from '../indentParagraph'
 
 
-export const Title = props => {
+export const PageTitle = props => {
     const [subheading, heading, paragraph] = props.children;
 
     return (

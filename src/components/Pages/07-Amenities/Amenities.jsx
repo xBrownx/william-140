@@ -1,9 +1,12 @@
 import React, {forwardRef, useState} from 'react';
 import {StyledSection} from "../../Styled/SectionContainer.styled";
 import {FadeCarousel} from "../../organisms/FadeCarousel/FadeCarousel";
-import * as CONSTANTS from './Amenities.constants'
+import { amenities as CONSTANTS } from "../../constants/Amenities";
+
+
 import * as Styled from "./Amenities.styled";
-import {AmenitiesList} from "./AmenitiesList";
+// import {AmenitiesList} from "./AmenitiesList";
+import { AmenitiesList } from '../../organisms';
 import {StyledHeading, StyledSubheading} from "../../Styled";
 
 
@@ -15,7 +18,7 @@ export const Amenities = forwardRef(function (
     },
     ref
 ) {
-    const amenitiesItems = CONSTANTS.AmenitiesItems();
+    const amenitiesItems = CONSTANTS.menuItems;
     const [activeIdx, setActiveIdx] = useState(0);
 
     const handleSlideChange = (idx) => {
@@ -33,15 +36,16 @@ export const Amenities = forwardRef(function (
             <Styled.SplitScreen id="split-screen">
                 <Styled.AmenitiesLeftContainer id="left-container">
                     <StyledSubheading>
-                        {CONSTANTS.subheadingText}
+                        {CONSTANTS.subheadingTxt}
                     </StyledSubheading>
                     <StyledHeading $secondary>
-                        {CONSTANTS.headingText}
+                        {CONSTANTS.headingTxt}
                     </StyledHeading>
-                    <AmenitiesList
-                        amenitiesItems={amenitiesItems}
-                        handleSlideChange={handleSlideChange}
-                    />
+                    <AmenitiesList items={amenitiesItems} />
+                    {/*<AmenitiesList*/}
+                    {/*    amenitiesItems={amenitiesItems}*/}
+                    {/*    handleSlideChange={handleSlideChange}*/}
+                    {/*/>*/}
                 </Styled.AmenitiesLeftContainer>
                 <Styled.AmenitiesRightContainer id="right-container">
                     <Styled.ImgContainer>

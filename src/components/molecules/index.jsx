@@ -1,3 +1,4 @@
-import { Title } from './title'
+import { PageTitle } from './pageTitle'
+import { IconLink } from './iconLink'
 
-export { Title, };
+export { PageTitle, IconLink};
