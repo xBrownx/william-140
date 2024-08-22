@@ -15,6 +15,10 @@ export const StyledLink = styled.a`
    ${C.primary.neutral};
    font-weight: 400;
 
+    ${props => props.$underline && css`
+        
+    `}
+
    &:hover {
         color: black;
         cursor: pointer;
