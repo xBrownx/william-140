@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   margin: var(--height-38px) 0 0 0;
   padding: 0 0 var(--height-32px) var(--width-32px);
 
-  ${props.$displayEnd && css`
+  ${props => props.$displayEnd && css`
     ${S.margin.none}
     padding: 0 0 0 var(--width-32px);
     display: flex;
