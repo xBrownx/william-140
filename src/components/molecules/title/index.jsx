@@ -7,16 +7,16 @@ export const Title = props => {
 
     return (
         <Container {...props}>
-            <Subheading>
+            <Subheading {...props}>
                 {subheading}
             </Subheading>
-            <Heading>
+            <Heading {...props}>
                 {heading}
             </Heading>
             {paragraph &&
-                <Paragraph>
+                <IndentParagraph {...props}>
                     {paragraph}
-                </Paragraph>
+                </IndentParagraph>
             }
         </Container>
     );
