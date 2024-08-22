@@ -11,5 +11,11 @@ Colour.font = {
     paragraphSecondary: css`color: #FFF;`,
 };
 
+Colour.background = {
+    primary: css`background: #DED9D0;`,
+    secondary: css`background: #164A49;`,
+    variant: css`background: #164A49; opacity: 0.3;`,
+};
+
 Colour.primary = {};
 Colour.secondary = {};
