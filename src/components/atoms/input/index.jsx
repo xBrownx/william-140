@@ -1,6 +1,4 @@
 
-const Input = props => {
+export const Input = props => {
 
 }
-
-export default Input;

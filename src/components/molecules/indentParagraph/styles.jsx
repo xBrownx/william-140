@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Style as S } from '../atoms';
+import { Style as S } from '../../atoms/globalStyles';
 
 export const Wrapper = styled.div`
   border-left: 1px solid var(--color-primary-4);

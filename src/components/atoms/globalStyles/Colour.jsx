@@ -9,6 +9,7 @@ Colour.font = {
     subheadingSecondary: css`color: #164A49;`,
     paragraphPrimary: css`color: #164A49; opacity: 0.7;`,
     paragraphSecondary: css`color: #FFF;`,
+    neutral: css`color: #FFF;`,
 };
 
 Colour.background = {
@@ -17,5 +18,7 @@ Colour.background = {
     variant: css`background: #164A49; opacity: 0.3;`,
 };
 
-Colour.primary = {};
+Colour.primary = {
+
+};
 Colour.secondary = {};

@@ -1,7 +1,6 @@
 import { StyledParagraph } from './styles';
 
-const Paragraph = props => {
+export const Paragraph = props => {
     return <StyledParagraph {...props}>{props.children}</StyledParagraph>;
 }
 
-export default Paragraph;

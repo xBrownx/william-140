@@ -2,11 +2,11 @@ import {css} from 'styled-components';
 
 const DESIGN ={width: 1440, height: 856};
 
-const pxToVw = (pxWidth) => 
+const pxToVw = (pxWidth) => {
     return (pxWidth / DESIGN.width) * 100;
 }
 
-const pxToVh = (pxHeight) => 
+const pxToVh = (pxHeight) => {
     return (pxHeight / DESIGN.height) * 100;
 }
 
@@ -15,29 +15,29 @@ export const Style = {}
 const px = {
     width: {
         _8: 0.556,
-        _16:,
-        _32:,
-        _48:,
-        _160:,
+        // _16:,
+        // _32:,
+        // _48:,
+        // _160:,
     },
     height: {
-        _8:,
-        _16:,
-        _24:,
-        _32:,
-        _40:,
-        _48:,
-        _56:,
-        _64:,
-        _72:,
-        _80:,
-        _88:,
-        _96:,
-        _104:,
-        _112:,
-        _120:,
-        _128:,
-        _136:,
+        // _8:,
+        // _16:,
+        // _24:,
+        // _32:,
+        // _40:,
+        // _48:,
+        // _56:,
+        // _64:,
+        // _72:,
+        // _80:,
+        // _88:,
+        // _96:,
+        // _104:,
+        // _112:,
+        // _120:,
+        // _128:,
+        // _136:,
     },
 }
 
@@ -107,6 +107,12 @@ Style.margin = {
     },
     y: {
 
+    }
+}
+
+Style.gap = {
+    width: {
+        _32px: css`gap: 2.222vw;`,
     }
 }
 

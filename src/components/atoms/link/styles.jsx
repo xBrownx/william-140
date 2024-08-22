@@ -12,10 +12,14 @@ export const StyledLink = styled.a`
    ${F.family.secondaryRegular};
    ${S.margin.none};
    ${S.padding.none};
-   ${C.primary.neutral};
+   ${C.font.neutral};
    font-weight: 400;
 
     ${props => props.$underline && css`
+        
+    `}
+    
+    ${props => props.$nav && css`
         
     `}
 

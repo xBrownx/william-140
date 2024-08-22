@@ -1,5 +1,5 @@
 import * as S from './styles'
-import { Paragraph } from '../atoms'
+import { Paragraph } from '../../atoms'
 
 export const IndentParagraph = props => {
   return (

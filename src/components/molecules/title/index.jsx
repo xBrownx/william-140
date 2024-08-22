@@ -1,5 +1,6 @@
 import { Container } from './styles'
-import { Subheading, Heading, Paragraph } from '../../atoms/'
+import { Subheading, Heading } from '../../atoms/'
+import { IndentParagraph } from '../indentParagraph'
 
 
 export const Title = props => {

@@ -1,6 +1,4 @@
 
-const LogoLarge = props => {
+export const LogoLarge = props => {
 
 }
-
-export default LogoLarge
