@@ -5,13 +5,19 @@ import {Colour as C} from '../globalStyles/Colour'
 
 export const StyledHeading = styled.h1`
     ${F.family.primaryLight};
-    ${F.size._64px};
+    ${F.size(64)};
     ${S.padding.none};
     ${S.margin.none};
+    font-weight: 300;
     
     ${C.font.headingPrimary};
     
     ${props => props.$secondary && css`
         ${C.font.headingSecondary};
     `};
+    
+    ${props => props.$variant && css`
+        ${C.font.headingVariant};
+        ${F.size(88)};
+    `}
 `

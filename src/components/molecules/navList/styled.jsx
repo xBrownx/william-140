@@ -8,7 +8,7 @@ import {
 export const StyledUl = styled.ul`
     list-style: none;
     display: flex;
-    ${S.gap.width._32px}
+    ${S.gap.width(32)};
     
     ${M.md`
         display: none  

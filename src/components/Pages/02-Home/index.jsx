@@ -1,1 +1,1 @@
-export * from './Home'
+export * from '../../ppages/Home'

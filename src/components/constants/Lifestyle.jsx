@@ -8,7 +8,7 @@ import img7 from "../../assets/img/Lifestyle-Carousel-7.png";
 import img8 from "../../assets/img/Lifestyle-Carousel-8.png";
 
 export const lifestyle = {
-  carouselImgs: [
+  carouselImages: [
             {src: img1},
             {src: img2},
             {src: img3},
@@ -20,5 +20,5 @@ export const lifestyle = {
         ],
   subheadingTxt: "LIFESTYLE",
   headingTxt: "Everyday is an experience",
-  paragraphTxt: The essence of Melbourne’s vibrant lifestyle, offering a perfect blend of convenience, culture, and connectivity.
+  paragraphTxt: "The essence of Melbourne’s vibrant lifestyle, offering a perfect blend of convenience, culture, and connectivity."
 };

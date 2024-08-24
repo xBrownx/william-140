@@ -1,15 +1,28 @@
 import styled, { css } from 'styled-components';
-
+import { Style as S } from '../../atoms'
 
 export const Container = styled.div`
-    display: flex;
     width: fit-content;
     
     ${props=> props.$row && css`
-        flex-direction: row;
+        ${S.flex.row}
     `};
     
     ${props => props.$column && css`
-        flex-direction: column;
+        ${S.flex.column}
+    `};
+    
+    ${props => props.padding && css`
+        ${S.padding.__(props.padding)};
+    `}
+    
+    ${props => props.paddingInlineBlock && css`
+        ${S.padding.inlineBlock(props.paddingInlineBlock)};
+    `}
+`
+
+export const Wrapper = styled.div`
+    ${props=> props.$row && css`
+        
     `};
 `

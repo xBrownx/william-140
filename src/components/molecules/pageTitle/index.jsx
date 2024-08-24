@@ -1,6 +1,6 @@
-import { Container } from './styles'
-import { Subheading, Heading } from '../../atoms/'
-import { IndentParagraph } from '../indentParagraph'
+import {Container, Wrapper} from './styles'
+import {Subheading, Heading} from '../../atoms/'
+import {IndentParagraph} from '../indentParagraph'
 
 
 export const PageTitle = props => {
@@ -8,12 +8,14 @@ export const PageTitle = props => {
 
     return (
         <Container {...props}>
-            <Subheading {...props}>
-                {subheading}
-            </Subheading>
-            <Heading {...props}>
-                {heading}
-            </Heading>
+            <Wrapper {...props}>
+                <Subheading {...props}>
+                    {subheading}
+                </Subheading>
+                <Heading {...props}>
+                    {heading}
+                </Heading>
+            </Wrapper>
             {paragraph &&
                 <IndentParagraph {...props}>
                     {paragraph}

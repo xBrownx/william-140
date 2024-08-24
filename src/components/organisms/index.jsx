@@ -1,3 +1,4 @@
-import { AmenitiesList } from "./amenitiesList";
+import { AmenitiesList } from './amenitiesList';
+import { DesignVideo } from './designVideo';
 
-export { AmenitiesList, };
+export { AmenitiesList, DesignVideo };

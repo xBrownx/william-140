@@ -9,7 +9,7 @@ export const headingText = "Your future workplace"
 export const paragraphText =
     <>
         Discover a new home for your business at 140 William Street—where<br/>
-        connection and community thrive for today's and tomorrow's workforce
+        connection and community thrive for today's and tomorrow's workforce.
     </>
 
 

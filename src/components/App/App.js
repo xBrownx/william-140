@@ -1,26 +1,25 @@
 import './App.css';
-import React, {lazy} from "react";
+import React from "react";
 import {PageRefs} from "../../util/PageRefs";
 import NavBar from "../organisms/NavBar/NavBar";
-import fullPageImg1 from '../../assets/img/03-FullPage-01.png'
-import fullPageImg2 from '../../assets/img/05-FullPage-02.png'
-import fullPageImg3 from '../../assets/img/Full-Page-Img-3.png'
-import fullPageImg4 from '../../assets/img/Full-Page-Img-4.jpeg'
 import {PageMinHeights} from "../../constants";
-import {Gallery} from "../Pages/11--Gallery/Gallery";
+import {
+    Agency,
+    Amenities,
+    Availability,
+    Design,
+    Enquire,
+    Gallery,
+    HeroOne,
+    HeroTwo,
+    HeroThree,
+    History,
+    Home,
+    Landing,
+    Lifestyle,
+    Location
+} from "../ppages";
 
-const Landing = lazy(() => import( "../Pages/01-Landing/").then(m => ({default: m.Landing})));
-const Home = lazy(() => import("../Pages/02-Home/").then(m => ({default: m.Home})));
-const FullPageImg = lazy(() => import("../Pages/03-FullPageImg/").then(m => ({default: m.FullPageImg})));
-const Lifestyle = lazy(() => import("../Pages/04-Lifestyle/").then(m => ({default: m.Lifestyle})));
-const Location = lazy(() => import("../Pages/05-Location/").then(m => ({default: m.Location})));
-const Design = lazy(() => import("../Pages/06-Design/").then(m => ({default: m.Design})));
-const Amenities = lazy(() => import("../Pages/07-Amenities/").then(m => ({default: m.Amenities})));
-const Availability = lazy(() => import("../Pages/08-Availability/").then(m => ({default: m.Availability})));
-const ScrollingText = lazy(() => import ("../Pages/09-ScrollingText/").then(m => ({default: m.ScrollingText})));
-const History = lazy(() => import("../Pages/10-History/").then(m => ({default: m.History})));
-const Agency = lazy(() => import("../Pages/11-Agency/").then(m => ({default: m.Agency})));
-const Enquire = lazy(() => import("../Pages/13-Enquire/").then(m => ({default: m.Enquire})));
 
 
 function App() {
@@ -44,19 +43,10 @@ function App() {
             <Home
                 id="home"
                 ref={pageRefs.home}
-                bgColour={'--color-primary-2'}
-                minHeight={PageMinHeights.home}
                 onDiscoverClick={() => scrollTo(pageRefs.availability)}
             />
 
-            <FullPageImg
-                id="FullPageImg"
-                ref={pageRefs.img1}
-                imgSrc={fullPageImg1}
-                bgColour={'--color-primary-2'}
-                minHeight={PageMinHeights.fullPageImg}
-                imgPadding={true}
-            />
+            <HeroOne/>
 
             <Lifestyle
                 id="Lifestyle"
@@ -72,14 +62,7 @@ function App() {
                 minHeight={PageMinHeights.location}
             />
 
-            <FullPageImg
-                id="FullPageImg"
-                ref={pageRefs.img2}
-                imgSrc={fullPageImg2}
-                minHeight={PageMinHeights.fullPageImg}
-                bgColour={'--color-primary-1'}
-                imgPadding={true}
-            />
+            <HeroTwo />
 
             <Design
                 id="Design"
@@ -101,10 +84,10 @@ function App() {
                 minHeight={PageMinHeights.availability}
             />
 
-            <ScrollingText
-                bgColour={'--color-primary-2'}
-                minHeight={PageMinHeights.scrollingText}
-            />
+            {/*<ScrollingText*/}
+            {/*    bgColour={'--color-primary-2'}*/}
+            {/*    minHeight={PageMinHeights.scrollingText}*/}
+            {/*/>*/}
 
             <History
                 id="History"
@@ -127,14 +110,7 @@ function App() {
                 minHeight={PageMinHeights.agency}
             />
 
-            <FullPageImg
-                id="FullPageImg4"
-                ref={pageRefs.img4}
-                imgSrc={fullPageImg4}
-                bgColour={'--color-primary-1'}
-                minHeight={PageMinHeights.fullPageImg}
-                imgPadding={true}
-            />
+            <HeroThree />
 
             <Enquire
                 id="enquire"
