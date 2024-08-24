@@ -8,6 +8,7 @@ import {
 export const Container = styled.div`
     ${S.flex.row};
     width: 100%;
+    
     ${props => props.$column && css`
         ${S.flex.column};
     `}

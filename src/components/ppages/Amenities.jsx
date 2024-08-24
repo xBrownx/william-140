@@ -1,12 +1,8 @@
 import React, {forwardRef, useState} from 'react';
-
 import {FadeCarousel} from "../organisms/FadeCarousel/FadeCarousel";
 import {amenities as CONSTANTS} from "../constants/Amenities";
-
 import * as Styled from "../Pages/07-Amenities/Amenities.styled";
-
 import {AmenitiesList} from '../organisms';
-import {StyledHeading, StyledSubheading} from "../Styled";
 import {Page} from "../templates/page";
 import {PageTitle, SplitScreen} from "../molecules";
 

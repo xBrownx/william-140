@@ -1,17 +1,17 @@
-import {StyledSection} from "../Styled/SectionContainer.styled";
-import {LandingBackground} from "../Pages/01-Landing/LandingVideo";
 import React, {forwardRef} from "react";
 import * as Styled from "../Pages/01-Landing/Landing.styled";
 import {ArrowButton} from "../Styled/Buttons/Buttons.styled";
 import {LandingTitle} from "../Pages/01-Landing/LandingTitle";
-
+import {Page} from "../templates/page";
+import {BackgroundVideo} from "../molecules";
+import video from '../../assets/vid/01-Landing.mp4'
 
 export const Landing = forwardRef(function ({id, scrollTo}, ref) {
 
     return (
-        <StyledSection id={id} ref={ref}>
+        <Page $fullScreen>
             <Styled.Container id="container">
-                <LandingBackground/>
+                <BackgroundVideo src={video}/>
                 <Styled.TitleContainer>
                     <LandingTitle />
                 </Styled.TitleContainer>
@@ -19,7 +19,7 @@ export const Landing = forwardRef(function ({id, scrollTo}, ref) {
                     <ArrowButton hoverColour={'#DED9D0'} onClick={scrollTo}/>
                 </Styled.LandingButtonWrapper>
             </Styled.Container>
-        </StyledSection>
+        </Page>
     );
 });
 

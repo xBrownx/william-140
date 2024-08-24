@@ -8,6 +8,7 @@ export const Container = styled.div`
     width: 100vw;
     filter: brightness(75%);
     overflow: hidden;
+
     
     animation: landing-image-expand 2s forwards;
 

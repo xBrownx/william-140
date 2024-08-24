@@ -1,34 +1,24 @@
 import React, {forwardRef} from 'react';
 import {ReactComponent as OpenIcon} from "../../assets/icons/Open-Icon.svg";
 import * as CONSTANTS from '../Pages/11-Agency/Agency.constants'
-import {StyledSection} from "../Styled/SectionContainer.styled";
 import imgLobby from '../../assets/img/1-Lobby.png';
-import {SplitScreen} from "../Pages/07-Amenities/Amenities.styled";
+import { SplitScreen } from '../molecules'
 import styled from "styled-components";
 import {Agent} from "../Pages/11-Agency/AgencyAgent";
+import {Page} from "../templates/page";
 
-export const Agency = forwardRef(function (
-    {
-        id,
-        bgColour,
-        minHeight
-    },
-    ref
-) {
+export const Agency = forwardRef(function ({id}, ref) {
     return (
-        <StyledSection
-            id={id}
-            ref={ref}
-            bgColour={bgColour}
-            minHeight={minHeight}
-            justify={'center'}
+        <Page
+            $fullScreen
+            $bgSecondary
         >
-            <SplitScreen id="split-screen">
+            <SplitScreen >
                 <LeftHand/>
                 <RightHand/>
             </SplitScreen>
 
-        </StyledSection>
+        </Page>
     );
 });
 
