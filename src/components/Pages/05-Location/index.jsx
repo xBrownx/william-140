@@ -1,1 +1,1 @@
-export * from '../../_pages/Location'
+export * from '../../ppages/Location'

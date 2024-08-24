@@ -1,1 +1,1 @@
-export * from '../../_pages/Home'
+export * from '../../ppages/Home'

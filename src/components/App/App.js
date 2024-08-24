@@ -18,7 +18,7 @@ import {
     Landing,
     Lifestyle,
     Location
-} from "../_pages";
+} from "../ppages";
 
 
 

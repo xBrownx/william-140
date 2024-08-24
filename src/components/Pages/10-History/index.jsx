@@ -1,1 +1,1 @@
-export * from '../../_pages/History'
+export * from '../../ppages/History'

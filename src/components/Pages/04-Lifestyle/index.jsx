@@ -1,1 +1,1 @@
-export * from '../../_pages/Lifestyle'
+export * from '../../ppages/Lifestyle'
