@@ -1,4 +1,5 @@
+import { BackgroundVideo } from "./backgroundVideo";
 import { PageTitle } from './pageTitle'
 import { IconLink } from './iconLink'
 
-export { PageTitle, IconLink};
+export { BackgroundVideo, PageTitle, IconLink};
