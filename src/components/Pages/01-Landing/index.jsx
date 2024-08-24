@@ -1,1 +1,1 @@
-export * from './Landing'
+export * from '../../_pages/Landing'

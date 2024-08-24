@@ -9,7 +9,7 @@ import {
 
 export const StyledButton = styled.button`
     
-    ${F.size._18px};
+    ${F.size(18)};
     ${F.family.secondaryRegular};
     ${S.borderRadius};
     ${S.margin.none};

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Style as S } from "../../atoms";
 export const StyledImg = styled.img`
     z-index: -1;
     position: absolute;

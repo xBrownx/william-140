@@ -1,1 +1,1 @@
-export * from './Lifestyle'
+export * from '../../_pages/Lifestyle'

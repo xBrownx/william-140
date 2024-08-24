@@ -8,8 +8,8 @@ import {
 
 export const StyledLink = styled.a`
    transition: all 200ms ease-in-out;
-   ${F.size._18px};
-   ${F.family.secondaryRegular};
+   ${F.size(18)};
+   ${F.family.secondaryLight};
    ${S.margin.none};
    ${S.padding.none};
    ${C.font.neutral};

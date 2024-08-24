@@ -1,1 +1,1 @@
-export * from './Amenities'
+export * from '../../_pages/Amenities'

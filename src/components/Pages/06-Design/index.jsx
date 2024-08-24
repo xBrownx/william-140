@@ -1,1 +1,1 @@
-export * from './Design'
+export * from '../../_pages/Design'

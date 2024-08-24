@@ -1,1 +1,1 @@
-export * from './Availability'
+export * from '../../_pages/Availability'
