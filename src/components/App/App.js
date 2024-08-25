@@ -89,35 +89,35 @@ function App() {
             {/*    minHeight={PageMinHeights.scrollingText}*/}
             {/*/>*/}
 
-            <History
-                id="History"
-                ref={pageRefs.history}
-                bgColour={'--color-primary-2'}
-                minHeight={PageMinHeights.history}
-            />
+            {/*<History*/}
+            {/*    id="History"*/}
+            {/*    ref={pageRefs.history}*/}
+            {/*    bgColour={'--color-primary-2'}*/}
+            {/*    minHeight={PageMinHeights.history}*/}
+            {/*/>*/}
 
-            <Gallery
-                id="Gallery"
-                ref={pageRefs.img4}
-                bgColour={'--color-primary-2'}
-                minHeight={PageMinHeights.home}
-            />
+            {/*<Gallery*/}
+            {/*    id="Gallery"*/}
+            {/*    ref={pageRefs.img4}*/}
+            {/*    bgColour={'--color-primary-2'}*/}
+            {/*    minHeight={PageMinHeights.home}*/}
+            {/*/>*/}
 
-            <Agency
-                id="Agency"
-                ref={pageRefs.agency}
-                bgColour={'--color-primary-1'}
-                minHeight={PageMinHeights.agency}
-            />
+            {/*<Agency*/}
+            {/*    id="Agency"*/}
+            {/*    ref={pageRefs.agency}*/}
+            {/*    bgColour={'--color-primary-1'}*/}
+            {/*    minHeight={PageMinHeights.agency}*/}
+            {/*/>*/}
 
-            <HeroThree />
+            {/*<HeroThree />*/}
 
-            <Enquire
-                id="enquire"
-                ref={pageRefs.enquire}
-                bgColour={'--color-primary-1'}
-                minHeight={PageMinHeights.enquire}
-            />
+            {/*<Enquire*/}
+            {/*    id="enquire"*/}
+            {/*    ref={pageRefs.enquire}*/}
+            {/*    bgColour={'--color-primary-1'}*/}
+            {/*    minHeight={PageMinHeights.enquire}*/}
+            {/*/>*/}
         </div>
     );
 }

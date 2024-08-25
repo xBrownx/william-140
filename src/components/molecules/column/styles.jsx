@@ -3,7 +3,8 @@ import { Style as S } from '../../atoms'
 
 export const StyledColumn = styled.div`
     ${S.flex.column};
-    height: 100%;
+    max-width: 100vw;
+    height: fit-content;
     
     ${props => props.$startX && css`
         align-items: start;

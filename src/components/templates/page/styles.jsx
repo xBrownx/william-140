@@ -10,9 +10,11 @@ export const StyledPage = styled.section`
     ${S.flex.column};
     
     position: relative;
-    min-width: 100%;
+    //min-width: 100%;
     height: 100%;
     z-index: 0;
+    max-width: 100vw !important;
+    overflow: hidden;
 
     ${props => props.$fullScreen && css`
         min-height: 100vh;

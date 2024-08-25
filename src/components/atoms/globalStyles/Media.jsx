@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import {css} from "styled-components";
 
 const device = {
     xs: '400px', // for small screen mobile
@@ -7,6 +7,8 @@ const device = {
     lg: '1280px', // for laptops
     xl: '1440px', // for desktop / monitors
     xxl: '1920px', // for big screens
+    xxxl: '2134px',
+    xxxxl: '2845px'
 }
 
 export const Media = {
@@ -42,6 +44,16 @@ export const Media = {
     `,
     xxl: (...args) => css`
         @media (max-width: ${device.xxl}) {
+            ${css(...args)};
+        }
+    `,
+    xxxl: (...args) => css`
+        @media (max-width: ${device.xxxl}) {
+            ${css(...args)};
+        }
+    `,
+    xxxxl: (...args) => css`
+        @media (max-width: ${device.xxxxl}) {
             ${css(...args)};
         }
     `,

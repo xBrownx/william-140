@@ -9,7 +9,7 @@ export const LevelButtons = props => {
     const buttonsBottom = [...buttons].slice(17)
     return (
         <Container>
-            <Wrapper gap={5.6}>
+            <Wrapper $top>
                 {buttonsTop.map((item) => {
                         return (
                             <LevelButton
@@ -27,7 +27,7 @@ export const LevelButtons = props => {
                 )}
             </Wrapper>
 
-            <Wrapper gap={6.2}>
+            <Wrapper $bottom>
                 {buttonsBottom.map((item) => {
                         return (
                             <LevelButton

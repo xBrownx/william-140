@@ -39,7 +39,7 @@ export const padding = ({top=0, right=0, bottom=0, left=0}) => {
     return (
         css`
             padding: 
-                ${pxToViewHeight(top)}vh 
+                ${pxToViewHeight(top)}vh
                 ${pxToViewWidth(right)}vw
                 ${pxToViewHeight(bottom)}vh
                 ${pxToViewWidth(left)}vw;`
@@ -58,7 +58,7 @@ export const margin = ({top=0, right=0, bottom=0, left=0}) => {
     return (
         css`
             margin: 
-                ${pxToViewHeight(top)}vh 
+                ${pxToViewWidth(top)}vw 
                 ${pxToViewWidth(right)}vw
                 ${pxToViewHeight(bottom)}vh
                 ${pxToViewWidth(left)}vw;`

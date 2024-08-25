@@ -3,12 +3,14 @@ import { Font as F, Colour as C, Style as S, pxToViewWidth, pxToViewHeight } fro
 
 
 export const Container = styled.div`
+    z-index: 2;
     will-change: all;
     transition: all 450ms;
     ${props => props.$isHover && props.$active && css`
         padding-left: 50px;
         cursor: pointer;
-    `}
+    `};
+    width: fit-content;
     
 `
 export const Wrapper = styled.div`

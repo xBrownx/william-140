@@ -6,10 +6,10 @@ export const Container = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100% 100%;
-    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
     height: 0;
-    padding-top: 143.88%; /* (img-height / img-width * container-width) */
-                /* (853 / 1280 * 100) */
+    padding-top: 143.88%;
 `
 
 export const InnerContainer = styled.div`

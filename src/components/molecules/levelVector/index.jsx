@@ -3,8 +3,8 @@ import * as S from './styles'
 export const LevelVector = props => {
     return (
         <S.Wrapper
-            $active={props.isActive}
-            $isHover={props.idx === props.hoverIdx}
+            $active={props.$active}
+            $hover={props.idx === props.hoverIdx}
             onMouseEnter={() => props.setHover(props.idx)}
             onMouseLeave={() => props.setHover(null)}
             onClick={() => props.onLevelClick(props.item)}

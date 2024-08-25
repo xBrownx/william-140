@@ -20,9 +20,9 @@ export const Availability = forwardRef(function (
         setModal(CONSTANTS.floorItems[idx])
     }
 
-
+    // minHeight={2072}
     return (
-        <Page minHeight={2072}>
+        <Page  id={"page"}>
             <BackgroundContainer src={img}>
                 <AvailabilityOverlay />
                 <PageTitle $variant padding={{top: 47, left: 64}}>

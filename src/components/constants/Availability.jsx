@@ -34,151 +34,93 @@ export const Availability = {
         {
             lvl: 6,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 16),
             vectorLeft: 0,
             vectorTop: 0,
             vectorHeight: 0,
-            lvlVector: blank
         },
         {
             lvl: 7,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 15),
-
         },
         {
             lvl: 8,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 14),
-            // lvlVector: blank
         },
         {
             lvl: 9,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 13),
-            // lvlVector: blank
         },
         {
             lvl: 10,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 12),
-            // lvlVector: blank
         },
         {
             lvl: 11,
             isActive: true,
-            // left: left,
-            // top: middleStart + (gap2 * 11),
-            vectorLeft: 488,
-            vectorTop: 1711.5,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L11 />
+            lvlVector: <L11 />,
+            offset: 285,
         },
         {
             lvl: 12,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 10),
-            // lvlVector: blank
         },
         {
             lvl: 13,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 9),
-            // lvlVector: blank
         },
         {
             lvl: 14,
             isActive: true,
-            // left: left,
-            // top: middleStart + (gap2 * 8),
-            vectorLeft: 488,
-            vectorTop: 1587,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L14 />
+            lvlVector: <L14 />,
+            offset: 245,
         },
         {
             lvl: 15,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 7),
-            // lvlVector: blank
         },
         {
             lvl: 16,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 6),
-            // lvlVector: blank
         },
         {
             lvl: 17,
             isActive: false,
-            // left: left,
-            // top: middleStart + (gap2 * 5),
-            // lvlVector: blank
         },
         {
             lvl: 18,
             isActive: true,
-            // left: left,
-            // top: middleStart + (gap2 * 4),
-            vectorLeft: 488,
-            vectorTop: 1423,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L18 />
+            lvlVector: <L18 />,
+            offset: 83,
         },
         {
             lvl: 19,
             isActive: true,
-            // left: left,
-            // top: middleStart + (gap2 * 3),
-            vectorLeft: 488,
-            vectorTop: 1382,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L19 />
+            lvlVector: <L19 />,
+            offset: 100,
         },
         {
             lvl: 20,
             isActive: true,
-            // left: left,
-            // top: middleStart + (gap2 * 2),
-            vectorLeft: 488,
-            vectorTop: 1341,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L20 />
+            lvlVector: <L20 />,
+            offset: 113,
         },
         {
             lvl: 21,
             isActive: false,
-            // left: left,
-            // top: middleStart + gap2,
-            // lvlVector: blank
         },
         {
             lvl: 22,
             isActive: true,
-            // left: left,
-            // top: middleStart,
-            vectorLeft: 488,
-            vectorTop: 1258,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L22 />
@@ -186,106 +128,67 @@ export const Availability = {
         {
             lvl: 25,
             isActive: true,
-            // left: left,
-            // top: topStart + (gap * 16),
-            vectorLeft: 489,
-            vectorTop: 1145.5,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L25 />
+            lvlVector: <L25 />,
+            offset: 106,
         },
         {
             lvl: 26,
             isActive: false,
-            // left: left,
-            // top: topStart + (gap * 15),
-            // lvlVector: blank
         },
         {
             lvl: 27,
             isActive: false,
-            // left: left,
-            // top: topStart + (gap * 14),
-            // lvlVector: blank
+
         },
         {
             lvl: 28,
             isActive: true,
-            // left: left,
-            // top: topStart + (gap * 13),
-            vectorLeft: 489,
-            vectorTop: 1023,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L28 />
+            lvlVector: <L28 />,
+            offset: -25,
         },
         {
             lvl: 29,
             isActive: false,
-            // left: left,
-            // top: topStart + (gap * 12),
-            lvlVector: blank
         },
         {
             lvl: 30,
             isActive: true,
-            // left: left,
-            // top: topStart + (gap * 11),
-            vectorLeft: 489,
-            vectorTop: 942,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L30 />
+            lvlVector: <L30 />,
+            offset: -45,
         },
         {
             lvl: 31,
             isActive: true,
-            // left: left,
-            // top: topStart + (gap * 10),
-            vectorLeft: 489,
-            vectorTop: 901.5,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L31 />
+            lvlVector: <L31 />,
+            offset: 2,
         },
         {
             lvl: 32,
             isActive: false,
-            // left: left,
-            // top: topStart + (gap * 9),
-            lvlVector: blank
         },
         {
             lvl: 33,
             isActive: true,
-            // left: left,
-            // top: topStart + (gap * 8),
-            vectorLeft: 489,
-            vectorTop: 820.5,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L33 />
+            lvlVector: <L33 />,
+            offset: -5,
         },
         {
             lvl: 34,
             isActive: false,
-            // left: left,
-            // top: topStart + (gap * 7),
-            lvlVector: blank
         },
         {
             lvl: 35,
             isActive: true,
-            // left: left,
-            // top: topStart + (gap * 6),
-            vectorLeft: 489,
-            vectorTop: 740,
-            vectorHeight: 88,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L35 />
@@ -293,62 +196,26 @@ export const Availability = {
         {
             lvl: 36,
             isActive: false,
-            // left: left,
-            // top: topStart + (gap * 5),
-            // vectorLeft: 0,
-            // vectorTop: 0,
-            // vectorHeight: 0,
-            // lvlVector: blank
         },
         {
             lvl: 37,
             isActive: false,
-            // left: left,
-            // top: topStart + (gap * 4),
-            // vectorLeft: 0,
-            // vectorTop: 0,
-            // vectorHeight: 0,
-            // lvlVector: blank
         },
         {
             lvl: 38,
             isActive: false,
-            // left: left,
-            // top: topStart + (gap * 3),
-            // vectorLeft: 0,
-            // vectorTop: 0,
-            // vectorHeight: 0,
-            // lvlVector: blank
         },
         {
             lvl: 39,
             isActive: false,
-            // left: left,
-            // top: topStart + (gap * 2),
-            // vectorLeft: 0,
-            // vectorTop: 0,
-            // vectorHeight: 0,
-            // lvlVector: blank
         },
         {
             lvl: 40,
             isActive: false,
-            // left: left,
-            // top: topStart + gap,
-            // vectorLeft: 0,
-            // vectorTop: 0,
-            // vectorHeight: 0,
-            // lvlVector: blank
         },
         {
             lvl: 41,
             isActive: false,
-            // left: left,
-            // top: topStart,
-            // vectorLeft: 0,
-            // vectorTop: 0,
-            // vectorHeight: 0,
-            // lvlVector: blank
         }
     ]
 
