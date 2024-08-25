@@ -19,3 +19,7 @@ export const Tenancy = styled.div`
         height: 100%;
     }
 `
+
+export const TenancyDetails = styled.ul`
+    list-style: none;
+`

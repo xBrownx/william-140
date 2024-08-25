@@ -2,11 +2,11 @@ import React, {useState} from "react";
 import { LevelButtons, LevelVectors } from "../../molecules";
 import {Container} from "./styles";
 import {AvailabilityModal} from "../availabilityModal";
-import {Availability} from "../../constants";
 
 export const AvailabilityOverlay = props => {
     const [isHoverIdx, setIsHoverIdx] = useState(null)
     const [isModalOpen, setModalOpen] = React.useState(false);
+
     const [modalItem, setModalItem] = React.useState(null);
 
     const setHover = (idx) => {
@@ -17,9 +17,9 @@ export const AvailabilityOverlay = props => {
         setModalOpen(false);
     }
 
-    const onClick = (modal) => {
+    const onLevelClick = (modal) => {
         setModalItem(modal);
-        setModalOpen(true);
+        if(modalItem !== null) setModalOpen(true);
     }
 
 
@@ -34,12 +34,12 @@ export const AvailabilityOverlay = props => {
             <LevelButtons
                 hoverIdx={isHoverIdx}
                 setHover={setHover}
-                onClick={onClick}
+                onLevelClick={onLevelClick}
             />
             <LevelVectors
                 hoverIdx={isHoverIdx}
                 setHover={setHover}
-                onClick={onClick}
+                onLevelClick={onLevelClick}
             />
 
         </Container>

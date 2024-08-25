@@ -6,7 +6,7 @@ import styled, {css} from 'styled-components';
 import * as STYLED from "../../../Styled/GlobalStyles"
 import {ReactComponent as Arrow} from "../../../../assets/icons/Arrow.svg";
 import {ModalProvider, useModal} from "./Modal.context";
-import {ModalNav} from "./Modal.nav";
+
 
 
 const Modal = ({children}) => {

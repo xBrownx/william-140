@@ -1,12 +1,23 @@
-import styled from "styled-components";
-import { pxToViewHeight, pxToViewWidth } from "../../atoms/globalStyles";
-import { Style as S } from '../../atoms'
+import styled, {css} from "styled-components";
+import {pxToViewHeight, pxToViewWidth} from "../../atoms/globalStyles";
+import {Style as S} from '../../atoms'
+
+export const Container = styled.div`
+    position: absolute;
+    ${S.margin.__({
+        top: 581,
+        left: 489 * 2 + 19
+    })};
+
+    
+    ${S.flex.column};
+    ${S.gap.height(76)};
+`
 
 export const Wrapper = styled.div`
-    position: absolute;
-    margin-left: ${props => pxToViewWidth(props.left - 1)}vw;
-    margin-top: ${props => pxToViewHeight(props.top + 1)}vh;
-    ${S.flex.row};
-    ${S.gap.width(20)};
-    align-items: end;
+    ${S.flex.column};
+    ${props => props.gap && css`
+        ${S.gap.height(props.gap)};
+    `}
+
 `

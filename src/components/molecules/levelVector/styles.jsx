@@ -4,8 +4,9 @@ import {pxToViewHeight, pxToViewWidth} from "../../atoms/globalStyles";
 
 export const Wrapper = styled.div`
     position: absolute;
-    margin-left: ${props => pxToViewWidth(props.left - 1)}vw;
-    margin-top: ${props => pxToViewHeight(props.top + 1)}vh;
+    margin-left: ${props => pxToViewWidth(props.left)}vw;
+    margin-top: ${props => pxToViewHeight(props.top)}vh;
+    
     svg {
         opacity: 0;
         ${S.size.width(489)};

@@ -18,7 +18,7 @@ export const LevelVectors = props => {
                         height={item.vectorHeight}
                         hoverIdx={props.hoverIdx}
                         setHover={props.setHover}
-                        onClick={props.onClick}
+                        onLevelClick={props.onLevelClick}
                     >
                         {item.lvlVector}
                     </LevelVector>

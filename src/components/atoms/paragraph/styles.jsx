@@ -12,6 +12,10 @@ export const StyledParagraph = styled.p`
         ${C.font.paragraphSecondary};
     `};
     
+    ${props => props.opacity && css`
+        opacity: ${props.opacity};
+    `};
+    
     ${props => props.$size16 && css`
         ${F.size(18)};
     `};
@@ -27,6 +31,10 @@ export const StyledParagraph = styled.p`
     
     ${props => props.weight && css`
         font-weight: ${props.weight};
+    `}
+    
+    ${props => props.padding && css`
+        ${S.padding.__(props.padding)}
     `}
 `
 

@@ -27,13 +27,12 @@ export const ModalWindow = styled.div`
     z-index: 1000;
     top: 50%;
     left: 50%;
-    
-    height: 70.988vh;
     transform: translate(-50%, -50%);
     overflow: hidden;
     box-sizing: border-box;
     pointer-events: none;
-    transition: opacity 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    
     
     background: rgba(22, 74, 73, 0.3);
     backdrop-filter: blur(10px);
