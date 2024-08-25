@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {
     Style as S,
     Font as F,
@@ -13,6 +13,28 @@ export const StyledButton = styled.button`
     ${F.family.secondaryRegular};
     ${S.borderRadius};
     ${S.margin.none};
+    
+    ${props => props.width && css`
+        ${S.size.width(props.width)};
+        ${S.margin.none};
+        ${S.padding.none};
+    `}
+    
+    ${props => props.height && css`
+        ${S.size.height(props.height)};
+    `}
+    
+    ${props => props.fontSize && css`
+        ${F.size(props.fontSize)};
+    `}
+    
+    ${props => props.square && css`
+        ${S.size.square(props.square)};
+    `}
+    
+    ${props => props.fontSize && css`
+        ${F.size(props.fontSize)};
+    `}
     
     background: transparent;
     border-width: 1px;

@@ -1,6 +1,14 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { Style as S } from '../../atoms'
 
 export const StyledRow = styled.div`
     ${S.flex.row}
+    
+    ${props => props.padding && css`
+        ${S.padding.__(props.padding)};
+    `};
+    
+    ${props => props.gap && css`
+        ${S.gap.height(props.gap)};
+    `};
 `

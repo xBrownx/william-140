@@ -35,48 +35,48 @@ function App() {
                 id="navbar"
                 pageRefs={pageRefs}
             />
-            <Landing
-                id="landing"
-                ref={pageRefs.landing}
-                scrollTo={() => scrollTo(pageRefs.home)}/>
+            {/*<Landing*/}
+            {/*    id="landing"*/}
+            {/*    ref={pageRefs.landing}*/}
+            {/*    scrollTo={() => scrollTo(pageRefs.home)}/>*/}
 
-            <Home
-                id="home"
-                ref={pageRefs.home}
-                onDiscoverClick={() => scrollTo(pageRefs.availability)}
-            />
+            {/*<Home*/}
+            {/*    id="home"*/}
+            {/*    ref={pageRefs.home}*/}
+            {/*    onDiscoverClick={() => scrollTo(pageRefs.availability)}*/}
+            {/*/>*/}
 
-            <HeroOne/>
+            {/*<HeroOne/>*/}
 
-            <Lifestyle
-                id="Lifestyle"
-                ref={pageRefs.lifestyle}
-                bgColour={'--color-primary-2'}
-                minHeight={PageMinHeights.lifestyle}
-            />
+            {/*<Lifestyle*/}
+            {/*    id="Lifestyle"*/}
+            {/*    ref={pageRefs.lifestyle}*/}
+            {/*    bgColour={'--color-primary-2'}*/}
+            {/*    minHeight={PageMinHeights.lifestyle}*/}
+            {/*/>*/}
 
-            <Location
-                id="Location"
-                ref={pageRefs.location}
-                bgColour={'--color-primary-2'}
-                minHeight={PageMinHeights.location}
-            />
+            {/*<Location*/}
+            {/*    id="Location"*/}
+            {/*    ref={pageRefs.location}*/}
+            {/*    bgColour={'--color-primary-2'}*/}
+            {/*    minHeight={PageMinHeights.location}*/}
+            {/*/>*/}
 
-            <HeroTwo />
+            {/*<HeroTwo />*/}
 
-            <Design
-                id="Design"
-                ref={pageRefs.design}
-                bgColour={'--color-primary-1'}
-                minHeight={PageMinHeights.design}
-            />
+            {/*<Design*/}
+            {/*    id="Design"*/}
+            {/*    ref={pageRefs.design}*/}
+            {/*    bgColour={'--color-primary-1'}*/}
+            {/*    minHeight={PageMinHeights.design}*/}
+            {/*/>*/}
 
-            <Amenities
-                id="Amenities"
-                ref={pageRefs.amenities}
-                bgColour={'--color-primary-1'}
-                minHeight={PageMinHeights.amenities}
-            />
+            {/*<Amenities*/}
+            {/*    id="Amenities"*/}
+            {/*    ref={pageRefs.amenities}*/}
+            {/*    bgColour={'--color-primary-1'}*/}
+            {/*    minHeight={PageMinHeights.amenities}*/}
+            {/*/>*/}
 
             <Availability
                 id="Availability"

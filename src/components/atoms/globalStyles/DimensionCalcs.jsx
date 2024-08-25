@@ -22,6 +22,16 @@ export const height = (px) => css`height: ${pxToViewHeight(px)}vh;`;
 export const minHeight = (px) => css`min-height: ${pxToViewHeight(px)}vh;`;
 export const maxHeight = (px) => css`max-height: ${pxToViewHeight(px)}vh;`;
 
+export const square = (px) => {
+    const width = pxToViewWidth(px);
+    const height = pxToViewHeight(px);
+    const sq = Math.max(width, height);
+    return css`
+        width: ${sq}vw;
+        height: ${sq}vh;
+    `;
+}
+
 export const squareWidth = (px) => css`width: ${pxToViewWidth(px)}vw; height: ${pxToViewWidth(px)}vw;`;
 export const squareHeight = (px) => css`width: ${pxToViewHeight(px)}vh; height: ${pxToViewHeight(px)}vh;`;
 

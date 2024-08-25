@@ -67,6 +67,7 @@ Style.size = {
     height: Calc.height,
     minHeight: Calc.minHeight,
     maxHeight: Calc.maxHeight,
+    square:Calc.square,
 }
 
 Style.square = {

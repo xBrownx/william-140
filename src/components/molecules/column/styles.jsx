@@ -44,4 +44,8 @@ export const StyledColumn = styled.div`
     ${props => props.borderRadius && css`
         ${S.borderRadius};
     `};
+    
+    ${props => props.$flex && css`
+        //flex: 1;
+    `}
 `

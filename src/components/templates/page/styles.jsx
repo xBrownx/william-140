@@ -12,9 +12,14 @@ export const StyledPage = styled.section`
     position: relative;
     min-width: 100%;
     height: 100%;
-    
+    z-index: 0;
+
     ${props => props.$fullScreen && css`
         min-height: 100vh;
+    `};
+    
+    ${props => props.minHeight && css`
+        ${S.size.minHeight(props.minHeight)};
     `};
 
     ${props => props.$bgSecondary && css`

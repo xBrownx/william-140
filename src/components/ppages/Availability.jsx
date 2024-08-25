@@ -1,16 +1,9 @@
 import React, {forwardRef} from 'react';
 import img from "../../assets/img/08-Availability-02.png";
 import * as CONSTANTS from '../Pages/08-Availability/Availability.constants'
-import * as Styled from '../Pages/08-Availability/Availability.styled'
-import {StyledSection} from "../Styled/SectionContainer.styled";
-
-import {StyledHeading, StyledSubheading} from "../Styled";
-import {StyledParagraph} from "../PageTitles/Column/ColumnTitle.styled";
-
-import {ModalWindow} from "../Pages/08-Availability/Modal";
-import {LevelButtons} from "../Pages/08-Availability/AvailabilityButtons";
-import {ModalGeneric} from "../Pages/08-Availability/Modal/Modal.generic";
-import {PageTitle} from "../molecules";
+import {BackgroundContainer, PageTitle} from "../molecules";
+import {Page} from "../templates/page";
+import {AvailabilityOverlay, AvailabilityRating} from "../organisms";
 
 export const Availability = forwardRef(function (
     {
@@ -29,28 +22,20 @@ export const Availability = forwardRef(function (
 
 
     return (
-        <StyledSection
-            id={id}
-            ref={ref}
-            minHeight={minHeight}
-        >
-            <Styled.StyledImg src={img} alt="availibiility"/>
+        <Page minHeight={2072}>
+            <BackgroundContainer src={img}>
+                <AvailabilityOverlay />
+                <PageTitle $variant padding={{top: 47, left: 64}}>
+                    {CONSTANTS.subHeadingText}
+                    {CONSTANTS.headingText}
+                    {CONSTANTS.paragraphText}
+                </PageTitle>
+                <AvailabilityRating />
 
-            <LevelButtons
-                setModal={setModal}
-                setOpen={setOpen}
-            />
 
-            <PageTitle $variant $padding64>
-                {CONSTANTS.subHeadingText}
-                {CONSTANTS.headingText}
-                {CONSTANTS.paragraphText}
-            </PageTitle>
-
-</StyledSection>
-
-)
-    ;
+            </BackgroundContainer>
+        </Page>
+    );
 });
 
 
