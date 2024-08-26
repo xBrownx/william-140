@@ -1,13 +1,13 @@
 import { Button, Container } from "./styles";
 import { Column } from "../../molecules";
 import { NavArrow } from "../../atoms";
-import {Availability} from "../../constants";
+import {availability} from "../../constants";
 import {useEffect, useState} from "react";
 import modal from "../../Pages/08-Availability/Modal/Modal";
 
 
 export const ModalNav = props => {
-    const items = Availability.buttons;
+    const items = availability.buttons;
     const activeLevels = items.filter(item => item.isActive ? item : null).reverse();
 
     const navigateUp = () => {

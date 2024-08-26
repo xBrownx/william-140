@@ -1,9 +1,9 @@
 import React from "react";
 import {LandingAnimation} from "./LandingAnimation";
-import {Title} from "./Landing.styled";
+
 
 import {displayHeading} from "./Landing.constants";
-
+import {Title} from "./Landing.styled";
 
 export const LandingTitle = () => {
     return (

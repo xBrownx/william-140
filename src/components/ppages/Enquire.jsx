@@ -5,22 +5,11 @@ import {EnquireForm} from "../Pages/13-Enquire/EnquireForm";
 import {EnquireFooter} from "../Pages/13-Enquire/Enquire.footer";
 import * as CONSTANTS from "../Pages/13-Enquire/Enquire.constants";
 import {StyledHeading} from "../Styled";
+import {Page} from "../templates/page";
 
-export const Enquire = forwardRef(function (
-    {
-        id,
-        bgColour,
-        minHeight
-    },
-    ref
-) {
+export const Enquire = forwardRef(function ({id,}, ref) {
     return (
-        <StyledSection
-            id={id}
-            ref={ref}
-            bgColour={bgColour}
-            minHeight={minHeight}
-        >
+        <Page pageRef={ref} $bgSecondary>
             <Container id="container">
                 <ContentWrapper>
                     <StyledHeading $secondary>
@@ -30,7 +19,7 @@ export const Enquire = forwardRef(function (
                 </ContentWrapper>
                 <EnquireFooter/>
             </Container>
-        </StyledSection>
+        </Page>
     )
         ;
 });

@@ -4,17 +4,23 @@ import * as CONSTANTS from '../Pages/11-Agency/Agency.constants'
 import imgLobby from '../../assets/img/1-Lobby.png';
 import { SplitScreen } from '../molecules'
 import styled from "styled-components";
-import {Agent} from "../Pages/11-Agency/AgencyAgent";
+
 import {Page} from "../templates/page";
+import {Agent} from "../molecules/agent";
+
+import { Style as S } from '../atoms'
 
 export const Agency = forwardRef(function ({id}, ref) {
     return (
         <Page
             $fullScreen
             $bgSecondary
+            paddingInlineBlock={{inline: 160, block: 190}}
         >
-            <SplitScreen >
-                <LeftHand/>
+            <SplitScreen pageRef={ref}>
+                <ImgWrapper>
+                    <StyledImg src={imgLobby} alt="Lobby"/>
+                    </ImgWrapper>
                 <RightHand/>
             </SplitScreen>
 
@@ -22,11 +28,18 @@ export const Agency = forwardRef(function ({id}, ref) {
     );
 });
 
-const LeftHand = () => {
-    return (
-        <img src={imgLobby} alt="Lobby"/>
-    );
-}
+const ImgWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 16px;
+`
+
+const StyledImg = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+`
 
 const RightHand = () => {
     return (
@@ -123,7 +136,7 @@ const StyledUl = styled.ul`
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: var(--height-8px);
+    ${S.gap.height(16)};
     //margin: var(--height-32px) 0 0 0;
 `
 

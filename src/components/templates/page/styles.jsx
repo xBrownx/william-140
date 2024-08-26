@@ -51,6 +51,10 @@ export const StyledPage = styled.section`
     ${props => props.$yEnd && css`
         align-items: end;
     `};
+    
+    ${props => props.paddingInlineBlock && css`
+        ${S.padding.inlineBlock(props.paddingInlineBlock)};
+    `}
 
 
 `

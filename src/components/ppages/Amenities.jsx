@@ -7,14 +7,7 @@ import {Page} from "../templates/page";
 import {PageTitle, SplitScreen} from "../molecules";
 
 
-export const Amenities = forwardRef(function (
-    {
-        id,
-        bgColour,
-        minHeight
-    },
-    ref
-) {
+export const Amenities = forwardRef(function ({id,}, ref) {
     const amenitiesItems = CONSTANTS.menuItems;
     const [activeIdx, setActiveIdx] = useState(0);
 
@@ -24,6 +17,7 @@ export const Amenities = forwardRef(function (
 
     return (
         <Page
+            pageRef={ref}
             $fullScreen
             $bgSecondary
         >

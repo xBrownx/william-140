@@ -12,6 +12,7 @@ import {ReactComponent as L14 } from '../../assets/svg/Level-Vector-14.svg'
 import {ReactComponent as L11 } from '../../assets/svg/Level-Vector-11.svg'
 import {ReactComponent as TenancyOne} from '../../assets/svg/TenancyOne.svg'
 import {ReactComponent as TenancyTwo} from '../../assets/svg/TenancyTwo.svg'
+import {_availabilityAssets} from "../../assets";
 
 // const left = 489 * 2 + 19;
 // const topStart = 566;
@@ -25,7 +26,7 @@ import {ReactComponent as TenancyTwo} from '../../assets/svg/TenancyTwo.svg'
 // const gap2 = 40;
 
 const blank = <L35 />
-export const Availability = {
+export const availability = {
     subheadingTxt: "AVAILABILITY",
     headingTxt: "Your future workplace",
     paragraphTxt: "Discover a new home for your business at 140 William Street—where\n" +
@@ -60,7 +61,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L11 />,
-            offset: 285,
+            offset: 93.25,
         },
         {
             lvl: 12,
@@ -76,7 +77,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L14 />,
-            offset: 245,
+            offset: 82,
         },
         {
             lvl: 15,
@@ -96,7 +97,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L18 />,
-            offset: 83,
+            offset: 67.1,
         },
         {
             lvl: 19,
@@ -104,7 +105,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L19 />,
-            offset: 100,
+            offset: 63.33,
         },
         {
             lvl: 20,
@@ -112,7 +113,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L20 />,
-            offset: 113,
+            offset: 59.59,
         },
         {
             lvl: 21,
@@ -123,7 +124,8 @@ export const Availability = {
             isActive: true,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L22 />
+            lvlVector: <L22 />,
+            offset: 51.68,
         },
         {
             lvl: 25,
@@ -131,7 +133,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L25 />,
-            offset: 106,
+            offset: 40.44,
         },
         {
             lvl: 26,
@@ -148,7 +150,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L28 />,
-            offset: -25,
+            offset: 28.275,
         },
         {
             lvl: 29,
@@ -160,7 +162,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L30 />,
-            offset: -45,
+            offset: 20.2,
         },
         {
             lvl: 31,
@@ -168,7 +170,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L31 />,
-            offset: 2,
+            offset: 16.2,
         },
         {
             lvl: 32,
@@ -180,7 +182,7 @@ export const Availability = {
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
             lvlVector: <L33 />,
-            offset: -5,
+            offset: 8.11,
         },
         {
             lvl: 34,
@@ -191,7 +193,8 @@ export const Availability = {
             isActive: true,
             tenancyOne: <TenancyOne/>,
             tenancyTwo: <TenancyTwo/>,
-            lvlVector: <L35 />
+            lvlVector: <L35 />,
+            offset: 0,
         },
         {
             lvl: 36,
@@ -217,7 +220,8 @@ export const Availability = {
             lvl: 41,
             isActive: false,
         }
-    ]
+    ],
+    assets: _availabilityAssets
 
 }
 

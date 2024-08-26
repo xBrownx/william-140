@@ -1,14 +1,14 @@
-import {Page} from "../page";
-import {Container} from "./styles";
-import {ParallaxImg} from "../../organisms/ParallaxComponents";
 import React from "react";
+import {Container} from "./styles";
+import {ParallaxImg} from "../../molecules";
+import {Page} from "../page";
 
 
 export const Hero = props => {
     return (
         <Page $fullPage {...props}>
             <Container {...props}>
-                <ParallaxImg src={props.src} alt={props.alt}/>
+                <ParallaxImg image={props.img}/>
             </Container>
         </Page>
     );

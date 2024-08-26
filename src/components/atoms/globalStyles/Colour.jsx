@@ -3,6 +3,7 @@ import { css } from "styled-components";
 export const Colour = {}
 
 Colour.font = {
+    mainDisplay: css`color: #D9D9D980;`,
     headingPrimary: css`color: #164A49;`,
     headingSecondary: css`color: #FFF;`,
     headingVariant: css`color: #162425;`,

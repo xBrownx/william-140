@@ -2,13 +2,14 @@ import styled, {css} from "styled-components";
 import {useDeferredValue} from "react";
 
 
-export const CarouselMenu = ({carouselItems, activeIdx, setActiveIndex}) => {
+export const CarouselMenu = ({carouselItems, icons, activeIdx, setActiveIndex}) => {
+
     const slideTitles = carouselItems.map(item => {
         return item.title
     });
 
-    const slideIcons = carouselItems.map(item => {
-        return item.icon
+    const slideIcons = icons.map(item => {
+        return item.src
     });
 
     // const deferredIdx = useDeferredValue(activeIdx);

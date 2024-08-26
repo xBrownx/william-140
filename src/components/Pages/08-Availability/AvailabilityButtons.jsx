@@ -1,6 +1,6 @@
 import {AvailButton} from "../../Styled/Buttons/Buttons.styled";
 import {ModalThirdSpace} from "./Modal/Modal.ThirdSpace";
-import {Availability} from "../../constants";
+import {availability} from "../../constants";
 import React from "react";
 import Modal from "./Modal/Modal";
 import {ModalGeneric} from "./Modal/Modal.generic";
@@ -11,7 +11,7 @@ import {LevelVector} from "../../molecules/levelVector";
 export const LevelButtons = ({setOpen, setModal}) => {
     return (
         <>
-            {Availability.buttons.map((item) => {
+            {availability.buttons.map((item) => {
                 return (
                     <>
                         <LevelButton

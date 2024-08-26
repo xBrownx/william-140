@@ -3,6 +3,7 @@ import * as Calcs from './DimensionCalcs'
 
 export const Font = {
     size: Calcs.fontSize,
+    lineHeight: Calcs.height,
     family: {
         primaryLight: css`font-family: 'TWKEverett-Light', serif;`,
         primaryRegular: css`font-family: 'TWKEverett-Regular', serif;`,

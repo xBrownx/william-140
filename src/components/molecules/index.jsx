@@ -7,6 +7,7 @@ import { LevelButtons } from './levelButtons'
 import { LevelVectors } from './levelVectors'
 import { ModalPane } from './modalPane'
 import { PageTitle } from './pageTitle'
+import { ParallaxImg } from "./parallaxImage";
 import { PoppingLinkList }  from './poppingLinkList'
 import { Row } from './row'
 import { SplitScreen } from "./splitScreen";
@@ -21,6 +22,7 @@ export {
     LevelVectors,
     ModalPane,
     PageTitle,
+    ParallaxImg,
     PoppingLinkList,
     Row,
     SplitScreen

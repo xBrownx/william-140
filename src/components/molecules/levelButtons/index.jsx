@@ -1,10 +1,10 @@
-import {Availability} from "../../constants";
+import {availability} from "../../constants";
 import {LevelButton} from "../levelButton";
 import React from "react";
 import {Container, Wrapper} from "./styles";
 
 export const LevelButtons = props => {
-    const buttons = [...Availability.buttons].reverse();
+    const buttons = [...availability.buttons].reverse();
     const buttonsTop = [...buttons].slice(0, 17)
     const buttonsBottom = [...buttons].slice(17)
     return (

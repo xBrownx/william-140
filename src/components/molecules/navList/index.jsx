@@ -6,7 +6,12 @@ export const NavList = props => {
     return(
         <StyledUl {...props}>
             {links.map((link) => (
-                <StyledLink $nav key={link.name}>{link.name}</StyledLink>
+                <StyledLink
+                    $nav key={link.name}
+                    onClick={() => props.scrollTo(link.nav)}
+                >
+                    {link.name}
+                </StyledLink>
             ))}
         </StyledUl>
     );

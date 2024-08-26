@@ -1,8 +1,5 @@
 import './App.css';
-import React from "react";
-import {PageRefs} from "../../util/PageRefs";
-import NavBar from "../organisms/NavBar/NavBar";
-import {PageMinHeights} from "../../constants";
+import React, {useRef} from "react";
 import {
     Agency,
     Amenities,
@@ -20,68 +17,71 @@ import {
     Location
 } from "../ppages";
 
-
+import {Header} from "../organisms/header";
 
 function App() {
 
-    const pageRefs = PageRefs()
-    const scrollTo = (page) => {
-        page.current.scrollIntoView({behavior: "smooth"})
+    const pageRefs = {
+        landing: useRef(),
+        location: useRef(),
+        design: useRef(),
+        amenities: useRef(),
+        availability: useRef(),
+        history: useRef(),
+        agency: useRef(),
+        enquire: useRef(),
     }
+
+    const scrollTo = (page) => {
+        setTimeout(() => page.current.scrollIntoView({behavior: "smooth"}), 0);
+    }
+
     return (
         <div ref={pageRefs.main} className="app-container">
-
-            <NavBar
-                id="navbar"
+            <Header
                 pageRefs={pageRefs}
+                scrollTo={scrollTo}
             />
-            {/*<Landing*/}
-            {/*    id="landing"*/}
-            {/*    ref={pageRefs.landing}*/}
-            {/*    scrollTo={() => scrollTo(pageRefs.home)}/>*/}
 
-            {/*<Home*/}
-            {/*    id="home"*/}
-            {/*    ref={pageRefs.home}*/}
-            {/*    onDiscoverClick={() => scrollTo(pageRefs.availability)}*/}
-            {/*/>*/}
+            <Landing
+                id="landing"
+                ref={pageRefs.landing}
+                scrollTo={() => scrollTo(pageRefs.home)}/>
 
-            {/*<HeroOne/>*/}
+            <Home
+                id="home"
+                ref={pageRefs.home}
+                onDiscoverClick={() => scrollTo(pageRefs.availability)}
+            />
 
-            {/*<Lifestyle*/}
-            {/*    id="Lifestyle"*/}
-            {/*    ref={pageRefs.lifestyle}*/}
-            {/*    bgColour={'--color-primary-2'}*/}
-            {/*    minHeight={PageMinHeights.lifestyle}*/}
-            {/*/>*/}
+            <HeroOne/>
 
-            {/*<Location*/}
-            {/*    id="Location"*/}
-            {/*    ref={pageRefs.location}*/}
-            {/*    bgColour={'--color-primary-2'}*/}
-            {/*    minHeight={PageMinHeights.location}*/}
-            {/*/>*/}
+            <Lifestyle
+                id="Lifestyle"
+                ref={pageRefs.lifestyle}
+            />
 
-            {/*<HeroTwo />*/}
+            <Location
+                id="Location"
+                ref={pageRefs.location}
+            />
 
-            {/*<Design*/}
-            {/*    id="Design"*/}
-            {/*    ref={pageRefs.design}*/}
-            {/*    bgColour={'--color-primary-1'}*/}
-            {/*    minHeight={PageMinHeights.design}*/}
-            {/*/>*/}
+            <HeroTwo />
 
-            {/*<Amenities*/}
-            {/*    id="Amenities"*/}
-            {/*    ref={pageRefs.amenities}*/}
-            {/*    bgColour={'--color-primary-1'}*/}
-            {/*    minHeight={PageMinHeights.amenities}*/}
-            {/*/>*/}
+            <Design
+                id="Design"
+                ref={pageRefs.design}
+                bgColour={'--color-primary-1'}
+            />
+
+            <Amenities
+                id="Amenities"
+                ref={pageRefs.amenities}
+            />
 
             <Availability
                 id="Availability"
                 ref={pageRefs.availability}
-                minHeight={PageMinHeights.availability}
             />
 
             {/*<ScrollingText*/}
@@ -89,35 +89,26 @@ function App() {
             {/*    minHeight={PageMinHeights.scrollingText}*/}
             {/*/>*/}
 
-            {/*<History*/}
-            {/*    id="History"*/}
-            {/*    ref={pageRefs.history}*/}
-            {/*    bgColour={'--color-primary-2'}*/}
-            {/*    minHeight={PageMinHeights.history}*/}
-            {/*/>*/}
+            <History
+                id="History"
+                ref={pageRefs.history}
+            />
 
-            {/*<Gallery*/}
-            {/*    id="Gallery"*/}
-            {/*    ref={pageRefs.img4}*/}
-            {/*    bgColour={'--color-primary-2'}*/}
-            {/*    minHeight={PageMinHeights.home}*/}
-            {/*/>*/}
+            <Gallery
+                id="Gallery"
+            />
 
-            {/*<Agency*/}
-            {/*    id="Agency"*/}
-            {/*    ref={pageRefs.agency}*/}
-            {/*    bgColour={'--color-primary-1'}*/}
-            {/*    minHeight={PageMinHeights.agency}*/}
-            {/*/>*/}
+            <Agency
+                id="Agency"
+                ref={pageRefs.agency}
+            />
 
-            {/*<HeroThree />*/}
+            <HeroThree />
 
-            {/*<Enquire*/}
-            {/*    id="enquire"*/}
-            {/*    ref={pageRefs.enquire}*/}
-            {/*    bgColour={'--color-primary-1'}*/}
-            {/*    minHeight={PageMinHeights.enquire}*/}
-            {/*/>*/}
+            <Enquire
+                id="enquire"
+                ref={pageRefs.enquire}
+            />
         </div>
     );
 }

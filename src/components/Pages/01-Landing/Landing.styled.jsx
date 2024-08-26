@@ -9,7 +9,7 @@ export const Container = styled.div`
     min-height: 100vh;
     height: 100vh;
     overflow: hidden;
-
+    
     @media only screen and (max-width: 800px) {
         min-height: 100vh;
     }

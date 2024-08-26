@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    z-index: 0;
-    position: absolute;
+    z-index: 1;
     background-size: cover;
     height: 100vh;
     width: 100vw;
-    filter: brightness(75%);
-    overflow: hidden;
 
-    
+
     animation: landing-image-expand 2s forwards;
 
     @keyframes landing-image-expand {
@@ -38,4 +35,5 @@ export const StyledVideo = styled.video`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(75%);
 `

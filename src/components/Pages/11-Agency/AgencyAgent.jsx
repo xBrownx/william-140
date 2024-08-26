@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-export const Agent = ({agent}) => {
+const Agent = ({agent}) => {
     return (
         <ListItemStyled>
             <StyledImg src={agent.img} alt="Agent"/>

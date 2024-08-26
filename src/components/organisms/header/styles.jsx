@@ -19,6 +19,9 @@ export const LogoWrapper = styled.div`
     svg {
         min-height: 2.099vh;
         min-width: 19.097vw;
+        &:hover {
+            cursor: pointer;
+        }
     }
 `
 

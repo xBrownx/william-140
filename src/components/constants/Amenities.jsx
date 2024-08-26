@@ -13,6 +13,7 @@ import {ReactComponent as AmenitiesIcon04} from '../../assets/icons/07-Amenities
 import {ReactComponent as AmenitiesIcon05} from '../../assets/icons/07-Amenities-Icon-5.svg'
 import {ReactComponent as AmenitiesIcon06} from '../../assets/icons/07-Amenities-Icon-6.svg'
 import {ReactComponent as AmenitiesIcon07} from '../../assets/icons/07-Amenities-Icon-7.svg'
+import {_amenitiesAssets} from "../../assets";
 
 export const amenities = {
   subheadingTxt: "AMENITIES",
@@ -26,6 +27,7 @@ export const amenities = {
     {name: "default", txt: 'Resort style end of trip facilities', Icon: AmenitiesIcon05, src: AmenitiesCarousel05},
     {name: "default", txt: 'On site car parking', Icon: AmenitiesIcon06, src: AmenitiesCarousel06},
     {name: "default", txt: 'On site cafe', Icon: AmenitiesIcon07, src: AmenitiesCarousel07},
-  ]
+  ],
+  assets: _amenitiesAssets
   
 }

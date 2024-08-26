@@ -1,14 +1,13 @@
 import React, {forwardRef} from 'react';
-import {StyledSection} from "../Styled/SectionContainer.styled";
-import {InfiniteLooper} from "../organisms/ScrollingCarousel/InfiniteLooper.component";
+import { ScrollingCarousel } from "../organisms/ScrollingCarousel";
 import * as Styled from "../Pages/04-Lifestyle/Lifestyle.styled";
 import * as CONSTANTS from "../Pages/04-Lifestyle/Lifestyle.constants";
 import { PageTitle } from "../molecules";
 import { Page } from "../templates/page";
-
+import {LifestyleImages} from "../organisms/lifestyleImages";
+import {lifestyle} from "../constants";
 
 export const Lifestyle = forwardRef(function ({id}, ref) {
-    const lifestyleItems = CONSTANTS.LifestyleItems();
 
     return (
         <Page $fullScreen $endY>
@@ -21,20 +20,7 @@ export const Lifestyle = forwardRef(function ({id}, ref) {
                     {CONSTANTS.headingText}
                     {CONSTANTS.paragraphText}
                 </PageTitle>
-                <Styled.LifestyleCarouselContainer>
-                    <InfiniteLooper>
-                        {
-                            lifestyleItems.map((slide, i) => {
-                                return (
-                                    <Styled.StyledImg
-                                        key={`${i}_inner`}
-                                        src={slide.src}
-                                        alt={`Carousel ${i}`}/>
-                                );
-                            })
-                        }
-                    </InfiniteLooper>
-                </Styled.LifestyleCarouselContainer>
+                <ScrollingCarousel />
             </Styled.LifestyleContainer>
         </Page>
 )

@@ -3,6 +3,7 @@ import HamSut from "../../assets/svg/2-Hamish-Sutherland.svg";
 import GeoMur from "../../assets/svg/3-Georgina-Murray.svg";
 import MicDar from "../../assets/svg/4-Michael-Darvell.svg";
 import ShaBur from "../../assets/svg/5-Shane-Burns.svg";
+import {_agencyAssets} from "../../assets";
 
 export const agency = {
     headingTxt: "Agencies",
@@ -10,7 +11,6 @@ export const agency = {
         "contact your preferred agent for further info or to arrange" +
         "a private inspection.",
     subheadingTxt: ["KNIGHT FRANK", "COLLIERS"],
-    assets: {},
     agents: {
         knightFrank: [
             {
@@ -46,5 +46,6 @@ export const agency = {
                 img: ShaBur
             }
         ],
-    }
+    },
+    assets: _agencyAssets
 }

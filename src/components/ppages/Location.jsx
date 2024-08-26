@@ -1,23 +1,16 @@
 import React, {forwardRef, useState} from 'react';
-
-import {CarouselContainer, Container} from "../Pages/05-Location/Location.styled";
-import {FadeCarousel} from "../organisms/FadeCarousel/FadeCarousel";
-import {CarouselMenu} from "../organisms/FadeCarousel/CarouselMenu";
+import {Container} from "../Pages/05-Location/Location.styled";
 import * as CONSTANTS from '../Pages/05-Location/Location.constants'
-
-import {Page} from "../templates/page";
+import {Page} from "../templates";
 import {PageTitle} from "../molecules";
+import { LocationCarousel } from "../organisms";
 
 export const Location = forwardRef(function ({id}, ref) {
-    const locationItems = CONSTANTS.LocationItems();
-    const [activeIdx, setActiveIdx] = useState(0);
-
-    const handleSlideChange = (idx) => {
-        setActiveIdx(idx);
-    }
-
     return (
-        <Page $yEnd>
+        <Page
+            pageRef={ref}
+            $yEnd
+        >
             <Container>
                 <PageTitle
                     $row
@@ -27,16 +20,7 @@ export const Location = forwardRef(function ({id}, ref) {
                     {CONSTANTS.headingText}
                     {CONSTANTS.paragraphText}
                 </PageTitle>
-                <CarouselContainer id="location-carousel-container">
-                    <FadeCarousel
-                        activeIdx={activeIdx}
-                        carouselItems={locationItems}/>
-                </CarouselContainer>
-                <CarouselMenu
-                    carouselItems={locationItems}
-                    activeIdx={activeIdx}
-                    setActiveIndex={handleSlideChange}
-                />
+                <LocationCarousel />
             </Container>
         </Page>
     );

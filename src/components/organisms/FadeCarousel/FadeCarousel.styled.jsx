@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-
+import { Style as S } from '../../atoms'
 
 export const CarouselContainer = styled.div`
     margin-inline: auto;
@@ -15,7 +15,7 @@ export const CarouselSlide = styled.div`
     grid-row: 1;
     grid-column: 1;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     transition-property: opacity;
     opacity: 0;
     transition-timing-function: ease-in;
@@ -28,21 +28,22 @@ export const CarouselSlide = styled.div`
 `
 
 export const ImgContainer = styled.div`
-    width: 100%;
-    height: 100%;
+    ${props => props.width && css`
+        ${S.size.width(props.width)}
+        ${S.size.minWidth(props.width)}
+        ${S.size.maxWidth(props.width)}
+    `}
     
-    svg {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+    ${props => props.height && css`
+        ${S.size.height(props.height)}
+        ${S.size.maxHeight(props.height)}
+        ${S.size.minHeight(props.height)}
+    `}
+    
+    ${S.borderRadius};
     
     img {
-        max-height: 100%;
-        max-width: 100%;
-        height: 100%;
-        width: 100%;
-        //object-fit: contain;
+        ${S.borderRadius};
     }
 `
 

@@ -5,24 +5,9 @@ import {BackgroundContainer, PageTitle} from "../molecules";
 import {Page} from "../templates/page";
 import {AvailabilityOverlay, AvailabilityRating} from "../organisms";
 
-export const Availability = forwardRef(function (
-    {
-        id,
-        minHeight
-    },
-    ref) {
-
-    const [open, setOpen] = React.useState(false);
-    const [modal, setModal] = React.useState(null);
-    const [modalIdx, setModalIdx] = React.useState(0);
-
-    const onButtonClick = (idx) => {
-        setModal(CONSTANTS.floorItems[idx])
-    }
-
-    // minHeight={2072}
+export const Availability = forwardRef(function ({id,}, ref) {
     return (
-        <Page  id={"page"}>
+        <Page pageRef={ref}>
             <BackgroundContainer src={img}>
                 <AvailabilityOverlay />
                 <PageTitle $variant padding={{top: 47, left: 64}}>
@@ -31,8 +16,6 @@ export const Availability = forwardRef(function (
                     {CONSTANTS.paragraphText}
                 </PageTitle>
                 <AvailabilityRating />
-
-
             </BackgroundContainer>
         </Page>
     );

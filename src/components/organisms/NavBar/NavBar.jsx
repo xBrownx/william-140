@@ -13,7 +13,7 @@ const NavBar = ({pageRefs}) => {
 
     const navItems = NavItems({mainRefs: pageRefs})
 
-    return (<Header />);
+    return (<></>);
 
         // <Styled.NavBarContainer
         //     id="nav-bar-container"

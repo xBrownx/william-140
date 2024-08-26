@@ -1,3 +1,5 @@
+import {_designAssets} from "../../assets";
+
 export const design = {
     subheadingTxt: "DESIGN",
     headingTxt: "A memorable arrival experience",
@@ -13,4 +15,5 @@ export const design = {
         {title: "MEETING ROOM", src: ""},
         {title: "COURTYARD", src: ""},
     ],
+    assets: _designAssets
 }

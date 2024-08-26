@@ -1,3 +1,4 @@
 import { Hero } from './hero'
+import { Page } from './page'
 
-export { Hero }
+export { Hero, Page }

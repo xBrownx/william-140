@@ -1,39 +1,44 @@
 import React, {forwardRef} from "react";
-import img from "../../assets/img/02-Home-Final.jpg";
 import {TextButtonVariant} from "../Styled/Buttons/Buttons.styled";
-import {ParallaxImg} from "../organisms/ParallaxComponents";
-import * as Styles from "../Pages/02-Home/Home.styled";
-import * as CONSTANTS from '../Pages/02-Home/Home.constants'
-import {HomeImg as Image} from "../Styled/Images";
-import {Page} from "../templates/page";
-import {SplitScreen, Column} from '../molecules'
-import {Paragraph, Subheading} from "../atoms";
+import { home as CONSTANTS } from '../constants'
+import {ImgWrapper} from "../Pages/02-Home/Home.styled";
+
+import { Paragraph, Subheading } from "../atoms";
+import { SplitScreen, Column, ParallaxImg } from '../molecules'
+import { Page } from "../templates";
+
+
 
 export const Home = forwardRef(function ({id, onDiscoverClick}, ref) {
+    const assets = CONSTANTS.assets
     return (
-        <Page $fullScreen>
+        <Page
+            pageRef={ref}
+            $fullScreen
+        >
             <SplitScreen $padding>
-                <Styles.LeftContainer id="home-left">
-                    <Image>
-                        <ParallaxImg src={img} alt={""}/>
-                    </Image>
-                </Styles.LeftContainer>
+                <ImgWrapper
+                    width={assets.hero.width}
+                    height={assets.hero.height}
+                >
+                    <ParallaxImg image={assets.hero}/>
+                </ImgWrapper>
                 <Column
                     $centreY
                     paddingInlineBlock={{inline: 16}}
                     gap={32}
                 >
                     <Subheading $variant>
-                        {CONSTANTS.headingText}
+                        {CONSTANTS.headingTxt}
                     </Subheading>
                     <Paragraph size={36} weight={300}>
-                        {CONSTANTS.paragraphText}
+                        {CONSTANTS.paragraphTxt}
                     </Paragraph>
                     <TextButtonVariant
                         $secondary
                         onClick={onDiscoverClick}
                     >
-                        {CONSTANTS.buttonText}
+                        {CONSTANTS.buttonTxt}
                     </TextButtonVariant>
                 </Column>
             </SplitScreen>

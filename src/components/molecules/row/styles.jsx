@@ -11,4 +11,8 @@ export const StyledRow = styled.div`
     ${props => props.gap && css`
         ${S.gap.height(props.gap)};
     `};
+    
+    ${props => props.spaceBetween && css`
+        justify-content: space-between;
+    `}
 `
