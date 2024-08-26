@@ -1,5 +1,5 @@
-import {ReactComponent as RatingOne} from '../../../assets/svg/rating_1.svg'
-import {ReactComponent as RatingTwo} from '../../../assets/svg/rating_2.svg'
+import {ReactComponent as RatingOne} from '../../../assets/svg/Availability-Rating-01.svg'
+import {ReactComponent as RatingTwo} from '../../../assets/svg/Availability-Rating-02.svg'
 import {Column} from "../../molecules";
 import {Paragraph} from "../../atoms";
 import {Wrapper} from "./styles";

@@ -4,19 +4,25 @@ import React from "react";
 import {Container, Wrapper} from "./styles";
 
 export const LevelButtons = props => {
-    const buttons = [...availability.buttons].reverse();
-    const buttonsTop = [...buttons].slice(0, 17)
-    const buttonsBottom = [...buttons].slice(17)
+    const btnsObject = availability.buttons;
+    const btnsArr = Object.keys(btnsObject).map(key => {
+        return {key: key, lvl: btnsObject[key].lvl, isActive: btnsObject[key].isActive,}
+    });
+
+    const buttons = [...btnsArr].reverse();
+    const buttonsTop = [...buttons].slice(0, 17);
+    const buttonsBottom = [...buttons].slice(17);
+
     return (
         <Container>
             <Wrapper $top>
                 {buttonsTop.map((item) => {
                         return (
                             <LevelButton
+                                key={item.key}
                                 active={item.isActive}
-                                key={item.lvl}
                                 item={item}
-                                hoverIdx={props.hoverIdx}
+                                hoverKey={props.hoverKey}
                                 setHover={props.setHover}
                                 onLevelClick={props.onLevelClick}
                             >
@@ -31,10 +37,10 @@ export const LevelButtons = props => {
                 {buttonsBottom.map((item) => {
                         return (
                             <LevelButton
+                                key={item.key}
                                 active={item.isActive}
-                                key={item.lvl}
                                 item={item}
-                                hoverIdx={props.hoverIdx}
+                                hoverKey={props.hoverKey}
                                 setHover={props.setHover}
                                 onLevelClick={props.onLevelClick}
                             >

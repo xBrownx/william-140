@@ -1,59 +1,30 @@
-import {Container, Wrapper} from "./styles";
-import {availability} from "../../constants";
-import {LevelVector} from "../levelVector";
+import { Container, VectorWrapper } from "./styles";
+import { availability } from "../../constants";
 
 export const LevelVectors = props => {
+    const lvlVectors = availability.assets.lvlVectors;
+    const vectors = Object.keys(lvlVectors).map(key => {
+        return {key: key, vector: lvlVectors[key].vector};
+    });
 
-    const buttons = [...availability.buttons].reverse();
-    const buttonsTop = [...buttons].slice(0, 17)
-    const buttonsBottom = [...buttons].slice(17)
 
     return (
         <Container>
-            {/*<Wrapper $top>*/}
-                {buttons.map((item) => {
+                {vectors.map((item) => {
                         return (
-                            <LevelVector
-                                $active={item.isActive}
-                                key={item.lvl}
-                                idx={item.lvl}
-                                item={item}
-                                offset={item.offset}
-                                // top={item.vectorTop}
-                                // left={item.vectorLeft}
-                                // height={item.vectorHeight}
-                                hoverIdx={props.hoverIdx}
-                                setHover={props.setHover}
-                                onLevelClick={props.onLevelClick}
+                            <VectorWrapper
+                                key={item.key}
+                                $hover={item.key === props.hoverKey}
+                                offset={item.vector.positionTop}
+                                onMouseEnter={() => props.setHover(item.key)}
+                                onMouseLeave={() => props.setHover(null)}
+                                onClick={() => props.onLevelClick(item.key)}
                             >
-                                {item.lvlVector}
-                            </LevelVector>
+                                <item.vector.src />
+                            </VectorWrapper>
                         );
                     }
                 )}
-            {/*</Wrapper>*/}
-            {/*<Wrapper $bottom>*/}
-            {/*    {buttonsBottom.map((item) => {*/}
-            {/*            return (*/}
-            {/*                <LevelVector*/}
-            {/*                    $active={item.isActive}*/}
-            {/*                    key={item.lvl}*/}
-            {/*                    idx={item.lvl}*/}
-            {/*                    item={item}*/}
-            {/*                    offset={item.offset}*/}
-            {/*                    // top={item.vectorTop}*/}
-            {/*                    // left={item.vectorLeft}*/}
-            {/*                    // height={item.vectorHeight}*/}
-            {/*                    hoverIdx={props.hoverIdx}*/}
-            {/*                    setHover={props.setHover}*/}
-            {/*                    onLevelClick={props.onLevelClick}*/}
-            {/*                >*/}
-            {/*                    {item.lvlVector}*/}
-            {/*                </LevelVector>*/}
-            {/*            );*/}
-            {/*        }*/}
-            {/*    )}*/}
-            {/*</Wrapper>*/}
         </Container>
     );
 }

@@ -9,6 +9,26 @@ export const Container = styled.div`
     padding: 46.7% 0 0 33.81%;
 `
 
-export const Wrapper = styled.div`
-    width: 100%;
+export const VectorWrapper = styled.div`
+    position: absolute;
+    z-index: 10;
+    width: 51.45%;
+    margin: ${props => props.offset}% 0 0 0;
+    mix-blend-mode: overlay;
+
+    svg {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        
+        transition: opacity 200ms;
+        transition-timing-function: linear;
+            
+        ${props => props.$hover && css`
+            opacity: 1;
+            cursor: pointer;
+        `}
+
+
+    }
 `

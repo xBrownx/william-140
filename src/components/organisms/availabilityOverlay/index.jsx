@@ -1,43 +1,44 @@
 import React, {useState} from "react";
-import { LevelButtons, LevelVectors } from "../../molecules";
 import {Container} from "./styles";
-import {AvailabilityModal} from "../availabilityModal";
+import { LevelButtons, LevelVectors } from "../../molecules";
+import { AvailabilityModal } from "../availabilityModal";
 
 export const AvailabilityOverlay = props => {
-    const [isHoverIdx, setIsHoverIdx] = useState(null)
+    const [hoverKey, setHoverKey] = useState(null)
     const [isModalOpen, setModalOpen] = React.useState(false);
 
-    const [modalItem, setModalItem] = React.useState(null);
+    const [modalKey, setModalKey] = React.useState(null);
 
-    const setHover = (idx) => {
-        setIsHoverIdx(idx);
+    const setHover = (key) => {
+        console.log(key);
+        setHoverKey(key);
     }
 
     const closeModal = () => {
         setModalOpen(false);
     }
 
-    const onLevelClick = (modal) => {
-        setModalItem(modal);
-        if(modalItem !== null) setModalOpen(true);
+    const onLevelClick = (key) => {
+        setModalKey(key);
+        if(modalKey !== null) setModalOpen(true);
     }
-
 
     return (
         <Container>
             <AvailabilityModal
                 $open={isModalOpen}
-                modalItem={modalItem}
-                setModal={setModalItem}
+                modalKey={modalKey}
+                setModal={setModalKey}
                 closeModal={closeModal}
             />
+
             <LevelButtons
-                hoverIdx={isHoverIdx}
+                hoverKey={hoverKey}
                 setHover={setHover}
                 onLevelClick={onLevelClick}
             />
             <LevelVectors
-                hoverIdx={isHoverIdx}
+                hoverKey={hoverKey}
                 setHover={setHover}
                 onLevelClick={onLevelClick}
             />

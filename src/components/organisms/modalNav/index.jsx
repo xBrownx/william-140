@@ -7,34 +7,46 @@ import modal from "../../Pages/08-Availability/Modal/Modal";
 
 
 export const ModalNav = props => {
-    const items = availability.buttons;
-    const activeLevels = items.filter(item => item.isActive ? item : null).reverse();
+    const itemsObj = availability.buttons;
+    const itemsArr = Object.keys(itemsObj).map(key => {
+        return {key: key, lvl: itemsObj[key].lvl, isActive: itemsObj[key].isActive}
+    })
+
+    const activeLevels = itemsArr.filter(item => item.isActive ? item : null).reverse();
+
+    const activeIdx = () => {
+        return activeLevels.findIndex(obj => obj.key === props.activeModalKey)
+    }
+
+    const getIdx = (key) => {
+        return activeLevels.findIndex(obj => obj.key === key)
+    }
 
     const navigateUp = () => {
-        const activeIdx = activeLevels.indexOf(props.activeModal);
-        if (activeIdx > 0) {
-            props.setModal(activeLevels[activeIdx - 1])
+
+        if (activeIdx() > 0) {
+            props.setModal(activeLevels[activeIdx() - 1].key)
         }
     };
+
     const navigateDn = () => {
-        const activeIdx = activeLevels.indexOf(props.activeModal);
-        if (activeIdx < activeLevels.length - 1) {
-            props.setModal(activeLevels[activeIdx + 1])
+        if (activeIdx() < activeLevels.length - 1) {
+            props.setModal(activeLevels[activeIdx() + 1].key)
         }
     }
 
     const isVisible = (item) => {
-        const activeIdx = activeLevels.indexOf(props.activeModal);
-        const idx = activeLevels.indexOf(item);
 
-        if(activeIdx < 3 ) {
+        const idx = getIdx(item.key);
+
+        if(activeIdx() < 3 ) {
             return idx < 5
         }
-        else if (activeIdx > activeLevels.length - 4) {
+        else if (activeIdx() > activeLevels.length - 4) {
             return idx > activeLevels.length - 6
         }
         else {
-            return idx > activeIdx - 3 && idx < activeIdx + 3
+            return idx > activeIdx() - 3 && idx < activeIdx() + 3
         }
 
     }
@@ -46,7 +58,7 @@ export const ModalNav = props => {
                 {activeLevels.map(item => {
                     return (
                         <Button
-                            $active={props.activeModal === item}
+                            $active={props.activeModalKey === item.key}
                             $visible={isVisible(item)}
                             square={64}
                             fontSize={16}

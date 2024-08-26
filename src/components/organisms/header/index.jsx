@@ -21,7 +21,6 @@ export const Header = props => {
                         {name: "Agencies", nav: pageRefs.agency},
                         {name: "Enquiry", nav: pageRefs.enquire},
                     ]}
-
                 >
                 </NavList>
             </S.NavigationWrapper>

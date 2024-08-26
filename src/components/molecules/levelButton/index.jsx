@@ -7,10 +7,10 @@ export const LevelButton = props => {
     return (
             <NumberButton
                 $active={props.active}
-                $isHover={props.item.lvl === props.hoverIdx}
-                onMouseEnter={() => props.setHover(props.item.lvl)}
+                $isHover={props.item.key === props.hoverKey}
+                onMouseEnter={() => props.setHover(props.item.key)}
                 onMouseLeave={() => props.setHover(null)}
-                onClick={() => props.onLevelClick(props.item)}
+                onClick={() => props.onLevelClick(props.item.key)}
             >
                 {props.children}
             </NumberButton>

@@ -3,12 +3,14 @@ import {ModalNav} from "../modalNav";
 import React, {useState} from "react";
 import {Tenancy, TenancyDetails, Title} from "./styles";
 import {Link, Paragraph} from "../../atoms";
+import {availability} from "../../constants";
 
 export const AvailabilityModal = props => {
-    const level = props.modalItem;
+    const activeModal = availability.buttons[props.modalKey];
+    const lvlVectors = availability.assets.lvlVectors;
     const [tenancy, setTenancy] = useState(0)
 
-    if(props.modalItem === null) return;
+    if(props.modalKey === null) return;
     return (
         <ModalPane
             $open={props.$open}
@@ -19,12 +21,12 @@ export const AvailabilityModal = props => {
                 gap={60}
             >
                 <ModalNav
-                    activeModal={level}
+                    activeModalKey={props.modalKey}
                     setModal={props.setModal}
                 />
                 <Column gap={16}>
                     <Title>
-                        Level {level.lvl ? level.lvl : "error"}
+                        Level {activeModal.lvl ? activeModal.lvl : "error"}
                     </Title>
                     <Row gap={16}>
                         <Link
@@ -44,7 +46,7 @@ export const AvailabilityModal = props => {
                     </Row>
                     <Row gap={34}>
                         <Tenancy>
-                            {tenancy === 0 ? level.tenancyOne : level.tenancyTwo}
+                            {lvlVectors[props.modalKey].tenancy[tenancy].src}
                         </Tenancy>
                         <Column $flex gap={16}>
                             <Paragraph $secondary size={14}>
