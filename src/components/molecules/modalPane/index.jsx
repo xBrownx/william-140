@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {BackgroundOverlay, CloseButtonWrapper, Container, ModalWindow} from "./styles";
-import {ReactComponent as Close} from "../../../assets/icons/close.svg";
+import {ReactComponent as Close} from "../../../assets/icons/Close.svg";
 
 
 export const ModalPane = props => {

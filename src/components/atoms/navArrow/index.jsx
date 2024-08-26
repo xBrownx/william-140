@@ -1,4 +1,4 @@
-import { ReactComponent as Arrow } from '../../../assets/svg/arrow.svg'
+import { ReactComponent as Arrow } from '../../../assets/icons/Up-Arrow.svg'
 import {Wrapper} from "./styles";
 
 export const NavArrow = props => {

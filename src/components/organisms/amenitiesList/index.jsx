@@ -1,21 +1,24 @@
 import * as S from './styles'
 import {IconLink} from "../../molecules";
-import { Paragraph } from '../../atoms'
+import {Paragraph} from '../../atoms'
+import {amenities} from '../../constants'
+
 export const AmenitiesList = props => {
-    const items = props.items;
+    const menuItems = amenities.menuItems;
+    const icons = amenities.assets.icons;
+
+
     return (
         <S.StyledUl>
-            {items.map(item => {
+            {menuItems.map((item, idx) => {
                 return (
-                    <>
-                        {item.Icon &&
-                            <S.StyledLi key={item.name}>
-                                <IconLink Icon={item.Icon}>
-                                    <Paragraph $secondary $size16>{item.txt}</Paragraph>
-                                </IconLink>
-                            </S.StyledLi>
-                        }
-                    </>
+                    <S.StyledLi key={item.txt}>
+                        <IconLink Icon={icons[idx].src} idx={idx} onHover={props.onHover}>
+                            <Paragraph $secondary $size16>{item.txt}</Paragraph>
+                        </IconLink>
+                    </S.StyledLi>
+
+
                 );
             })}
         </S.StyledUl>

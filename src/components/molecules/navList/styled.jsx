@@ -8,6 +8,8 @@ import {
 export const StyledUl = styled.ul`
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     ${S.gap.width(32)};
     
     ${M.md`

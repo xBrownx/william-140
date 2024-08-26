@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import {Container, StyledVideo} from "./styles";
-import video from "../../../assets/vid/01-Landing.mp4";
+import video from "../../../assets/vid/Landing.mp4";
 import {LandingTitleAnimation} from "../../organisms";
 
 export const BackgroundVideo = props => {

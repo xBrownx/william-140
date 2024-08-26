@@ -1,8 +1,8 @@
-import JamPap from "../../../assets/svg/1-James-Pappas.svg";
-import HamSut from "../../../assets/svg/2-Hamish-Sutherland.svg";
-import GeoMur from "../../../assets/svg/3-Georgina-Murray.svg";
-import MicDar from "../../../assets/svg/4-Michael-Darvell.svg";
-import ShaBur from "../../../assets/svg/5-Shane-Burns.svg";
+import JamPap from "../../../assets/svg/Agency-James-Pappas.svg";
+import HamSut from "../../../assets/svg/Agency-Hamish-Sutherland.svg";
+import GeoMur from "../../../assets/svg/Agency-Georgina-Murray.svg";
+import MicDar from "../../../assets/svg/Agency-Michael-Darvell.svg";
+import ShaBur from "../../../assets/svg/Agency-Shane-Burns.svg";
 
 import React from "react";
 

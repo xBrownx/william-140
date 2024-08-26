@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import * as STYLED from "../../../Styled/GlobalStyles"
-import {ReactComponent as Arrow} from "../../../../assets/icons/Arrow.svg";
+import {ReactComponent as Arrow} from "../../../../assets/icons/Down-Arrow.svg";
 
 export const ModalNav = ({idx, items, onSelectLevel}) => {
     const [lvlNum, setLvlNum] = React.useState(idx);

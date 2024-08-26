@@ -3,7 +3,7 @@ import * as Styled from "../Pages/01-Landing/Landing.styled";
 import { ArrowButton } from "../Styled/Buttons/Buttons.styled";
 import { Page } from "../templates";
 import { BackgroundVideo } from "../molecules";
-import video from '../../assets/vid/01-Landing.mp4'
+import video from '../../assets/vid/Landing.mp4'
 import { LandingTitleAnimation } from "../organisms";
 
 export const Landing = forwardRef(function ({id, scrollTo}, ref) {

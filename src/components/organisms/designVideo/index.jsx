@@ -2,8 +2,8 @@ import {ButtonWrapper, Container, ListWrapper, MapWrapper} from "./styles";
 import {PoppingLinkList, Row} from "../../molecules";
 import {design as CONSTANTS} from '../../constants'
 import {StyledButton} from "../../atoms/button/styles";
-import {ReactComponent as MainEntry} from '../../../assets/svg/main entry.svg'
-import { ReactComponent as Play } from '../../../assets/svg/play_arrow.svg'
+import {ReactComponent as MainEntry} from '../../../assets/svg/Design-Main-Entry.svg'
+import { ReactComponent as Play } from '../../../assets/icons/Play.svg'
 export const DesignVideo = props => {
     return (
         <Container>

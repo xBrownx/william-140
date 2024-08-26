@@ -1,6 +1,6 @@
 import React, {forwardRef, useState} from 'react';
 import {FadeCarousel} from "../organisms/FadeCarousel/FadeCarousel";
-import {amenities as CONSTANTS} from "../constants/Amenities";
+import { amenities } from '../constants'
 import * as Styled from "../Pages/07-Amenities/Amenities.styled";
 import {AmenitiesList} from '../organisms';
 import {Page} from "../templates/page";
@@ -8,8 +8,8 @@ import {PageTitle, SplitScreen} from "../molecules";
 
 
 export const Amenities = forwardRef(function ({id,}, ref) {
-    const amenitiesItems = CONSTANTS.menuItems;
-    const [activeIdx, setActiveIdx] = useState(0);
+    const assets = amenities.assets.carousel;
+    const [activeIdx, setActiveIdx] = useState(7);
 
     const handleSlideChange = (idx) => {
         setActiveIdx(idx);
@@ -24,20 +24,16 @@ export const Amenities = forwardRef(function ({id,}, ref) {
             <SplitScreen $padding>
                 <Styled.AmenitiesLeftContainer id="left-container">
                     <PageTitle $secondary>
-                        {CONSTANTS.subheadingTxt}
-                        {CONSTANTS.headingTxt}
+                        {amenities.subheadingTxt}
+                        {amenities.headingTxt}
                     </PageTitle>
-                    <AmenitiesList items={amenitiesItems}/>
-                    {/*<AmenitiesList*/}
-                    {/*    amenitiesItems={amenitiesItems}*/}
-                    {/*    handleSlideChange={handleSlideChange}*/}
-                    {/*/>*/}
+                    <AmenitiesList onHover={handleSlideChange}/>
                 </Styled.AmenitiesLeftContainer>
                 <Styled.AmenitiesRightContainer id="right-container">
                     <Styled.ImgContainer>
                         <FadeCarousel
                             activeIdx={activeIdx}
-                            carouselItems={amenitiesItems}
+                            carouselItems={assets}
                         />
                     </Styled.ImgContainer>
                 </Styled.AmenitiesRightContainer>

@@ -1,7 +1,7 @@
 import React, {forwardRef} from 'react';
-import {ReactComponent as OpenIcon} from "../../assets/icons/Open-Icon.svg";
+import {ReactComponent as OpenIcon} from "../../assets/icons/Open.svg";
 import * as CONSTANTS from '../Pages/11-Agency/Agency.constants'
-import imgLobby from '../../assets/img/1-Lobby.png';
+import imgLobby from '../../assets/img/Agency-Lobby.png';
 import { SplitScreen } from '../molecules'
 import styled from "styled-components";
 

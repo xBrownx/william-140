@@ -1,9 +1,13 @@
 import {NavList} from "../../molecules/navList";
 import {LogoInline} from "../../atoms";
 import * as S from './styles'
+import { header } from '../../constants'
 
 export const Header = props => {
-    const pageRefs = props.pageRefs
+    const pageRefs = props.pageRefs;
+    const links = header.links.map((link) => {
+        return {...link, route: pageRefs[link.key]}
+    })
     return (
         <S.Container>
             <S.LogoWrapper>
@@ -12,15 +16,7 @@ export const Header = props => {
             <S.NavigationWrapper>
                 <NavList
                     scrollTo={props.scrollTo}
-                    links={[
-                        {name: "Location", nav: pageRefs.location},
-                        {name: "Design", nav: pageRefs.design},
-                        {name: "Amenities", nav: pageRefs.amenities},
-                        {name: "Availability", nav: pageRefs.availability},
-                        {name: "History", nav: pageRefs.history},
-                        {name: "Agencies", nav: pageRefs.agency},
-                        {name: "Enquiry", nav: pageRefs.enquire},
-                    ]}
+                    links={links}
                 >
                 </NavList>
             </S.NavigationWrapper>

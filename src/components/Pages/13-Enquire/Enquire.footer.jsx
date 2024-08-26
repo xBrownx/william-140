@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactComponent as FooterLogo} from "../../../assets/svg/140W_Logo_RGB_Stacked_White.svg";
+import {ReactComponent as FooterLogo} from "../../../assets/svg/Footer-Logo.svg";
 import styled from "styled-components";
 
 export const EnquireFooter = () => {

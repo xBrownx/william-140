@@ -1,7 +1,7 @@
-import video from "../../../assets/vid/10-History.mp4";
+import video from "../../../assets/vid/History.mp4";
 import React, {useRef, useState} from "react";
 import styled from "styled-components";
-import placeholder from "../../../assets/img/10-History-Placeholder.png"
+import placeholder from "../../../assets/img/History-Placeholder.png"
 import {media} from '../../Styled/Media'
 import * as Padding from '../../Styled/Padding'
 export const HistoryVideo = () => {

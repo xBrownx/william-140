@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import img from "../../assets/img/08-Availability-02.png";
+import img from "../../assets/img/Availability-02.png";
 import * as CONSTANTS from '../Pages/08-Availability/Availability.constants'
 import {BackgroundContainer, PageTitle} from "../molecules";
 import {Page} from "../templates/page";

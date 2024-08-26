@@ -1,10 +1,10 @@
 import React, {Children, cloneElement} from 'react';
 import * as Styled from './Modal.styled';
 import {floorItems} from '../Availability.constants'
-import {ReactComponent as Close} from "../../../../assets/icons/close.svg";
+import {ReactComponent as Close} from "../../../../assets/icons/Close.svg";
 import styled, {css} from 'styled-components';
 import * as STYLED from "../../../Styled/GlobalStyles"
-import {ReactComponent as Arrow} from "../../../../assets/icons/Arrow.svg";
+import {ReactComponent as Arrow} from "../../../../assets/icons/Down-Arrow.svg";
 import {ModalProvider, useModal} from "./Modal.context";
 
 

@@ -1,7 +1,7 @@
-import thirdSpace01 from "../../../assets/img/08-Availability-LS-01.jpg"
-import thirdSpace02 from "../../../assets/img/08-Availability-LS-02.jpg"
-import thirdSpace03 from "../../../assets/img/08-Availability-LS-02.jpg"
-import thirdSpace04 from "../../../assets/img/08-Availability-LS-02.jpg"
+import thirdSpace01 from "../../../assets/img/Availability-LS-01.jpg"
+import thirdSpace02 from "../../../assets/img/Availability-LS-02.jpg"
+import thirdSpace03 from "../../../assets/img/Availability-LS-02.jpg"
+import thirdSpace04 from "../../../assets/img/Availability-LS-02.jpg"
 import React from "react";
 
 export const subHeadingText = "AVAILABILITY"

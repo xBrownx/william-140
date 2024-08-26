@@ -2,12 +2,12 @@ import _svgLocationCarousel01 from './svg/Location-Carousel-1.svg'
 import _svgLocationCarousel02 from './svg/Location-Carousel-2.svg'
 import _svgLocationCarousel03 from './svg/Location-Carousel-3.svg'
 import _svgLocationCarousel04 from './svg/Location-Carousel-4.svg'
-import {ReactComponent as _icnLocationIcon01} from './icons/05-Location-01-FB.svg'
-import {ReactComponent as _icnLocationIcon02} from './icons/05-Location-02-Retail.svg'
-import {ReactComponent as _icnLocationIcon03} from './icons/05-Location-03-Trains.svg'
-import {ReactComponent as _icnLocationIcon04} from './icons/05-Location-04-Hotels.svg'
-import {ReactComponent as _icnLocationIcon05} from './icons/05-Location-05-Trams.svg'
-import {ReactComponent as _icnLocationIcon06} from './icons/05-Location-06-Access.svg'
+import {ReactComponent as _icnLocationIcon01} from './icons/Location-01-FB.svg'
+import {ReactComponent as _icnLocationIcon02} from './icons/Location-02-Retail.svg'
+import {ReactComponent as _icnLocationIcon03} from './icons/Location-03-Trains.svg'
+import {ReactComponent as _icnLocationIcon04} from './icons/Location-04-Hotels.svg'
+import {ReactComponent as _icnLocationIcon05} from './icons/Location-05-Trams.svg'
+import {ReactComponent as _icnLocationIcon06} from './icons/Location-06-Access.svg'
 
 export const _locationAssets = {
     carousel: [
