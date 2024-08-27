@@ -1,6 +1,6 @@
 import {StyledUl} from "./styled";
 import {StyledLink} from "../../atoms/link/styles";
-import {TextButtonVariant} from "../../Styled/Buttons/Buttons.styled";
+import {Button} from "../../atoms";
 
 export const NavList = props => {
     const links = props.links
@@ -12,9 +12,9 @@ export const NavList = props => {
                     onClick={() => props.scrollTo(link.route)}
                 >
                     {link.type === "link" ? link.txt :
-                        <TextButtonVariant>
+                        <Button $secondary>
                             {link.txt}
-                        </TextButtonVariant>
+                        </Button>
                     }
                 </StyledLink>
             ))}

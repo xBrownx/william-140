@@ -6,16 +6,18 @@ export const Container = styled.div`
     z-index: 2;
     will-change: all;
     transition: all 450ms;
-    ${props => props.$isHover && props.$active && css`
-        padding-left: 50px;
-        cursor: pointer;
-    `};
     width: fit-content;
+    ${props => props.$isHover && props.$active && css`
+        cursor: pointer;
+        ${Wrapper} {
+            transform: translateX(50px);
+        }
+    `};
     
 `
 export const Wrapper = styled.div`
     transition: all 200ms ease;
-    ${S.square.width(30)};
+    ${S.squareTwo(30)};
     ${F.size(14)};
     ${F.family.secondaryLight};
     ${C.font.paragraphSecondary};
@@ -28,6 +30,8 @@ export const Wrapper = styled.div`
         font-weight: 700;
         ${C.button.primary};
     `}
+    
+     
     
     
     

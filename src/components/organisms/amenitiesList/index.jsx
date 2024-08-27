@@ -1,7 +1,7 @@
 import * as S from './styles'
 import {IconLink} from "../../molecules";
 import {Paragraph} from '../../atoms'
-import {amenities} from '../../constants'
+import {amenities} from '../../../constants'
 
 export const AmenitiesList = props => {
     const menuItems = amenities.menuItems;

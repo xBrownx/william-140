@@ -23,6 +23,6 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
     ${props=> props.$row && css`
-        
+        width: 75%;
     `};
 `

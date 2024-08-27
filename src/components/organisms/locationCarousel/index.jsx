@@ -1,9 +1,9 @@
-import {CarouselContainer} from "../../Pages/05-Location/Location.styled";
-import {FadeCarousel} from "../FadeCarousel/FadeCarousel";
-import {CarouselMenu} from "../FadeCarousel/CarouselMenu";
-import {Wrapper} from "./styles";
-import { location } from '../../constants'
+import { FadeCarousel } from "../../molecules/fadeCarousel";
+import { CarouselMenu } from "../../molecules/fadeCarousel/CarouselMenu";
+import { Wrapper } from "./styles";
+import { location } from '../../../constants'
 import {useState} from "react";
+import {Container} from "../../molecules";
 
 export const LocationCarousel = props => {
     const [activeIdx, setActiveIdx] = useState(0);
@@ -12,11 +12,11 @@ export const LocationCarousel = props => {
     }
     return (
         <Wrapper>
-            <CarouselContainer id="location-carousel-container">
+            <Container $imgCover>
                 <FadeCarousel
                     activeIdx={activeIdx}
                     carouselItems={location.assets.carousel}/>
-            </CarouselContainer>
+            </Container>
             <CarouselMenu
                 carouselItems={location.menuItems}
                 icons={location.assets.icons}

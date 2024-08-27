@@ -12,9 +12,11 @@ export const StyledHeading = styled.h1`
         display: flex;
         justify-content: ${props.justify};
     `}
+    opacity: 0.7
     
     ${props => props.$clone && css`
-        color: #162425 !important;
+        z-index: 3;
+        color: black !important;
         opacity: 1 !important;
     `}
        

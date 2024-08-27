@@ -55,6 +55,10 @@ export const StyledPage = styled.section`
     ${props => props.paddingInlineBlock && css`
         ${S.padding.inlineBlock(props.paddingInlineBlock)};
     `}
+    
+    ${props => props.padding && css`
+        ${S.padding.__(props.padding)};
+    `}
 
 
 `

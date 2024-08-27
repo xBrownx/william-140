@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {buttonAnim} from "../../Styled/Buttons/Buttons.styled";
 import { Style as S } from '../../atoms/'
 export const StyledUl = styled.ul`
     ${S.flex.column};

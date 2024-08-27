@@ -10,7 +10,6 @@ export const AvailabilityOverlay = props => {
     const [modalKey, setModalKey] = React.useState(null);
 
     const setHover = (key) => {
-        console.log(key);
         setHoverKey(key);
     }
 

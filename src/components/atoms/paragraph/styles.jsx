@@ -36,5 +36,9 @@ export const StyledParagraph = styled.p`
     ${props => props.padding && css`
         ${S.padding.__(props.padding)}
     `}
+    
+    ${props => props.$noPStyle && css`
+        ${S.padding.none}
+    `}
 `
 

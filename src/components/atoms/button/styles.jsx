@@ -8,58 +8,62 @@ import {
 
 
 export const StyledButton = styled.button`
-    
+
     ${F.size(18)};
     ${F.family.secondaryRegular};
     ${S.borderRadius};
     ${S.margin.none};
-    ${S.flex.centre}
-    
-    ${props => props.width && css`
-        ${S.size.width(props.width)};
-        ${S.margin.none};
-        ${S.padding.none};
-    `};
-    
-    ${props => props.height && css`
-        ${S.size.height(props.height)};
-    `};
-    
-    ${props => props.fontSize && css`
-        ${F.size(props.fontSize)};
-    `};
-    
-    ${props => props.square && css`
-        ${S.size.square(props.square)};
-    `};
-    
-    ${props => props.fontSize && css`
-        ${F.size(props.fontSize)};
-    `};
-    
-    ${props => props.$secondary && css`
-        color: white;
-        border-color: white;
-    `};
-    
-    ${props => props.gap && css`
-        ${S.gap.width(props.gap)};
-    `}
+    ${S.flex.centre};
+    ${C.font.primary};
     
     background: transparent;
     border-width: 1px;
     border-style: solid;
+    border-color: #164A49;
     padding: 0.5em 1.5em;
     overflow: hidden;
     position: relative;
     width: fit-content;
     z-index: 1;
-    
+
+    ${props => props.width && css`
+        ${S.size.width(props.width)};
+        ${S.margin.none};
+        ${S.padding.none};
+    `};
+
+    ${props => props.height && css`
+        ${S.size.height(props.height)};
+    `};
+
+    ${props => props.fontSize && css`
+        ${F.size(props.fontSize)};
+    `};
+
+    ${props => props.square && css`
+        ${S.square(props.square)};
+    `};
+
+    ${props => props.fontSize && css`
+        ${F.size(props.fontSize)};
+    `};
+
+    ${props => props.$secondary && css`
+        color: white;
+        border-color: white;
+    `};
+
+    ${props => props.gap && css`
+        ${S.gap.width(props.gap)};
+    `}
+
+   
+
     &:hover {
         cursor: pointer;
         color: #FFF;
     }
-    
+
     &::after {
         content: "";
         background: #164A49;
@@ -81,6 +85,26 @@ export const StyledButton = styled.button`
         bottom: 0;
         transition: all 0.35s;
     }
-    
+
+    ${props => props.$variant && css`
+        &::after,  &:hover::after {
+            all: unset;
+        }
+        
+        &:hover {
+            cursor: pointer;
+            color: black;
+        }
+
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        ${S.size.height(51)};
+        color: #162425;
+        
+        background: white;
+
+    `}
+
 `
 

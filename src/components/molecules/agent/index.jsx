@@ -1,11 +1,13 @@
 import {Email, Name, Phone, StyledImg, Wrapper} from "./styles";
 import {Column} from "../column";
+import { Image } from "../../atoms";
 
 export const Agent = props => {
-    const {name, phone, email, img} = props.agent;
+    const {name, phone, email} = props.agent;
+    const img = props.img
     return (
         <Wrapper>
-            <StyledImg src={img} alt="Agent"/>
+            <Image {...img}/>
             <Column padding={{left: 8}}>
                 <Name>{name}</Name>
                 <Phone>

@@ -1,7 +1,7 @@
 import {NavList} from "../../molecules/navList";
 import {LogoInline} from "../../atoms";
 import * as S from './styles'
-import { header } from '../../constants'
+import { header } from '../../../constants'
 
 export const Header = props => {
     const pageRefs = props.pageRefs;

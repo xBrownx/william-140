@@ -1,6 +1,6 @@
 import {ButtonWrapper, Container, ListWrapper, MapWrapper} from "./styles";
 import {PoppingLinkList, Row} from "../../molecules";
-import {design as CONSTANTS} from '../../constants'
+import {design as CONSTANTS} from '../../../constants'
 import {StyledButton} from "../../atoms/button/styles";
 import {ReactComponent as MainEntry} from '../../../assets/svg/Design-Main-Entry.svg'
 import { ReactComponent as Play } from '../../../assets/icons/Play.svg'

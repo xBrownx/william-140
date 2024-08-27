@@ -1,3 +1,4 @@
+import background from "./img/Availability-02.png";
 import {ReactComponent as L11Vector} from "./svg/Availability-Vector-L11.svg";
 import {ReactComponent as L14Vector} from "./svg/Availability-Vector-L14.svg";
 import {ReactComponent as L18Vector} from "./svg/Availability-Vector-L18.svg";
@@ -14,8 +15,17 @@ import {ReactComponent as Tenancy01} from "./svg/Availability-Tenancy-01.svg";
 import {ReactComponent as Tenancy02} from "./svg/Availability-Tenancy-02.svg";
 import {ReactComponent as Rating01} from "./svg/Availability-Rating-01.svg";
 import {ReactComponent as Rating02} from "./svg/Availability-Rating-02.svg";
+import {ReactComponent as Download} from "./icons/Download.svg";
 
 export const _availabilityAssets = {
+    bgImg: {
+        key: "l11-vector",
+        src: background,
+        role: "presentation",
+        width: 1440,
+        height: 2072,
+        lazy: false,
+    },
     lvlVectors: {
         l11: {
             vector: {
@@ -32,16 +42,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
             ],
@@ -62,16 +72,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -92,16 +102,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -122,16 +132,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -152,16 +162,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -182,16 +192,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -212,16 +222,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -242,16 +252,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -272,16 +282,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -302,16 +312,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -332,16 +342,16 @@ export const _availabilityAssets = {
                     key: "tenancy-1",
                     src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
                     src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
@@ -360,40 +370,48 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: <Tenancy01 />,
+                    src: Tenancy01,
                     role: "presentation",
-                    width: 491,
-                    height: 77,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 },
                 {
                     key: "tenancy-2",
-                    src: <Tenancy02 />,
+                    src: Tenancy02,
                     role: "presentation",
-                    width: 0,
-                    height: 0,
+                    width: 264,
+                    height: 264,
                     lazy: false
                 }
             ]
         },
     },
-
-    ratings: [
-        {
+    icons: {
+        ratingOne: {
             key: "rating-1",
             src: Rating01,
             role: "presentation",
-            width: 0,
-            height: 0,
+            width: 136,
+            height: 19,
             lazy: false
         },
-        {
+        ratingTwo: {
             key: "rating-2",
             src: Rating02,
             role: "presentation",
-            width: 0,
-            height: 0,
+            width: 136,
+            height: 19,
             lazy: false
         },
-    ]
+        download: {
+            key: "download",
+            src: Download,
+            role: "presentation",
+            width: 24,
+            height: 24,
+            lazy: false
+        }
+    }
+
 }

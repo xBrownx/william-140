@@ -1,16 +1,27 @@
 import {Column, ModalPane, Row} from "../../molecules";
-import {ModalNav} from "../modalNav";
-import React, {useState} from "react";
+import {ModalNav} from "../../molecules/";
+import React, {useEffect, useState} from "react";
 import {Tenancy, TenancyDetails, Title} from "./styles";
 import {Link, Paragraph} from "../../atoms";
-import {availability} from "../../constants";
+import {availability} from "../../../constants";
 
 export const AvailabilityModal = props => {
+    const [tenancy, setTenancy] = useState(0)
+    const [TenancyVector, setTenancyVector] = useState(0);
     const activeModal = availability.buttons[props.modalKey];
     const lvlVectors = availability.assets.lvlVectors;
-    const [tenancy, setTenancy] = useState(0)
+    const setTenancyWithVector = (t) => {
+        setTenancyVector(lvlVectors[props.modalKey].tenancy[t].src);
+        setTenancy(t);
+    }
+    useEffect(() => {
+        console.log(lvlVectors[props.modalKey])
+        if(lvlVectors[props.modalKey])
+            setTenancyVector(lvlVectors[props.modalKey].tenancy[0].src)
+    }, [props.modalKey]);
 
     if(props.modalKey === null) return;
+
     return (
         <ModalPane
             $open={props.$open}
@@ -32,21 +43,21 @@ export const AvailabilityModal = props => {
                         <Link
                             $underlined
                             $active={tenancy === 0}
-                            onClick={() => setTenancy(0)}
+                            onClick={() => setTenancyWithVector(0)}
                         >
                             TENANCY 1
                         </Link>
                         <Link
                             $underlined
                             $active={tenancy === 1}
-                            onClick={() => setTenancy(1)}
+                            onClick={() => setTenancyWithVector(1)}
                         >
                             TENANCY 2
                         </Link>
                     </Row>
                     <Row gap={34}>
                         <Tenancy>
-                            {lvlVectors[props.modalKey].tenancy[tenancy].src}
+                            {TenancyVector ? <TenancyVector /> : null}
                         </Tenancy>
                         <Column $flex gap={16}>
                             <Paragraph $secondary size={14}>

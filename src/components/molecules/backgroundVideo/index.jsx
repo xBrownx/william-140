@@ -1,7 +1,6 @@
-import React, {useEffect, useRef} from "react";
-import {Container, StyledVideo} from "./styles";
-import video from "../../../assets/vid/Landing.mp4";
-import {LandingTitleAnimation} from "../../organisms";
+import React, { useEffect, useRef } from "react";
+import { Container, StyledVideo } from "./styles";
+import { LandingTitleAnimation } from "../../organisms";
 
 export const BackgroundVideo = props => {
     const videoRef = useRef(null);
@@ -28,9 +27,9 @@ export const BackgroundVideo = props => {
     });
     return (
         <Container>
-            <LandingTitleAnimation/>
+            <LandingTitleAnimation />
             <StyledVideo autoPlay loop muted controls={false} ref={videoRef}>
-                <source src={props.src} type="video/mp4"/>
+                <source src={props.src} type="video/mp4" />
             </StyledVideo>
         </Container>
     );

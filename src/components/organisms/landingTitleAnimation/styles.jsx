@@ -2,8 +2,6 @@ import styled, {css} from "styled-components";
 import { Style as S } from '../../atoms'
 
 export const Container = styled.div`
-    
-    
     z-index: 3;
     position: absolute;
     display: flex;
@@ -15,7 +13,7 @@ export const Container = styled.div`
     left: 0;
     
     ${S.gap.height(32)};
-    ${S.padding.__({right: 32, bottom: 32, left: 32})};
+    ${S.padding.__({right: 32, bottom: 41, left: 32})};
 
     
     ${props => props.$clone && css`

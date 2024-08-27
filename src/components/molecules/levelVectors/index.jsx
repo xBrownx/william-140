@@ -1,5 +1,5 @@
 import { Container, VectorWrapper } from "./styles";
-import { availability } from "../../constants";
+import { availability } from "../../../constants";
 
 export const LevelVectors = props => {
     const lvlVectors = availability.assets.lvlVectors;

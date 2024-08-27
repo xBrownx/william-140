@@ -5,7 +5,7 @@ import _imgLifestyleCarousel04 from "./img/Lifestyle-Carousel-4.png";
 import _imgLifestyleCarousel05 from "./img/Lifestyle-Carousel-5.png";
 import _imgLifestyleCarousel06 from "./img/Lifestyle-Carousel-6.png";
 import _imgLifestyleCarousel07 from "./img/Lifestyle-Carousel-7.png";
-import _imgLifestyleCarousel08 from "./img/Lifestyle-Carousel-1.png";
+import _imgLifestyleCarousel08 from "./img/Lifestyle-Carousel-8.png";
 
 
 export const _lifestyleAssets = {

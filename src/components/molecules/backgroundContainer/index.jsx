@@ -1,4 +1,3 @@
-import * as Styled from './styles'
 import {Container, InnerContainer} from "./styles";
 
 

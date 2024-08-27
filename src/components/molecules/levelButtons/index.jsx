@@ -1,4 +1,4 @@
-import {availability} from "../../constants";
+import {availability} from "../../../constants";
 import {LevelButton} from "../levelButton";
 import React from "react";
 import {Container, Wrapper} from "./styles";

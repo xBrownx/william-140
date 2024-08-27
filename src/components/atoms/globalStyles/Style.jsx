@@ -53,6 +53,7 @@ Style.flex = {
         align-items: center;
         justify-content: center;
     `
+
 }
 
 Style.fullscreen = css`
@@ -70,9 +71,10 @@ Style.size = {
     square:Calc.square,
 }
 
-Style.square = {
-    width: Calc.squareWidth,
-    height: Calc.squareHeight,
-}
+Style.square = Calc.square;
+Style.squareTwo = Calc.squareTwo;
+
+Style.position = Calc.position;
+
 
 

@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     height: 100%;
     gap: 40px;
     ${S.size.height(300)};
-    
+    max-width: unset !important;
 `
 
 

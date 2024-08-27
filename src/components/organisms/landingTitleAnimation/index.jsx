@@ -1,8 +1,9 @@
-import {Container, Title} from "./styles";
-import {landing} from '../../constants';
 import {motion} from "framer-motion";
-import {PageTitle} from "../../molecules";
+import {Container} from "./styles";
+import {landing} from '../../../constants';
 import {LandingTitle} from "../../atoms";
+
+
 
 export const LandingTitleAnimation = props => {
     const headings = landing.heading

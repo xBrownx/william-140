@@ -23,14 +23,25 @@ export const minHeight = (px) => css`min-height: ${pxToViewHeight(px)}vh;`;
 export const maxHeight = (px) => css`max-height: ${pxToViewHeight(px)}vh;`;
 
 export const square = (px) => {
-    const width = pxToViewWidth(px);
-    const height = pxToViewHeight(px);
-    const sq = Math.max(width, height);
+    const sq = Math.min(pxToViewWidth(px), pxToViewHeight(px));
+
     return css`
-        width: ${sq}vw;
-        height: ${sq}vh;
+        height: 0;
+        min-width: ${sq}vw;
+        padding-bottom: ${sq}vw;
     `;
 }
+
+export const squareTwo = (px) => {
+    const sq = Math.min(pxToViewWidth(px), pxToViewHeight(px));
+
+    return css`
+        height: ${sq}vw;
+        min-width: ${sq}vw;
+        padding-bottom: ${sq}vw;
+    `;
+}
+
 
 export const squareWidth = (px) => css`width: ${pxToViewWidth(px)}vw; height: ${pxToViewWidth(px)}vw;`;
 export const squareHeight = (px) => css`width: ${pxToViewHeight(px)}vh; height: ${pxToViewHeight(px)}vh;`;
@@ -94,3 +105,12 @@ export const gapX = (px) => css`gap:${pxToViewWidth(px)}vw;`;
 export const gapY = (px) => css`gap:${pxToViewHeight(px)}vh;`;
 
 export const fontSize = (px) => css`font-size: ${pxToFontSize(px)}vw;`;
+
+export const position = ({top='unset', right='unset', bottom='unset', left='unset'}) => {
+    return css`
+        top: ${top};
+        right: ${right};
+        bottom: ${bottom};
+        left: ${left};
+    `
+}
