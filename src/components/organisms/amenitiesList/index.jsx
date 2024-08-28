@@ -13,7 +13,7 @@ export const AmenitiesList = props => {
             {menuItems.map((item, idx) => {
                 return (
                     <S.StyledLi key={item.txt}>
-                        <IconLink Icon={icons[idx].src} idx={idx} onHover={props.onHover}>
+                        <IconLink Icon={icons[idx].src} idx={idx}>
                             <Paragraph $secondary $size16>{item.txt}</Paragraph>
                         </IconLink>
                     </S.StyledLi>

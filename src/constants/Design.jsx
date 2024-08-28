@@ -2,7 +2,7 @@ import {_designAssets} from "../assets";
 
 export const design = {
     subheadingTxt: "DESIGN",
-    headingTxt: <>A memorable<br/>arrival experience</>,
+    headingTxt: "A memorable\narrival experience",
     btnTxt: "Start Tour",
     menuItems: [
         {title: "MAIN ENTRY", src: ""},

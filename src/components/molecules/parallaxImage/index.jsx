@@ -13,10 +13,16 @@ export const ParallaxImg = props => {
         offset: ["start end", "end start"]
     });
 
-    const y1 = useTransform(
+    const offset = useTransform(
         scrollYProgress,
         [0, 0.25, 0.75, 1],
         ["-50%", "-25%", "25%", "50%"]
+    );
+
+    const scale = useTransform(
+        scrollYProgress,
+        [0, 0.4, 0.6, 1],
+        ["175%", "150%", "125%", "100%"]
     );
 
     return (
@@ -26,7 +32,7 @@ export const ParallaxImg = props => {
         >
             <StyledImg
                 as={motion.img}
-                style={{y: y1}}
+                style={{scale: scale}}
                 src={img.src}
                 alt={img.alt}
                 width={img.width}

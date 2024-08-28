@@ -1,12 +1,10 @@
-import {_availabilityAssets} from "../assets";
+import { _availabilityAssets } from "../assets";
 
 export const availability = {
     subheadingTxt: "AVAILABILITY",
     headingTxt: "Your future workplace",
-    paragraphTxt: <>
-        Discover a new home for your business at 140 William Street—where<br/>
-        connection and community thrive for today's and tomorrow's workforce.
-    </>,
+    paragraphTxt: "Discover a new home for your business at 140 William Street—where\n" +
+        "connection and community thrive for today's and tomorrow's workforce.",
     buttons: {
         l06: {lvl: 6, isActive: false},
         l07: {lvl: 7, isActive: false},

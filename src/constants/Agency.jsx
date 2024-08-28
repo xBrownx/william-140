@@ -2,8 +2,8 @@ import {_agencyAssets} from "../assets";
 
 export const agency = {
     headingTxt: "Agencies",
-    paragraphTxt: "If you'd like to inspect this property in person, please" +
-        "contact your preferred agent for further info or to arrange" +
+    paragraphTxt: "If you'd like to inspect this property in person, please\n" +
+        "contact your preferred agent for further info or to arrange\n" +
         "a private inspection.",
     subheadingTxt: ["KNIGHT FRANK", "COLLIERS"],
     agents: {

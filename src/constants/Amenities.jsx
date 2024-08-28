@@ -2,7 +2,7 @@ import {_amenitiesAssets} from "../assets";
 
 export const amenities = {
   subheadingTxt: "AMENITIES",
-  headingTxt: "Elite Services and Amenities",
+  headingTxt: "Elite Services and\nAmenities",
   menuItems: [
     {txt: 'Hotel style concierge'},
     {txt: 'Flexible space suitable for short term use'},
