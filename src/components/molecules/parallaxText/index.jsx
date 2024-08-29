@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef, useState } from "react";
+import { Wrapper, StyledSpan } from './styles'
 
 const DURATION = 0.20;
 const STAGGER = 0.025;
@@ -7,7 +8,8 @@ const STAGGER = 0.025;
 const TextSplit = ({children}) => {
 
     return children.split("").map((l, i) => (
-        <motion.span
+        <StyledSpan>
+            as={motion.span}
             variants={{
                 hidden: {
                     y: "100%",
@@ -21,11 +23,10 @@ const TextSplit = ({children}) => {
                 ease: "linear",
                 delay: STAGGER * i,
             }}
-            style={{display: "inline-block", overflow: "hidden"}}
             key={i}
         >
             {l === ' ' ? <>&nbsp;</> : l}
-        </motion.span>
+        </StyledSpan>
     ))
 
 
@@ -34,8 +35,8 @@ const TextSplit = ({children}) => {
 export const ParallaxText = ({children}) => {
     const lineSplit = children.split("\n");
     return lineSplit.map((line) => (
-        <motion.div
-            style={{whiteSpace: "pre-line", overflow: "hidden"}}
+        <Wrapper
+            as={motion.div}
             initial="hidden"
             whileInView="visible"
             viewport={{
@@ -44,7 +45,12 @@ export const ParallaxText = ({children}) => {
                 once: true
             }}
         >
-            <><TextSplit>{line}</TextSplit><br /></>
+            <>
+                <TextSplit>
+                    {line}
+                </TextSplit>
+                <br />
+            </>
 
         </motion.div>
     ));
