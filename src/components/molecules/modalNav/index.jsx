@@ -2,8 +2,11 @@ import { Button, Container } from "./styles";
 import { Column } from "../index";
 import { NavArrow } from "../../atoms";
 import {availability} from "../../../constants";
+import { useModalKeyContext } from "../../organisms/availabilityOverlay/context";
 
 export const ModalNav = props => {
+    const [modalKey, setModalKey] = useModalKeyContext();
+
     const itemsObj = availability.buttons;
     const itemsArr = Object.keys(itemsObj).map(key => {
         return {key: key, lvl: itemsObj[key].lvl, isActive: itemsObj[key].isActive}
@@ -12,7 +15,7 @@ export const ModalNav = props => {
     const activeLevels = itemsArr.filter(item => item.isActive ? item : null).reverse();
 
     const activeIdx = () => {
-        return activeLevels.findIndex(obj => obj.key === props.activeModalKey)
+        return activeLevels.findIndex(obj => obj.key === modalKey)
     }
 
     const getIdx = (key) => {
@@ -22,13 +25,13 @@ export const ModalNav = props => {
     const navigateUp = () => {
 
         if (activeIdx() > 0) {
-            props.setModal(activeLevels[activeIdx() - 1].key)
+            setModalKey(activeLevels[activeIdx() - 1].key)
         }
     };
 
     const navigateDn = () => {
         if (activeIdx() < activeLevels.length - 1) {
-            props.setModal(activeLevels[activeIdx() + 1].key)
+            setModalKey(activeLevels[activeIdx() + 1].key)
         }
     }
 
@@ -55,7 +58,7 @@ export const ModalNav = props => {
                 {activeLevels.map(item => {
                     return (
                         <Button
-                            $active={props.activeModalKey === item.key}
+                            $active={modalKey === item.key}
                             $visible={isVisible(item)}
                             square={64}
                             fontSize={16}

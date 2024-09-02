@@ -1,12 +1,13 @@
-import {availability} from "../../../constants";
-import {LevelButton} from "../levelButton";
+import { availability } from "../../../constants";
+import { LevelButton } from "../levelButton";
 import React from "react";
-import {Container, Wrapper} from "./styles";
+import { Container, Wrapper } from "./styles";
 
 export const LevelButtons = props => {
+
     const btnsObject = availability.buttons;
     const btnsArr = Object.keys(btnsObject).map(key => {
-        return {key: key, lvl: btnsObject[key].lvl, isActive: btnsObject[key].isActive,}
+        return { key: key, lvl: btnsObject[key].lvl, isActive: btnsObject[key].isActive, }
     });
 
     const buttons = [...btnsArr].reverse();
@@ -20,11 +21,7 @@ export const LevelButtons = props => {
                         return (
                             <LevelButton
                                 key={item.key}
-                                active={item.isActive}
                                 item={item}
-                                hoverKey={props.hoverKey}
-                                setHover={props.setHover}
-                                onLevelClick={props.onLevelClick}
                             >
                                 {item.lvl ? item.lvl : null}
                             </LevelButton>

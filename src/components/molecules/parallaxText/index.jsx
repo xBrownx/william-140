@@ -33,8 +33,8 @@ const TextSplit = ({children}) => {
 }
 
 export const ParallaxText = ({children}) => {
-    const lineSplit = children.split("\n");
-    return lineSplit.map((line) => (
+    //const lineSplit = children.split("\n");
+    return ( //lineSplit.map((line) =>
         <Wrapper
             as={motion.div}
             initial="hidden"
@@ -46,12 +46,12 @@ export const ParallaxText = ({children}) => {
             }}
         >
             <>
-                <TextSplit>
-                    {line}
-                </TextSplit>
+                {/*<TextSplit>*/}
+                    children
+                {/*</TextSplit>*/}
                 <br />
             </>
 
-        </motion.div>
-    ));
+        </Wrapper>
+    );//);
 }

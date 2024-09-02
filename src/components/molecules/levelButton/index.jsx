@@ -1,16 +1,20 @@
-import React, {useState} from 'react'
-import {LevelVector} from "../levelVector";
-import {NumberButton} from "../../atoms";
-import * as S from './styles'
+import React from 'react'
+import { NumberButton } from "../../atoms";
+import {
+    useHoverContext,
+    useModalStatusContext
+} from "../../organisms/availabilityOverlay/context";
 
 export const LevelButton = props => {
+    const [hoverKey, setHoverKey] = useHoverContext();
+    const [isModalOpen, onLevelClick] = useModalStatusContext();
     return (
             <NumberButton
-                $active={props.active}
-                $isHover={props.item.key === props.hoverKey}
-                hoverStart={() => props.setHover(props.item.key)}
-                hoverEnd={() => props.setHover(null)}
-                onClick={() => props.onLevelClick(props.item.key)}
+                $active={props.item.isActive}
+                $isHover={props.item.key === hoverKey}
+                hoverStart={() => setHoverKey(props.item.key)}
+                hoverEnd={() => setHoverKey(null)}
+                onClick={() => onLevelClick(props.item.key)}
             >
                 {props.children}
             </NumberButton>

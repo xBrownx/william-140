@@ -4,37 +4,39 @@ import React, {useEffect, useState} from "react";
 import {Tenancy, TenancyDetails, Title} from "./styles";
 import {Link, Paragraph} from "../../atoms";
 import {availability} from "../../../constants";
+import { useModalKeyContext, useModalStatusContext } from "../availabilityOverlay/context";
 
 export const AvailabilityModal = props => {
+    const [isModalOpen, onLevelClick] = useModalStatusContext();
+    const [modalKey, setModalKey] = useModalKeyContext();
+
     const [tenancy, setTenancy] = useState(0)
     const [TenancyVector, setTenancyVector] = useState(0);
-    const activeModal = availability.buttons[props.modalKey];
+    const activeModal = availability.buttons[modalKey];
     const lvlVectors = availability.assets.lvlVectors;
+
     const setTenancyWithVector = (t) => {
-        setTenancyVector(lvlVectors[props.modalKey].tenancy[t].src);
+        setTenancyVector(lvlVectors[modalKey].tenancy[t].src);
         setTenancy(t);
     }
     useEffect(() => {
-        console.log(lvlVectors[props.modalKey])
-        if(lvlVectors[props.modalKey])
-            setTenancyVector(lvlVectors[props.modalKey].tenancy[0].src)
-    }, [props.modalKey]);
+        console.log(lvlVectors[modalKey])
+        if(lvlVectors[modalKey])
+            setTenancyVector(lvlVectors[modalKey].tenancy[0].src)
+    }, [modalKey]);
 
-    if(props.modalKey === null) return;
+    if(modalKey === null) return;
 
     return (
         <ModalPane
-            $open={props.$open}
-            closeModal={props.closeModal}
+            $open={isModalOpen}
+            closeModal={() => onLevelClick(null)}
         >
             <Row
                 padding={{top: 62, left: 48, right: 48}}
                 gap={60}
             >
-                <ModalNav
-                    activeModalKey={props.modalKey}
-                    setModal={props.setModal}
-                />
+                <ModalNav />
                 <Column gap={16}>
                     <Title>
                         Level {activeModal.lvl ? activeModal.lvl : "error"}
