@@ -5,26 +5,27 @@ import { LandingTitleAnimation } from "../../organisms";
 export const BackgroundVideo = props => {
     const videoRef = useRef(null);
 
-    useEffect(() => {
-        let options = {
-            rootMargin: "0px",
-            threshold: [0.25, 0.75]
-        };
 
-        let handlePlay = (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    videoRef.current.play();
-                } else {
-                    videoRef.current.pause();
-                }
-            });
-        };
-
-        let observer = new IntersectionObserver(handlePlay, options);
-
-        observer.observe(videoRef.current);
-    });
+    // useEffect(() => {
+    //     let options = {
+    //         rootMargin: "0px",
+    //         threshold: [0.25, 0.75]
+    //     };
+    //
+    //     let handlePlay = (entries, observer) => {
+    //         entries.forEach((entry) => {
+    //             if (entry.isIntersecting) {
+    //                 videoRef.current.play();
+    //             } else {
+    //                 videoRef.current.pause();
+    //             }
+    //         });
+    //     };
+    //
+    //     let observer = new IntersectionObserver(handlePlay, options);
+    //
+    //     observer.observe(videoRef.current);
+    // });
     return (
         <Container>
             <LandingTitleAnimation />

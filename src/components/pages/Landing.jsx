@@ -1,22 +1,13 @@
-import React, { forwardRef, lazy, Suspense, useEffect, useState } from "react";
+import React, { forwardRef } from "react";
 import { landing as CONST } from '../../constants';
 import { ArrowButton } from '../atoms';
 import { BackgroundVideo, Container } from "../molecules";
 import { LandingTitleAnimation } from "../organisms";
 import { Page } from "../templates";
-import { wait } from "@testing-library/user-event/dist/utils";
-
-const module = () => import('../../assets/_landing')
-
 
 export const Landing = forwardRef(function ({ id, scrollTo }, ref) {
 
-    // const [loading, setLoading] = useState(true);
-    //
-    // wait(3000).then(() => module().then(() => setLoading(false)));
-
     return (
-        // <>{loading ? <></> :
         <Page
             pageRef={ref}
             $fullScreen
@@ -39,6 +30,5 @@ export const Landing = forwardRef(function ({ id, scrollTo }, ref) {
                 </Container>
             </Container>
         </Page>
-        // }</>
     )
 });
