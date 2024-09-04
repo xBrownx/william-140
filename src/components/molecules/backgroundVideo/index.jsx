@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, memo } from "react";
 import { Container, StyledVideo } from "./styles";
 import { LandingTitleAnimation } from "../../organisms";
 
-export const BackgroundVideo = props => {
+export const BackgroundVideo = memo(function BackgroundVideo(props) {
     const videoRef = useRef(null);
 
 
@@ -34,4 +34,4 @@ export const BackgroundVideo = props => {
             </StyledVideo>
         </Container>
     );
-}
+});

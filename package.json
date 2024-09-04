@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^2.1.4"
+    "babel-plugin-styled-components": "^2.1.4",
+    "@types/react": "18.3.3"
   }
 }

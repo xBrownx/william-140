@@ -1,8 +1,9 @@
 import {Email, Name, Phone, StyledImg, Wrapper} from "./styles";
 import {Column} from "../column";
 import { Image } from "../../atoms";
+import { memo } from "react";
 
-export const Agent = props => {
+export const Agent = memo(function Agent(props) {
     const {name, phone, email} = props.agent;
     const img = props.img
     return (
@@ -17,4 +18,4 @@ export const Agent = props => {
             </Column>
         </Wrapper>
     );
-}
+});

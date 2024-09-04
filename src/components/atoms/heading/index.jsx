@@ -1,7 +1,8 @@
 import { StyledHeading } from "./styles";
 import { ParallaxText } from "../../molecules/parallaxText";
+import { memo } from "react";
 
-export const Heading = props => {
+export const Heading = memo(function Heading(props) {
     return (
         <StyledHeading {...props}>
             <ParallaxText>
@@ -9,4 +10,4 @@ export const Heading = props => {
             </ParallaxText>
         </StyledHeading>
     );
-}
+});

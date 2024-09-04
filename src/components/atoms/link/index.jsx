@@ -1,6 +1,11 @@
 import {StyledLink} from "./styles";
+import { memo } from "react";
 
-export const Link = props => {
-    return <StyledLink {...props}>{props.children}</StyledLink>
-}
+export const Link = memo(function Link(props) {
+    return (
+        <StyledLink {...props}>
+            {props.children}
+        </StyledLink>
+    );
+});
 

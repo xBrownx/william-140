@@ -1,1 +1,1 @@
-
+import { memo } from "react";

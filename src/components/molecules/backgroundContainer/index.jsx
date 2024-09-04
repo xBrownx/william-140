@@ -1,7 +1,7 @@
 import {Container, InnerContainer} from "./styles";
+import { memo } from "react";
 
-
-export const BackgroundContainer = props => {
+export const BackgroundContainer = memo(function BackgroundContainer(props) {
     return (
         <Container {...props}>
             <InnerContainer>
@@ -9,4 +9,4 @@ export const BackgroundContainer = props => {
             </InnerContainer>
         </Container>
     );
-}
+});

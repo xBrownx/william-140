@@ -1,36 +1,4 @@
-import styled, {css} from "styled-components";
-import {useDeferredValue} from "react";
-
-
-export const CarouselMenu = ({carouselItems, icons, activeIdx, setActiveIndex}) => {
-
-    const slideTitles = carouselItems.map(item => {
-        return item.title
-    });
-
-    const slideIcons = icons.map(item => {
-        return item.src
-    });
-
-    // const deferredIdx = useDeferredValue(activeIdx);
-
-    return (
-        <Container id="container">
-            <Wrapper id="wrapper">
-                {slideIcons.map((Item, index) => (
-                    <MenuItem
-                        id="menu-item"
-                        onClick={() => setActiveIndex(index)}
-                        key={index}
-                        $isActive={activeIdx === index}>
-                        <Item/>
-                        <p>{slideTitles[index]}</p>
-                    </MenuItem>
-                ))}
-            </Wrapper>
-        </Container>
-    );
-}
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
     position: relative;

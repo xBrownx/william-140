@@ -1,7 +1,8 @@
-import {CarouselContainer, CarouselSlide, ImgContainer,} from "./FadeCarousel.styled";
+import {CarouselContainer, CarouselSlide, ImgContainer,} from "./styles";
 import {Image} from "../../atoms";
+import { memo } from "react";
 
-export const FadeCarousel = ({activeIdx, carouselItems}) => {
+export const FadeCarousel = memo(function FadeCarousel({activeIdx, carouselItems}) {
 
     return (
             <CarouselContainer>
@@ -17,6 +18,4 @@ export const FadeCarousel = ({activeIdx, carouselItems}) => {
                 ))}
             </CarouselContainer>
     );
-}
-
-
+});

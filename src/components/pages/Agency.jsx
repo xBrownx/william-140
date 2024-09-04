@@ -1,32 +1,34 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, memo } from 'react';
 import { agency as CONST } from '../../constants'
 import { Image } from '../atoms'
 import { Agent, SplitScreen } from '../molecules'
 import { Page } from "../templates/";
 import styled from "styled-components";
-
-
 import { Style as S } from '../atoms'
 
-const Agency = forwardRef(function ({id}, ref) {
-    const heroImg = CONST.assets.hero;
+const Agency = memo(
+    forwardRef(
+        function ({id}, ref) {
+            const heroImg = CONST.assets.hero;
 
-    return (
-        <Page
-            $fullScreen
-            $bgSecondary
-            paddingInlineBlock={{inline: 160, block: 190}}
-        >
-            <SplitScreen pageRef={ref}>
-                <ImgWrapper>
-                    <Image {...heroImg}/>
-                </ImgWrapper>
-                <RightHand/>
-            </SplitScreen>
+            return (
+                <Page
+                    $fullScreen
+                    $bgSecondary
+                    paddingInlineBlock={{inline: 160, block: 190}}
+                >
+                    <SplitScreen pageRef={ref}>
+                        <ImgWrapper>
+                            <Image {...heroImg} />
+                        </ImgWrapper>
+                        <RightHand />
+                    </SplitScreen>
 
-        </Page>
-    );
-});
+                </Page>
+            );
+        }
+    )
+);
 
 const ImgWrapper = styled.div`
     width: 100%;
@@ -47,7 +49,7 @@ const RightHand = () => {
                 <StyledParagraph>
                     {CONST.paragraphTxt}
                 </StyledParagraph>
-                <SubHeading title={CONST.subheadingTxt[0]}/>
+                <SubHeading title={CONST.subheadingTxt[0]} />
                 <StyledUl>
                     {CONST.agents.knightFrank.map((agent, i) => (
                         <Agent
@@ -57,7 +59,7 @@ const RightHand = () => {
                         />
                     ))}
                 </StyledUl>
-                <SubHeading title={CONST.subheadingTxt[1]}/>
+                <SubHeading title={CONST.subheadingTxt[1]} />
                 <StyledUl>
                     {CONST.agents.colliers.map((agent, i) => (
                         <Agent
@@ -77,7 +79,7 @@ const SubHeading = ({title}) => {
     return (
         <SubheadingWrapper>
             <StyledSubheading>{title}</StyledSubheading>
-            <OpenIcon.src {...OpenIcon}/>
+            <OpenIcon.src {...OpenIcon} />
         </SubheadingWrapper>
     );
 }
