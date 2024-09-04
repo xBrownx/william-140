@@ -8,7 +8,6 @@ export const Container = styled.div`
     position: fixed;
     top: 0;
     width: 100%;
-    
 `
 
 export const LogoWrapper = styled.div`
@@ -29,6 +28,4 @@ export const LogoWrapper = styled.div`
 
 export const NavigationWrapper = styled.div`
     ${S.padding.__({ right: 32 })};
-    mix-blend-mode: screen;
-    background-color: white;
 `

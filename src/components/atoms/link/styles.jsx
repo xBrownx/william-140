@@ -12,10 +12,9 @@ export const StyledLink = styled.a`
     ${F.family.secondaryLight};
     ${S.margin.none};
     ${S.padding.none};
-    
+    z-index: 1000;
     font-weight: 400;
-    mix-blend-mode: screen;
-    color: black;
+    color: white;
     ${props => props.$underlined && css`
         opacity: 0.7;
         ${props => props.$active && css`
@@ -31,11 +30,12 @@ export const StyledLink = styled.a`
     
     
     &:hover {
-        color: black;
         cursor: pointer;
         ${props => props.$underlined && css`
             color: white;
             opacity: 1;
         `}
     }
+    
+    
 `

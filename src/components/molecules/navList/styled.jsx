@@ -11,7 +11,8 @@ export const StyledUl = styled.ul`
     justify-content: center;
     align-items: center;
     ${S.gap.width(32)};
-
+    
+    
     ${M.md`
         display: none  
     `};
