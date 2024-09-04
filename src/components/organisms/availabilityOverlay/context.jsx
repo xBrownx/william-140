@@ -11,6 +11,7 @@ export const AvailabilityProvider = ({ children }) => {
     const onLevelClick = (key) => {
         setModalKey(key);
         if (modalKey !== null) setModalOpen(true);
+        else setModalOpen(false);
     }
     return (
         <ModalKeyContext.Provider value={[ modalKey, setModalKey ]}>

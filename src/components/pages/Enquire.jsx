@@ -44,3 +44,5 @@ export const Enquire = forwardRef(function ({id, scrollToTop}, ref) {
     );
 });
 
+export default Enquire;
+

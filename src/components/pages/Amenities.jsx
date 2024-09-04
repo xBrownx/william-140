@@ -4,7 +4,7 @@ import {Column, Container, FadeCarousel, PageTitle, SplitScreen} from "../molecu
 import {AmenitiesList} from '../organisms';
 import {Page} from "../templates/";
 
-export const Amenities = forwardRef(function ({id,}, ref) {
+const Amenities = forwardRef(function ({id,}, ref) {
     const assets = CONST.assets.carousel;
     const [activeIdx, setActiveIdx] = useState(7);
 
@@ -39,6 +39,8 @@ export const Amenities = forwardRef(function ({id,}, ref) {
 
     );
 });
+
+export default Amenities;
 
 
 

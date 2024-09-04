@@ -5,7 +5,7 @@ import { BackgroundVideo, Container } from "../molecules";
 import { LandingTitleAnimation } from "../organisms";
 import { Page } from "../templates";
 
-export const Landing = forwardRef(function ({ id, scrollTo }, ref) {
+const Landing = forwardRef(function ({ id, scrollTo }, ref) {
 
     return (
         <Page
@@ -32,3 +32,5 @@ export const Landing = forwardRef(function ({ id, scrollTo }, ref) {
         </Page>
     )
 });
+
+export default Landing;

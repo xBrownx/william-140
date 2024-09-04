@@ -6,7 +6,7 @@ import { Page } from "../templates";
 import { ImgWrapper } from "../molecules/parallaxImage/styles";
 
 
-export const Home = forwardRef(function ({id, onDiscoverClick}, ref) {
+const Home = forwardRef(function ({id, onDiscoverClick}, ref) {
     const assets = CONST.assets
     return (
         <Page
@@ -41,3 +41,7 @@ export const Home = forwardRef(function ({id, onDiscoverClick}, ref) {
         </Page>
     );
 });
+
+export default Home;
+
+

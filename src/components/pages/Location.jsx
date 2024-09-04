@@ -4,7 +4,7 @@ import { Column, PageTitle } from "../molecules";
 import { LocationCarousel } from "../organisms";
 import { Page } from "../templates";
 
-export const Location = forwardRef(function ({id}, ref) {
+const Location = forwardRef(function ({id}, ref) {
     return (
         <Page
             pageRef={ref}
@@ -24,3 +24,5 @@ export const Location = forwardRef(function ({id}, ref) {
         </Page>
     );
 });
+
+export default Location;

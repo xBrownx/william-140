@@ -8,7 +8,7 @@ const STAGGER = 0.025;
 const TextSplit = ({children}) => {
 
     return children.split("").map((l, i) => (
-        <StyledSpan>
+        <StyledSpan
             as={motion.span}
             variants={{
                 hidden: {
@@ -33,8 +33,9 @@ const TextSplit = ({children}) => {
 }
 
 export const ParallaxText = ({children}) => {
-    //const lineSplit = children.split("\n");
-    return ( //lineSplit.map((line) =>
+    const lineSplit = children.split("\n");
+    return (
+        lineSplit.map((line) =>
         <Wrapper
             as={motion.div}
             initial="hidden"
@@ -46,12 +47,13 @@ export const ParallaxText = ({children}) => {
             }}
         >
             <>
-                {/*<TextSplit>*/}
-                    children
-                {/*</TextSplit>*/}
+                <TextSplit>
+                    {line}
+                </TextSplit>
                 <br />
             </>
 
         </Wrapper>
-    );//);
+    )
+        );
 }

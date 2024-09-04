@@ -4,7 +4,7 @@ import { PageTitle } from "../molecules";
 import { DesignVideo } from "../organisms";
 import { Page } from "../templates";
 
-export const Design = forwardRef(function ({id,}, ref) {
+const Design = forwardRef(function ({id,}, ref) {
     return (
         <Page
             pageRef={ref}
@@ -23,4 +23,6 @@ export const Design = forwardRef(function ({id,}, ref) {
 
     );
 });
+
+export default Design;
 

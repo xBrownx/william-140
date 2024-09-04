@@ -5,7 +5,7 @@ import { HistoryVideo } from "../organisms/";
 import { Page } from "../templates/";
 
 
-export const History = forwardRef(function ({id,}, ref) {
+const History = forwardRef(function ({id,}, ref) {
 
     return (
         <Page
@@ -24,3 +24,5 @@ export const History = forwardRef(function ({id,}, ref) {
 
     );
 });
+
+export default History;

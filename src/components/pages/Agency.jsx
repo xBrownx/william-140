@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 import { Style as S } from '../atoms'
 
-export const Agency = forwardRef(function ({id}, ref) {
+const Agency = forwardRef(function ({id}, ref) {
     const heroImg = CONST.assets.hero;
 
     return (
@@ -144,6 +144,8 @@ const StyledUl = styled.ul`
     ${S.gap.height(16)};
     //margin: var(--height-32px) 0 0 0;
 `
+
+export default Agency;
 
 
 

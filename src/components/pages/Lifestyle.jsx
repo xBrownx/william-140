@@ -5,7 +5,7 @@ import { LifestyleImages } from "../organisms";
 import { Page } from "../templates";
 
 
-export const Lifestyle = forwardRef(function ({id}, ref) {
+const Lifestyle = forwardRef(function ({id}, ref) {
 
     return (
         <Page $fullScreen $endY>
@@ -23,6 +23,7 @@ export const Lifestyle = forwardRef(function ({id}, ref) {
                 </ScrollingCarousel>
             </Column>
         </Page>
-    )
-        ;
+    );
 });
+
+export default Lifestyle;

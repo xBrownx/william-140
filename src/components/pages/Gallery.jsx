@@ -3,7 +3,7 @@ import { _galleryAssets } from "../../assets";
 import { SlideCarousel } from "../molecules/";
 import { Page } from "../templates";
 
-export const Gallery = forwardRef(function ({ id }, ref) {
+const Gallery = forwardRef(function ({ id }, ref) {
         return (
             <Page
                 id={id}
@@ -16,3 +16,4 @@ export const Gallery = forwardRef(function ({ id }, ref) {
     })
 ;
 
+export default Gallery;

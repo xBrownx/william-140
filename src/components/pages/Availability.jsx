@@ -4,7 +4,7 @@ import { BackgroundContainer, PageTitle } from "../molecules";
 import { AvailabilityOverlay, AvailabilityRating } from "../organisms";
 import { Page } from "../templates";
 
-export const Availability = forwardRef(function ({id,}, ref) {
+const Availability = forwardRef(function ({id,}, ref) {
     return (
         <Page pageRef={ref}>
             <BackgroundContainer src={CONST.assets.bgImg.src}>
@@ -20,6 +20,7 @@ export const Availability = forwardRef(function ({id,}, ref) {
     );
 });
 
+export default Availability;
 
 
 
