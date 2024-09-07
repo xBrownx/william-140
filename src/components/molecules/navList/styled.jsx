@@ -6,12 +6,12 @@ import {
 } from '../../atoms'
 
 export const StyledUl = styled.ul`
+    position: relative;
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     ${S.gap.width(32)};
-    
     
     ${M.md`
         display: none  

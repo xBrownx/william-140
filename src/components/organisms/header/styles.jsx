@@ -4,18 +4,20 @@ import { Style as S } from '../../atoms'
 export const Container = styled.div`
     ${S.size.height(90)};
     ${S.flex.centre};
+    ${S.padding.__({ right: 32, left: 32 })};
     z-index: 5;
     position: fixed;
     top: 0;
     width: 100%;
 `
 
-export const LogoWrapper = styled.div`
+export const Wrapper = styled.div`
+    flex: 1;
     display: flex;
     align-items: center;
-    width: 100%;
-    ${S.padding.__({ left: 32 })};
 
+    width: 100%;
+    
     svg {
         min-height: 2.099vh;
         min-width: 19.097vw;
@@ -24,8 +26,4 @@ export const LogoWrapper = styled.div`
             cursor: pointer;
         }
     }
-`
-
-export const NavigationWrapper = styled.div`
-    ${S.padding.__({ right: 32 })};
 `

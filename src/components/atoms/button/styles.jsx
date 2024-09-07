@@ -52,9 +52,20 @@ export const StyledButton = styled.button`
         color: white;
         border-color: white;
     `};
+    
+    ${props => props.$variantOne && css`
+        color: black;
+        border-color: white;
+        background-color: white;
+        transition: all 200ms ease-in-out;
+    `};
 
     ${props => props.gap && css`
         ${S.gap.width(props.gap)};
+    `}
+    
+    ${props => props.$fillParent && css`
+        width: 100%;
     `}
 
    

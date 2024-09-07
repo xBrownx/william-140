@@ -1,8 +1,8 @@
 import { NavList } from "../../molecules/navList";
 import { LogoInline } from "../../atoms";
-import * as S from './styles'
 import { header } from '../../../constants'
 import { memo } from 'react'
+import { Container, Wrapper } from "./styles";
 
 export const Header = memo(
     function Header(props) {
@@ -11,18 +11,18 @@ export const Header = memo(
             return {...link, route: pageRefs[link.key]}
         })
         return (
-            <S.Container>
-                <S.LogoWrapper>
+            <Container>
+                <Wrapper>
                     <LogoInline onClick={() => props.scrollTo(pageRefs.landing)} />
-                </S.LogoWrapper>
-                <S.NavigationWrapper>
+                </Wrapper>
+                <Wrapper>
                     <NavList
                         scrollTo={props.scrollTo}
                         links={links}
                     >
                     </NavList>
-                </S.NavigationWrapper>
-            </S.Container>
+                </Wrapper>
+            </Container>
         );
     }
 );

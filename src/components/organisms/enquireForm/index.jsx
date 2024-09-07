@@ -65,7 +65,13 @@ export const EnquireForm = memo(
                                 rows="4"
                             />
                         </Row>
-                        <Button type="submit" $variant>Submit</Button>
+                        <Button
+                            $fillParent
+                            $variantOne
+                            type="submit"
+                        >
+                            Submit
+                        </Button>
                     </Column>
                 </form>
             </Container>

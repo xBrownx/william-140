@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import {
     Style as S,
     Font as F,
@@ -7,7 +7,7 @@ import {
 } from "../globalStyles/";
 
 export const StyledLink = styled.a`
-    transition: all 200ms ease-in-out;
+    transition: all 1000ms ease-in-out;
     ${F.size(18)};
     ${F.family.secondaryLight};
     ${S.margin.none};
@@ -15,6 +15,7 @@ export const StyledLink = styled.a`
     z-index: 1000;
     font-weight: 400;
     color: white;
+
     ${props => props.$underlined && css`
         opacity: 0.7;
         ${props => props.$active && css`
@@ -24,10 +25,9 @@ export const StyledLink = styled.a`
     `}
     
     ${props => props.$nav && css`
-
+        position: relative;
+        transition: none;
     `}
-    
-    
     
     &:hover {
         cursor: pointer;
@@ -35,7 +35,11 @@ export const StyledLink = styled.a`
             color: white;
             opacity: 1;
         `}
+
+        ${props => props.$nav && css`
+            font-weight: 600;
+        `}
     }
-    
-    
+
+
 `
