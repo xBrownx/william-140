@@ -1,23 +1,23 @@
 import './App.css';
 import React, { useRef, lazy, Suspense, useTransition, useEffect, useState } from "react";
 import { Header } from "../organisms";
-import Landing from '../pages/Landing'
+import Landing from '../pages/landing'
 import ErrorBoundary from "../ErrorBoundary";
 import { ScrollingText } from "../organisms";
 
-const Agency = lazy(() => import('../pages/Agency'));
-const Amenities = lazy(() => import('../pages/Amenities'));
-const Availability = lazy(() => import('../pages/Availability'));
-const Design = lazy(() => import('../pages/Design'));
-const Enquire = lazy(() => import('../pages/Enquire'));
-const Gallery = lazy(() => import('../pages/Gallery'));
-const History = lazy(() => import('../pages/History'));
-const HeroOne = lazy(() => import('../pages/HeroOne'));
-const HeroTwo = lazy(() => import('../pages/HeroTwo'));
-const HeroThree = lazy(() => import('../pages/HeroThree'));
-const Home = lazy(() => import('../pages/Home'));
-const Lifestyle = lazy(() => import('../pages/Lifestyle'));
-const Location = lazy(() => import('../pages/Location'));
+const Agency = lazy(() => import('../pages/agency'));
+const Amenities = lazy(() => import('../pages/amenities'));
+const Availability = lazy(() => import('../pages/availabality'));
+const Design = lazy(() => import('../pages/design'));
+const Enquire = lazy(() => import('../pages/enquire'));
+const Gallery = lazy(() => import('../pages/gallery'));
+const History = lazy(() => import('../pages/history'));
+const HeroOne = lazy(() => import('../pages/heroOne'));
+const HeroTwo = lazy(() => import('../pages/heroTwo'));
+const HeroThree = lazy(() => import('../pages/heroThree'));
+const Home = lazy(() => import('../pages/home'));
+const Lifestyle = lazy(() => import('../pages/lifestyle'));
+const Location = lazy(() => import('../pages/location'));
 const Footer = lazy(() => import('../organisms/').then(m => ({ default: m.Footer })));
 
 function App() {

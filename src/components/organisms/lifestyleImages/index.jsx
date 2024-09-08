@@ -1,10 +1,10 @@
 import { memo } from "react";
-import { lifestyle } from "../../../constants";
+
 import { ImgContainer, StyledImg, Wrapper } from "./styles";
 
 export const LifestyleImages = memo(
-    function LifestyleImages() {
-        const images = lifestyle.assets.carousel;
+    function LifestyleImages(props) {
+        const images = props.assets.carousel;
         return (
             <Wrapper>
                 {

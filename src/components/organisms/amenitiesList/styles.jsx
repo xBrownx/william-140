@@ -13,18 +13,9 @@ export const StyledUl = styled.ul`
 
 export const StyledLi = styled.li`
     ${S.padding.bottom(32)};
-    &:hover {
-        cursor: pointer;
+    p, svg {
+        opacity: 1;
 
-        p, svg {
-            opacity: 1;
-            
-        }
-    }
-
-    svg {
-        opacity: 0.7;
-        transition: all 200ms ease-in-out;
     }
     
 `

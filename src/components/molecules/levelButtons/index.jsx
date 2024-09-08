@@ -1,11 +1,10 @@
-import { availability } from "../../../constants";
 import { LevelButton } from "../levelButton";
 import React from "react";
 import { Container, Wrapper } from "./styles";
 
 export const LevelButtons = props => {
 
-    const btnsObject = availability.buttons;
+    const btnsObject = props.buttons;
     const btnsArr = Object.keys(btnsObject).map(key => {
         return { key: key, lvl: btnsObject[key].lvl, isActive: btnsObject[key].isActive, }
     });

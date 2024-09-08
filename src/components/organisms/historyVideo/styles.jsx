@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Style as S } from '../../atoms'
 
 export const StyledVideo = styled.video`
@@ -19,6 +19,7 @@ export const StyledImg = styled.img`
 `
 
 export const StyledButton = styled.div`
+    transition: all 200ms ease-in-out;
     z-index: 2;
     grid-row: 1;
     grid-column: 1;
@@ -34,5 +35,8 @@ export const StyledButton = styled.div`
     
     &:hover {
         cursor: pointer;
+        ${props => props.$isPlaying && css`
+            opacity: 1;
+        `
     }
 `

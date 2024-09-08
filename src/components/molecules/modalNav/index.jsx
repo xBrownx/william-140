@@ -1,7 +1,6 @@
 import { Button, Container } from "./styles";
 import { Column } from "../index";
 import { NavArrow } from "../../atoms";
-import { availability } from "../../../constants";
 import { useModalKeyContext } from "../../organisms/availabilityOverlay/context";
 import { memo } from "react";
 
@@ -9,7 +8,7 @@ export const ModalNav = memo(
     function ModalNav(props) {
         const [modalKey, setModalKey] = useModalKeyContext();
 
-        const itemsObj = availability.buttons;
+        const itemsObj = props.buttons;
         const itemsArr = Object.keys(itemsObj).map(key => {
             return {key: key, lvl: itemsObj[key].lvl, isActive: itemsObj[key].isActive}
         })

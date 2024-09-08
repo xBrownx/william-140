@@ -1,11 +1,11 @@
 import { memo } from 'react';
 import { Container } from "./styles";
 import { Line } from "./line";
-import { landing } from '../../../constants';
+
 
 export const LandingTitleAnimation = memo(
     function LandingTitleAnimation(props) {
-        const headings = landing.heading
+        const headings = props.heading
         return (
             <Container {...props}>
                 {headings.map((item) => {

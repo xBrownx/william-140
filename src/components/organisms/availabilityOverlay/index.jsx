@@ -6,13 +6,20 @@ import { AvailabilityProvider } from "./context";
 
 
 export const AvailabilityOverlay = memo(
-    function AvailabilityOverlay() {
+    function AvailabilityOverlay(props) {
         return (
             <AvailabilityProvider>
                 <Container>
-                    <AvailabilityModal />
-                    <LevelButtons />
-                    <LevelVectors />
+                    <AvailabilityModal
+                        buttons={props.buttons}
+                        assets={props.assets}
+                    />
+                    <LevelButtons
+                        buttons={props.buttons}
+                    />
+                    <LevelVectors
+                        assets={props.assets}
+                    />
                 </Container>
             </AvailabilityProvider>
         );

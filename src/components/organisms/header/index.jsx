@@ -1,6 +1,6 @@
 import { NavList } from "../../molecules/navList";
 import { LogoInline } from "../../atoms";
-import { header } from '../../../constants'
+import { header } from './constants'
 import { memo } from 'react'
 import { Container, Wrapper } from "./styles";
 

@@ -28,7 +28,7 @@ export const BackgroundVideo = memo(function BackgroundVideo(props) {
     // });
     return (
         <Container>
-            <LandingTitleAnimation />
+            <LandingTitleAnimation heading={props.heading}/>
             <StyledVideo autoPlay loop muted controls={false} ref={videoRef}>
                 <source src={props.src} type="video/mp4" />
             </StyledVideo>

@@ -103,6 +103,17 @@ export const StyledContainer = styled.div`
         box-sizing: border-box;
     `}
     
+    ${props => props.$flexOne && css`
+        min-width: 50%;
+        width: 50%;
+        flex: 1;
+    `}
+        
+    ${props => props.$fillSize && css`
+        width: 100%;
+        height: 100%;
+    `}
+    
     
 
 

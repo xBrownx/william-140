@@ -1,6 +1,5 @@
 import { ButtonWrapper, Container, ListWrapper, MapWrapper } from "./styles";
 import { PoppingLinkList, Row } from "../../molecules";
-import { design as CONSTANTS } from '../../../constants'
 import { StyledButton } from "../../atoms/button/styles";
 import { ReactComponent as MainEntry } from '../../../assets/svg/Design-Main-Entry.svg'
 import { ReactComponent as Play } from '../../../assets/icons/Play.svg'
@@ -12,7 +11,7 @@ export const DesignVideo = memo(
             <Container>
                 <Row>
                     <ListWrapper style={{flex: 1}}>
-                        <PoppingLinkList items={CONSTANTS.menuItems} {...props} />
+                        <PoppingLinkList items={props.menuItems} {...props} />
                     </ListWrapper>
                     <ButtonWrapper>
                         <StyledButton $secondary fontSize={16} gap={10}>

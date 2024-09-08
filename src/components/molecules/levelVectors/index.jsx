@@ -1,9 +1,8 @@
 import { Container, VectorWrapper } from "./styles";
-import { availability } from "../../../constants";
 import { useHoverContext, useModalStatusContext } from "../../organisms/availabilityOverlay/context";
 
 export const LevelVectors = props => {
-    const lvlVectors = availability.assets.lvlVectors;
+    const lvlVectors = props.assets.lvlVectors;
     const vectors = Object.keys(lvlVectors).map(key => {
         return {key: key, vector: lvlVectors[key].vector};
     });

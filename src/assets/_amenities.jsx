@@ -13,6 +13,7 @@ import {ReactComponent as AmenitiesIcon04} from './icons/Amenities-Icon-4.svg'
 import {ReactComponent as AmenitiesIcon05} from './icons/Amenities-Icon-5.svg'
 import {ReactComponent as AmenitiesIcon06} from './icons/Amenities-Icon-6.svg'
 import {ReactComponent as AmenitiesIcon07} from './icons/Amenities-Icon-7.svg'
+import video from './vid/amenities cut.mp4'
 
 export const _amenitiesAssets = {
     carousel: [
@@ -139,5 +140,8 @@ export const _amenitiesAssets = {
             height: 32,
             lazy: false,
         },
-    ]
+    ],
+    video: {
+        src: video,
+    }
 }

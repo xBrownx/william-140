@@ -1,14 +1,14 @@
 import React, { useRef, useState, memo } from "react";
-import { history } from '../../../constants'
 import { Container } from "../../molecules";
 import { StyledButton, StyledImg, StyledVideo } from "./styles";
 
 
 export const HistoryVideo = memo(
-    function HistoryVideo() {
+    function HistoryVideo(props) {
+
+        const assets = props.assets;
         const videoRef = useRef();
         const [isPlaying, setIsPlaying] = useState(false);
-        const assets = history.assets;
 
         const handlePlay = (isPlay) => {
             isPlay ? videoRef.current.play() : videoRef.current.pause();
@@ -23,9 +23,10 @@ export const HistoryVideo = memo(
                 <StyledImg $isVisible={!isPlaying} {...assets.placeholder} />
                 <StyledButton
                     onClick={() => handlePlay(!isPlaying)}
+                    $isPlaying={isPlaying}
                     $isVisible={!isPlaying}
                 >
-                    Play
+                    {isPlaying ? "Pause" : "Play"}
                 </StyledButton>
             </Container>
         );

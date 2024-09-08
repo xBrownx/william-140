@@ -1,6 +1,7 @@
+import { memo } from "react";
 import { StyledUl, StyledLi } from "./styles";
 import { PoppingLink } from "../poppingLink";
-import { memo } from "react";
+
 
 export const PoppingLinkList = memo(
     function PoppingLinkList(props) {

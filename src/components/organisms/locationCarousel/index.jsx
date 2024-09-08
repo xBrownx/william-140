@@ -1,12 +1,11 @@
-import { FadeCarousel } from "../../molecules/fadeCarousel";
+import { FadeCarousel } from "../../molecules";
 import { Index } from "../../molecules/carouselMenu";
 import { Wrapper } from "./styles";
-import { location } from '../../../constants'
 import { useState, memo } from "react";
 import { Container } from "../../molecules";
 
 export const LocationCarousel = memo(
-    function LocationCarousel() {
+    function LocationCarousel(props) {
         const [activeIdx, setActiveIdx] = useState(0);
         const handleSlideChange = (idx) => {
             setActiveIdx(idx);
@@ -16,11 +15,11 @@ export const LocationCarousel = memo(
                 <Container $imgCover>
                     <FadeCarousel
                         activeIdx={activeIdx}
-                        carouselItems={location.assets.carousel} />
+                        carouselItems={props.assets.carousel} />
                 </Container>
                 <Index
-                    carouselItems={location.menuItems}
-                    icons={location.assets.icons}
+                    carouselItems={props.menuItems}
+                    icons={props.assets.icons}
                     activeIdx={activeIdx}
                     setActiveIndex={handleSlideChange}
                 />

@@ -4,8 +4,8 @@ import { Style as S } from '../../atoms'
 export const StyledColumn = styled.div`
     ${S.flex.column};
     max-width: 100vw;
+    width: 100%;
     height: 100%;
-    
     
     ${props => props.$startX && css`
         align-items: start;
@@ -47,7 +47,12 @@ export const StyledColumn = styled.div`
         ${S.borderRadius};
     `};
     
-    ${props => props.$flex && css`
-        //flex: 1;
+    ${props => props.$flexOne && css`
+        width: 100%;
+        flex: 1;
+    `}
+
+    ${props => props.$borderBox && css`
+        box-sizing: border-box;
     `}
 `

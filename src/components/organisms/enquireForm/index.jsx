@@ -1,11 +1,10 @@
-import { enquire as CONST } from "../../../constants";
 import React, { useState, memo } from "react";
 import { Button, Input, TextArea } from "../../atoms";
 import { Column, Container, Row } from "../../molecules";
 
 export const EnquireForm = memo(
-    function EnquireForm() {
-        const fields = CONST.fields
+    function EnquireForm(props) {
+        const fields = props.fields
         const [inputs, setInputs] = useState({});
 
         const handleChange = (event) => {

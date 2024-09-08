@@ -1,26 +1,24 @@
 import React, { memo, useEffect, useState } from "react";
 import { Tenancy, TenancyDetails, Title } from "./styles";
-import { availability } from "../../../constants";
 import { Link, Paragraph } from "../../atoms";
 import { Column, ModalPane, ModalNav, Row } from "../../molecules";
 import { useModalKeyContext, useModalStatusContext } from "../availabilityOverlay/context";
 
 export const AvailabilityModal = memo(
-    function AvailabilityModal() {
+    function AvailabilityModal(props) {
         const [isModalOpen, onLevelClick] = useModalStatusContext();
         const [modalKey, setModalKey] = useModalKeyContext();
 
         const [tenancy, setTenancy] = useState(0)
         const [TenancyVector, setTenancyVector] = useState(0);
-        const activeModal = availability.buttons[modalKey];
-        const lvlVectors = availability.assets.lvlVectors;
+        const activeModal = props.buttons[modalKey];
+        const lvlVectors = props.assets.lvlVectors;
 
         const setTenancyWithVector = (t) => {
             setTenancyVector(lvlVectors[modalKey].tenancy[t].src);
             setTenancy(t);
         }
         useEffect(() => {
-            console.log(lvlVectors[modalKey])
             if (lvlVectors[modalKey])
                 setTenancyVector(lvlVectors[modalKey].tenancy[0].src)
         }, [modalKey]);
@@ -36,7 +34,7 @@ export const AvailabilityModal = memo(
                     padding={{top: 62, left: 48, right: 48}}
                     gap={60}
                 >
-                    <ModalNav />
+                    <ModalNav buttons={props.buttons} />
                     <Column gap={16}>
                         <Title>
                             Level {activeModal.lvl ? activeModal.lvl : "error"}
