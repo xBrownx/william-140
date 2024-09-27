@@ -1,7 +1,6 @@
-import video from './vid/Landing.mp4'
 export const _landingAssets = {
     video: {
         key: 'landing-video',
-        src: video,
+        src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/landing/background.mp4",
     }
 }

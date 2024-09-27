@@ -1,11 +1,3 @@
-import AmenitiesCarousel00 from './img/Amenities-00-Default.jpg'
-import AmenitiesCarousel01 from './img/Amenities-01-Concierge.png'
-import AmenitiesCarousel02 from './img/Amenities-02-Flexible.png'
-import AmenitiesCarousel03 from './img/Amenities-03-Multi-Room.png'
-import AmenitiesCarousel04 from './img/Amenities-04-Gym.png'
-import AmenitiesCarousel05 from './img/Amenities-05-Shower.png'
-import AmenitiesCarousel06 from './img/Amenities-06-Parking.png'
-import AmenitiesCarousel07 from './img/Amenities-07-Cafe.png'
 import {ReactComponent as AmenitiesIcon01} from './icons/Amenities-Icon-1.svg'
 import {ReactComponent as AmenitiesIcon02} from './icons/Amenities-Icon-2.svg'
 import {ReactComponent as AmenitiesIcon03} from './icons/Amenities-Icon-3.svg'
@@ -13,13 +5,13 @@ import {ReactComponent as AmenitiesIcon04} from './icons/Amenities-Icon-4.svg'
 import {ReactComponent as AmenitiesIcon05} from './icons/Amenities-Icon-5.svg'
 import {ReactComponent as AmenitiesIcon06} from './icons/Amenities-Icon-6.svg'
 import {ReactComponent as AmenitiesIcon07} from './icons/Amenities-Icon-7.svg'
-import video from './vid/amenities cut.mp4'
+
 
 export const _amenitiesAssets = {
     carousel: [
         {
             key: "amenitiesCarousel-1",
-            src: AmenitiesCarousel01,
+            src: "",
             alt: "Concierge",
             width: 544,
             height: 815,
@@ -27,7 +19,7 @@ export const _amenitiesAssets = {
         },
         {
             key: "amenitiesCarousel-2",
-            src: AmenitiesCarousel02,
+            src: "",
             alt: "Flexible Space",
             width: 544,
             height: 815,
@@ -35,7 +27,7 @@ export const _amenitiesAssets = {
         },
         {
             key: "amenitiesCarousel-3",
-            src: AmenitiesCarousel03,
+            src: "",
             alt: "Multi-purpose Space",
             width: 544,
             height: 815,
@@ -43,7 +35,7 @@ export const _amenitiesAssets = {
         },
         {
             key: "amenitiesCarousel-4",
-            src: AmenitiesCarousel04,
+            src: "",
             alt: "Gym",
             width: 544,
             height: 815,
@@ -51,7 +43,7 @@ export const _amenitiesAssets = {
         },
         {
             key: "amenitiesCarousel-5",
-            src: AmenitiesCarousel05,
+            src: "",
             alt: "Facilities",
             width: 544,
             height: 815,
@@ -59,7 +51,7 @@ export const _amenitiesAssets = {
         },
         {
             key: "amenitiesCarousel-6",
-            src: AmenitiesCarousel06,
+            src: "",
             alt: "Parking",
             width: 544,
             height: 815,
@@ -67,7 +59,7 @@ export const _amenitiesAssets = {
         },
         {
             key: "amenitiesCarousel-7",
-            src: AmenitiesCarousel07,
+            src: "",
             alt: "Cafe",
             width: 544,
             height: 815,
@@ -75,7 +67,7 @@ export const _amenitiesAssets = {
         },
         {
             key: "amenitiesCarousel-00",
-            src: AmenitiesCarousel00,
+            src: "",
             alt: "Default",
             width: 544,
             height: 815,
@@ -142,6 +134,6 @@ export const _amenitiesAssets = {
         },
     ],
     video: {
-        src: video,
+        src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/amenities/amenities.mp4",
     }
 }

@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
-import { Style as S } from '../../atoms'
+import { Style as S, Font as F } from '../../atoms'
+import { paddingBottom } from "../../atoms/globalStyles/DimensionCalcs";
+
 export const Container = styled.div`
     width: 100%;
     ${S.size.height(810)};
@@ -10,7 +12,7 @@ export const Container = styled.div`
 
 export const ListWrapper = styled.div`
     flex: 1;
-    ${S.padding.__({top: 140, left: 32})}
+    ${S.padding.__({ top: 140, left: 32 })}
     z-index: 1000;
 `
 
@@ -22,24 +24,26 @@ export const ButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     height: fit-content;
-    ${S.padding.__({top: 140})}
+
+    ${S.padding.__({ top: 140 })}
     ${props => props.$visible && css`
         opacity: 0;
     `}
     button {
         z-index: 1000;
+
         svg {
             ${S.size.height(24)};
             ${S.size.width(24)};
         }
-    } 
+    }
 `
 export const MapWrapper = styled.div`
     flex: 1;
     display: flex;
     justify-content: end;
-    
-    ${S.padding.__({top: 48, right: 32})}
+
+    ${S.padding.__({ top: 48, right: 32 })}
     svg {
         ${S.size.width(175)};
         ${S.size.height(219)};
@@ -53,11 +57,11 @@ export const VideoContainer = styled.div`
     height: 100%;
     position: absolute !important;
     z-index: 0;
-    
+
     ${props => props.$isLoading && css`
         opacity: 0;
     `};
-    
+
 `
 
 export const StyledVideo = styled.video`
@@ -65,3 +69,55 @@ export const StyledVideo = styled.video`
     height: 100%;
     object-fit: cover;
 `
+
+export const Overlay = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: end;
+    
+    box-sizing: border-box;
+`
+
+export const MenuWrapper = styled.div`
+    z-index: 10000;
+    ${S.size.height(61)};
+    ${S.padding.__({bottom: 41, right: 74, left: 42})};
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+`
+
+export const StyledUl = styled.ul`
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+`
+
+export const StyledLi = styled.li`
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    ${props => props.$border && css`
+
+        border-right: 1px solid white;
+    `}
+    p {
+        color: white;
+        opacity: 0.7;
+        ${F.size(16)};
+        font-weight: 300;
+        ${F.lineHeight(20.75)};
+    }
+`;

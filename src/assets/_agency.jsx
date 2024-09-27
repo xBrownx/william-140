@@ -1,14 +1,9 @@
-import JamesPappas from './svg/Agency-James-Pappas.svg';
-import HamishSutherland from './svg/Agency-Hamish-Sutherland.svg';
-import GeorginaMurray from './svg/Agency-Georgina-Murray.svg';
-import MichaelDarvell from './svg/Agency-Michael-Darvell.svg';
-import ShaneBurns from './svg/Agency-Shane-Burns.svg';
 import {ReactComponent as Open} from './icons/Open.svg';
-import AmenitiesCarousel00 from "./img/Amenities-00-Default.jpg";
+
 export const _agencyAssets = {
     hero: {
         key: "hero",
-        src: AmenitiesCarousel00,
+        src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/agency/hero.jpg",
         role: "presentation",
         width: 544,
         height: 815,
@@ -17,7 +12,7 @@ export const _agencyAssets = {
     agents: {
         jamPap: {
             key: "jamPap",
-            src: JamesPappas,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/agency/Agency-James-Pappas.svg",
             alt: "James Pappas",
             width: 80,
             height: 80,
@@ -25,7 +20,7 @@ export const _agencyAssets = {
         },
         hamSut: {
             key: "hamSut",
-            src: HamishSutherland,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/agency/Agency-Hamish-Sutherland.svg",
             alt: "Hamish Sutherland",
             width: 80,
             height: 80,
@@ -33,7 +28,7 @@ export const _agencyAssets = {
         },
         geoMur: {
             key: "geoMur",
-            src: GeorginaMurray,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/agency/Agency-Georgina-Murray.svg",
             alt: "Georgina Murray",
             width: 80,
             height: 80,
@@ -41,7 +36,7 @@ export const _agencyAssets = {
         },
         micDar: {
             key: "micDar",
-            src: MichaelDarvell,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/agency/Agency-Michael-Darvell.svg",
             alt: "Michael Darvell",
             width: 80,
             height: 80,
@@ -49,7 +44,7 @@ export const _agencyAssets = {
         },
         shaBur: {
             key: "shaBur",
-            src: ShaneBurns,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/agency/Agency-Shane-Burns.svg",
             alt: "Shane Burns",
             width: 80,
             height: 80,

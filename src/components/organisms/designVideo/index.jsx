@@ -1,9 +1,19 @@
-import { ButtonWrapper, Container, ListWrapper, MapWrapper, StyledVideo, VideoContainer } from "./styles";
-import { PoppingLinkList, Row } from "../../molecules";
+import {
+    ButtonWrapper,
+    Container,
+    ListWrapper,
+    MapWrapper, MenuWrapper, Overlay,
+    StyledLi,
+    StyledUl,
+    StyledVideo,
+    VideoContainer
+} from "./styles";
+import { Column, PoppingLinkList, Row } from "../../molecules";
 import { StyledButton } from "../../atoms/button/styles";
 import { ReactComponent as Play } from '../../../assets/icons/Play.svg'
 import { memo, useEffect, useRef, useState } from 'react'
 import { wait } from "@testing-library/user-event/dist/utils";
+import { Paragraph } from "../../atoms";
 
 
 export const DesignVideo = memo(
@@ -51,32 +61,48 @@ export const DesignVideo = memo(
                     >
                     </StyledVideo>
                 </VideoContainer>
-                <Row>
-                    <ListWrapper style={{ flex: 1 }}>
-                        <PoppingLinkList
-                            setShotChange={setShotChange}
-                            currentShot={currentShot}
-                            items={props.menuItems}
-                            {...props}
-                        />
-                    </ListWrapper>
-                    <ButtonWrapper $visible={currentShot === 9}>
-                        <StyledButton
-                            $secondary
-                            fontSize={16}
-                            gap={10}
-                            onClick={() => setShotChange(9)}
-                        >
-                            <Play />
-                            Start Tour
-                        </StyledButton>
-                    </ButtonWrapper>
-                </Row>
+                <Overlay style={{ justifyContent: "end" }}>
+                    <MenuWrapper>
+                        <StyledUl>
+                            <StyledLi $border>
+                                <p>START TOUR</p>
+                            </StyledLi>
+                            {props.menuItems.map((item, i) => {
+                                return (
+                                    <StyledLi key={i}>
+                                        <p>{item.title}</p>
+                                    </StyledLi>
+                                );
+                            })}
 
+                        </StyledUl>
+                    </MenuWrapper>
+                </Overlay>
             </Container>
         );
     }
 );
+
+
+// <ListWrapper style={{ flex: 1 }}>
+//                         <PoppingLinkList
+//                             setShotChange={setShotChange}
+//                             currentShot={currentShot}
+//                             items={props.menuItems}
+//                             {...props}
+//                         />
+//                     </ListWrapper>
+//                     <ButtonWrapper $visible={currentShot === 9}>
+//                         <StyledButton
+//                             $secondary
+//                             fontSize={16}
+//                             gap={10}
+//                             onClick={() => setShotChange(9)}
+//                         >
+//                             <Play />
+//                             Start Tour
+//                         </StyledButton>
+//                     </ButtonWrapper>
 
 
 // {/*<MapWrapper style={{flex: 1, display: "flex", justifyContent: "end"}}>*/}
