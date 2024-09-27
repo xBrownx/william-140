@@ -7,13 +7,6 @@ import { Page } from "../../templates";
 const Amenities = memo(
     forwardRef(
         function ({id,}, ref) {
-            const assets = CONST.assets.carousel;
-            const [activeIdx, setActiveIdx] = useState(7);
-
-            const handleSlideChange = (idx) => {
-                setActiveIdx(idx);
-            }
-
             return (
                 <Page
                     pageRef={ref}
@@ -27,11 +20,7 @@ const Amenities = memo(
                                     {CONST.subheadingTxt}
                                     {CONST.headingTxt}
                                 </PageTitle>
-                                <AmenitiesList
-                                    menuItems={CONST.menuItems}
-                                    assets={CONST.assets}
-                                    onHover={handleSlideChange}
-                                />
+                                <AmenitiesList />
                             </Column>
                         </Container>
                         <Container

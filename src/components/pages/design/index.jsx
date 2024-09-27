@@ -21,8 +21,8 @@ const Design = memo(
                         {CONST.headingTxt}
                     </PageTitle>
                     <DesignVideo
+                        tour={CONST.tour}
                         menuItems={CONST.menuItems}
-                        assets={CONST.assets}
                     />
                 </Page>
             );

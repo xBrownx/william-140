@@ -89,35 +89,43 @@ export const MenuWrapper = styled.div`
 `
 
 export const StyledUl = styled.ul`
-    
+
     margin: 0;
     padding: 0;
     list-style: none;
-    
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    
-    
-`
+    align-items: center;
+    justify-content: center;
+    ${S.gap.width(16)};
+
+
+`;
 
 export const StyledLi = styled.li`
     margin: 0;
     padding: 0;
-
-    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-
+    ${S.size.height(29)};
+    ${S.padding.inlineBlock({inline: 8, block: 0})};
     ${props => props.$border && css`
-
         border-right: 1px solid white;
     `}
+    
     p {
         color: white;
         opacity: 0.7;
         ${F.size(16)};
         font-weight: 300;
+        
+        ${F.family.secondaryLight};
         ${F.lineHeight(20.75)};
+    }
+    
+    &:hover {
+        cursor: pointer;
     }
 `;

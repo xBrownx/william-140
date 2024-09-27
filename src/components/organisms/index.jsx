@@ -10,7 +10,7 @@ import { Header } from './header'
 import { HistoryVideo } from "./historyVideo";
 import { LandingTitleAnimation } from "./landingTitleAnimation";
 import { LifestyleImages } from './lifestyleImages'
-import { LocationCarousel } from "./locationCarousel";
+import LocationCarousel from "./locationCarousel";
 import { ScrollingText } from "./scrollingText";
 
 export {

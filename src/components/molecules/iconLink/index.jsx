@@ -1,13 +1,12 @@
 import { Wrapper } from './styles'
-import { memo } from "react";
+import { Image } from "../../atoms";
 
-export const IconLink = memo(
-    function IconLink(props) {
-        return (
-            <Wrapper{...props}>
-                <props.Icon />
-                {props.children}
-            </Wrapper>
-        );
-    }
-);
+
+export function IconLink(props) {
+    return (
+        <Wrapper {...props}>
+            <Image src={props.iconSrc} />
+            {props.children}
+        </Wrapper>
+    );
+}

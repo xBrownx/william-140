@@ -1,5 +1,3 @@
-import {ReactComponent as Open} from './icons/Open.svg';
-
 export const _agencyAssets = {
     hero: {
         key: "hero",
@@ -54,7 +52,7 @@ export const _agencyAssets = {
     icons: {
         open: {
             key: "open",
-            src: Open,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/open.svg",
             alt: "Open",
             width: 24,
             height: 24,

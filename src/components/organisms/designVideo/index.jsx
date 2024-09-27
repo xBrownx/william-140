@@ -13,26 +13,36 @@ import { StyledButton } from "../../atoms/button/styles";
 import { ReactComponent as Play } from '../../../assets/icons/Play.svg'
 import { memo, useEffect, useRef, useState } from 'react'
 import { wait } from "@testing-library/user-event/dist/utils";
-import { Paragraph } from "../../atoms";
+import { Image } from "../../atoms";
 
 
 export const DesignVideo = memo(
     function DesignVideo(props) {
-        const videos = props.assets.videos;
-        const videoSrcArray = Object.keys(videos).map(key => videos[key].src);
-        const [currentShot, setCurrentShot] = useState(0);
-        const [videoSrc, setVideoSrc] = useState(videoSrcArray[0]);
+        const tour = props.tour;
+        const menuItems = props.menuItems;
+        const [currentShot, setCurrentShot] = useState("main-entry");
+        const [videoSrc, setVideoSrc] = useState(menuItems["main-entry"].videoSrc);
         const [isLoading, setIsLoading] = useState(false);
         const videoRef = useRef(null);
-        const setShotChange = (shot) => {
 
+        const startTour = () => {
+            videoRef.current.scrollIntoView({ behavior: "smooth" });
+            if (currentShot !== tour.key) {
+                setIsLoading(true);
+                setCurrentShot(tour.key);
+                wait(200).then(() => {
+                    setVideoSrc(tour.videoSrc);
+                })
+            }
+        }
+
+        const setShotChange = (shot) => {
             videoRef.current.scrollIntoView({ behavior: "smooth" });
             if (currentShot !== shot) {
                 setIsLoading(true);
-                console.log("currentShot: ", currentShot, "shot: ", shot);
                 setCurrentShot(shot);
                 wait(200).then(() => {
-                    setVideoSrc(videoSrcArray[shot]);
+                    setVideoSrc(menuItems[shot].videoSrc);
                 })
             }
         }
@@ -57,20 +67,32 @@ export const DesignVideo = memo(
                     <StyledVideo
                         ref={videoRef}
                         muted
-                        src={videoSrc}
+                        src={currentShot.videoSrc}
                     >
                     </StyledVideo>
                 </VideoContainer>
                 <Overlay style={{ justifyContent: "end" }}>
                     <MenuWrapper>
                         <StyledUl>
-                            <StyledLi $border>
-                                <p>START TOUR</p>
+                            <StyledLi
+                                $border
+                                onClick={() => setCurrentShot(tour)}
+                            >
+                                <Row padding={{right: 16}} style={{ justifyContent: "start" }} >
+                                    <Image width={24} height={24} src={tour.iconSrc} />
+                                    <p>{tour.title}</p>
+                                </Row>
+
                             </StyledLi>
-                            {props.menuItems.map((item, i) => {
+                            {Object.keys(menuItems).map((key) => {
                                 return (
-                                    <StyledLi key={i}>
-                                        <p>{item.title}</p>
+                                    <StyledLi
+                                        key={menuItems[key].key}
+                                        onClick={() => setCurrentShot(menuItems[key])}
+                                    >
+                                        <p>
+                                            {menuItems[key].title}
+                                        </p>
                                     </StyledLi>
                                 );
                             })}

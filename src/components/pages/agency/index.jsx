@@ -86,7 +86,7 @@ const SubHeading = ({title, link}) => {
     return (
         <SubheadingWrapper onClick={() => openInNewTab(link)}>
             <StyledSubheading>{title}</StyledSubheading>
-            <OpenIcon.src {...OpenIcon} />
+            <Image src={OpenIcon} />
         </SubheadingWrapper>
     );
 }
