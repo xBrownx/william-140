@@ -6,7 +6,11 @@ import { memo } from "react";
 export const PoppingLink = memo(
     function PoppingLink(props) {
         return (
-            <AnimatedLink>
+            <AnimatedLink
+                $active={props.currentShot === props.shotIdx}
+                onClick={() => props.setShotChange(props.shotIdx)}
+                {...props}
+            >
                 <Paragraph $secondary size={16}>
                     {props.children}
                 </Paragraph>

@@ -1,6 +1,7 @@
 import React, { useRef, useState, memo } from "react";
 import { Container } from "../../molecules";
-import { StyledButton, StyledImg, StyledVideo } from "./styles";
+import { ButtonWrapper, StyledButton, StyledImg, StyledVideo } from "./styles";
+import { Button } from "../../atoms";
 
 
 export const HistoryVideo = memo(
@@ -16,18 +17,23 @@ export const HistoryVideo = memo(
         }
 
         return (
-            <Container $gridCentre paddingInlineBlock={{inline: 160, block: 32}} $borderRadius $overflowHidden>
+            <Container $gridCentre paddingInlineBlock={{ inline: 160, block: 32 }} $borderRadius $overflowHidden>
                 <StyledVideo ref={videoRef} $isVisible={isPlaying} loop muted controls={false}>
                     <source src={assets.video.src} type="video/mp4" />
                 </StyledVideo>
                 <StyledImg $isVisible={!isPlaying} {...assets.placeholder} />
-                <StyledButton
-                    onClick={() => handlePlay(!isPlaying)}
+                <ButtonWrapper
                     $isPlaying={isPlaying}
                     $isVisible={!isPlaying}
                 >
-                    {isPlaying ? "Pause" : "Play"}
-                </StyledButton>
+                    <Button
+                        $square
+                        $secondary
+                        onClick={() => handlePlay(!isPlaying)}
+                    >
+                        {isPlaying ? "Pause" : "Play"}
+                    </Button>
+                </ButtonWrapper>
             </Container>
         );
     }

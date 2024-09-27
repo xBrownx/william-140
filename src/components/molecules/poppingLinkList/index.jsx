@@ -7,10 +7,16 @@ export const PoppingLinkList = memo(
     function PoppingLinkList(props) {
         return (
             <StyledUl>
-                {props.items.map(item => {
+                {props.items.map((item, key) => {
                     return (
                         <StyledLi key={item.title}>
-                            <PoppingLink>{item.title}</PoppingLink>
+                            <PoppingLink
+                                shotIdx={key}
+                                currentShot={props.currentShot}
+                                setShotChange={props.setShotChange}
+                            >
+                                {item.title}
+                            </PoppingLink>
                         </StyledLi>
                     );
                 })}

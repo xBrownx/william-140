@@ -1,4 +1,40 @@
+const baseURL = "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/";
+
 export const _designAssets = {
+
+    videos: {
+        mainEntry: {
+            src: baseURL + "main-entry.mp4",
+        },
+        reception: {
+            src: baseURL + "reception.mp4",
+        },
+        liftLobby: {
+            src: baseURL + "lift-lobby.mp4",
+        },
+        loungeLobby: {
+            src: baseURL + "lobby-lounge.mp4",
+        },
+        workLobby: {
+            src: baseURL + "work-lobby.mp4",
+        },
+        servery: {
+            src: baseURL + "servery.mp4",
+        },
+        cafePavilion: {
+            src: baseURL + "cafe-pavillion.mp4",
+        },
+        meetingRoom: {
+            src: baseURL + "meeting-room.mp4",
+        },
+        courtyard: {
+            src: baseURL + "courtyard.mp4",
+        },
+        tour: {
+            src: baseURL + "tour.mp4",
+        },
+    },
+
     floorPlan: [
         {
             key: "design-floorPlan-1",

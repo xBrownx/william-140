@@ -7,6 +7,7 @@ export const StyledParagraph = styled.p`
     ${F.family.secondaryRegular};
     ${F.size(18)};
     ${C.font.paragraphPrimary};
+    white-space: pre-wrap;
         
     ${props => props.$secondary && css`
         ${C.font.paragraphSecondary};

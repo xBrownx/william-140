@@ -18,8 +18,23 @@ export const StyledImg = styled.img`
     opacity: ${props => props.$isVisible ? 1 : 0};
 `
 
+export const ButtonWrapper = styled.div`
+    position: relative;
+    transition: opacity 200ms ease-in-out;
+    grid-row: 1;
+    grid-column: 1;
+    opacity: ${props => props.$isVisible ? 1 : 0};
+    
+    &:hover {
+        cursor: pointer;
+        ${props => props.$isPlaying && css`
+            opacity: 1;
+        `
+    }
+`
+
 export const StyledButton = styled.div`
-    transition: all 200ms ease-in-out;
+    
     z-index: 2;
     grid-row: 1;
     grid-column: 1;
@@ -32,6 +47,8 @@ export const StyledButton = styled.div`
     border-radius: 5px;
     color: white;
     opacity: ${props => props.$isVisible ? 1 : 0};
+    background: transparent;
+    position: relative;
     
     &:hover {
         cursor: pointer;
@@ -39,4 +56,28 @@ export const StyledButton = styled.div`
             opacity: 1;
         `
     }
+        
+        &::after {
+        content: "";
+        background: #164A49;
+        position: absolute;
+        z-index: -1;
+        padding: 0.5em 1.5em;
+        display: block;
+        transition: all 0.35s;
+        left: 0;
+        right: 0;
+        top: -100%;
+        bottom: 100%;
+    }
+
+    &:hover::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all 0.35s;
+    }
+        
+        
 `

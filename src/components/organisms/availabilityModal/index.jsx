@@ -25,6 +25,8 @@ export const AvailabilityModal = memo(
 
         if (modalKey === null) return;
 
+
+
         return (
             <ModalPane
                 $open={isModalOpen}

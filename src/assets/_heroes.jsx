@@ -1,5 +1,5 @@
 import _imgHeroOne from './img/Hero-One.jpeg';
-import _imgHeroTwo from './img/Hero-Two.png';
+import _imgHeroTwo from './img/Hero-Two-V3.png';
 import _imgHeroThree from './img/Hero-Three.jpeg';
 
 export const _heroOneAssets = {

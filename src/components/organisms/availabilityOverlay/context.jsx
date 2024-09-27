@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 const ModalKeyContext = createContext(null);
 const HoverContext = createContext(null);
@@ -8,13 +8,21 @@ export const AvailabilityProvider = ({ children }) => {
     const [hoverKey, setHoverKey] = useState(null)
     const [modalKey, setModalKey] = React.useState(null);
     const [isModalOpen, setModalOpen] = React.useState(false);
+
+
+
     const onLevelClick = (key) => {
         setModalKey(key);
-        if (modalKey !== null) setModalOpen(true);
-        else setModalOpen(false);
+        setModalOpen(modalKey !== null);
+
+         if (typeof window != 'undefined' && window.document && key !== null) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'unset';
+            }
     }
     return (
-        <ModalKeyContext.Provider value={[ modalKey, setModalKey ]}>
+        <ModalKeyContext.Provider value={[modalKey, setModalKey]}>
             <HoverContext.Provider value={[hoverKey, setHoverKey]}>
                 <ModalStatusContext.Provider value={[isModalOpen, onLevelClick]}>
                     {children}

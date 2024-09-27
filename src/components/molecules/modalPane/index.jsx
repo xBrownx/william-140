@@ -8,13 +8,7 @@ export const ModalPane = memo(
     function ModalPane(props) {
         const [isModalOpen, onLevelClick] = useModalStatusContext();
 
-        useEffect(() => {
-            if (typeof window != 'undefined' && window.document && isModalOpen) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'unset';
-            }
-        },)
+
 
         return (
             <>

@@ -62,11 +62,16 @@ export const StyledButton = styled.button`
 
     ${props => props.gap && css`
         ${S.gap.width(props.gap)};
-    `}
+    `};
     
     ${props => props.$fillParent && css`
         width: 100%;
-    `}
+    `};
+    
+    ${props => props.$square && css`
+        width: 150px;
+        height: 150px;
+    `};
 
    
 

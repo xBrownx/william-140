@@ -37,7 +37,6 @@ const Amenities = memo(
                         <Container
                             $fillSize
                             padding={{left: 16}}
-
                         >
                             <AmenitiesVideo src={CONST.assets.video.src} />
                         </Container>
