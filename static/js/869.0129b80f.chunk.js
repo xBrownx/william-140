@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkwilliam_140=self.webpackChunkwilliam_140||[]).push([[869],{6869:(e,a,i)=>{i.r(a),i.d(a,{default:()=>c});var l=i(5043),s=i(9444),r=i(8826),n=i(4920),u=i(579);const c=(0,l.memo)((0,l.forwardRef)((function(e,a){let{id:i}=e;return(0,u.jsx)(n.Y,{id:i,pageRef:a,children:(0,u.jsx)(r.An,{images:s.V6.carousel})})})))}}]);
+//# sourceMappingURL=869.0129b80f.chunk.js.map
