@@ -2,17 +2,17 @@ import {CarouselContainer, CarouselSlide, ImgContainer,} from "./styles";
 import {Image} from "../../atoms";
 import { memo } from "react";
 
-export const FadeCarousel = memo(function FadeCarousel({activeIdx, carouselItems}) {
+export const FadeCarousel = memo(function FadeCarousel({activeShot, carouselItems}) {
 
     return (
             <CarouselContainer>
                 {carouselItems.map((item, idx) => (
                     <CarouselSlide
                         key={item.key}
-                        $isActive={activeIdx === idx}
+                        $isActive={activeShot === idx}
                     >
-                        <ImgContainer {...item}>
-                            <Image {...item}/>
+                        <ImgContainer>
+                            <Image src={item.imgSrc}/>
                         </ImgContainer>
                     </CarouselSlide>
                 ))}

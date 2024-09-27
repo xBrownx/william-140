@@ -10,7 +10,7 @@ const heroImg = CONST.assets.hero;
 const knightFrankAgency = CONST.agencies.knightFrank;
 const colliersAgency = CONST.agencies.colliers;
 const agentAssets = CONST.assets.agents;
-const OpenIcon = CONST.assets.icons.open;
+const OpenIcon = CONST.assets.icons.open.src;
 
 const Agency = memo(
     forwardRef(
@@ -34,12 +34,13 @@ const Agency = memo(
                                 <StyledParagraph>
                                     {CONST.paragraphTxt}
                                 </StyledParagraph>
+
                                 <SubHeading
-                                    title={knightFrankAgency.label}
-                                    link={knightFrankAgency.link}
+                                    title={colliersAgency.label}
+                                    link={colliersAgency.link}
                                 />
                                 <StyledUl>
-                                    {knightFrankAgency.agents.map((agent, i) => (
+                                    {colliersAgency.agents.map((agent, i) => (
                                         <Agent
                                             key={agent.key}
                                             agent={agent}
@@ -48,11 +49,11 @@ const Agency = memo(
                                     ))}
                                 </StyledUl>
                                 <SubHeading
-                                    title={colliersAgency.label}
-                                    link={colliersAgency.link}
+                                    title={knightFrankAgency.label}
+                                    link={knightFrankAgency.link}
                                 />
                                 <StyledUl>
-                                    {colliersAgency.agents.map((agent, i) => (
+                                    {knightFrankAgency.agents.map((agent, i) => (
                                         <Agent
                                             key={agent.key}
                                             agent={agent}
@@ -128,7 +129,7 @@ const SubheadingWrapper = styled.div`
 
     padding: var(--height-8px) 0;
 
-    svg {
+    img {
         padding: 0;
         margin: 0 0 0 10px;
         height: var(--font-size-18px);

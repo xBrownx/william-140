@@ -1,5 +1,5 @@
 import { FadeCarousel } from "../../molecules";
-import { Index } from "../../molecules/carouselMenu";
+import CarouselMenu from "../../molecules/carouselMenu/carouselMenu";
 import { Wrapper } from "./styles";
 import { useState, memo } from "react";
 import { Container } from "../../molecules";
@@ -7,22 +7,20 @@ import { constants as CONST } from "./constants";
 
 
 function LocationCarousel(props) {
-    const [activeIdx, setActiveIdx] = useState(0);
-    const handleSlideChange = (idx) => {
-        setActiveIdx(idx);
-    }
+    const menuItems = CONST.menuItems;
+    const [activeShot, setActiveShot] = useState(0);
+
     return (
         <Wrapper>
             <Container $imgCover>
                 <FadeCarousel
-                    activeIdx={activeIdx}
-                    carouselItems={props.assets.carousel} />
+                    activeShot={activeShot}
+                    carouselItems={menuItems} />
             </Container>
-            <Index
-                carouselItems={props.menuItems}
-                icons={props.assets.icons}
-                activeIdx={activeIdx}
-                setActiveIndex={handleSlideChange}
+            <CarouselMenu
+                menuItems={menuItems}
+                activeShot={activeShot}
+                setActiveShot={setActiveShot}
             />
         </Wrapper>
     );

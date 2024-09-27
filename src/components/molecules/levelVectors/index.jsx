@@ -1,5 +1,6 @@
 import { Container, VectorWrapper } from "./styles";
 import { useHoverContext, useModalStatusContext } from "../../organisms/availabilityOverlay/context";
+import { Image } from "../../atoms";
 
 export const LevelVectors = props => {
     const lvlVectors = props.assets.lvlVectors;
@@ -21,7 +22,7 @@ export const LevelVectors = props => {
                                 onMouseLeave={() => setHoverKey(null)}
                                 onClick={() => onLevelClick(item.key)}
                             >
-                                <item.vector.src />
+                                <Image src={item.vector.src}/>
                             </VectorWrapper>
                         );
                     }

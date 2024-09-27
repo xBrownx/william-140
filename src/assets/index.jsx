@@ -9,7 +9,7 @@ import { _historyAssets } from "./_history";
 import { _homeAssets } from "./_home";
 import { _landingAssets } from "./_landing";
 import { _lifestyleAssets } from "./_lifestyle";
-import { _locationAssets } from "./_location";
+
 
 export {
     _agencyAssets,
@@ -24,5 +24,4 @@ export {
     _homeAssets,
     _landingAssets,
     _lifestyleAssets,
-    _locationAssets,
 }

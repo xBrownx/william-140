@@ -25,6 +25,12 @@ export const CarouselSlide = styled.div`
         opacity: 1;
         transition-timing-function: ease-out;
     `};
+    
+    img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 `
 
 export const ImgContainer = styled.div`
@@ -41,9 +47,12 @@ export const ImgContainer = styled.div`
     `}
     
     ${S.borderRadius};
-    
+    align-items: end;
     img {
         ${S.borderRadius};
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 `
 

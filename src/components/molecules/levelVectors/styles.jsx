@@ -16,7 +16,7 @@ export const VectorWrapper = styled.div`
     margin: ${props => props.offset}% 0 0 0;
     mix-blend-mode: overlay;
 
-    svg {
+    img {
         opacity: 0;
         width: 100%;
         height: 100%;

@@ -5,8 +5,12 @@ export const Wrapper = styled.div`
     ${S.flex.column};
     ${S.gap.height(4)};
     
-    svg {
-        ${S.size.width(136)};
-        ${S.size.height(25)};
+    img {
+        height: 25px;
+        ${S.size.height(19)};
+        justify-content: start;
+        align-items: start;
+        object-fit: cover;
+        padding: 0;
     }
 `

@@ -46,7 +46,7 @@ export const MenuItem = styled.div`
         }
     }
 
-    svg {
+    img {
         width: 2.222vw;
         height: 2.222vw;
         transition: all 300ms ease;
@@ -69,7 +69,7 @@ export const MenuItem = styled.div`
             color: #164A49;
         }
         
-        svg {
+        img {
             filter: invert(20%) sepia(82%) saturate(370%) hue-rotate(130deg) brightness(94%) contrast(92%);
             opacity: 1;
         }

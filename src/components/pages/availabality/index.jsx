@@ -3,6 +3,7 @@ import { availability as CONST } from "./constants";
 import { BackgroundContainer, PageTitle } from "../../molecules";
 import { AvailabilityOverlay, AvailabilityRating } from "../../organisms";
 import { Page } from "../../templates";
+import ThirdSpace from "../../organisms/thirdSpace";
 
 const Availability = memo(
     forwardRef(
@@ -21,6 +22,7 @@ const Availability = memo(
                         </PageTitle>
                         <AvailabilityRating assets={CONST.assets} />
                     </BackgroundContainer>
+                    <ThirdSpace />
                 </Page>
             );
         }

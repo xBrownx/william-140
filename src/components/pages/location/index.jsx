@@ -22,10 +22,7 @@ const Location = memo(
                             {CONST.headingTxt}
                             {CONST.paragraphTxt}
                         </PageTitle>
-                        <LocationCarousel
-                            menuItems={CONST.menuItems}
-                            assets={CONST.assets}
-                        />
+                        <LocationCarousel />
                     </Column>
                 </Page>
             );
