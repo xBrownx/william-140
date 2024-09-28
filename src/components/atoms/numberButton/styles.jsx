@@ -9,9 +9,6 @@ export const Container = styled.div`
     width: fit-content;
     ${props => props.$isHover && props.$active && css`
         cursor: pointer;
-        ${Wrapper} {
-            transform: translateX(50px);
-        }
     `};
     
 `

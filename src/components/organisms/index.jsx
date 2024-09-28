@@ -1,6 +1,6 @@
 import { AmenitiesList } from './amenitiesList';
 import { AmenitiesVideo } from "./amenitiesVideo";
-import { AvailabilityModal} from "./availabilityModal";
+import AvailabilityModal from "./availabilityModal";
 import { AvailabilityOverlay } from "./availabilityOverlay";
 import { AvailabilityRating } from "./availabilityRating";
 import { DesignVideo } from './designVideo';

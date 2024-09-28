@@ -16,7 +16,8 @@ export const SlideUpAnim = memo(
                 }}
                 viewport={{
                     margin: "0px 0px -50px 0px",
-                    amount: "some"
+                    amount: "some",
+                    once: true
                 }}
                 transition={{
                     duration: 0.2,

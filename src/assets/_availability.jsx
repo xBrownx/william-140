@@ -1,5 +1,5 @@
-import {ReactComponent as Tenancy01} from "./svg/Availability-Tenancy-01.svg";
-import {ReactComponent as Tenancy02} from "./svg/Availability-Tenancy-02.svg";
+import { ReactComponent as Tenancy01 } from "./svg/Availability-Tenancy-01.svg";
+import { ReactComponent as Tenancy02 } from "./svg/Availability-Tenancy-02.svg";
 
 
 export const _availabilityAssets = {
@@ -12,36 +12,6 @@ export const _availabilityAssets = {
         lazy: false,
     },
     lvlVectors: {
-        l11: {
-            vector: {
-                key: "l11-vector",
-                src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/Availability-Vector-L11.svg",
-                role: "presentation",
-                width: 491,
-                height: 64,
-                lazy: false,
-                positionTop: 93.25,
-            },
-            tenancy: [
-                {
-                    key: "tenancy-1",
-                    src: Tenancy01,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                },
-            ],
-        },
-
         l14: {
             vector: {
                 key: "l14-vector",
@@ -55,20 +25,36 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l14.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "148.3 m²",
+                    timing: "Sept 2024",
+                    fitout: "Existing",
+                    leaseType: "Direct",
+                    furtherDetails: [
+                        {
+                            label: "8pax Meeting Room",
+                            value: "1",
+                        },
+                        {
+                            label: "Collaboration Area",
+                            value: "1",
+                        },
+                        {
+                            label: "Workstations",
+                            value: "14",
+                        },
+                        {
+                            label: "Kitchen/Breakout",
+                            value: "1",
+                        },
+                    ]
                 },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                }
+
             ]
         },
 
@@ -89,16 +75,53 @@ export const _availabilityAssets = {
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "505 m²",
+                    timing: "Immediate",
+                    fitout: "Spec",
+                    leaseType: "Direct",
+                    furtherDetails: [
+                        {
+                            heading: true,
+                            label: "New Spec Suite",
+                            value: "",
+                        },
+                        {
+                            label: "12pax Boardroom",
+                            value: "1",
+                        },
+                        {
+                            label: "5pax Meeting Room",
+                            value: "1",
+                        },
+                        {
+                            label: "4pax Meeting Room",
+                            value: "1",
+                        },
+                        {
+                            label: "Office",
+                            value: "2",
+                        },
+                        {
+                            label: "Quiet Room",
+                            value: "2",
+                        },
+                        {
+                            label: "Collaboration Area",
+                            value: "40",
+                        },
+                        {
+                            label: "Workstations",
+                            value: "2",
+                        },
+                        {
+                            label: "Kitchen/Breakout",
+                            value: "1",
+                        },
+                    ]
                 },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                }
+
             ]
         },
 
@@ -119,16 +142,15 @@ export const _availabilityAssets = {
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "618 m²",
+                    timing: "Immediate",
+                    fitout: "Refurbished",
+                    leaseType: "Direct",
+                    paragraph: "Fully refurbished - warm shell"
                 },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                }
+
             ]
         },
 
@@ -149,16 +171,15 @@ export const _availabilityAssets = {
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "1258 m²",
+                    timing: "Immediate",
+                    fitout: "Refurbished",
+                    leaseType: "Direct",
+                    paragraph: "Fully refurbished - warm shell"
                 },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                }
+
             ]
         },
 
@@ -175,20 +196,45 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "",
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "550.5 m²",
+                    timing: "Immediate",
+                    fitout: "Existing",
+                    leaseType: "Direct",
+                    furtherDetails: [
+                        {
+                            label: "Reception Area",
+                            value: "1",
+                        },
+                        {
+                            label: "Large Boardroom",
+                            value: "1",
+                        },
+
+                        {
+                            label: "Large Meeting Room",
+                            value: "1",
+                        },
+                        {
+                            label: "6pax Meeting Room",
+                            value: "2",
+                        },
+                        {
+                            label: "Office",
+                            value: "17",
+                        },
+                        {
+                            label: "Kitchen/Breakout",
+                            value: "1",
+                        },
+                    ]
                 },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                }
+
             ]
         },
 
@@ -205,20 +251,18 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "",
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: " m²",
+                    timing: "",
+                    fitout: "Existing",
+                    leaseType: "Direct",
                 },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                }
+
             ]
         },
 
@@ -235,20 +279,18 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "",
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: " m²",
+                    timing: "",
+                    fitout: "Existing",
+                    leaseType: "Direct",
                 },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                }
+
             ]
         },
 
@@ -265,20 +307,45 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l30.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "625 m²",
+                    timing: "Immediate",
+                    fitout: "Existing",
+                    leaseType: "Direct",
+                    furtherDetails: [
+                        {
+                            label: "Reception Area",
+                            value: "1",
+                        },
+                        {
+                            label: "14pax Boardroom",
+                            value: "1",
+                        },
+
+                        {
+                            label: "Meeting Room",
+                            value: "3",
+                        },
+                        {
+                            label: "Office",
+                            value: "14",
+                        },
+                        {
+                            label: "Workstation",
+                            value: "18",
+                        },
+                        {
+                            label: "Kitchen/Breakout",
+                            value: "1",
+                        },
+                    ]
                 },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                }
+
             ]
         },
 
@@ -295,20 +362,19 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l31.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
-                },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "1248 m²",
+                    timing: "Sept 2025",
+                    fitout: "Existing",
+                    leaseType: "Direct",
+                    paragraph: "Existing fitted whole floor. Can be\nrefurbished to warm shell"
                 }
+
             ]
         },
 
@@ -325,20 +391,47 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l33.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "433.5 m²",
+                    timing: "Immediate",
+                    fitout: "Existing",
+                    leaseType: "Direct",
+                    furtherDetails: [
+                        {
+                            label: "Reception Area",
+                            value: "1",
+                        },
+                        {
+                            label: "18pax Boardroom",
+                            value: "1",
+                        },
+                        {
+                            label: "8pax Boardroom",
+                            value: "1",
+                        },
+                        {
+                            label: "Small Meeting Room",
+                            value: "2",
+                        },
+                        {
+                            label: "Office",
+                            value: "2",
+                        },
+                        {
+                            label: "Workstation",
+                            value: "40",
+                        },
+                        {
+                            label: "Kitchen/Breakout",
+                            value: "1",
+                        },
+                    ]
                 },
-                {
-                    key: "tenancy-2",
-                    src: Tenancy02,
-                    role: "presentation",
-                    width: 264,
-                    height: 264,
-                    lazy: false
-                }
             ]
         },
 
@@ -355,19 +448,74 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l35-1.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "222.2 m²",
+                    timing: "April 2025",
+                    fitout: "Existing",
+                    leaseType: "Direct",
+                    furtherDetails: [
+                        {
+                            label: "10pax Boardroom",
+                            value: "1",
+                        },
+                        {
+                            label: "4pax Boardroom",
+                            value: "1",
+                        },
+                        {
+                            label: "Workstation",
+                            value: "12",
+                        },
+                        {
+                            label: "Kitchen/Breakout",
+                            value: "1",
+                        },
+                    ]
                 },
                 {
                     key: "tenancy-2",
-                    src: Tenancy02,
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l35-2.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
-                    lazy: false
+                    lazy: false,
+                    status: "Available",
+                    floorArea: "611.2 m²",
+                    timing: "May 2025",
+                    fitout: "Existing",
+                    leaseType: "Direct",
+                    furtherDetails: [
+                        {
+                            label: "14pax Boardroom",
+                            value: "1",
+                        },
+                        {
+                            label: "Small Meeting Room",
+                            value: "2",
+                        },
+                        {
+                            label: "Office",
+                            value: "4",
+                        },
+                        {
+                            label: "Quiet Room",
+                            value: "2",
+                        },
+                        {
+                            label: "Workstation",
+                            value: "52",
+                        },
+                        {
+                            label: "Kitchen/Breakout",
+                            value: "1",
+                        },
+                    ]
+
                 }
             ]
         },

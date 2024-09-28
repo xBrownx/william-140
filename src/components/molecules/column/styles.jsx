@@ -55,4 +55,8 @@ export const StyledColumn = styled.div`
     ${props => props.$borderBox && css`
         box-sizing: border-box;
     `}
+    
+    ${props => props.$fitContent && css`
+        width: fit-content;
+    `}
 `

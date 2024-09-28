@@ -78,8 +78,8 @@ export const DesignVideo = memo(
                                 $border
                                 onClick={() => setCurrentShot(tour)}
                             >
-                                <Row padding={{right: 16}} style={{ justifyContent: "start" }} >
-                                    <Image width={24} height={24} src={tour.iconSrc} />
+                                <Row $centre padding={{right: 16}}>
+                                    {/*<Image width={24} height={24} src={tour.iconSrc} />*/}
                                     <p>{tour.title}</p>
                                 </Row>
 
@@ -89,6 +89,7 @@ export const DesignVideo = memo(
                                     <StyledLi
                                         key={menuItems[key].key}
                                         onClick={() => setCurrentShot(menuItems[key])}
+                                        $active={menuItems[key] === currentShot}
                                     >
                                         <p>
                                             {menuItems[key].title}

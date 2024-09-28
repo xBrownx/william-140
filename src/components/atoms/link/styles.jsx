@@ -41,5 +41,5 @@ export const StyledLink = styled.a`
         `}
     }
 
-
+height: fit-content;
 `

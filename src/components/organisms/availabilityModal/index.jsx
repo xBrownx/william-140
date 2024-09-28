@@ -1,174 +1,195 @@
 import React, { memo, useEffect, useState } from "react";
-import { Tenancy, TenancyDetails, Title } from "./styles";
-import { Link, Paragraph } from "../../atoms";
+import {
+    CustomButton,
+    DetailsWrapper,
+    LabelWrapper,
+    NavWrapper,
+    StyledLi,
+    StyledUl,
+    Title,
+    ValueWrapper,
+    VectorWrapper
+} from "./styles";
+import { Button, Image, Link, Paragraph } from "../../atoms";
 import { Column, ModalPane, ModalNav, Row } from "../../molecules";
 import { useModalKeyContext, useModalStatusContext } from "../availabilityOverlay/context";
 
-export const AvailabilityModal = memo(
-    function AvailabilityModal(props) {
-        const [isModalOpen, onLevelClick] = useModalStatusContext();
-        const [modalKey, setModalKey] = useModalKeyContext();
 
-        const [tenancy, setTenancy] = useState(0)
-        const [TenancyVector, setTenancyVector] = useState(0);
-        const activeModal = props.buttons[modalKey];
-        const lvlVectors = props.assets.lvlVectors;
+function AvailabilityModal(props) {
 
-        const setTenancyWithVector = (t) => {
-            setTenancyVector(lvlVectors[modalKey].tenancy[t].src);
-            setTenancy(t);
+    const [isModalOpen, onLevelClick] = useModalStatusContext();
+    const [modalKey, setModalKey] = useModalKeyContext();
+
+    const [tenancy, setTenancy] = useState(0)
+    const [TenancyVector, setTenancyVector] = useState(0);
+    const activeModal = props.buttons[modalKey];
+    const lvlVectors = props.assets.lvlVectors;
+
+    const setTenancyWithVector = (t) => {
+        setTenancy(t);
+    }
+    useEffect(() => {
+        if (lvlVectors[modalKey]) {
+            setTenancy(lvlVectors[modalKey].tenancy[0])
         }
-        useEffect(() => {
-            if (lvlVectors[modalKey])
-                setTenancyVector(lvlVectors[modalKey].tenancy[0].src)
-        }, [modalKey]);
+    }, [modalKey]);
 
-        if (modalKey === null) return;
+    if (modalKey === null) return;
 
 
-
-        return (
-            <ModalPane
-                $open={isModalOpen}
-                closeModal={() => onLevelClick(null)}
+    return (
+        <ModalPane
+            $open={isModalOpen}
+            closeModal={() => onLevelClick(null)}
+        >
+            <Row
+                paddingInlineBlock={{ inline: 64, block: 22 }}
+                gap={64}
             >
-                <Row
-                    padding={{top: 62, left: 48, right: 48}}
-                    gap={60}
-                >
+                <NavWrapper>
                     <ModalNav buttons={props.buttons} />
-                    <Column gap={16}>
-                        <Title>
-                            Level {activeModal.lvl ? activeModal.lvl : "error"}
-                        </Title>
-                        <Row gap={16}>
+                </NavWrapper>
+
+                <Column $fitContent padding={{ top: 64 }} gap={16}>
+                    <Title>
+                        Level {activeModal.lvl ? activeModal.lvl : "error"}
+                    </Title>
+                    {lvlVectors[modalKey].tenancy.length > 1 &&
+                        <Row gap={16} $fitContent>
                             <Link
                                 $underlined
-                                $active={tenancy === 0}
-                                onClick={() => setTenancyWithVector(0)}
+                                $active={tenancy.key === 'tenancy-1'}
+                                onClick={() => setTenancy(lvlVectors[modalKey].tenancy[0])}
                             >
                                 TENANCY 1
                             </Link>
                             <Link
                                 $underlined
-                                $active={tenancy === 1}
-                                onClick={() => setTenancyWithVector(1)}
+                                $active={tenancy.key === 'tenancy-2'}
+                                onClick={() => setTenancy(lvlVectors[modalKey].tenancy[1])}
                             >
                                 TENANCY 2
                             </Link>
                         </Row>
-                        <Row gap={34}>
-                            <Tenancy>
-                                {TenancyVector ? <TenancyVector /> : null}
-                            </Tenancy>
-                            <Column $flex gap={16}>
-                                <Paragraph $secondary size={14}>
-                                    Molestie suspendisse fames vel eu tortor<br />
-                                    at. Eu facilisis sit tempus id sed mattis.
-                                </Paragraph>
-                                <Row gap={12}>
-                                    <TenancyDetails>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={1}>
-                                                Timing:
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={1}>
-                                                Landlord:
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={1}
-                                                       padding={{bottom: 16}}>
-                                                Lease Type:
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={1}>
-                                                18pax Boardroom:
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={1}>
-                                                8pax Meeting Room:
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={1}>
-                                                Small Meeting Office:
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={1}>
-                                                Office:
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={1}>
-                                                Workstation:
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={1}>
-                                                Kitchen Breakout:
-                                            </Paragraph>
-                                        </li>
-                                    </TenancyDetails>
-                                    <TenancyDetails>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={0.7}>
-                                                Immediate
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={0.7}>
-                                                REST
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={0.7}
-                                                       padding={{bottom: 16}}>
-                                                Direct
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={0.7}>
-                                                xx
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={0.7}>
-                                                xx
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={0.7}>
-                                                xx
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={0.7}>
-                                                xx
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={0.7}>
-                                                xx
-                                            </Paragraph>
-                                        </li>
-                                        <li>
-                                            <Paragraph $secondary size={16} weight={400} opacity={0.7}>
-                                                xx
-                                            </Paragraph>
-                                        </li>
-                                    </TenancyDetails>
-                                </Row>
-                            </Column>
-                        </Row>
-                    </Column>
-                </Row>
-            </ModalPane>
-        );
-    }
-);
+                    }
+                    <TenancyDeets tenancy={tenancy} />
+                    <CustomButton>
+                        <Image src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/download.svg"}
+                               alt="Tenancy deet" />
+                        Floor Plan
+                    </CustomButton>
+                </Column>
+                <VectorWrapper>
+                    <Image src={tenancy.src} alt="Tenancy deet" />
+                </VectorWrapper>
+
+            </Row>
+        </ModalPane>
+    );
+}
+
+const TenancyDeets = (props) => {
+    const tenancy = props.tenancy
+    return (
+
+        <DetailsWrapper>
+            <Column gap={16}>
+                <StyledUl>
+                    <StyledLi>
+                        <LabelWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}>
+                                Status
+                            </Paragraph>
+                        </LabelWrapper>
+                        <ValueWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}
+                                       style={{ color: "#84936E" }}>
+                                {tenancy.status}
+                            </Paragraph>
+                        </ValueWrapper>
+                    </StyledLi>
+                    <StyledLi>
+                        <LabelWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}>
+                                Floor Area
+                            </Paragraph>
+                        </LabelWrapper>
+                        <ValueWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}>
+                                {tenancy.floorArea}
+                            </Paragraph>
+                        </ValueWrapper>
+                    </StyledLi>
+                    <StyledLi>
+                        <LabelWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}>
+                                Timing
+                            </Paragraph>
+                        </LabelWrapper>
+                        <ValueWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}>
+                                {tenancy.timing}
+                            </Paragraph>
+                        </ValueWrapper>
+                    </StyledLi>
+                    <StyledLi>
+                        <LabelWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}>
+                                Fitout
+                            </Paragraph>
+                        </LabelWrapper>
+                        <ValueWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}>
+                                {tenancy.fitout}
+                            </Paragraph>
+                        </ValueWrapper>
+                    </StyledLi>
+                    <StyledLi>
+                        <LabelWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}>
+                                Lease Type
+                            </Paragraph>
+                        </LabelWrapper>
+                        <ValueWrapper>
+                            <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300} opacity={1}>
+                                {tenancy.leaseType}
+                            </Paragraph>
+                        </ValueWrapper>
+                    </StyledLi>
+                </StyledUl>
+                {tenancy.furtherDetails !== undefined &&
+                    <StyledUl>
+                        {tenancy.furtherDetails.map(item => {
+                            return (
+                                <StyledLi>
+                                    <LabelWrapper>
+                                        <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300}
+                                                   opacity={1}>
+                                            {item.label}
+                                        </Paragraph>
+                                    </LabelWrapper>
+                                    <ValueWrapper>
+                                        <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300}
+                                                   opacity={1}>
+                                            {item.value}
+                                        </Paragraph>
+                                    </ValueWrapper>
+                                </StyledLi>
+                            );
+                        })})
+                    </StyledUl>
+                }
+                {tenancy.paragraph !== undefined &&
+                    <StyledUl>
+                        <Paragraph $secondary $light size={14} lineHeight={18.16} weight={300}
+                                   opacity={1}>
+                            {tenancy.paragraph}
+                        </Paragraph>
+                    </StyledUl>
+                }
+            </Column>
+        </DetailsWrapper>
+    );
+}
+
+export default memo(AvailabilityModal);

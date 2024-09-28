@@ -75,14 +75,14 @@ export const Overlay = styled.div`
     flex-direction: column;
     height: 100%;
     justify-content: end;
-    
+
     box-sizing: border-box;
 `
 
 export const MenuWrapper = styled.div`
     z-index: 10000;
     ${S.size.height(61)};
-    ${S.padding.__({bottom: 41, right: 74, left: 42})};
+    ${S.padding.__({ bottom: 41, right: 74, left: 42 })};
     width: 100%;
     max-width: 100vw;
     box-sizing: border-box;
@@ -104,28 +104,39 @@ export const StyledUl = styled.ul`
 `;
 
 export const StyledLi = styled.li`
+    transition: all 200ms ease-in-out;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     ${S.size.height(29)};
-    ${S.padding.inlineBlock({inline: 8, block: 0})};
+    ${S.padding.inlineBlock({ inline: 8, block: 0 })};
+
     ${props => props.$border && css`
         border-right: 1px solid white;
     `}
-    
     p {
+        transition: all 200ms ease-in-out;
         color: white;
         opacity: 0.7;
         ${F.size(16)};
         font-weight: 300;
-        
+
         ${F.family.secondaryLight};
         ${F.lineHeight(20.75)};
     }
-    
+
     &:hover {
         cursor: pointer;
+
+        p {
+            opacity: 1;
+        }
     }
+    ${props => props.$active && css`
+        p {
+            opacity: 1;
+        }
+    `}
 `;

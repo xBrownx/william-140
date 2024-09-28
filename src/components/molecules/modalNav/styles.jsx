@@ -2,6 +2,7 @@ import styled, {css} from "styled-components";
 import { Style as S, Font as F, Colour as C } from '../../atoms'
 export const Container = styled.div`
     width: fit-content;
+    ${S.size.height(432)};
 `
 
 export const Button = styled.div`
@@ -16,7 +17,8 @@ export const Button = styled.div`
     border: 1px solid white;
     
     ${props => props.$active && css`
-        background-color: white;
+        background-color: #164A49;
+        border: 1px solid #164A49;
     `}
     
     ${props => props.$visible && css`
@@ -30,7 +32,7 @@ export const Button = styled.div`
         color: white;
         font-weight: 700;
         ${props => props.$active && css`
-            color: #164A49;
+            color: white;
         `}
     }
 `

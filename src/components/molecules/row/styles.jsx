@@ -4,9 +4,14 @@ import { Style as S } from '../../atoms'
 export const StyledRow = styled.div`
     ${S.flex.row}
 
+    height: 100%;
     
     ${props => props.padding && css`
         ${S.padding.__(props.padding)};
+    `};
+    
+    ${props => props.paddingInlineBlock && css`
+        ${S.padding.inlineBlock(props.paddingInlineBlock)};
     `};
     
     ${props => props.margin && css`
@@ -19,9 +24,18 @@ export const StyledRow = styled.div`
     
     ${props => props.$justifySpaceBetween & css`
         justify-content: space-between;
-    `}
+    `};
     
     ${props => props.spaceBetween && css`
         justify-content: space-between;
+    `};
+    
+    ${props => props.$fitContent && css`
+        height: fit-content !important;
+    `}
+    
+    ${props => props.$centre && css`
+        justify-content: center;
+        align-items: center;
     `}
 `

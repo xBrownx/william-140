@@ -1,5 +1,7 @@
 import styled, {css} from "styled-components";
-import { Style as S } from '../../atoms'
+import { Style as S } from '../../atoms';
+import {Font as F} from '../../atoms'
+import {Colour as C} from '../../atoms';
 export const Container = styled.div`
 
 `
@@ -21,8 +23,8 @@ export const BackgroundOverlay = styled.div`
 export const ModalWindow = styled.div`
     ${S.flex.column};
     ${S.borderRadius};
-    ${S.size.width(796)};
-    ${S.size.height(516)};
+    ${S.size.width(1000)};
+    ${S.size.height(562.5)};
     position: fixed;
     z-index: 1000;
     top: 50%;
@@ -52,8 +54,20 @@ export const CloseButtonWrapper = styled.div`
     top: 0;
     right: 0;
     padding: 2.963vh 1.667vw;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &:hover {
         cursor: pointer;
     }
+
+    p {
+        ${F.family.secondaryLight};
+        ${F.size(14)};
+        ${C.font.paragraphSecondary};
+        white-space: pre-wrap;
+        font-weight: 400;
+    }
+    
+    
 `

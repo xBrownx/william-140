@@ -41,5 +41,14 @@ export const StyledParagraph = styled.p`
     ${props => props.$noPStyle && css`
         ${S.padding.none}
     `}
+    
+    ${props => props.lineHeight && css`
+        ${F.lineHeight(props.lineHeight)};
+    `}
+    
+    ${props => props.$light && css`
+        ${F.family.secondaryLight};
+    `}
+    
 `
 
