@@ -8,6 +8,7 @@ export const Container = styled.div`
     align-items: end;
     ${S.padding.__({bottom: 32})};
     z-index: 0;
+    ${S.size.height(128)}
 `
 
 export const Wrapper = styled.div`
@@ -32,6 +33,15 @@ export const RightDiv = styled.div`
     flex: 1;
     display: flex;
     justify-content: end;
+    height: 100%;
+    align-items: end;
+    img {
+        display: flex;
+        height: 150px;
+        justify-content: end;
+        align-items: end;
+        transform: translateY(50px)
+    }
 `
 
 export const StyledText = styled.p`

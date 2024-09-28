@@ -1,6 +1,7 @@
 import { ReactComponent as FooterLogo } from "../../../assets/svg/Footer-Logo.svg";
 import React, { memo } from "react";
 import { CentreDiv, Container, LeftDiv, RightDiv, StyledText, Wrapper } from "./styles";
+import { Image } from "../../atoms";
 
 export const Footer = memo(
     function Footer() {
@@ -16,9 +17,7 @@ export const Footer = memo(
                         <FooterLogo />
                     </CentreDiv>
                     <RightDiv>
-                        <StyledText>
-                            Designed and developed by replika
-                        </StyledText>
+                        <Image src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/replika-logo.png"} />
                     </RightDiv>
                 </Wrapper>
             </Container>
