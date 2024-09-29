@@ -8,7 +8,7 @@ export const _historyAssets = {
     },
     placeholder: {
         key: "history-placeHolder",
-        src: placeholder,
+        src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/history/History-Placeholder.jpeg",
         role: "presentation"
     }
 }
