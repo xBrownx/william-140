@@ -1,4 +1,4 @@
-import { StyledUl } from "./styled";
+import { CustomLink, StyledUl } from "./styled";
 import { Link } from "../../atoms/";
 import { Button } from "../../atoms";
 import { memo } from "react";
@@ -14,10 +14,14 @@ export const NavList = memo(
                         key={link.key}
                         onClick={() => props.scrollTo(link.route)}
                     >
-                        {link.type === "link" ? link.txt :
-                            <Button $secondary>
+                        {link.type === "link" ?
+                            <CustomLink>
                                 {link.txt}
-                            </Button>
+                            </CustomLink>
+                            :
+                            <Button $secondary >
+                                {link.txt}
+                            </Button >
                         }
                     </Link>
                 ))}
