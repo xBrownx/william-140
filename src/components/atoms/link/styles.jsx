@@ -37,32 +37,11 @@ export const StyledLink = styled.a`
         `}
 
         ${props => props.$nav && css`
-            font-weight: 600;
+            
         `}
     }
 
 height: fit-content;
 `
 
-export const StyledNavLink = styled.a`
-    all: unset;
-    font-size: ${STYLE.fontSize(16)}vw;
-    line-height: ${STYLE.height(21.25)}vh;
-    letter-spacing: 0;
-    font-family: 'MaisonNeueExt', serif;
-    color: white;
 
-    transition: all 200ms ease-in-out;
-    &:hover {
-        cursor: pointer;
-        color: ${STYLE.colour.primary};
-    }
-    
-    ${props => props.$isActive && css`
-        color: ${STYLE.colour.primary};
-        font-weight: 700;
-        &:hover {
-            cursor: default;
-        }
-    `}
-`

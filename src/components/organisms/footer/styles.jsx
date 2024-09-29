@@ -37,7 +37,7 @@ export const RightDiv = styled.div`
     align-items: end;
     img {
         display: flex;
-        height: 150px;
+        height: 200px;
         justify-content: end;
         align-items: end;
         transform: translateY(50px)
