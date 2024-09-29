@@ -8,15 +8,16 @@ import carousel07 from './img/Gallery-Carousel-07.jpg'
 
 export const _galleryAssets = {
     carousel: [
+
         {
-            src: carousel01,
+            src: carousel02,
             role: "presentation",
             width: 2500,
             height: 1389,
             lazy: false
         },
         {
-            src: carousel02,
+            src: carousel01,
             role: "presentation",
             width: 2500,
             height: 1389,

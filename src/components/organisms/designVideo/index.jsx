@@ -20,32 +20,12 @@ export const DesignVideo = memo(
     function DesignVideo(props) {
         const tour = props.tour;
         const menuItems = props.menuItems;
-        const [currentShot, setCurrentShot] = useState("main-entry");
-        const [videoSrc, setVideoSrc] = useState(menuItems["main-entry"].videoSrc);
+        const [currentShot, setCurrentShot] = useState(tour);
+
         const [isLoading, setIsLoading] = useState(false);
         const videoRef = useRef(null);
 
-        const startTour = () => {
-            videoRef.current.scrollIntoView({ behavior: "smooth" });
-            if (currentShot !== tour.key) {
-                setIsLoading(true);
-                setCurrentShot(tour.key);
-                wait(200).then(() => {
-                    setVideoSrc(tour.videoSrc);
-                })
-            }
-        }
 
-        const setShotChange = (shot) => {
-            videoRef.current.scrollIntoView({ behavior: "smooth" });
-            if (currentShot !== shot) {
-                setIsLoading(true);
-                setCurrentShot(shot);
-                wait(200).then(() => {
-                    setVideoSrc(menuItems[shot].videoSrc);
-                })
-            }
-        }
 
         useEffect(() => {
             console.log("useEffect triggered")
@@ -57,6 +37,7 @@ export const DesignVideo = memo(
                 setIsLoading(false);
             })
         }, [currentShot]);
+
 
 
         return (
@@ -71,8 +52,9 @@ export const DesignVideo = memo(
                         ref={videoRef}
                         muted
                         src={currentShot.videoSrc}
-                        autoPlay={true}
+                        autoPlay
                         controls={true}
+                        onLoad={() =>{videoRef.current.play()}}
                     >
                     </StyledVideo>
 

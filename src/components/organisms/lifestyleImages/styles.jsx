@@ -20,6 +20,7 @@ export const StyledImg = styled.img`
     object-fit: cover;
     height: 100%;
     width: auto;
+    ${S.borderRadius};
 `
     //
     // ${media.md`

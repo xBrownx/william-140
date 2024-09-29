@@ -18,7 +18,7 @@ export const HistoryVideo = memo(
 
         return (
             <Container $gridCentre paddingInlineBlock={{ inline: 160, block: 32 }} $borderRadius $overflowHidden>
-                <StyledVideo ref={videoRef} $isVisible={isPlaying} loop muted controls={false}>
+                <StyledVideo ref={videoRef} $isVisible={isPlaying} loop muted controls={true}>
                     <source src={assets.video.src} type="video/mp4" />
                 </StyledVideo>
                 <StyledImg $isVisible={!isPlaying} {...assets.placeholder} />
