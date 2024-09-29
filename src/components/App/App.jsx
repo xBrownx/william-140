@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useRef, lazy, Suspense, useTransition, useEffect, useState } from "react";
+import { imageAssets, videoAssets } from '../../assets/assetLinks';
 import { Header } from "../organisms";
 import Landing from '../pages/landing'
 import ErrorBoundary from "../ErrorBoundary";
@@ -22,7 +23,34 @@ const Location = lazy(() => import('../pages/location'));
 const Footer = lazy(() => import('../organisms/').then(m => ({ default: m.Footer })));
 
 function App() {
+    const [isLoading, setIsLoading] = useState(true);
+    
+    const cacheAssets = async (imgArray, vidArray) => {
+        const imgPromises = await imgArray.map((src) => {
+            return new Promise(function (resolve, reject) {
+                const img = new Image();
+        
+                img.src = src;
+                img.onload = resolve();
+                img.onerror = reject();
+            });
+        }   
 
+        const vidPromises = await vidArray.map((src) => {
+            return new Promise(function (resolve, reject) {
+                const vid = new Video();
+        
+                vid.src = src;
+                vid.onload = resolve();
+                vid.onerror = reject();
+            });
+        } 
+
+        await Promises.all(imgPromises);
+        await Promises.all(vidPromises);
+        setIsLoading(false);
+    }
+    
     const pageRefs = {
         landing: useRef(),
         home: useRef(),
@@ -41,6 +69,10 @@ function App() {
         }, 100);
     }
 
+    useEffect(() => {
+        cacheAssets(imageAssets, videoAssets);
+    }
+    
     return (
         <ErrorBoundary>
             <div ref={pageRefs.main} className="app-container" style={{mixBlendMode: "screen"}} >
