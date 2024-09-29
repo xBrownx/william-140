@@ -7,6 +7,10 @@ export const StyledColumn = styled.div`
     width: 100%;
     height: 100%;
     
+    ${props => props.$width && css`
+    ${S.size.width(props.$width)};
+    `}
+    
     ${props => props.$startX && css`
         align-items: start;
     `};

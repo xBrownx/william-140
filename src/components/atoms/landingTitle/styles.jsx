@@ -19,7 +19,7 @@ export const StyledHeading = styled.h1`
         color: black !important;
         opacity: 1 !important;
     `}
-       
+    
     
     
 `

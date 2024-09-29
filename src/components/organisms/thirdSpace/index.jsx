@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 import { CarouselWrapper, Container } from './styles';
 import { constants as CONST } from "./constants";
 import { PageTitle, SlideCarousel } from "../../molecules";
-import { _galleryAssets } from "../../../assets";
 
 function ThirdSpace(props) {
     return (

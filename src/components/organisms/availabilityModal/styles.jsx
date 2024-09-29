@@ -112,3 +112,14 @@ export const CustomButton = styled.button`
     }
 
 `
+
+export const CarouselWrapper = styled.div`
+    
+    img {
+        object-fit: cover;
+        object-position: center center;
+        ${S.size.width(532)} !important;
+        ${S.size.height(299)};
+        ${S.size.maxWidth(532)} !important;
+    }
+`

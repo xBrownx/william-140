@@ -5,6 +5,7 @@ export const StyledRow = styled.div`
     ${S.flex.row}
 
     height: 100%;
+    box-sizing: border-box;
     
     ${props => props.padding && css`
         ${S.padding.__(props.padding)};

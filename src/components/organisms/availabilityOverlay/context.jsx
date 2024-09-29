@@ -13,9 +13,9 @@ export const AvailabilityProvider = ({ children }) => {
 
     const onLevelClick = (key) => {
         setModalKey(key);
-        setModalOpen(modalKey !== null);
+        setModalOpen(true);
 
-         if (typeof window != 'undefined' && window.document && key !== null) {
+         if (typeof window != 'undefined' && window.document && !isModalOpen ) {
                 document.body.style.overflow = 'hidden';
             } else {
                 document.body.style.overflow = 'unset';

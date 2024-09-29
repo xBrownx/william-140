@@ -1,5 +1,6 @@
 import React, { memo, useEffect, useState } from "react";
 import {
+    CarouselWrapper,
     CustomButton,
     DetailsWrapper,
     LabelWrapper,
@@ -11,8 +12,11 @@ import {
     VectorWrapper
 } from "./styles";
 import { Button, Image, Link, Paragraph } from "../../atoms";
-import { Column, ModalPane, ModalNav, Row } from "../../molecules";
+import { Column, ModalPane, ModalNav, Row, SlideCarousel } from "../../molecules";
 import { useModalKeyContext, useModalStatusContext } from "../availabilityOverlay/context";
+import ThirdSpace from "../thirdSpace";
+import ThirdSpaceCarousel from "../thirdSpace/carousel";
+import { constants as CONST } from "../thirdSpace/constants";
 
 
 function AvailabilityModal(props) {
@@ -49,40 +53,43 @@ function AvailabilityModal(props) {
                 <NavWrapper>
                     <ModalNav buttons={props.buttons} />
                 </NavWrapper>
+                {modalKey === "l05" ? <ThirdspaceModal /> :
+                    <>
+                        <Column $fitContent padding={{ top: 64 }} gap={16}>
+                            <Title>
+                                Level {activeModal.lvl ? activeModal.lvl : "error"}
+                            </Title>
+                            {lvlVectors[modalKey].tenancy.length > 1 &&
 
-                <Column $fitContent padding={{ top: 64 }} gap={16}>
-                    <Title>
-                        Level {activeModal.lvl ? activeModal.lvl : "error"}
-                    </Title>
-                    {lvlVectors[modalKey].tenancy.length > 1 &&
-                        <Row gap={16} $fitContent>
-                            <Link
-                                $underlined
-                                $active={tenancy.key === 'tenancy-1'}
-                                onClick={() => setTenancy(lvlVectors[modalKey].tenancy[0])}
-                            >
-                                TENANCY 1
-                            </Link>
-                            <Link
-                                $underlined
-                                $active={tenancy.key === 'tenancy-2'}
-                                onClick={() => setTenancy(lvlVectors[modalKey].tenancy[1])}
-                            >
-                                TENANCY 2
-                            </Link>
-                        </Row>
-                    }
-                    <TenancyDeets tenancy={tenancy} />
-                    <CustomButton>
-                        <Image src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/download.svg"}
-                               alt="Tenancy deet" />
-                        Floor Plan
-                    </CustomButton>
-                </Column>
-                <VectorWrapper>
-                    <Image src={tenancy.src} alt="Tenancy deet" />
-                </VectorWrapper>
-
+                                <Row gap={16} $fitContent>
+                                    <Link
+                                        $underlined
+                                        $active={tenancy.key === 'tenancy-1'}
+                                        onClick={() => setTenancy(lvlVectors[modalKey].tenancy[0])}
+                                    >
+                                        TENANCY 1
+                                    </Link>
+                                    <Link
+                                        $underlined
+                                        $active={tenancy.key === 'tenancy-2'}
+                                        onClick={() => setTenancy(lvlVectors[modalKey].tenancy[1])}
+                                    >
+                                        TENANCY 2
+                                    </Link>
+                                </Row>
+                            }
+                            <TenancyDeets tenancy={tenancy} />
+                            <CustomButton>
+                                <Image
+                                    src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/download.svg"}
+                                    alt="Tenancy deet" />
+                                Floor Plan
+                            </CustomButton>
+                        </Column>
+                        <VectorWrapper>
+                            <Image src={tenancy.src} alt="Tenancy deet" />
+                        </VectorWrapper>
+                    </>}
             </Row>
         </ModalPane>
     );
@@ -91,7 +98,6 @@ function AvailabilityModal(props) {
 const TenancyDeets = (props) => {
     const tenancy = props.tenancy
     return (
-
         <DetailsWrapper>
             <Column gap={16}>
                 <StyledUl>
@@ -189,6 +195,19 @@ const TenancyDeets = (props) => {
                 }
             </Column>
         </DetailsWrapper>
+    );
+}
+
+const ThirdspaceModal = (props) => {
+    return (
+        <Column padding={{ top: 64 }} $borderBox $width={532} gap={33}>
+            <Title>
+                Level 5 Third Space
+            </Title>
+            <CarouselWrapper>
+                <SlideCarousel images={CONST.carousel} />
+            </CarouselWrapper>
+        </Column>
     );
 }
 

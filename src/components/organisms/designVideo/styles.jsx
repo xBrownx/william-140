@@ -39,12 +39,15 @@ export const ButtonWrapper = styled.div`
     }
 `
 export const MapWrapper = styled.div`
+    position: absolute;
     flex: 1;
+    z-index: 10;
     display: flex;
     justify-content: end;
-
-    ${S.padding.__({ top: 48, right: 32 })}
-    svg {
+    right: 0;
+    top: 0;
+    ${S.padding.__({ top: 120, right: 32 })}
+    img {
         ${S.size.width(175)};
         ${S.size.height(219)};
     }

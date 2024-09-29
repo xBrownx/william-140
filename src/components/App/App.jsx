@@ -4,6 +4,7 @@ import { Header } from "../organisms";
 import Landing from '../pages/landing'
 import ErrorBoundary from "../ErrorBoundary";
 import { ScrollingText } from "../organisms";
+import LoadingScreen from "../organisms/loadingScreen";
 
 const Agency = lazy(() => import('../pages/agency'));
 const Amenities = lazy(() => import('../pages/amenities'));
@@ -43,6 +44,7 @@ function App() {
     return (
         <ErrorBoundary>
             <div ref={pageRefs.main} className="app-container" style={{mixBlendMode: "screen"}} >
+                {/*<LoadingScreen />*/}
                 <Header pageRefs={pageRefs} scrollTo={scrollTo} />
                 <Landing ref={pageRefs.landing} scrollTo={() => scrollTo(pageRefs.home)} />
 

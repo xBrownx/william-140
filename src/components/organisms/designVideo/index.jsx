@@ -64,12 +64,18 @@ export const DesignVideo = memo(
                 <VideoContainer
                     $isLoading={isLoading}
                 >
+                    <MapWrapper>
+                        {currentShot.mapSrc !== undefined && <Image src={currentShot.mapSrc}/> }
+                    </MapWrapper>
                     <StyledVideo
                         ref={videoRef}
                         muted
                         src={currentShot.videoSrc}
+                        autoPlay={true}
+                        controls={true}
                     >
                     </StyledVideo>
+
                 </VideoContainer>
                 <Overlay style={{ justifyContent: "end" }}>
                     <MenuWrapper>

@@ -6,7 +6,7 @@ export const availability = {
     paragraphTxt: "Discover a new home for your business at 140 William Street—where\n" +
         "connection and community thrive for today's and tomorrow's workforce.",
     buttons: {
-        l05: {lvl: 5, isActive: false},
+        l05: {lvl: 5, isActive: true},
         l06: {lvl: 6, isActive: false},
         l07: {lvl: 7, isActive: false},
         l08: {lvl: 8, isActive: false},

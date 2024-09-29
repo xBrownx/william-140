@@ -15,13 +15,14 @@ const Home = memo(
                     $fullScreen
                 >
                     <SplitScreen $padding>
-                        <ImgWrapper
+                        <ImgWrapper id={'left-pane'}
                             width={assets.hero.width}
                             height={assets.hero.height}
                         >
                             <ParallaxImg image={assets.hero} />
                         </ImgWrapper>
                         <Column
+                            id={'right-pane'}
                             $centreY
                             paddingInlineBlock={{inline: 16}}
                             gap={32}
