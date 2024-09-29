@@ -71,7 +71,7 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l19.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
@@ -138,7 +138,7 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l19.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
@@ -167,7 +167,7 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: Tenancy01,
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l20.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
@@ -196,7 +196,7 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: "",
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l22.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
@@ -251,7 +251,7 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: "",
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l20.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
@@ -279,7 +279,7 @@ export const _availabilityAssets = {
             tenancy: [
                 {
                     key: "tenancy-1",
-                    src: "",
+                    src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l20.svg",
                     role: "presentation",
                     width: 264,
                     height: 264,
