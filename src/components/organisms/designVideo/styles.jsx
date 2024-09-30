@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Style as S, Font as F } from '../../atoms'
+import { Style as S, Font as F, Media as M } from '../../atoms'
 import { paddingBottom } from "../../atoms/globalStyles/DimensionCalcs";
 
 export const Container = styled.div`
@@ -8,6 +8,10 @@ export const Container = styled.div`
     margin: 2% 0 0 0;
     background-color: black;
     position: relative;
+    
+    ${M.md`
+        
+    `};
 `
 
 export const ListWrapper = styled.div`
@@ -102,7 +106,9 @@ export const StyledUl = styled.ul`
     align-items: center;
     justify-content: center;
     ${S.gap.width(16)};
-
+    ${M.md`
+        display: none;
+    `};
 
 `;
 

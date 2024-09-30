@@ -11,7 +11,7 @@ export const Container = styled.div`
     align-items: center;
     
     ${M.md`
-        padding-block: 0;
+        padding-block: 32px;
         padding-inline: 16px;
     `};
     

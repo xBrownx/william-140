@@ -6,10 +6,11 @@ export const StyledColumn = styled.div`
     flex-direction: column;
     justify-content: end;
     gap: ${S.height(32)};
-    padding-block: ${S.height(192)};
+    padding-top: ${S.height(192)};
     
     ${M.md`
         padding-block: 64px;
         x-overflow: scroll;
+        padding-bottom: 0;
     `};
 `;

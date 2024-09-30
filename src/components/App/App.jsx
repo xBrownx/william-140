@@ -114,9 +114,8 @@ function App() {
             <AnimatePresence>
                 {imgLoading && <LoadingScreen $total={totalAssets} $progress={loadCount} />}
             </AnimatePresence>
-            {!imgLoading &&
-                <div ref={pageRefs.main} className="app-container" style={{ mixBlendMode: "screen" }}>
 
+                <div ref={pageRefs.main} className="app-container" style={{ mixBlendMode: "screen" }}>
                     <Header pageRefs={pageRefs} scrollTo={scrollTo} />
                     <Landing ref={pageRefs.landing} scrollTo={() => scrollTo(pageRefs.home)} />
                     <Home ref={pageRefs.home} onDiscoverClick={() => scrollTo(pageRefs.availability)} />
@@ -135,7 +134,7 @@ function App() {
                     <Enquire ref={pageRefs.enquire} scrollToTop={() => scrollTo(pageRefs.landing)} />
                     <Footer />
                 </div>
-            }
+
 
         </ErrorBoundary>
 

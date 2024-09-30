@@ -3,6 +3,7 @@ import { amenities as CONST } from './constants'
 import { Column, Container, FadeCarousel, PageTitle, SplitScreen } from "../../molecules";
 import { AmenitiesList, AmenitiesVideo } from '../../organisms';
 import { Page } from "../../templates";
+import { CustomSplitScreen, VideoContainer } from "./styles";
 
 const Amenities = memo(
     forwardRef(
@@ -13,7 +14,7 @@ const Amenities = memo(
                     $fullScreen
                     $bgSecondary
                 >
-                    <SplitScreen $padding>
+                    <CustomSplitScreen $padding>
                         <Container >
                             <Column>
                                 <PageTitle $secondary>
@@ -23,13 +24,10 @@ const Amenities = memo(
                                 <AmenitiesList />
                             </Column>
                         </Container>
-                        <Container
-                            $fillSize
-                            padding={{left: 16}}
-                        >
+                        <VideoContainer>
                             <AmenitiesVideo src={CONST.assets.video.src} />
-                        </Container>
-                    </SplitScreen>
+                        </VideoContainer>
+                    </CustomSplitScreen>
                 </Page>
 
             );

@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Media as M } from '../../atoms';
 
 export const Container = styled.div`
     position: relative;
@@ -10,6 +11,7 @@ export const Container = styled.div`
     justify-content: center;
     overflow: hidden;
     box-sizing: border-box;
+        
 `
 
 export const Wrapper = styled.div`
@@ -41,9 +43,9 @@ export const MenuItem = styled.div`
             color: #164A49;
         `};
         
-        @media only screen and (max-width: 750px) {
-            font-size: 6pt;
-        }
+        ${M.md`
+            font-size: 16px;
+        `};
     }
 
     img {
@@ -55,7 +57,10 @@ export const MenuItem = styled.div`
             opacity: 1;
             filter: invert(20%) sepia(82%) saturate(370%) hue-rotate(130deg) brightness(94%) contrast(92%);
         `};
-        
+        ${M.md`
+            width: 32px;
+            height: 32px;
+        `};
         
     }
     
