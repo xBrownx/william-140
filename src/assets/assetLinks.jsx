@@ -1,4 +1,4 @@
-export const images = [
+export const imageAssets = [
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/down-arrow.svg",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/Header-Logo.svg",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/Footer-Logo.svg",
@@ -23,25 +23,15 @@ export const images = [
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Location-03-Trains.svg",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/location/Location-Carousel-4.svg",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/Location-04-Hotels.svg",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/tour.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/play.svg",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/main-entry.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/design/entry.png",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/reception.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/design/reception.png",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/lift-lobby.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/design/lift-lobby.png",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/lobby-lounge.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/design/lobby-lounge.png",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/work-lobby.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/design/work-lounge.png",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/servery.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/design/servery.png",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/cafe-pavillion.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/design/cafe-pavilion.png",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/meeting-room.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/design/meeting-room.png",
-    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/courtyard.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/design/courtyard.png",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/history/History-Placeholder.jpeg",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/gallery/Gallery-Carousel-01.jpg",
@@ -55,8 +45,18 @@ export const images = [
 
 ]
 
-export const videos = [
+export const videoAssets = [
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/landing/background.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/tour.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/main-entry.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/reception.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/lift-lobby.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/lobby-lounge.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/work-lobby.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/servery.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/cafe-pavillion.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/meeting-room.mp4",
+    "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/design/courtyard.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/amenities/amenities.mp4",
     "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/videos/history/history.mp4"
 
