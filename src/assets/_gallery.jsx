@@ -1,11 +1,3 @@
-import carousel01 from './img/Gallery-Carousel-01.jpg'
-import carousel02 from './img/Gallery-Carousel-02.jpg'
-import carousel03 from './img/Gallery-Carousel-03.jpg'
-import carousel04 from './img/Gallery-Carousel-04.jpg'
-import carousel05 from './img/Gallery-Carousel-05.jpg'
-import carousel06 from './img/Gallery-Carousel-06.jpg'
-import carousel07 from './img/Gallery-Carousel-07.jpg'
-
 export const _galleryAssets = {
     carousel: [
 
