@@ -10,49 +10,56 @@ export const _galleryAssets = {
     carousel: [
 
         {
-            src: carousel02,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/gallery/Gallery-Carousel-02.jpg",
             role: "presentation",
             width: 2500,
             height: 1389,
             lazy: false
         },
         {
-            src: carousel01,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/gallery/Gallery-Carousel-01.jpg",
             role: "presentation",
             width: 2500,
             height: 1389,
             lazy: false
         },
         {
-            src: carousel03,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/gallery/Gallery-Carousel-03.jpg",
             role: "presentation",
             width: 2500,
             height: 1389,
             lazy: false
         },
         {
-            src: carousel04,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/gallery/Gallery-Carousel-04.jpg",
             role: "presentation",
             width: 2500,
             height: 1389,
             lazy: false
         },
         {
-            src: carousel05,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/gallery/Gallery-Carousel-05.jpg",
             role: "presentation",
             width: 2500,
             height: 1389,
             lazy: false
         },
         {
-            src: carousel06,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/gallery/Gallery-Carousel-06.jpg",
             role: "presentation",
             width: 2500,
             height: 1389,
             lazy: false
         },
         {
-            src: carousel07,
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/gallery/Gallery-Carousel-07.jpg",
+            role: "presentation",
+            width: 2500,
+            height: 1389,
+            lazy: false
+        },
+        {
+            src: "https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/gallery/Gallery-Carousel-08.jpg",
             role: "presentation",
             width: 2500,
             height: 1389,
