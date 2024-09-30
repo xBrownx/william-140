@@ -22,8 +22,11 @@ export const StyledHeading = styled.h1`
         ${F.size(88)};
     `}
     
+    white-space: normal;
+    
     ${M.md`
         font-size: 36px;
         line-height: 43.2px;
+        display:inline-block
     `};
 `
