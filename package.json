@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@react-spring/parallax": "^9.7.4",
+    "@remotion/preload": "^4.0.213",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -20,6 +21,7 @@
     "react-router-dom": "^6.25.1",
     "react-scripts": "^5.0.1",
     "react-use-scroll-direction": "^0.1.0",
+    "remotion": "^4.0.213",
     "split-type": "^0.3.4",
     "styled-components": "^6.1.12",
     "swiper": "^11.1.8",

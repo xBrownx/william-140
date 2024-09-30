@@ -17,8 +17,8 @@ export const Header = memo(
                 </Wrapper>
                 <Wrapper>
                     <NavList
-                        scrollTo={props.scrollTo}
-                        links={links}
+                        $scrollTo={props.scrollTo}
+                        $links={links}
                     >
                     </NavList>
                 </Wrapper>

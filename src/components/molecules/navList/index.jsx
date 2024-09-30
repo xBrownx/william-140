@@ -5,14 +5,14 @@ import { memo } from "react";
 
 export const NavList = memo(
     function NavList(props) {
-        const links = props.links
+        const links = props.$links;
         return (
             <StyledUl {...props}>
                 {links.map((link) => (
                     <Link
                         $nav
                         key={link.key}
-                        onClick={() => props.scrollTo(link.route)}
+                        onClick={() => props.$scrollTo(link.route)}
                     >
                         {link.type === "link" ?
                             <CustomLink>
