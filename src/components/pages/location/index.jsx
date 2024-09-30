@@ -3,6 +3,7 @@ import { location as CONST } from './constants'
 import { Column, PageTitle } from "../../molecules";
 import { LocationCarousel } from "../../organisms";
 import { Page } from "../../templates";
+import { StyledColumn } from "./styles";
 
 const Location = memo(
     forwardRef(
@@ -12,7 +13,7 @@ const Location = memo(
                     pageRef={ref}
                     $yEnd
                 >
-                    <Column gap={32}>
+                    <StyledColumn>
                         <PageTitle
                             $row
                             $displayEnd
@@ -23,7 +24,7 @@ const Location = memo(
                             {CONST.paragraphTxt}
                         </PageTitle>
                         <LocationCarousel />
-                    </Column>
+                    </StyledColumn>
                 </Page>
             );
         }

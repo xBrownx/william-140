@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
-import { Style as S } from '../../atoms'
+import {Style as S, Media as M } from '../../atoms'
+
 export const ImageContainer = styled.div`
     ${props => props.width && css`
         ${S.size.width(props.width)}
@@ -14,6 +15,11 @@ export const ImageContainer = styled.div`
     `}
     
     ${S.borderRadius};
+
+    ${M.md`
+        height: 100%;
+        x-overflow: scroll;
+    `};
 `
 
 export const StyledImage = styled.img`
@@ -33,5 +39,10 @@ export const StyledImage = styled.img`
     
     img {
         ${S.borderRadius};
-    }
+    };
+
+    ${M.md`
+        height: 100%;
+        x-overflow: scroll;
+    `};
 `

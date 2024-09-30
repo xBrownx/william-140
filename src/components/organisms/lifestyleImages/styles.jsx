@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import { Style as S } from '../../atoms'
+import { Style as S, Media as M } from '../../atoms'
 
 export const Wrapper = styled.div`
     ${S.flex.row};
@@ -8,6 +8,12 @@ export const Wrapper = styled.div`
     gap: 40px;
     ${S.size.height(300)};
     max-width: unset !important;
+
+    ${M.md`
+        height: 120px;
+        overflow: hidden;
+        gap: 16px;
+    `};
 `
 
 

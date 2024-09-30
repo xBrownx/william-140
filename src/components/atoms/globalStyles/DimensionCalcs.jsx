@@ -114,3 +114,16 @@ export const position = ({top='unset', right='unset', bottom='unset', left='unse
         left: ${left};
     `
 }
+
+export const pxToVw = (pxWidth) => {
+    return `${(pxWidth / DESIGN.width) * 100}vw`;
+}
+
+export const pxToVh = (pxHeight) => {
+    return `${(pxHeight / DESIGN.height) * 100}vh`;
+}
+
+export const pxToFontSizeVw = (px) => {
+    const pt = px * 0.74999943307122;
+    return `${(pt * 1.3333343412075) / DESIGN.width * 100}vw`;
+}

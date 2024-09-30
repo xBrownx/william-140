@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-import {Style as S} from '../../atoms/globalStyles';
+import {Style as S, Media as M } from '../../atoms/globalStyles';
 
 export const Wrapper = styled.div`
     border-left: 1px solid var(--color-primary-4);
@@ -23,4 +23,9 @@ export const Wrapper = styled.div`
         ${S.padding.none};
         border: none;
     `}
+
+    ${M.md`
+        padding-left: 16px;
+        width: 100%;
+    `};
 `

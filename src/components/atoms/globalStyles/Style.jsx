@@ -76,5 +76,8 @@ Style.squareTwo = Calc.squareTwo;
 
 Style.position = Calc.position;
 
+Style.width = Calc.pxToVw;
+Style.height = Calc.pxToVh;
+Style.fontSize = Calc.pxToFontSizeVw;
 
 

@@ -4,6 +4,7 @@ import { ArrowButton } from '../../atoms';
 import { BackgroundVideo, Container } from "../../molecules";
 import { LandingTitleAnimation } from "../../organisms";
 import { Page } from "../../templates";
+import { ArrowContainer, StyledContainer } from "./styles";
 
 const Landing = memo(
     forwardRef(
@@ -13,29 +14,17 @@ const Landing = memo(
                     pageRef={ref}
                     $fullScreen
                 >
-                    <Container
-                        $fullScreen
-                        $centre
-                    >
+                    <StyledContainer>
                         <BackgroundVideo
-                            heading={CONST.heading}
+                            headings={CONST.heading}
                             src={CONST.assets.video.src}
                         />
-                        <LandingTitleAnimation
-                            heading={CONST.heading}
-                            $clone
-                        />
-                        <Container
-                            $absolute
-                            position={{right: 0, bottom: 0}}
-                            padding={{right: 32, bottom: 41}}
-                        >
+                        <ArrowContainer>
                             <ArrowButton
-                                size={64}
                                 onClick={scrollTo}
                             />
-                        </Container>
-                    </Container>
+                        </ArrowContainer>
+                    </StyledContainer>
                 </Page>
             )
         }

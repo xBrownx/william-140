@@ -6,7 +6,7 @@ import { Page } from "../page";
 export const Hero = memo(
     function Hero(props) {
         return (
-            <Page $fullPage {...props}>
+            <Page {...props}>
                 <Container {...props}>
                     <ParallaxImg image={props.img} />
                 </Container>

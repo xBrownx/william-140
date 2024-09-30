@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import { Style as S } from '../../atoms'
+import {Style as S, Media as M } from '../../atoms'
 
 export const CarouselContainer = styled.div`
     margin-inline: auto;
@@ -10,6 +10,12 @@ export const CarouselContainer = styled.div`
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+
+    ${M.md`
+        height: 100%;
+        min-width: fit-content;
+        overflow-x: scroll;
+    `};
 `
 export const CarouselSlide = styled.div`
     grid-row: 1;
@@ -31,6 +37,12 @@ export const CarouselSlide = styled.div`
             height: 100%;
             object-fit: cover;
         }
+    ${M.md`
+        height: 100%;
+        min-width: fit-content;
+        overflow-x: scroll;
+    `};
+    
 `
 
 export const ImgContainer = styled.div`
@@ -54,5 +66,17 @@ export const ImgContainer = styled.div`
         height: 100%;
         object-fit: cover;
     }
+
+    ${M.md`
+        height: 100%;
+        min-width: fit-content;
+        overflow-x: scroll;
+        img {
+        
+        width: fit-content
+        height: 100%;
+        object-fit: unset;
+    }
+    `};
 `
 

@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components'
-import {Font as F} from '../globalStyles/Font'
-import {Style as S} from '../globalStyles/Style'
-import {Colour as C} from '../globalStyles/Colour'
+import {Style as S, Font as F, Colour as C, Media as M} from '../globalStyles';
 
 export const StyledParagraph = styled.p`
     ${F.family.secondaryRegular};
@@ -49,6 +47,16 @@ export const StyledParagraph = styled.p`
     ${props => props.$light && css`
         ${F.family.secondaryLight};
     `}
+    
+    ${M.md`
+        font-size: 14px;
+        line-height: 21px;
+        opacity: 0.7;
+        white-space: wrap;
+        padding: 0;
+        font-weight: 400;
+        
+    `};
     
 `
 

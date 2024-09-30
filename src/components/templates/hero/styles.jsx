@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Style as S } from '../../atoms'
+import { Style as S, Media as M } from '../../atoms'
 export const Container = styled.div`
     ${S.padding.inlineBlock({inline: 160, block: 90})};
     
@@ -9,5 +9,10 @@ export const Container = styled.div`
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
+    
+    ${M.md`
+        padding-block: 0;
+        padding-inline: 16px;
+    `};
     
 `

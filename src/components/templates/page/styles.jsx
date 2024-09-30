@@ -60,5 +60,10 @@ export const StyledPage = styled.section`
         ${S.padding.__(props.padding)};
     `}
 
+    ${M.md`
+        width: 100%;
+        min-height: fit-content;
+        x-overflow: scroll;
+    `};
 
 `

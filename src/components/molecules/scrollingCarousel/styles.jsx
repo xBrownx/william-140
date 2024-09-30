@@ -1,10 +1,11 @@
 import styled, {css} from "styled-components";
-import {Style as S} from '../../atoms'
+import {Style as S, Media as M} from '../../atoms'
 
 export const OuterContainer = styled.div`
     overflow: hidden;
     width: 100%;
         max-width: unset !important;
+        
 `
 
 export const InnerContainer = styled.div`

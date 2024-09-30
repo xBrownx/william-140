@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
-import {Font as F} from '../globalStyles/Font'
-import {Style as S} from '../globalStyles/Style'
-import {Colour as C} from '../globalStyles/Colour'
+import {Font as F} from '../globalStyles/Font';
+import {Style as S} from '../globalStyles/Style';
+import {Colour as C} from '../globalStyles/Colour';
+import {Media as M } from '../globalStyles';
 
 export const StyledHeading = styled.h1`
     ${F.family.primaryLight};
@@ -20,4 +21,9 @@ export const StyledHeading = styled.h1`
         ${C.font.headingVariant};
         ${F.size(88)};
     `}
+    
+    ${M.md`
+        font-size: 36px;
+        line-height: 43.2px;
+    `};
 `

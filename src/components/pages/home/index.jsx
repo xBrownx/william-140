@@ -1,9 +1,17 @@
 import React, { forwardRef, memo } from "react";
 import { home as CONST } from './constants'
-import { Button, Paragraph, Subheading } from "../../atoms";
-import { SplitScreen, Column, ParallaxImg } from '../../molecules'
+import { Paragraph, Subheading } from "../../atoms";
+import { ParallaxImg } from '../../molecules'
 import { Page } from "../../templates";
-import { ImgWrapper } from "../../molecules/parallaxImage/styles";
+import {
+    CustomButton,
+    CustomParagraph,
+    CustomSubheading,
+    ImgWrapper,
+    Pane,
+    StyledColumn,
+    StyledSplitScreen
+} from "./styles";
 
 const Home = memo(
     forwardRef(
@@ -14,33 +22,27 @@ const Home = memo(
                     pageRef={ref}
                     $fullScreen
                 >
-                    <SplitScreen $padding>
-                        <ImgWrapper id={'left-pane'}
-                            width={assets.hero.width}
-                            height={assets.hero.height}
-                        >
-                            <ParallaxImg image={assets.hero} />
-                        </ImgWrapper>
-                        <Column
-                            id={'right-pane'}
-                            $centreY
-                            paddingInlineBlock={{inline: 16}}
-                            gap={32}
-                        >
-                            <Subheading $variant>
-                                {CONST.headingTxt}
-                            </Subheading>
-                            <Paragraph size={36} weight={300}>
-                                {CONST.paragraphTxt}
-                            </Paragraph>
-                            <Button
-                                onClick={onDiscoverClick}
-                            >
-                                {CONST.buttonTxt}
-                            </Button>
-                        </Column>
-                    </SplitScreen>
-                </Page>
+                    <StyledSplitScreen>
+                        <Pane id={'left-pane'} >
+                            <ImgWrapper >
+                                <ParallaxImg image={assets.hero} />
+                            </ImgWrapper >
+                        </Pane >
+                        <Pane id={'right-pane'} >
+                            <StyledColumn >
+                                <CustomSubheading>
+                                    {CONST.headingTxt}
+                                </CustomSubheading >
+                                <CustomParagraph>
+                                    {CONST.paragraphTxt}
+                                </CustomParagraph >
+                                <CustomButton onClick={onDiscoverClick} >
+                                    {CONST.buttonTxt}
+                                </CustomButton >
+                            </StyledColumn >
+                        </Pane >
+                    </StyledSplitScreen >
+                </Page >
             );
         }
     )

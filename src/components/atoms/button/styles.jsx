@@ -72,13 +72,11 @@ export const StyledButton = styled.button`
         width: 150px;
         height: 150px;
     `};
-
-   
-
+    
     &:hover {
         cursor: pointer;
         color: #FFF;
-    }
+    };
 
     &::after {
         content: "";
@@ -92,7 +90,7 @@ export const StyledButton = styled.button`
         right: 0;
         top: -100%;
         bottom: 100%;
-    }
+    };
 
     &:hover::after {
         left: 0;
@@ -100,7 +98,7 @@ export const StyledButton = styled.button`
         top: 0;
         bottom: 0;
         transition: all 0.35s;
-    }
+    };
 
     ${props => props.$variant && css`
         &::after,  &:hover::after {
@@ -120,7 +118,14 @@ export const StyledButton = styled.button`
         
         background: white;
 
-    `}
+    `};
+
+    ${M.md`
+        height: 34px;
+        font-size: ${S.fontSize(14)};
+        line-height: ${S.height(18.16)};
+        width: fit-content;
+    `};
 
 `
 

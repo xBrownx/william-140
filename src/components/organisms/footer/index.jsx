@@ -17,7 +17,7 @@ export const Footer = memo(
                         <FooterLogo />
                     </CentreDiv>
                     <RightDiv>
-                        <Image src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/replika-logo.png"} />
+                        {/*<Image src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/replika-logo.png"} />*/}
                     </RightDiv>
                 </Wrapper>
             </Container>

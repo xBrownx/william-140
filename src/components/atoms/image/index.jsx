@@ -4,7 +4,7 @@ import { memo } from "react";
 export const Image = memo(function Image(props) {
     return (
         <ImageContainer {...props}>
-            <StyledImage {...props} />
+            <StyledImage ref={props.$ref}{...props} />
         </ImageContainer>
     );
 });

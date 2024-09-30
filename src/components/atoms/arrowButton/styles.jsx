@@ -68,8 +68,8 @@ export const StyledButton = styled.button`
 export const Wrapper = styled.div`
     z-index: 1;
     ${S.borderRadius};
-    ${S.margin.none};
-    ${S.padding.none};
+    padding: 0;
+    margin: 0;
     background: transparent;
     border-width: 1px;
     border-style: solid;
@@ -77,5 +77,11 @@ export const Wrapper = styled.div`
     overflow: hidden;
     position: relative;
     ${S.square(64)};
+    
+    ${M.md`
+        width: 64px;
+        height: 64px;
+        border-radius: 3px;
+    `};
 `
 

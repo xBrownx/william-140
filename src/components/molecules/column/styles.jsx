@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 import { Style as S } from '../../atoms'
 
-export const StyledColumn = styled.div`
+export const    StyledColumn = styled.div`
     ${S.flex.column};
     max-width: 100vw;
     width: 100%;
