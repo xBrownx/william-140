@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f103b276.css",
-    "main.js": "/static/js/main.6188fb1a.js",
+    "main.js": "/static/js/main.ffd51f9d.js",
     "static/js/453.48090b23.chunk.js": "/static/js/453.48090b23.chunk.js",
     "static/media/Lifestyle-Carousel-2.png": "/static/media/Lifestyle-Carousel-2.cc4d9e8bfcf69c4f1ce4.png",
     "static/media/History-Placeholder.jpeg": "/static/media/History-Placeholder.6725af6df8519f21c47e.jpeg",
@@ -27,11 +27,11 @@
     "static/media/Up-Arrow.svg": "/static/media/Up-Arrow.0cf6ead135a7636d0eaa8ede43407f3e.svg",
     "static/media/Down-Arrow.svg": "/static/media/Down-Arrow.6efe3d381678db8a7203b028bb1b317d.svg",
     "main.f103b276.css.map": "/static/css/main.f103b276.css.map",
-    "main.6188fb1a.js.map": "/static/js/main.6188fb1a.js.map",
+    "main.ffd51f9d.js.map": "/static/js/main.ffd51f9d.js.map",
     "453.48090b23.chunk.js.map": "/static/js/453.48090b23.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f103b276.css",
-    "static/js/main.6188fb1a.js"
+    "static/js/main.ffd51f9d.js"
   ]
 }
