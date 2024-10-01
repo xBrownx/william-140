@@ -108,7 +108,7 @@ export const ModalWrapper = styled.div`
     z-index: 1000000;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: scroll;
     box-sizing: border-box;
     pointer-events: none;
     transition: all 500ms ease-in-out;
@@ -261,5 +261,12 @@ export const CustomColumn = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
+`
+
+export const ThirdSpaceColumn = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 32px;
     
 `
