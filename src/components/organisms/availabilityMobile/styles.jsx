@@ -193,3 +193,73 @@ export const ModalContentWrapper = styled.div`
 export const ModalParagraph = styled.p`
 
 `
+
+export const FloorPlanButton = styled.button`
+    border-radius: 3px;
+    font-family: 'SuisseIntl-Light', serif;
+    gap: 1.5px;
+    margin: 39px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    background: transparent;
+    border-width: 1px;
+    border-style: solid;
+    color: white;
+    border-color: white;
+    padding: 0.5em 1.5em;
+    overflow: hidden;
+    position: relative;
+    
+    z-index: 1;
+    
+    width: 100%;
+    
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+`
+
+export const DetailsWrapper = styled.div`
+    padding-top: 39px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 8px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+`
+
+export const StyledUl = styled.ul`
+    list-style: none;
+    width: 100%;
+`
+
+export const StyledLi = styled.li`
+    padding-left: 9px;
+    display: flex;
+    flex-direction: row;
+    gap: 58px;
+    width: 291px;
+`
+
+export const LabelWrapper = styled.div`
+    width: 104px;
+`
+
+export const ValueWrapper = styled.div`
+    width: 70px;
+`
+
+export const CustomColumn = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+`

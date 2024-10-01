@@ -6,7 +6,9 @@ import { ReactComponent as Arrow } from '../../../assets/icons/Up-Arrow.svg'
 import MobileModal from "./modal";
 
 function AvailabilityMobile(props) {
-    const buttonArr = Object.keys(CONST.levels).map(key => CONST.levels[key]);
+    const buttonArr = Object.keys(CONST.levels).map(key => {
+        return {key: key, ...CONST.levels[key]}
+    });
     const buttonNumbers = buttonArr.filter(item => item.isActive).map(item => {
         return item;
     });
@@ -45,7 +47,11 @@ function AvailabilityMobile(props) {
 
     useEffect(() => {
         props.setNavVis(!isModal);
-    }, [isModal])
+    }, [isModal]);
+
+    useEffect(() => {
+        console.log(activeLevel)
+    }, [activeLevel])
 
     return (
         <Container {...props}>
@@ -58,6 +64,7 @@ function AvailabilityMobile(props) {
                 navRight={navRight}
                 buttonNumbers={buttonNumbers}
                 activeLvl={activeLevel}
+                onButtonClick={onButtonClick}
             />
             <CustomHeading>
                 AVAILABLE TENANCIES
