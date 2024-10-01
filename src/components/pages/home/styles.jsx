@@ -24,7 +24,7 @@ export const Pane = styled.div`
 
     ${M.md`
         flex: none;
-        width: 100%;
+        
         ${props => props.id === 'left-pane' && css`
             order: 2;
         `};
@@ -48,6 +48,8 @@ export const ImgWrapper = styled.div`
 
     ${M.md`
         width: 100%;
+        min-height: unset;
+        height: 100%;
     `};
 `
 
