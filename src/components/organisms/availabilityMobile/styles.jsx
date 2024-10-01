@@ -66,7 +66,7 @@ export const CustomButton = styled.div`
     justify-content: center;
     border: 1px solid white;
   
-    ${props => props.$active && css`
+    ${props => props.$active && props.$modalActive && css`
         background-color: #164A49;
         border: 1px solid #164A49;
     `}

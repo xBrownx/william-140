@@ -7,7 +7,7 @@ import MobileModal from "./modal";
 
 function AvailabilityMobile(props) {
     const buttonArr = Object.keys(CONST.levels).map(key => {
-        return {key: key, ...CONST.levels[key]}
+        return { key: key, ...CONST.levels[key] }
     });
     const buttonNumbers = buttonArr.filter(item => item.isActive).map(item => {
         return item;
@@ -40,6 +40,10 @@ function AvailabilityMobile(props) {
 
     const [activeLevel, setActiveLevel] = useState(0);
 
+    const closeModal = () => {
+        setModal(false);
+    }
+
     const onButtonClick = (btn) => {
         setActiveLevel(btn);
         setModal(true);
@@ -57,7 +61,7 @@ function AvailabilityMobile(props) {
         <Container {...props}>
             <MobileModal
                 showModal={isModal}
-                closeModal={() => setModal(false)}
+                closeModal={closeModal}
                 startIndex={startIndex}
                 visibleButtons={visibleButtons}
                 navLeft={navLeft}
@@ -71,11 +75,13 @@ function AvailabilityMobile(props) {
             </CustomHeading>
             <MobileModalNav
                 startIndex={startIndex}
+                activeLvl={activeLevel}
                 visibleButtons={visibleButtons}
                 navLeft={navLeft}
                 navRight={navRight}
                 buttonNumbers={buttonNumbers}
                 onButtonClick={onButtonClick}
+                showModal={isModal}
             />
         </Container>
     );
@@ -93,19 +99,39 @@ export const MobileModalNav = (props) => {
                     <Arrow onClick={props.navLeft} />
                 </ArrowWrapper>
                 <ButtonsWrapper>
-                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[0])}>
+                    <CustomButton
+                        onClick={() => props.onButtonClick(props.visibleButtons[0])}
+                        $active={props.visibleButtons[0].key === props.activeLvl.key}
+                        $modalActive={props.showModal}
+                    >
                         {props.visibleButtons[0].lvl}
                     </CustomButton>
-                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[1])}>
+                    <CustomButton
+                        onClick={() => props.onButtonClick(props.visibleButtons[1])}
+                        $active={props.visibleButtons[1].key === props.activeLvl.key}
+                        $modalActive={props.showModal}
+                    >
                         {props.visibleButtons[1].lvl}
                     </CustomButton>
-                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[2])}>
+                    <CustomButton
+                        onClick={() => props.onButtonClick(props.visibleButtons[2])}
+                        $active={props.visibleButtons[2].key === props.activeLvl.key}
+                        $modalActive={props.showModal}
+                    >
                         {props.visibleButtons[2].lvl}
                     </CustomButton>
-                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[3])}>
+                    <CustomButton
+                        onClick={() => props.onButtonClick(props.visibleButtons[3])}
+                        $active={props.visibleButtons[3].key === props.activeLvl.key}
+                        $modalActive={props.showModal}
+                    >
                         {props.visibleButtons[3].lvl}
                     </CustomButton>
-                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[4])}>
+                    <CustomButton
+                        onClick={() => props.onButtonClick(props.visibleButtons[4])}
+                        $active={props.visibleButtons[4].key === props.activeLvl.key}
+                        $modalActive={props.showModal}
+                    >
                         {props.visibleButtons[4].lvl}
                     </CustomButton>
                 </ButtonsWrapper>
