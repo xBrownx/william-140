@@ -10,8 +10,7 @@ export const StyledColumn = styled.div`
     
     ${M.md`
         padding-block: 64px;
-        overflow-x: scroll;
+        width: 100%;
         padding-bottom: 0;
-        width: fit-content;
     `};
 `;

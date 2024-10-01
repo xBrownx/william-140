@@ -3,7 +3,7 @@ import {Style as S, Media as M } from '../../atoms'
 export const Wrapper = styled.div`
     ${M.md`
         width: fit-content;
-        overflow: auto;
+        overflow: scroll;
     `};
 `
 
@@ -11,11 +11,12 @@ export const CustomContainer = styled.div`
     position: relative;
     
     ${M.md`
-        width: fit-content;
+        box-sizing: unset;
+        width: 100vw;
         height: 810px;
         min-width: 100vw;
         height: 810px;
-        overflow: auto;
+        overflow: scroll;
     `};
     
     
