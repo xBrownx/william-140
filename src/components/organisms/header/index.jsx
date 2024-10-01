@@ -1,5 +1,7 @@
 import { NavList } from "../../molecules/navList";
 import { LogoInline } from "../../atoms";
+import logo from '../../../assets/svg/Header-Logo.svg';
+import { Image } from '../../atoms'
 import { header } from './constants'
 import { memo } from 'react'
 import { Container, Wrapper } from "./styles";
@@ -13,7 +15,7 @@ export const Header = memo(
         return (
             <Container>
                 <Wrapper>
-                    <LogoInline onClick={() => props.scrollTo(pageRefs.landing)} />
+                    <img src={logo} onClick={() => props.scrollTo(pageRefs.landing)} />
                 </Wrapper>
                 <Wrapper>
                     <NavList

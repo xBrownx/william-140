@@ -3,6 +3,8 @@ import { ArrowWrapper, ButtonsWrapper, Container, CustomButton, CustomHeading, C
 import { NavArrow } from "../../atoms";
 import { constants as CONST } from './constants'
 import { ReactComponent as Arrow } from '../../../assets/icons/Up-Arrow.svg'
+import MobileModal from "./modal";
+
 function AvailabilityMobile(props) {
     const buttonArr = Object.keys(CONST.levels).map(key => CONST.levels[key]);
     const buttonNumbers = buttonArr.filter(item => item.isActive).map(item => {
@@ -16,7 +18,7 @@ function AvailabilityMobile(props) {
 
     const navLeft = () => {
         let idx = startIndex
-        if(idx > 0) {
+        if (idx > 0) {
             idx--;
             setStartIndex(idx);
         }
@@ -25,15 +27,30 @@ function AvailabilityMobile(props) {
 
     const navRight = () => {
         let idx = startIndex
-        if(idx < buttonNumbers.length - 5) {
+        if (idx < buttonNumbers.length - 5) {
             idx++;
             setStartIndex(idx);
         }
         setVisibleButtons(buttonNumbers.slice(idx, idx + 5));
     }
 
+    const [isModal, setModal] = useState(false);
+
+    const onButtonClick = (btn) => {
+        setModal(true);
+    }
+
     return (
         <Container {...props}>
+            <MobileModal
+                showModal={isModal}
+                closeModal={() => setModal(false)}
+                startIndex={startIndex}
+                visibleButtons={visibleButtons}
+                navLeft={navLeft}
+                navRight={navRight}
+                buttonNumbers={buttonNumbers}
+            />
             <CustomHeading>
                 AVAILABLE TENANCIES
             </CustomHeading>
@@ -43,6 +60,7 @@ function AvailabilityMobile(props) {
                 navLeft={navLeft}
                 navRight={navRight}
                 buttonNumbers={buttonNumbers}
+                onButtonClick={onButtonClick}
             />
         </Container>
     );
@@ -50,15 +68,17 @@ function AvailabilityMobile(props) {
 
 export const MobileModalNav = (props) => {
     return (
-        <CustomRow>
+        <>
+
+            <CustomRow>
                 <ArrowWrapper
                     $left
                     $hidden={props.startIndex === 0}
                 >
-                    <Arrow onClick={props.navLeft}/>
+                    <Arrow onClick={props.navLeft} />
                 </ArrowWrapper>
                 <ButtonsWrapper>
-                    <CustomButton>
+                    <CustomButton onClick={() => props.onButtonClick(0)}>
                         {props.visibleButtons[0]}
                     </CustomButton>
                     <CustomButton>
@@ -78,9 +98,10 @@ export const MobileModalNav = (props) => {
                     $right
                     $hidden={props.startIndex === props.buttonNumbers.length - 5}
                 >
-                    <Arrow onClick={props.navRight}/>
+                    <Arrow onClick={props.navRight} />
                 </ArrowWrapper>
             </CustomRow>
+        </>
     );
 }
 

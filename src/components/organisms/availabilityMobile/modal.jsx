@@ -1,58 +1,50 @@
 import {
+    CloseButtonWrapper,
+    CustomHeading, CustomImage,
     CustomSubheading,
-    ImageWrapper,
-    ModalContainer,
-    ModalWrapper,
+    ImageWrapper, ModalContentWrapper,
+    ModalHeading,
+    ModalWrapper, TenancyImage,
     TenancyWrapper
-} from "../availabilityModal/styles";
-import { CustomHeading } from "./styles";
-import { constants as CONST } from "./constants";
-import { useState } from "react";
+} from "./styles";
+
+import React from "react";
 import { MobileModalNav } from "./index";
+import { Image } from "../../atoms";
+import { ModalContainer } from "./styles";
 
 function MobileModal(props) {
-    const buttonArr = Object.keys(CONST.levels).map(key => CONST.levels[key]);
-    const buttonNumbers = buttonArr.filter(item => item.isActive).map(item => {
-        return item.lvl
-    }).reverse();
 
-    const [startIndex, setStartIndex] = useState(0);
-    const [visibleButtons, setVisibleButtons] = useState(
-        buttonNumbers.slice(0, 5)
-    );
-
-    const navLeft = () => {
-        let idx = startIndex
-        if(idx > 0) {
-            idx--;
-            setStartIndex(idx);
-        }
-        setVisibleButtons(buttonNumbers.slice(idx, idx + 5));
+    if (typeof window != 'undefined' && window.document && props.showModal) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'unset';
     }
 
-    const navRight = () => {
-        let idx = startIndex
-        if(idx < buttonNumbers.length - 5) {
-            idx++;
-            setStartIndex(idx);
-        }
-        setVisibleButtons(buttonNumbers.slice(idx, idx + 5));
-    }
     return (
-        <ModalContainer>
-            <ModalWrapper>
+        <ModalContainer $open={props.showModal}>
+            <CloseButtonWrapper onClick={props.closeModal}>
+                <CustomImage src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/close.svg"} />
+            </CloseButtonWrapper>
+            <ModalWrapper $open={props.showModal}>
                 <MobileModalNav {...props} />
-                <CustomHeading>
-
-                </CustomHeading>
+                <ModalHeading>
+                    Level 33
+                </ModalHeading>
                 <TenancyWrapper>
                     <CustomSubheading>
-
+                        TENANCY 1
+                    </CustomSubheading>
+                    <CustomSubheading>
+                        TENANCY 2
                     </CustomSubheading>
                 </TenancyWrapper>
                 <ImageWrapper>
-
+                    <TenancyImage src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/images/availability/leasing/l14.svg"} />
                 </ImageWrapper>
+                <ModalContentWrapper>
+
+                </ModalContentWrapper>
             </ModalWrapper>
         </ModalContainer>
     );

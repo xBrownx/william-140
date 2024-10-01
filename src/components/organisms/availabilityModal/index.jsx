@@ -24,8 +24,7 @@ function AvailabilityModal(props) {
     const [isModalOpen, onLevelClick] = useModalStatusContext();
     const [modalKey, setModalKey] = useModalKeyContext();
 
-    const [tenancy, setTenancy] = useState(0)
-    const [TenancyVector, setTenancyVector] = useState(0);
+    const [tenancy, setTenancy] = useState(0);
     const activeModal = props.buttons[modalKey];
     const lvlVectors = props.assets.lvlVectors;
 

@@ -5,7 +5,7 @@ export const Container = styled.div`
     ${S.size.height(90)};
     ${S.flex.centre};
     ${S.padding.__({right: 32, left: 32})};
-    z-index: 5;
+    z-index: 1;
     position: fixed;
     top: 0;
     width: 100%;
@@ -20,10 +20,11 @@ export const Wrapper = styled.div`
     flex: 1;
     display: flex;
     align-items: center;
-
+    z-index: 10;
     width: 100%;
 
-    svg {
+    img {
+        z-index: 10;
         min-height: 2.099vh;
         min-width: 19.097vw;
 
