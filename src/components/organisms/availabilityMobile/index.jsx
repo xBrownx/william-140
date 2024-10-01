@@ -1,14 +1,36 @@
-import { memo } from 'react';
-import { ButtonsWrapper, Container, CustomButton, CustomHeading, CustomRow } from './styles';
+import { memo, useState } from 'react';
+import { ArrowWrapper, ButtonsWrapper, Container, CustomButton, CustomHeading, CustomRow } from './styles';
 import { NavArrow } from "../../atoms";
 import { constants as CONST } from './constants'
+import { ReactComponent as Arrow } from '../../../assets/icons/Up-Arrow.svg'
 function AvailabilityMobile(props) {
     const buttonArr = Object.keys(CONST.levels).map(key => CONST.levels[key]);
-    console.log(buttonArr);
     const buttonNumbers = buttonArr.filter(item => item.isActive).map(item => {
         return item.lvl
     }).reverse();
-    console.log(buttonNumbers);
+
+    const [startIndex, setStartIndex] = useState(0);
+    const [visibleButtons, setVisibleButtons] = useState(
+        buttonNumbers.slice(0, 5)
+    );
+
+    const navLeft = () => {
+        let idx = startIndex
+        if(idx > 0) {
+            idx--;
+            setStartIndex(idx);
+        }
+        setVisibleButtons(buttonNumbers.slice(idx, idx + 5));
+    }
+
+    const navRight = () => {
+        let idx = startIndex
+        if(idx < buttonNumbers.length - 5) {
+            idx++;
+            setStartIndex(idx);
+        }
+        setVisibleButtons(buttonNumbers.slice(idx, idx + 5));
+    }
 
     return (
         <Container {...props}>
@@ -16,25 +38,35 @@ function AvailabilityMobile(props) {
                 AVAILABLE TENANCIES
             </CustomHeading>
             <CustomRow>
-                <NavArrow $left onClick={() => {}} />
+                <ArrowWrapper
+                    $left
+                    $hidden={startIndex === 0}
+                >
+                    <Arrow onClick={navLeft}/>
+                </ArrowWrapper>
                 <ButtonsWrapper>
                     <CustomButton>
-                        {buttonNumbers[0]}
+                        {visibleButtons[0]}
                     </CustomButton>
                     <CustomButton>
-                        {buttonNumbers[1]}
+                        {visibleButtons[1]}
                     </CustomButton>
                     <CustomButton>
-                        {buttonNumbers[2]}
+                        {visibleButtons[2]}
                     </CustomButton>
                     <CustomButton>
-                        {buttonNumbers[3]}
+                        {visibleButtons[3]}
                     </CustomButton>
                     <CustomButton>
-                        {buttonNumbers[4]}
+                        {visibleButtons[4]}
                     </CustomButton>
                 </ButtonsWrapper>
-                <NavArrow $right onClick={() => {}} />
+                <ArrowWrapper
+                    $right
+                    $hidden={startIndex === buttonNumbers.length - 5}
+                >
+                    <Arrow onClick={navRight}/>
+                </ArrowWrapper>
             </CustomRow>
         </Container>
     );

@@ -24,6 +24,28 @@ export const CustomRow = styled.div`
     align-items: center;
 `
 
+export const ArrowWrapper = styled.div`
+    width: 24px;
+    height: 24px;
+    
+    svg {
+        width: 100%;
+        height: 100%;
+        
+        ${props => props.$hidden && css`
+            display: none;
+        `}
+    }
+    
+    ${props => props.$right && css`
+        rotate: 90deg;
+    `}
+    
+    ${props => props.$left && css`
+        rotate: -90deg;
+    `}
+`
+
 export const ButtonsWrapper = styled.div`
     display: flex;
     flex-direction: row;
@@ -59,5 +81,4 @@ export const CustomButton = styled.div`
         ${props => props.$active && css`
             color: white;
         `}
-    
 `

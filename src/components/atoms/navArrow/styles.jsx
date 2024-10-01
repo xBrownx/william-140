@@ -18,6 +18,10 @@ export const Wrapper = styled.div`
         &:hover {
             cursor: pointer;
         }
+        
+        ${props => props.$hidden && css`
+            display: none;
+        `}
     }
     
     ${props => props.$right && css`
