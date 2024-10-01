@@ -19,10 +19,26 @@ export const CustomSplitScreen = styled.div`
     `};
 `;
 
+export const Pane = styled.div`
+    flex: 1;
+    align-items: center;
+    ${M.md`
+        flex: none;
+        width: 100%;
+        ${props => props.id === 'left-pane' && css`
+            order: 2;
+        `};
+        
+        ${props => props.id === 'right-pane' && css`
+            order: 1;
+        `};
+    `};
+`
+
 export const VideoContainer = styled.div`
     position: relative;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     padding-left: ${S.width(16)};
     
 `
