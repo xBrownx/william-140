@@ -37,40 +37,51 @@ function AvailabilityMobile(props) {
             <CustomHeading>
                 AVAILABLE TENANCIES
             </CustomHeading>
-            <CustomRow>
-                <ArrowWrapper
-                    $left
-                    $hidden={startIndex === 0}
-                >
-                    <Arrow onClick={navLeft}/>
-                </ArrowWrapper>
-                <ButtonsWrapper>
-                    <CustomButton>
-                        {visibleButtons[0]}
-                    </CustomButton>
-                    <CustomButton>
-                        {visibleButtons[1]}
-                    </CustomButton>
-                    <CustomButton>
-                        {visibleButtons[2]}
-                    </CustomButton>
-                    <CustomButton>
-                        {visibleButtons[3]}
-                    </CustomButton>
-                    <CustomButton>
-                        {visibleButtons[4]}
-                    </CustomButton>
-                </ButtonsWrapper>
-                <ArrowWrapper
-                    $right
-                    $hidden={startIndex === buttonNumbers.length - 5}
-                >
-                    <Arrow onClick={navRight}/>
-                </ArrowWrapper>
-            </CustomRow>
+            <MobileModalNav
+                startIndex={startIndex}
+                visibleButtons={visibleButtons}
+                navLeft={navLeft}
+                navRight={navRight}
+                buttonNumbers={buttonNumbers}
+            />
         </Container>
     );
 }
 
+export const MobileModalNav = (props) => {
+    return (
+        <CustomRow>
+                <ArrowWrapper
+                    $left
+                    $hidden={props.startIndex === 0}
+                >
+                    <Arrow onClick={props.navLeft}/>
+                </ArrowWrapper>
+                <ButtonsWrapper>
+                    <CustomButton>
+                        {props.visibleButtons[0]}
+                    </CustomButton>
+                    <CustomButton>
+                        {props.visibleButtons[1]}
+                    </CustomButton>
+                    <CustomButton>
+                        {props.visibleButtons[2]}
+                    </CustomButton>
+                    <CustomButton>
+                        {props.visibleButtons[3]}
+                    </CustomButton>
+                    <CustomButton>
+                        {props.visibleButtons[4]}
+                    </CustomButton>
+                </ButtonsWrapper>
+                <ArrowWrapper
+                    $right
+                    $hidden={props.startIndex === props.buttonNumbers.length - 5}
+                >
+                    <Arrow onClick={props.navRight}/>
+                </ArrowWrapper>
+            </CustomRow>
+    );
+}
 
 export default memo(AvailabilityMobile);

@@ -123,3 +123,23 @@ export const CarouselWrapper = styled.div`
         ${S.size.maxWidth(532)} !important;
     }
 `
+
+export const ModalContainer = styled.div`
+    
+`
+
+export const ModalWrapper = styled.div`
+
+`
+
+export const CustomHeading = styled.h1`
+
+`
+
+export const TenancyWrapper = styled.div``
+
+export const CustomSubheading = styled.h2`
+
+`
+
+export const ImageWrapper = styled.div``
