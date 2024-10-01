@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { Style as S, Font as F, Colour as C } from '../globalStyles'
+import {
+    Style as S,
+    Font as F,
+    Colour as C,
+    Media as M
+} from "../globalStyles/";
 
 export const StyledTextArea = styled.textarea`
     ${S.size.height(109)};
@@ -17,5 +22,12 @@ export const StyledTextArea = styled.textarea`
     &::placeholder {
         color: white;
     }
+    
+    opacity: 0.7;
+    ${M.md`
+        height: 109px;
+        font-size: 14px;
+        line-height: 18.86px;
+    `};
     
 `

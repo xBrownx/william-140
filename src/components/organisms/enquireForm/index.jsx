@@ -1,6 +1,7 @@
 import React, { useState, memo } from "react";
 import { Button, Input, TextArea } from "../../atoms";
 import { Column, Container, Row } from "../../molecules";
+import { CustomButton, CustomContainer } from "./styles";
 
 export const EnquireForm = memo(
     function EnquireForm(props) {
@@ -18,7 +19,7 @@ export const EnquireForm = memo(
         }
 
         return (
-            <Container width={576}>
+            <CustomContainer width={576}>
                 <form onSubmit={handleSubmit}>
                     <Column gap={16}>
                         <Row
@@ -64,16 +65,16 @@ export const EnquireForm = memo(
                                 rows="4"
                             />
                         </Row>
-                        <Button
+                        <CustomButton
                             $fillParent
                             $variantOne
                             type="submit"
                         >
                             Submit
-                        </Button>
+                        </CustomButton>
                     </Column>
                 </form>
-            </Container>
+            </CustomContainer>
         );
     }
 );

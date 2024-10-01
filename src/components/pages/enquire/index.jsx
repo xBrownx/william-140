@@ -1,36 +1,34 @@
 import React, { forwardRef, memo } from 'react';
 import { enquire as CONST } from "./constants";
-import { ArrowButton, Heading } from "../../atoms";
-import { Column, Container } from "../../molecules";
+import { ArrowButton } from "../../atoms";
+import { Container } from "../../molecules";
 import { EnquireForm } from "../../organisms";
 import { Page } from "../../templates";
+import { useMobile } from "../../../hooks/useMobile";
+import { CustomColumn, CustomContainer, CustomHeading } from "./styles";
+import { ParallaxText } from "../../molecules/parallaxText";
 
 
 export const Enquire = memo(
     forwardRef(
         function ({id, scrollToTop}, ref) {
+            const isMobile = useMobile();
             return (
                 <Page
                     $bgSecondary
-                    padding={{top: 70}}
+                    padding={{top: isMobile ? 64 : 70}}
                 >
-                    <Container
-                        pageRef={ref}
-                        $flexColumn
-                        $alignCentre
-                        $overflowHidden
-                        $borderBox
-                        padding={{top: 70}}
-                        margin={{bottom: 140}}
-                    >
-                        <Column gap={32} $centreX>
-                            <Heading $secondary>
-                                {CONST.headingTxt}
-                            </Heading>
+                    <CustomContainer ref={ref}>
+                        <CustomColumn>
+                            <CustomHeading $secondary>
+                                <ParallaxText>
+                                    {CONST.headingTxt}
+                                </ParallaxText>
+                            </CustomHeading>
                             <EnquireForm fields={CONST.fields}/>
-                        </Column>
-                    </Container>
-                    <Container
+                        </CustomColumn>
+                    </CustomContainer>
+                    {!isMobile && <Container
                         $justifyEnd
                         widthPc={100}
                         height={64}
@@ -41,7 +39,7 @@ export const Enquire = memo(
                             $rotate
                             onClick={scrollToTop}
                         />
-                    </Container>
+                    </Container>}
                 </Page>
             );
         }

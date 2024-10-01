@@ -1,14 +1,16 @@
-import {Email, Name, Phone, StyledImg, Wrapper} from "./styles";
+import { CustomImageContainer, Name, Phone, StyledImg, Wrapper } from "./styles";
 import {Column} from "../column";
-import { Image } from "../../atoms";
 import { memo } from "react";
+
 
 export const Agent = memo(function Agent(props) {
     const {name, phone, email} = props.agent;
     const img = props.img
     return (
         <Wrapper>
-            <Image {...img}/>
+            <CustomImageContainer {...img}>
+                <StyledImg {...img}/>
+            </CustomImageContainer>
             <Column padding={{left: 8}}>
                 <Name>{name}</Name>
                 <Phone>

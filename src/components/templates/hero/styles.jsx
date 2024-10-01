@@ -13,6 +13,7 @@ export const Container = styled.div`
     ${M.md`
         padding-block: 32px;
         padding-inline: 16px;
+        height: fit-content;
     `};
     
 `

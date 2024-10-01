@@ -1,6 +1,6 @@
 import React, { useRef, useState, memo } from "react";
 import { Container } from "../../molecules";
-import { ButtonWrapper, StyledButton, StyledImg, StyledVideo } from "./styles";
+import { ButtonWrapper, CustomContainer, CustomButton, StyledImg, StyledVideo } from "./styles";
 import { Button } from "../../atoms";
 
 
@@ -17,7 +17,7 @@ export const HistoryVideo = memo(
         }
 
         return (
-            <Container $gridCentre paddingInlineBlock={{ inline: 160, block: 32 }} $borderRadius $overflowHidden>
+            <CustomContainer>
                 <StyledVideo ref={videoRef} $isVisible={isPlaying} loop muted controls={true}>
                     <source src={assets.video.src} type="video/mp4" />
                 </StyledVideo>
@@ -26,15 +26,15 @@ export const HistoryVideo = memo(
                     $isPlaying={isPlaying}
                     $isVisible={!isPlaying}
                 >
-                    <Button
+                    <CustomButton
                         $square
                         $secondary
                         onClick={() => handlePlay(!isPlaying)}
                     >
-                        {isPlaying ? "Pause" : "Play"}
-                    </Button>
+                        {isPlaying ? "pause" : "play"}
+                    </CustomButton>
                 </ButtonWrapper>
-            </Container>
+            </CustomContainer>
         );
     }
 );

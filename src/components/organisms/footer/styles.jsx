@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { Style as S, Colour as C, Font as F } from '../../atoms'
+import { Style as S, Colour as C, Font as F, Media as M } from '../../atoms'
 export const Container = styled.div`
     position: relative;
     ${C.background.secondary}
@@ -9,6 +9,14 @@ export const Container = styled.div`
     ${S.padding.__({bottom: 32})};
     z-index: 0;
     ${S.size.height(128)}
+    
+    ${M.md`
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+        padding: 0;
+        z-index: 1;
+    `};
 `
 
 export const Wrapper = styled.div`
@@ -51,4 +59,22 @@ export const StyledText = styled.p`
     ${F.size(14)};
     font-weight: 700;
     color: #fff;
+    
+    ${M.md`
+        font-size: 14px;
+        line-height: 27px;
+        padding-bottom: 16px;
+    `};
+`
+
+export const MobileWrapper = styled.div`
+    display: flex;
+    padding-top: 144px;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const CustomImage = styled.img`
+    width: 150px;
+    
 `

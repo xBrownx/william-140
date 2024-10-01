@@ -18,6 +18,9 @@ export const ImageContainer = styled.div`
 
     ${M.md`
         height: 100%;
+        width: unset;
+        max-width: unset;
+        min-width: unset;
         x-overflow: scroll;
     `};
 `
@@ -44,5 +47,8 @@ export const StyledImage = styled.img`
     ${M.md`
         height: 100%;
         x-overflow: scroll;
+        width: unset;
+        max-width: unset;
+        min-width: unset;
     `};
 `

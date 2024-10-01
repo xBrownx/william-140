@@ -20,5 +20,11 @@ export const StyledInput = styled.input`
     &::placeholder {
         color: white;
     }
+    opacity: 0.7;
+    ${M.md`
+        height: 50px;
+        font-size: 14px;
+        line-height: 18.86px;
+    `};
     
 `

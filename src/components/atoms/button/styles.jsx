@@ -122,8 +122,8 @@ export const StyledButton = styled.button`
 
     ${M.md`
         height: 34px;
-        font-size: ${S.fontSize(14)};
-        line-height: ${S.height(18.16)};
+        font-size: 14px;
+        line-height: 18.16px;
         width: fit-content;
     `};
 
