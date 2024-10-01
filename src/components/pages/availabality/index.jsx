@@ -5,6 +5,7 @@ import { AvailabilityOverlay, AvailabilityRating } from "../../organisms";
 import { Page } from "../../templates";
 import ThirdSpace from "../../organisms/thirdSpace";
 import { useMobile } from "../../../hooks/useMobile";
+import AvailabilityMobile from "../../organisms/availabilityMobile";
 
 const Availability = memo(
     forwardRef(
@@ -19,6 +20,7 @@ const Availability = memo(
                             assets={CONST.assets}
                         />}
                         {!isMobile && <PageContents /> }
+                        {isMobile && <AvailabilityMobile /> }
                     </BackgroundContainer >
                     <ThirdSpace />
                 </Page >
