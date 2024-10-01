@@ -149,3 +149,59 @@ export const StyledLi = styled.li`
         }
     `}
 `;
+
+export const MobileOverlay = styled.div`
+    z-index: 10000;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 17.5px;
+`
+
+export const CustomRow = styled.div`
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 16px;
+`
+
+export const CustomHeading = styled.h2`
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 20.75px;
+    font-family: 'SuisseIntl-Light', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    vertical-align: center;
+`
+
+export const ArrowWrapper = styled.div`
+    width: 24px;
+    height: 24px;
+    
+    
+    svg {
+        width: 100%;
+        height: 100%;
+        
+        ${props => props.$hidden && css`
+            display: none;
+        `}
+    }
+    
+    ${props => props.$right && css`
+        rotate: 90deg;
+    `}
+    
+    ${props => props.$left && css`
+        rotate: -90deg;
+    `}
+`

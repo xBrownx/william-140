@@ -1,8 +1,9 @@
 import {
+    ArrowWrapper,
     ButtonWrapper,
-    Container,
+    Container, CustomHeading, CustomRow,
     ListWrapper,
-    MapWrapper, MenuWrapper, Overlay,
+    MapWrapper, MenuWrapper, MobileOverlay, Overlay,
     StyledLi,
     StyledUl,
     StyledVideo,
@@ -14,10 +15,12 @@ import { ReactComponent as Play } from '../../../assets/icons/Play.svg'
 import { memo, useEffect, useRef, useState } from 'react'
 import { wait } from "@testing-library/user-event/dist/utils";
 import { Image } from "../../atoms";
-
+import { useMobile } from "../../../hooks/useMobile";
+import { ReactComponent as Arrow } from '../../../assets/icons/Up-Arrow.svg'
 
 export const DesignVideo = memo(
     function DesignVideo(props) {
+        const isMobile = useMobile();
         const tour = props.tour;
         const menuItems = props.menuItems;
         const [currentShot, setCurrentShot] = useState(tour);
@@ -25,11 +28,16 @@ export const DesignVideo = memo(
         const [isLoading, setIsLoading] = useState(false);
         const videoRef = useRef(null);
 
+        const mobileTour = {...tour, title: "TOUR"};
 
+        const [mobileIdx, setMobileIdx] = useState(0);
+        let menuArray = Object.keys(menuItems).map(key => {
+            return menuItems[key];
+        });
+
+        menuArray = [mobileTour, ...menuArray];
 
         useEffect(() => {
-            console.log("useEffect triggered")
-
             wait(500).then(() => {
                 videoRef.current.play();
             })
@@ -39,39 +47,57 @@ export const DesignVideo = memo(
         }, [currentShot]);
 
 
+        const navLeft = () => {
+            let idx = mobileIdx
+            if (idx > 0) {
+                idx--;
+                setMobileIdx(idx);
+            }
+        }
+
+        const navRight = () => {
+            let idx = mobileIdx
+            if (idx < menuArray.length - 1) {
+                idx++;
+                setMobileIdx(idx);
+            }
+        }
 
         return (
-            <Container>
+            <Container >
                 <VideoContainer
                     $isLoading={isLoading}
                 >
-                    <MapWrapper>
-                        {currentShot.mapSrc !== undefined && <Image src={currentShot.mapSrc}/> }
-                    </MapWrapper>
+                    {!isMobile && <MapWrapper >
+                        {currentShot.mapSrc !== undefined && <Image src={currentShot.mapSrc} />}
+                    </MapWrapper >
+                    }
                     <StyledVideo
                         ref={videoRef}
                         muted
-                        src={currentShot.videoSrc}
+                        src={isMobile ? menuArray[mobileIdx].videoSrc : currentShot.videoSrc}
                         autoPlay
                         controls={true}
-                        onLoad={() =>{videoRef.current.play()}}
+                        onLoad={() => {
+                            videoRef.current.play()
+                        }}
                     >
-                    </StyledVideo>
+                    </StyledVideo >
 
-                </VideoContainer>
-                <Overlay style={{ justifyContent: "end" }}>
-                    <MenuWrapper>
-                        <StyledUl>
+                </VideoContainer >
+                <Overlay style={{justifyContent: "end"}} >
+                    <MenuWrapper >
+                        <StyledUl >
                             <StyledLi
                                 $border
                                 onClick={() => setCurrentShot(tour)}
                             >
-                                <Row $centre padding={{right: 16}}>
+                                <Row $centre padding={{right: 16}} >
                                     {/*<Image width={24} height={24} src={tour.iconSrc} />*/}
-                                    <p>{tour.title}</p>
-                                </Row>
+                                    <p >{tour.title}</p >
+                                </Row >
 
-                            </StyledLi>
+                            </StyledLi >
                             {Object.keys(menuItems).map((key) => {
                                 return (
                                     <StyledLi
@@ -79,17 +105,39 @@ export const DesignVideo = memo(
                                         onClick={() => setCurrentShot(menuItems[key])}
                                         $active={menuItems[key] === currentShot}
                                     >
-                                        <p>
+                                        <p >
                                             {menuItems[key].title}
-                                        </p>
-                                    </StyledLi>
+                                        </p >
+                                    </StyledLi >
                                 );
                             })}
 
-                        </StyledUl>
-                    </MenuWrapper>
-                </Overlay>
-            </Container>
+                        </StyledUl >
+                    </MenuWrapper >
+                </Overlay >
+                ${isMobile && <MobileOverlay >
+                <CustomRow >
+                    <ArrowWrapper
+                        $left
+                        $hidden={mobileIdx === 0}
+                    >
+                        <Arrow onClick={navLeft} />
+                    </ArrowWrapper >
+                    <CustomHeading >
+                        {menuArray[mobileIdx].title}
+                    </CustomHeading >
+                    <ArrowWrapper
+                        $right
+                        $hidden={mobileIdx === menuArray.length - 1}
+                    >
+                        <Arrow onClick={navRight} />
+                    </ArrowWrapper >
+                </CustomRow >
+
+            </MobileOverlay >
+
+            }
+            </Container >
         );
     }
 );

@@ -1,6 +1,5 @@
 import { memo, useEffect, useState } from 'react';
 import { ArrowWrapper, ButtonsWrapper, Container, CustomButton, CustomHeading, CustomRow } from './styles';
-import { NavArrow } from "../../atoms";
 import { constants as CONST } from './constants'
 import { ReactComponent as Arrow } from '../../../assets/icons/Up-Arrow.svg'
 import MobileModal from "./modal";
