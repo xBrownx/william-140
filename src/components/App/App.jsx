@@ -112,7 +112,7 @@ function App() {
 
         <ErrorBoundary>
             <AnimatePresence>
-                {imgLoading && <LoadingScreen $total={totalAssets} $progress={loadCount} />}
+                {/*{imgLoading && <LoadingScreen $total={totalAssets} $progress={loadCount} />}*/}
             </AnimatePresence>
 
                 <div ref={pageRefs.main} className="app-container" style={{ mixBlendMode: "screen" }}>
