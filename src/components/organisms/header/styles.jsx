@@ -103,7 +103,7 @@ export const MobileUl = styled.ul`
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
-    padding-right: 16px;
+
     gap: 16px;
     padding-bottom: 32px;
 `
@@ -113,4 +113,10 @@ export const CustomHeading = styled.h2`
     font-weight: 300;
     font-size: 36px;
     line-height: 47.56px;
+    font-family: 'TWKEverett-Light', serif;
+    
+    ${props => props.$variant && css`
+        padding-top: 168px;
+        color: #5178E1;
+    `};
 `

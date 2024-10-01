@@ -80,60 +80,25 @@ export const Header = memo(
                                 />
                             </CustomRow>
                             <MobileUl>
-                                <CustomHeading
-                                    $fontSize={20}
-                                    $lineHeight={20}
-                                    $weight={300}
-                                    onClick={() => scrollTo(pageRefs.location)}
-                                >
+                                <CustomHeading onClick={() => scrollTo(pageRefs.location)} >
                                     Location
                                 </CustomHeading>
-                                <CustomHeading
-                                    $fontSize={20}
-                                    $lineHeight={20}
-                                    $weight={300}
-                                    onClick={() => scrollTo(pageRefs.design)}
-                                >
+                                <CustomHeading onClick={() => scrollTo(pageRefs.design)} >
                                     Design
                                 </CustomHeading>
-                                <CustomHeading
-                                    $fontSize={20}
-                                    $lineHeight={20}
-                                    $weight={300}
-                                    onClick={() => scrollTo(pageRefs.amenities)}
-                                >
+                                <CustomHeading onClick={() => scrollTo(pageRefs.amenities)} >
                                     Amenities
                                 </CustomHeading>
-                                <CustomHeading
-                                    $fontSize={20}
-                                    $lineHeight={20}
-                                    $weight={300}
-                                    onClick={() => scrollTo(pageRefs.availability)}
-                                >
+                                <CustomHeading onClick={() => scrollTo(pageRefs.availability)} >
                                     Availability
                                 </CustomHeading>
-                                <CustomHeading
-                                    $fontSize={20}
-                                    $lineHeight={20}
-                                    $weight={300}
-                                    onClick={() => scrollTo(pageRefs.history)}
-                                >
+                                <CustomHeading onClick={() => scrollTo(pageRefs.history)} >
                                     History
                                 </CustomHeading>
-                                <CustomHeading
-                                    $fontSize={20}
-                                    $lineHeight={20}
-                                    $weight={300}
-                                    onClick={() => scrollTo(pageRefs.agency)}
-                                >
+                                <CustomHeading onClick={() => scrollTo(pageRefs.agency)} >
                                     Agency
                                 </CustomHeading>
-                                <CustomHeading
-                                    $fontSize={20}
-                                    $lineHeight={20}
-                                    $weight={300}
-                                    onClick={() => scrollTo(pageRefs.enquire)}
-                                >
+                                <CustomHeading $variant onClick={() => scrollTo(pageRefs.enquire)} >
                                     Enquiry
                                 </CustomHeading>
                             </MobileUl>
