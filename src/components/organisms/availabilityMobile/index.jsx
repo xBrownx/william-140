@@ -1,4 +1,4 @@
-import { memo, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { ArrowWrapper, ButtonsWrapper, Container, CustomButton, CustomHeading, CustomRow } from './styles';
 import { NavArrow } from "../../atoms";
 import { constants as CONST } from './constants'
@@ -8,8 +8,8 @@ import MobileModal from "./modal";
 function AvailabilityMobile(props) {
     const buttonArr = Object.keys(CONST.levels).map(key => CONST.levels[key]);
     const buttonNumbers = buttonArr.filter(item => item.isActive).map(item => {
-        return item.lvl
-    }).reverse();
+        return item;
+    });
 
     const [startIndex, setStartIndex] = useState(0);
     const [visibleButtons, setVisibleButtons] = useState(
@@ -36,9 +36,16 @@ function AvailabilityMobile(props) {
 
     const [isModal, setModal] = useState(false);
 
+    const [activeLevel, setActiveLevel] = useState(0);
+
     const onButtonClick = (btn) => {
+        setActiveLevel(btn);
         setModal(true);
-    }
+    };
+
+    useEffect(() => {
+        props.setNavVis(!isModal);
+    }, [isModal])
 
     return (
         <Container {...props}>
@@ -50,6 +57,7 @@ function AvailabilityMobile(props) {
                 navLeft={navLeft}
                 navRight={navRight}
                 buttonNumbers={buttonNumbers}
+                activeLvl={activeLevel}
             />
             <CustomHeading>
                 AVAILABLE TENANCIES
@@ -78,20 +86,20 @@ export const MobileModalNav = (props) => {
                     <Arrow onClick={props.navLeft} />
                 </ArrowWrapper>
                 <ButtonsWrapper>
-                    <CustomButton onClick={() => props.onButtonClick(0)}>
-                        {props.visibleButtons[0]}
+                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[0])}>
+                        {props.visibleButtons[0].lvl}
                     </CustomButton>
-                    <CustomButton>
-                        {props.visibleButtons[1]}
+                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[1])}>
+                        {props.visibleButtons[1].lvl}
                     </CustomButton>
-                    <CustomButton>
-                        {props.visibleButtons[2]}
+                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[2])}>
+                        {props.visibleButtons[2].lvl}
                     </CustomButton>
-                    <CustomButton>
-                        {props.visibleButtons[3]}
+                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[3])}>
+                        {props.visibleButtons[3].lvl}
                     </CustomButton>
-                    <CustomButton>
-                        {props.visibleButtons[4]}
+                    <CustomButton onClick={() => props.onButtonClick(props.visibleButtons[4])}>
+                        {props.visibleButtons[4].lvl}
                     </CustomButton>
                 </ButtonsWrapper>
                 <ArrowWrapper

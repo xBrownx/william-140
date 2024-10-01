@@ -29,6 +29,8 @@ function App() {
     const [vidLoading, setVidLoading] = useState(true);
     const [loadCount, setLoadCount] = useState(0);
 
+    const [navBarVisible, setNavBarVisible] = useState(true);
+
     const totalAssets = imageAssets.length;
 
     useEffect(() => {
@@ -116,7 +118,7 @@ function App() {
             </AnimatePresence>
 
                 <div ref={pageRefs.main} className="app-container" style={{ mixBlendMode: "screen" }}>
-                    <Header pageRefs={pageRefs} scrollTo={scrollTo} />
+                    {navBarVisible && <Header pageRefs={pageRefs} scrollTo={scrollTo} /> }
                     <Landing ref={pageRefs.landing} scrollTo={() => scrollTo(pageRefs.home)} />
                     <Home ref={pageRefs.home} onDiscoverClick={() => scrollTo(pageRefs.availability)} />
                     <HeroOne />
@@ -125,7 +127,7 @@ function App() {
                     <HeroTwo />
                     <Design ref={pageRefs.design} />
                     <Amenities ref={pageRefs.amenities} />
-                    <Availability ref={pageRefs.availability} />
+                    <Availability ref={pageRefs.availability} setNavVis={setNavBarVisible} />
                     <ScrollingText />
                     <History ref={pageRefs.history} />
                     <Gallery />

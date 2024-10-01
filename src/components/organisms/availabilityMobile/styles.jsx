@@ -8,6 +8,8 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    z-index: 2;
+    position: relative;
 `
 
 export const CustomHeading = styled.h2`
@@ -123,7 +125,7 @@ export const ModalWrapper = styled.div`
         pointer-events: visible;
     `};
     
-    padding-top: 116px;
+    padding-top: 46px;
     padding-inline: 16px;
 `
 
@@ -162,7 +164,7 @@ export const ImageWrapper = styled.div`
 `
 
 export const CloseButtonWrapper = styled.div`
-    z-index: 10000;
+    z-index: 10000000;
     width: 24px;
     height: 24px;
     position: absolute;
@@ -176,8 +178,8 @@ export const CloseButtonWrapper = styled.div`
 `
 export const CustomImage = styled.img`
     z-index: 10000;
-    width: 100%;
-    height: 100%;
+    width: 24px;
+    height: 24px;
 `
 
 export const TenancyImage = styled.img`
@@ -185,5 +187,9 @@ export const TenancyImage = styled.img`
 `
 
 export const ModalContentWrapper = styled.div`
+
+`
+
+export const ModalParagraph = styled.p`
 
 `

@@ -9,7 +9,7 @@ import AvailabilityMobile from "../../organisms/availabilityMobile";
 
 const Availability = memo(
     forwardRef(
-        function ({id,}, ref) {
+        function ({id, setNavVis}, ref) {
             const isMobile = useMobile();
             return (
                 <Page pageRef={ref} >
@@ -20,7 +20,7 @@ const Availability = memo(
                             assets={CONST.assets}
                         />}
                         {!isMobile && <PageContents /> }
-                        {isMobile && <AvailabilityMobile /> }
+                        {isMobile && <AvailabilityMobile setNavVis={setNavVis} /> }
                     </BackgroundContainer >
                     <ThirdSpace />
                 </Page >
