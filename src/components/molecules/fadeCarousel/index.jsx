@@ -1,5 +1,4 @@
-import { CarouselContainer, CarouselSlide, ImgContainer, } from "./styles";
-import { Image } from "../../atoms";
+import { CarouselContainer, CarouselSlide, CustomImage, ImgContainer, } from "./styles";
 import React, { memo, useRef, useState } from "react";
 
 
@@ -17,7 +16,7 @@ export const FadeCarousel = memo(function FadeCarousel({activeShot, carouselItem
                     $isActive={activeShot === idx}
                 >
                     <ImgContainer >
-                        <Image
+                        <CustomImage
                             src={item.imgSrc}
                             alt={""}
                         />

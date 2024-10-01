@@ -1,8 +1,7 @@
 import { FadeCarousel } from "../../molecules";
 import CarouselMenu from "../../molecules/carouselMenu/carouselMenu";
-import { CustomContainer, Wrapper } from "./styles";
+import { CustomContainer, SwipeContainer, Wrapper } from "./styles";
 import { useState, memo } from "react";
-import { Container } from "../../molecules";
 import { constants as CONST } from "./constants";
 
 
@@ -12,7 +11,10 @@ function LocationCarousel(props) {
 
     return (
         <Wrapper>
-            <CustomContainer $imgCover>
+            {/*<SwipeContainer>*/}
+            {/*    <img src={"https://140-william-assets.s3.ap-southeast-2.amazonaws.com/icons/swipe-icon.svg"} alt={"swipe"} />*/}
+            {/*</SwipeContainer>*/}
+            <CustomContainer>
                 <FadeCarousel
                     activeShot={activeShot}
                     carouselItems={menuItems} />

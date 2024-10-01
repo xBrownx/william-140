@@ -14,7 +14,7 @@ export const CarouselContainer = styled.div`
     ${M.md`
         height: 100%;
         min-width: fit-content;
-        overflow-x: scroll;
+        overflow: auto;
     `};
 `
 export const CarouselSlide = styled.div`
@@ -32,15 +32,11 @@ export const CarouselSlide = styled.div`
         transition-timing-function: ease-out;
     `};
     
-    img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     ${M.md`
+        box-sizing: unset;
         height: 100%;
         min-width: fit-content;
-        overflow-x: scroll;
+        overflow: auto;
     `};
     
 `
@@ -60,23 +56,26 @@ export const ImgContainer = styled.div`
     
     ${S.borderRadius};
     align-items: end;
-    img {
-        ${S.borderRadius};
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 
     ${M.md`
         height: 100%;
-        min-width: fit-content;
-        overflow-x: scroll;
-        img {
-        
-        width: fit-content
-        height: 100%;
-        object-fit: unset;
-    }
+        width: 100%;
+        min-width: 100vw;
+        overflow:scroll;
     `};
 `
 
+export const CustomImage = styled.img`
+    ${S.borderRadius};
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    ${M.md`
+        min-height: 100%;
+        width: auto;
+        overflow: auto;
+        object-fit: contain !important;
+    `};
+    
+`
