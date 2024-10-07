@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
 
 export const CustomContainer = styled.div`
     position: relative;
-    
     ${M.md`
         box-sizing: unset;
         width: 100vw;
@@ -17,6 +16,7 @@ export const CustomContainer = styled.div`
         min-width: 100vw;
         height: 810px;
         overflow: scroll;
+        
     `};
     
     
